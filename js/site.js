@@ -356,7 +356,7 @@ $(window).on('load', function() {
   var ObserverOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.01
+    threshold: 0
   }
 
   // Create an intersection observer

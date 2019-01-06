@@ -1,10 +1,5 @@
 // Run a function when the DOM is ready
 $(document).ready(function() {
-  
-  // Truncate text (portfolio cards)
-  $('.truncate-text').succinct({
-      size: 40
-  });
 
   // Hamburger button
   $('#hamburgerBtn').click(function(e) {
@@ -38,6 +33,20 @@ $(document).ready(function() {
     }
     else {
       $(".online-course-card").slice(1).fadeOut('fast');
+      $(this).html('View more <i class="fas fa-chevron-down"></i>');
+    }
+  });
+
+  // Portfolio (View more/View less)
+  $('.project-group .col').slice(0, 4).show();
+  $('#portfolioShowMore').click(function(e) {
+    e.preventDefault();
+    if($(".project-group .col:hidden").length != 0) {
+      $(".project-group .col:hidden").fadeIn('slow');
+      $(this).html('View less <i class="fas fa-chevron-up"></i>');
+    }
+    else {
+      $(".project-group .col").slice(4).fadeOut('fast');
       $(this).html('View more <i class="fas fa-chevron-down"></i>');
     }
   });

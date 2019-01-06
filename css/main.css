@@ -2205,11 +2205,11 @@ ul.staggered-list li {
   .hide-on-large-only {
     display: none !important; } }
 
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 961px) {
   .hide-on-extra-large-only {
     display: none !important; } }
 
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 961px) {
   .show-on-extra-large {
     display: block !important; } }
 
@@ -2996,7 +2996,7 @@ table span.badge {
         right: 100%; }
       .row .col.push-l12 {
         left: 100%; } }
-    @media only screen and (min-width: 1201px) {
+    @media only screen and (min-width: 961px) {
       .row .col.xl1 {
         width: 8.3333333333%;
         margin-left: auto;
@@ -3280,7 +3280,7 @@ html {
   @media only screen and (min-width: 767px) {
     html {
       font-size: 14.5px; } }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 960px) {
     html {
       font-size: 15px; } }
 
@@ -3339,64 +3339,64 @@ small {
 @media only screen and (min-width: 360px) {
   .flow-text {
     font-size: 1.2rem; } }
-@media only screen and (min-width: 396px) {
+@media only screen and (min-width: 384px) {
   .flow-text {
     font-size: 1.224rem; } }
-@media only screen and (min-width: 432px) {
+@media only screen and (min-width: 408px) {
   .flow-text {
     font-size: 1.248rem; } }
-@media only screen and (min-width: 468px) {
+@media only screen and (min-width: 432px) {
   .flow-text {
     font-size: 1.272rem; } }
-@media only screen and (min-width: 504px) {
+@media only screen and (min-width: 456px) {
   .flow-text {
     font-size: 1.296rem; } }
-@media only screen and (min-width: 540px) {
+@media only screen and (min-width: 480px) {
   .flow-text {
     font-size: 1.32rem; } }
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 504px) {
   .flow-text {
     font-size: 1.344rem; } }
-@media only screen and (min-width: 612px) {
+@media only screen and (min-width: 528px) {
   .flow-text {
     font-size: 1.368rem; } }
-@media only screen and (min-width: 648px) {
+@media only screen and (min-width: 552px) {
   .flow-text {
     font-size: 1.392rem; } }
-@media only screen and (min-width: 684px) {
+@media only screen and (min-width: 576px) {
   .flow-text {
     font-size: 1.416rem; } }
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 600px) {
   .flow-text {
     font-size: 1.44rem; } }
-@media only screen and (min-width: 756px) {
+@media only screen and (min-width: 624px) {
   .flow-text {
     font-size: 1.464rem; } }
-@media only screen and (min-width: 792px) {
+@media only screen and (min-width: 648px) {
   .flow-text {
     font-size: 1.488rem; } }
-@media only screen and (min-width: 828px) {
+@media only screen and (min-width: 672px) {
   .flow-text {
     font-size: 1.512rem; } }
-@media only screen and (min-width: 864px) {
+@media only screen and (min-width: 696px) {
   .flow-text {
     font-size: 1.536rem; } }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 720px) {
   .flow-text {
     font-size: 1.56rem; } }
-@media only screen and (min-width: 936px) {
+@media only screen and (min-width: 744px) {
   .flow-text {
     font-size: 1.584rem; } }
-@media only screen and (min-width: 972px) {
+@media only screen and (min-width: 768px) {
   .flow-text {
     font-size: 1.608rem; } }
-@media only screen and (min-width: 1008px) {
+@media only screen and (min-width: 792px) {
   .flow-text {
     font-size: 1.632rem; } }
-@media only screen and (min-width: 1044px) {
+@media only screen and (min-width: 816px) {
   .flow-text {
     font-size: 1.656rem; } }
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 840px) {
   .flow-text {
     font-size: 1.68rem; } }
 @media only screen and (max-width: 360px) {
@@ -6458,6 +6458,7 @@ body {
   position: relative;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
   background: #f8f9fa;
@@ -6630,10 +6631,20 @@ header {
         margin-top: 15px;
         margin-bottom: 20px;
         text-align: center; }
-        .profile .profile-box .profile-description .profile-cta .contact-btn, .profile .profile-box .profile-description .profile-cta .resume-btn {
-          color: #212529; }
         .profile .profile-box .profile-description .profile-cta .contact-btn {
-          margin-right: 5px; }
+          margin-right: 5px;
+          background: #2196F3;
+          border: 1px solid #2196F3;
+          color: #fff; }
+          .profile .profile-box .profile-description .profile-cta .contact-btn:hover, .profile .profile-box .profile-description .profile-cta .contact-btn:focus {
+            background: transparent;
+            color: #2196F3;
+            border: 1px solid #2196F3; }
+        .profile .profile-box .profile-description .profile-cta .resume-btn {
+          border: 1px solid #212529; }
+          .profile .profile-box .profile-description .profile-cta .resume-btn:hover, .profile .profile-box .profile-description .profile-cta .resume-btn:focus {
+            background: #212529;
+            color: #fff; }
       .profile .profile-box .profile-description .profile-details {
         margin-top: 20px; }
         .profile .profile-box .profile-description .profile-details .fas, .profile .profile-box .profile-description .profile-details .fab {
@@ -6706,6 +6717,8 @@ header {
 .portfolio {
   padding-top: 25px;
   font-size: 1.6rem; }
+  .portfolio .project-group .col {
+    display: none; }
   .portfolio .card .card-image {
     border-bottom: 1px #cdcfd2 solid; }
   .portfolio .card .card-action a {
@@ -6808,7 +6821,12 @@ header {
         color: rgba(255, 255, 255, 0.5); }
   .contact button {
     margin-top: 20px;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    background: #2196F3;
+    color: #fff; }
+    .contact button:hover, .contact button:focus {
+      background: #fff;
+      color: #212529; }
 
 .page-footer {
   padding-top: 0 !important; }
@@ -6921,6 +6939,9 @@ header {
   padding: 0 10px;
   margin: 0 10px; }
 
+.waves-effect.waves-dark .waves-ripple {
+  background-color: rgba(0, 0, 0, 0.2); }
+
 input, textarea {
   color: #fff; }
 
@@ -6989,7 +7010,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 
   .contact, .interests {
     padding: 60px 0; } }
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1115px) {
   header nav .menu-wrapper .hamburger-btn {
     display: none; }
   header nav .menu-wrapper .table-of-contents {

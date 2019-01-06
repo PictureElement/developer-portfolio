@@ -6,10 +6,10 @@
 // Media Query Ranges
 $small-screen-up: 481px;
 $medium-screen-up: 768px;
-$large-screen-up: 1201px;
+$large-screen-up: 961px;
 $small-screen: 480px;
 $medium-screen: 767px;
-$large-screen: 1200px;
+$large-screen: 960px;
 
 // Colors
 $primary-color: #2196f3;
@@ -54,6 +54,7 @@ body {
   margin: 0;
   //font-family: $font-stack;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
   background: #f8f9fa;
@@ -279,11 +280,23 @@ header {
         margin-top: 15px;
         margin-bottom: 20px;
         text-align: center;
-        .contact-btn, .resume-btn {
-          color: #212529;
-        }
-        .contact-btn {
+        .contact-btn { 
           margin-right: 5px;
+          background: #2196F3;
+          border: 1px solid#2196F3;
+          color: #fff;
+          &:hover, &:focus {
+            background: transparent;
+            color: #2196F3; 
+            border: 1px solid#2196F3;
+          }
+        }
+        .resume-btn {
+          border: 1px solid #212529;       
+          &:hover, &:focus {
+            background: #212529;
+            color: #fff;     
+          }
         }
       }
       .profile-details {
@@ -393,6 +406,9 @@ header {
 .portfolio {
   padding-top: 25px;
   font-size: 1.6rem;
+  .project-group .col {
+    display: none;
+  }
   .card {
     .card-image {
       border-bottom: 1px #cdcfd2 solid;
@@ -544,6 +560,12 @@ header {
   button {
     margin-top: 20px;
     margin-bottom: 50px;
+    background: #2196F3;
+    color: #fff;
+    &:hover, &:focus {
+      background: #fff;
+      color: #212529;
+    }
   }
 }
 
@@ -695,6 +717,10 @@ header {
   margin: 0 10px;
 }
 
+.waves-effect.waves-dark .waves-ripple {
+   background-color: rgba(0, 0, 0, 0.2);
+ }
+
 // Input fields
 // =============================================================================
 
@@ -773,7 +799,7 @@ textarea.materialize-textarea {
   }
 }
 
-@media #{$extra-large-and-up} {
+@media only screen and (min-width: 1115px) {
   header {
     nav {
       .menu-wrapper { 

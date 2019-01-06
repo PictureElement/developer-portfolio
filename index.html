@@ -654,29 +654,35 @@
                 <div class="row mb-0">
                   <div class="col s12 l6">
                     <!-- Form -->
-                    <form>
+                    <form action="https://formspree.io/marios.sofokleous@yandex.com" method="POST">
                       <div class="row">
                         <div class="input-field col s12 m-0">
-                          <input id="name" type="text" class="validate">
+                          <input id="name" type="text" class="validate" name="name">
                           <label for="name">Name</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12 m-0">
-                          <input id="email" type="email" class="validate">
+                          <input id="email" type="email" class="validate" name="_replyto">
                           <label for="email">Email</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12 m-0">
-                          <input id="subject" type="text" class="validate">
+                          <input id="subject" type="text" class="validate" name="subject">
                           <label for="subject">Subject</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12 m-0">
-                          <textarea id="textarea" class="materialize-textarea"></textarea>
+                          <textarea id="textarea" class="materialize-textarea" name="message"></textarea>
                           <label for="textarea">Message</label>
+                        </div>
+                      </div>
+                      <!-- Spam prevention -->
+                      <div class="row" style="display:none">
+                        <div class="input-field col s12 m-0">
+                          <input type="text" name="_gotcha">
                         </div>
                       </div>
                       <button class="waves-effect waves-dark btn-flat" type="submit" name="action">

@@ -6465,6 +6465,9 @@ body {
   color: #212529;
   overflow-x: hidden; }
 
+main {
+  margin-top: 50px; }
+
 a {
   text-decoration: none; }
 
@@ -6506,8 +6509,8 @@ a {
   position: fixed;
   left: 0;
   top: 0;
-  background: #fff url("../media/preloader.gif") no-repeat center center;
-  background-size: 50px 50px;
+  background: #fff url("../media/preloader.svg") no-repeat center center;
+  background-size: 100px 100px;
   width: 100%;
   height: 100%;
   z-index: 1000;
@@ -7016,7 +7019,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   header nav .menu-wrapper .table-of-contents {
     display: block;
     position: fixed;
-    top: 88px;
+    top: 138px;
     right: 50% !important;
     margin-right: -558px; }
     header nav .menu-wrapper .table-of-contents li:first-child {

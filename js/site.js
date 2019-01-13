@@ -7,9 +7,15 @@ $(document).ready(function() {
     $('#tableOfContents').slideToggle("slow"); 
   });
 
-  // About me (View more/View less)
+  // Parallax scrolling effect
+  $(window).scroll(function() {
+    var scrollTop = $(this).scrollTop();
+    $(".parallax").css("top", -(scrollTop * 0.5) + "px");
+  });
+
+  // About me (View toggle)
   $('.about-me p').slice(0, 2).show();
-  $('#aboutMeShowMore').click(function(e) {
+  $('#aboutViewToggle').click(function(e) {
     e.preventDefault();
     if ($(".about-me p:hidden").length != 0) {
       $('.about-me p').css('text-align', 'left');
@@ -23,36 +29,33 @@ $(document).ready(function() {
     }
   });
 
-  // Online courses (View more/View less)
-  $('.online-course-card').slice(0, 1).show();
-  $('#onlineCoursesShowMore').click(function(e) {
+  // Portfolio (View toggle)
+  $('.project').slice(0, 6).show();
+  $('#portfolioViewToggle').click(function(e) {
+    e.preventDefault();
+    if ($(".project:hidden").length > 0) {
+      $(".project:hidden").fadeIn('slow');
+      $(this).html('View less <i class="fas fa-chevron-up"></i>');
+    }
+    else {
+      $(".project").slice(6).fadeOut('fast');
+      $(this).html('View more <i class="fas fa-chevron-down"></i>');
+    }
+  });
+
+  // Online courses (View toggle)
+  $('.online-course-card').slice(0, 2).show();
+  $('#onlineCoursesViewToggle').click(function(e) {
     e.preventDefault();
     if ($(".online-course-card:hidden").length != 0) {
       $(".online-course-card:hidden").fadeIn('slow');
       $(this).html('View less <i class="fas fa-chevron-up"></i>');
     }
     else {
-      $(".online-course-card").slice(1).fadeOut('fast');
+      $(".online-course-card").slice(2).fadeOut('fast');
       $(this).html('View more <i class="fas fa-chevron-down"></i>');
     }
   });
-
-  // Portfolio (View more/View less)
-  $('.project-group .col').slice(0, 4).show();
-  $('#portfolioShowMore').click(function(e) {
-    e.preventDefault();
-    if($(".project-group .col:hidden").length != 0) {
-      $(".project-group .col:hidden").fadeIn('slow');
-      $(this).html('View less <i class="fas fa-chevron-up"></i>');
-    }
-    else {
-      $(".project-group .col").slice(4).fadeOut('fast');
-      $(this).html('View more <i class="fas fa-chevron-down"></i>');
-    }
-  });
-
-  // Initialize parallax
-  $('.parallax').parallax();
 
   // Initialize tooltips
   let tooltipOptions = { 'exitDelay': 0 };

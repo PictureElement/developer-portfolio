@@ -357,7 +357,9 @@ $(document).ready(function() {
 $(window).on('load', function() {
   $('#preloader').fadeOut();
   
-  document.querySelector('#header').classList.add("animated", "slideInDown");
+  document.querySelector('.logo').classList.add("animated", "slideInDown");
+  document.querySelector('#hamburgerBtn').classList.add("animated", "slideInDown");
+  document.querySelector('#tableOfContents').classList.add("animated", "slideInDown");
   document.querySelector('#profile').classList.add("animated", "slideInUp");
 
   // DOM elements

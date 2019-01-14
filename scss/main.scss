@@ -34,12 +34,12 @@ $card-link-color: $primary-color;
 @import "components/normalize";
 @import "components/global";
 @import "components/grid";
+@import "components/transitions";
 @import "components/cards";
 @import "components/tooltip";
 @import "components/buttons";
 @import "components/waves";
 @import "components/forms/forms";
-
 
 // Reset
 // =============================================================================
@@ -79,6 +79,10 @@ body {
   line-height: 1.5;
   background: #f8f9fa;
   color: $text-color;
+}
+
+ul {
+  list-style-type: none;
 }
 
 main {
@@ -158,7 +162,7 @@ a {
   background-size: 100px 100px;
   width: 100%;
   height: 100%;
-  z-index: 1000;
+  z-index: 10000;
   overflow: hidden;
 }
 
@@ -201,6 +205,8 @@ header {
   background: $primary-color;
   width: 48px;
   li {
+    width: 48px;
+    height: 48px;
     &:first-child {
       display: none;
     }
@@ -219,10 +225,16 @@ header {
   }
 }
 
+// Class applied to active sidebar elements
+.scrollspy-active-element, .scrollspy-focus-element  {
+  background: #fff;
+}
+
 // Parallax 
 // =============================================================================
 
 .parallax-wrapper {
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
@@ -657,7 +669,7 @@ textarea.materialize-textarea {
 
 @keyframes slideInDown {
   0% {
-    transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-200%,0);
     visibility: visible;
   }
   100% {
@@ -727,8 +739,14 @@ textarea.materialize-textarea {
           display: none;
         }
         .table-of-contents {
-          li:first-child {
-            display: block;
+          li {
+            transition: .3s ease-out;
+            &:hover, &:active {
+              background: #fff;
+            }
+            &:first-child {
+              display: block;
+            }
           }
           display: block;
           position: fixed;

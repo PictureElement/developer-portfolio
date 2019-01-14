@@ -3081,6 +3081,14 @@ input[type=range] + .thumb {
       .row .col.push-xl12 {
         left: 100%; } }
 
+.scale-transition {
+  transition: transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important; }
+  .scale-transition.scale-out {
+    transform: scale(0);
+    transition: transform .2s !important; }
+  .scale-transition.scale-in {
+    transform: scale(1); }
+
 .card-panel {
   transition: box-shadow .25s;
   padding: 24px;
@@ -4682,6 +4690,9 @@ body {
   background: #f8f9fa;
   color: #212529; }
 
+ul {
+  list-style-type: none; }
+
 main {
   margin-top: 50px; }
 
@@ -4740,7 +4751,7 @@ a {
   background-size: 100px 100px;
   width: 100%;
   height: 100%;
-  z-index: 1000;
+  z-index: 10000;
   overflow: hidden; }
 
 header {
@@ -4773,20 +4784,27 @@ header {
   display: none;
   background: #2196F3;
   width: 48px; }
-  .table-of-contents li:first-child {
-    display: none; }
-  .table-of-contents li a {
-    display: inline-block;
+  .table-of-contents li {
     width: 48px;
-    height: 48px;
-    font-size: 25px;
-    text-align: center;
-    line-height: 48px;
-    color: #212529; }
-    .table-of-contents li a:hover {
-      border: none; }
+    height: 48px; }
+    .table-of-contents li:first-child {
+      display: none; }
+    .table-of-contents li a {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      font-size: 25px;
+      text-align: center;
+      line-height: 48px;
+      color: #212529; }
+      .table-of-contents li a:hover {
+        border: none; }
+
+.scrollspy-active-element, .scrollspy-focus-element {
+  background: #fff; }
 
 .parallax-wrapper {
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
@@ -5109,7 +5127,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 
 @keyframes slideInDown {
   0% {
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -200%, 0);
     visibility: visible; }
   100% {
     transform: translateZ(1); } }
@@ -5159,8 +5177,12 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
     top: 118px;
     right: 50% !important;
     margin-right: -558px; }
-    header nav .menu-wrapper .table-of-contents li:first-child {
-      display: block; } }
+    header nav .menu-wrapper .table-of-contents li {
+      transition: .3s ease-out; }
+      header nav .menu-wrapper .table-of-contents li:hover, header nav .menu-wrapper .table-of-contents li:active {
+        background: #fff; }
+      header nav .menu-wrapper .table-of-contents li:first-child {
+        display: block; } }
 /* Skills chart */
 @media only screen and (min-width: 340px) {
   .skills .skill-chart {

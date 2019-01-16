@@ -15,7 +15,7 @@ $(document).ready(function() {
 
   // Hamburger button
   $('#hamburgerBtn').click(function(e) {
-    e.preventDefault(); 
+    e.preventDefault();
     $('#tableOfContents').slideToggle("slow"); 
   });
 
@@ -26,7 +26,7 @@ $(document).ready(function() {
     $("#parallax").css("top", -(scrollTop * 0.5) + "px");
     // Back to top
     let backToTopOffset = 2000;
-    if(scrollTop > backToTopOffset) {
+    if (scrollTop > backToTopOffset && window.innerWidth < 1115) {
       $('#backToTop').fadeIn();
     }
     else {

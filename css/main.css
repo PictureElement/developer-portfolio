@@ -5181,9 +5181,6 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   .contact, .interests {
     padding: 60px 0; } }
 @media only screen and (min-width: 1115px) {
-  .back-to-top {
-    display: none; }
-
   .page-footer a {
     display: inline-block; }
 

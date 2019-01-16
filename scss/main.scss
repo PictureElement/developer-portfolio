@@ -93,6 +93,16 @@ main {
   max-width: 960px;
   width: 90%;
 }
+@media #{$medium-and-up} {
+  .container {
+    width: 90%;
+  }
+}
+@media #{$large-and-up} {
+  .container {
+    width: 90%;
+  }
+}
 
 .section-title-underline {
   background: $primary-color;
@@ -166,11 +176,51 @@ a {
   overflow: hidden;
 }
 
+// Parallax 
+// =============================================================================
+
+.parallax-wrapper {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.parallax {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 750px;
+  width: 100%;
+  background-color: #1d1d1b;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto/v1547422608/msof.me/bg.jpg");
+}
+
+// Back to top
+// =============================================================================
+
+.back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: $primary-color !important;
+  z-index: 1000;
+}
+
+
+
 // Header
 // =============================================================================
 
 header {
-  margin-top: 20px;
+  padding-top: 20px;
   nav {
     height: 48px !important;
     line-height: 48px;
@@ -200,26 +250,27 @@ header {
   background: transparent;
 }
 
-.table-of-contents {
-  display: none;
-  background: $primary-color;
-  width: 48px;
-  li {
+.menu-wrapper {
+  .table-of-contents {
+    list-style: none;
+    white-space: nowrap;
+    display: none;
+    background: $primary-color;
     width: 48px;
-    height: 48px;
-    &:first-child {
-      display: none;
-    }
-    a {
-      display: inline-block;
+    li {
       width: 48px;
       height: 48px;
-      font-size: 25px;
-      text-align: center;
-      line-height: 48px;
-      color: $text-color;
-      &:hover {
-        border: none;
+      &:first-child {
+        display: none;
+      }
+      a {
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        font-size: 25px;
+        text-align: center;
+        line-height: 48px;
+        color: $text-color;
       }
     }
   }
@@ -228,45 +279,6 @@ header {
 // Class applied to active sidebar elements
 .scrollspy-active-element, .scrollspy-focus-element  {
   background: #fff;
-}
-
-// Parallax 
-// =============================================================================
-
-.parallax-wrapper {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 500px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.parallax {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 750px;
-  width: 100%;
-  background-color: #1d1d1b;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto/v1547422608/msof.me/bg.jpg");
-}
-
-@keyframes bgFadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.7;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 // Profile
@@ -301,11 +313,11 @@ header {
   text-align: center;
   margin: 15px 0;
   a {
-    text-decoration: underline dotted;
-    color: $text-color;
+    color: $primary-color;
+    transition: color .2s ease-in-out;
   }
   a:hover {
-    text-decoration: none;
+    color: $text-color;
   }
 }
 
@@ -318,15 +330,17 @@ header {
     border: 1px solid $primary-color;
     margin-right: 5px;
     color: #fff;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out, border .2s ease-in-out;
     &:hover, &:focus {
       background: transparent;
       color: $primary-color; 
-      border: 1px solid$primary-color;
+      border: 1px solid $primary-color;
     }
   }
   .resume-btn {
     border: 1px solid $text-color;       
     color: $text-color;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
     &:hover, &:focus {
       background: $text-color;
       color: #fff;     
@@ -347,11 +361,11 @@ header {
     font-size: 1.4rem;
   }
   a {
-    text-decoration: underline dotted;
-    color: $text-color;
+    color: $primary-color;
+    transition: color .2s ease-in-out;
   }
   a:hover {
-    text-decoration: none;
+    color: $text-color;
   }
   li {
     font-size: 1.4rem;
@@ -376,7 +390,7 @@ header {
         display: inline-block;
         background-color: rgba(0, 0, 0, 0.2);
         border-radius: 50%;
-        transition: all .2s ease-in-out;
+        transition: transform .2s ease-in-out;
         &:hover {
          transform: scale(1.1);
         }
@@ -520,7 +534,7 @@ header {
     border-radius: 2px;
     padding: 1rem;
     box-sizing: content-box;
-    transition: all .2s ease-in-out;
+    transition: transform .2s ease-in-out;
     &:hover, &:active, &:focus {
       transform: scale(1.1);
     }
@@ -551,6 +565,7 @@ header {
         color: #fff;
       }
       .contact-icon {
+        transition: background-color .2s ease-in-out;
         font-size: 2rem;
         border: 1px solid rgba(255, 255, 255, 0.3);
         padding: 10px;
@@ -569,6 +584,7 @@ header {
     margin-bottom: 56px;
     background: $primary-color;
     color: #fff;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
     &:hover, &:focus {
       background: #fff;
       color: $text-color;
@@ -617,6 +633,9 @@ textarea.materialize-textarea {
   padding-top: 0 !important;
   .footer-copyright {
     font-size: 1rem;
+  }
+  a {
+    display: none;
   }
   a:hover {
     text-decoration: underline;
@@ -732,32 +751,35 @@ textarea.materialize-textarea {
 }
 
 @media only screen and (min-width: 1115px) {
-  header {
-    nav {
-      .menu-wrapper { 
-        .hamburger-btn {
-          display: none;
+  .back-to-top {
+    display: none;
+  }
+  .page-footer a {
+    display: inline-block;
+  }
+  .menu-wrapper {
+    position: fixed;
+    top: 118px;
+    right: 50%;
+    margin-right: -558px;
+    .hamburger-btn {
+      display: none;
+    }
+    .table-of-contents {
+      display: block;
+      li {
+        transition: background-color .2s ease-in-out;
+        &:hover, &:active {
+          background: #fff;
         }
-        .table-of-contents {
-          li {
-            transition: .3s ease-out;
-            &:hover, &:active {
-              background: #fff;
-            }
-            &:first-child {
-              display: block;
-            }
-          }
+        &:first-child {
           display: block;
-          position: fixed;
-          top: 118px;
-          right: 50% !important;
-          margin-right: -558px;
         }
       }
     }
   }
 }
+
 
 /* Skills chart */
 @media only screen and (min-width: 340px) {

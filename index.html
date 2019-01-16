@@ -16,43 +16,50 @@
     <!-- Basic favicon -->
     <link rel="shortcut icon" href="media/favicon2.png">
   </head>
-  <body>
+  <body id="home">
+    <!-- Preloader -->
     <div id="preloader" class="preloader"></div>
-    <header id="header">
+    <!-- Parallax -->
+    <div class="parallax-wrapper">
+      <div id="parallax" class="parallax"></div>
+    </div>
+    <!-- Back to top -->
+    <a href="#home" id="backToTop" class="back-to-top smooth-scroll btn-floating btn-medium waves-effect waves-light red"><i class="fas fa-chevron-up"></i></a>
+    <header>
       <div class="container">
         <div class="row mb-0">
           <div class="col s12">
             <nav>
-              <a href="#" class="logo"><img src="media/logo.png" alt="logo"></a>
-              <div class="menu-wrapper">
+              <a href="#" id="logo" class="logo"><img src="media/logo.png" alt="logo"></a>
+              <div id="menuWrapper" class="menu-wrapper">
                 <button id="hamburgerBtn" class="hamburger-btn waves-effect waves-light"><i class="fas fa-bars"></i></button>
                 <ul id="tableOfContents" class="table-of-contents z-depth-2">
                   <li>
-                    <a href="#home" class="tooltipped" data-position="left" data-tooltip="Home"><i class="fas fa-home"></i></a>
+                    <a href="#home" class="tooltipped smooth-scroll" data-position="left" data-tooltip="Home"><i class="fas fa-home"></i></a>
                   </li>
                   <li>
-                    <a href="#aboutMe" class="tooltipped" data-position="left" data-tooltip="About"><i class="fas fa-user"></i></a>
+                    <a href="#aboutMe" class="tooltipped smooth-scroll" data-position="left" data-tooltip="About"><i class="fas fa-info"></i></a>
                   </li>
                   <li>
-                    <a href="#experience" class="tooltipped" data-position="left" data-tooltip="Experience"><i class="fas fa-briefcase"></i></a>
+                    <a href="#experience" class="tooltipped smooth-scroll" data-position="left" data-tooltip="Experience"><i class="fas fa-briefcase"></i></a>
                   </li>
                   <li>
-                    <a href="#portfolio" class="tooltipped" data-position="left" data-tooltip="Portfolio"><i class="fas fa-folder-open"></i></a>
+                    <a href="#portfolio" class="tooltipped smooth-scroll" data-position="left" data-tooltip="Portfolio"><i class="fas fa-folder-open"></i></a>
                   </li>
                   <li>
-                    <a href="#skills" class="tooltipped" data-position="left" data-tooltip="Skills"><i class="fas fa-check"></i></a>
+                    <a href="#skills" class="tooltipped smooth-scroll" data-position="left" data-tooltip="Skills"><i class="fas fa-check"></i></a>
                   </li>
                   <li>
-                    <a href="#education" class="tooltipped" data-position="left" data-tooltip="Education"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="#education" class="tooltipped smooth-scroll" data-position="left" data-tooltip="Education"><i class="fas fa-graduation-cap"></i></a>
                   </li>
                   <li>
-                    <a href="#onlineCourses" class="tooltipped" data-position="left" data-tooltip="Courses"><i class="fas fa-book"></i></a>
+                    <a href="#onlineCourses" class="tooltipped smooth-scroll" data-position="left" data-tooltip="Courses"><i class="fas fa-book"></i></a>
                   </li>
                   <li>
-                    <a href="#interests" class="tooltipped" data-position="left" data-tooltip="Interests"><i class="fas fa-heart"></i></a>
+                    <a href="#interests" class="tooltipped smooth-scroll" data-position="left" data-tooltip="Interests"><i class="fas fa-heart"></i></a>
                   </li>
                   <li>
-                    <a href="#contact" class="tooltipped" data-position="left" data-tooltip="Contact"><i class="fas fa-envelope-open"></i></a>
+                    <a href="#contact" class="tooltipped smooth-scroll" data-position="left" data-tooltip="Contact"><i class="fas fa-envelope-open"></i></a>
                   </li>
                 </ul>
               </div>
@@ -61,14 +68,10 @@
         </div>
       </div>
     </header>
-    <!-- Parallax -->
-    <div class="parallax-wrapper scrollspy" id="home">
-      <div class="parallax"></div>
-    </div>
     <main>
       <article>
         <!-- Profile -->
-        <section id="profile" class="profile">
+        <section id="profile" class="profile scrollspy">
           <div class="container">
             <div class="row mb-0">
               <div class="col s12 px-0">
@@ -117,14 +120,14 @@
                         <h1 class="profile-name">Marios Sofokleous</h1>
                         <h2 class="profile-position">Front-end Web Developer</h2>
                         <div class="profile-cta">
-                          <a href="#contact" class="contact-btn waves-effect waves-dark btn-flat">Contact</a>
+                          <a href="#contact" class="contact-btn waves-effect waves-dark btn-flat smooth-scroll">Contact</a>
                           <a href="https://res.cloudinary.com/pictureelement/image/upload/v1547168647/msof.me/resume.pdf" target="_blank" class="resume-btn waves-effect waves-light btn-flat">Resume <i class="fas fa-download"></i></a>
                         </div>
                         <hr class="thematic-break">
                         <p class="profile-summary">
                           If you are a business or individual seeking a web 
                           presence or an employer looking to hire, you can get 
-                          in touch with me <a href="#contact">here</a>.
+                          in touch with me <a class="smooth-scroll" href="#contact">here</a>.
                         </p>
                         <hr class="thematic-break">
                         <ul class="profile-details">
@@ -301,7 +304,7 @@
                           class="activator lazyload">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator">Grecko<i class="fas fa-ellipsis-v right"></i></span>
+                        <span class="card-title activator truncate">Grecko<i class="fas fa-ellipsis-v right"></i></span>
                         <p class="truncate">A restaurant website built with Bootstrap 4.</p>
                       </div>
                       <div class="card-action">
@@ -342,7 +345,7 @@
                           class="activator lazyload">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator">Weather App<i class="fas fa-ellipsis-v right"></i></span>
+                        <span class="card-title activator truncate">Weather App<i class="fas fa-ellipsis-v right"></i></span>
                         <p class="truncate">A weather app built with jQuery using the AccuWeather and Flickr APIs.</p>
                       </div>
                       <div class="card-action">
@@ -374,7 +377,7 @@
                           class="activator lazyload">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator">QuizNinja<i class="fas fa-ellipsis-v right"></i></span>
+                        <span class="card-title activator truncate">QuizNinja<i class="fas fa-ellipsis-v right"></i></span>
                         <p class="truncate">Traditional style trivia game built with jQuery.</p>
                       </div>
                       <div class="card-action">
@@ -409,7 +412,7 @@
                           class="activator lazyload">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator">MemePearl<i class="fas fa-ellipsis-v right"></i></span>
+                        <span class="card-title activator truncate">MemePearl<i class="fas fa-ellipsis-v right"></i></span>
                         <p class="truncate">A simple meme generator, with photo effects and filters using the Canvas API.</p>
                       </div>
                       <div class="card-action">
@@ -442,7 +445,7 @@
                           class="activator lazyload">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator">Minimal Calculator<i class="fas fa-ellipsis-v right"></i></span>
+                        <span class="card-title activator truncate">Minimal Calculator<i class="fas fa-ellipsis-v right"></i></span>
                         <p class="truncate">A minimal calculator app written in HTML, CSS, and JavaScript.</p>
                       </div>
                       <div class="card-action">
@@ -473,7 +476,7 @@
                           class="activator lazyload">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator">Vue Tasks<i class="fas fa-ellipsis-v right"></i></span>
+                        <span class="card-title activator truncate">Vue Tasks<i class="fas fa-ellipsis-v right"></i></span>
                         <p class="truncate">A basic to-do app built with Vue.js and Bulma.</p>
                       </div>
                       <div class="card-action">
@@ -505,7 +508,7 @@
                           class="activator lazyload">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator">Msof.me<i class="fas fa-ellipsis-v right"></i></span>
+                        <span class="card-title activator truncate">Msof.me<i class="fas fa-ellipsis-v right"></i></span>
                         <p class="truncate">A single-page personal portfolio website built with Materialize for msof.me</p>
                       </div>
                       <div class="card-action">
@@ -543,7 +546,7 @@
                           class="activator lazyload">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator">MyDirtyHobby<i class="fas fa-ellipsis-v right"></i></span>
+                        <span class="card-title activator truncate">MyDirtyHobby<i class="fas fa-ellipsis-v right"></i></span>
                         <p class="truncate">A web page built from scratch. Design by Colbette II Ltd.</p>
                       </div>
                       <div class="card-action">
@@ -581,7 +584,7 @@
                           class="activator lazyload">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator">Starting Business<i class="fas fa-ellipsis-v right"></i></span>
+                        <span class="card-title activator truncate">Starting Business<i class="fas fa-ellipsis-v right"></i></span>
                         <p class="truncate">A landing page built with Bootstrap 4. Design by DQ Media.</p>
                       </div>
                       <div class="card-action">
@@ -620,7 +623,7 @@
                           class="activator lazyload">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator">Portfolio 2<i class="fas fa-ellipsis-v right"></i></span>
+                        <span class="card-title activator truncate">Portfolio 2<i class="fas fa-ellipsis-v right"></i></span>
                         <p class="truncate">A portfolio site built from scratch using a responsive 12-column Flexbox grid system.</p>
                       </div>
                       <div class="card-action">
@@ -653,7 +656,7 @@
                           class="activator lazyload">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator">HTML5Tech<i class="fas fa-ellipsis-v right"></i></span>
+                        <span class="card-title activator truncate">HTML5Tech<i class="fas fa-ellipsis-v right"></i></span>
                         <p class="truncate">An ever-growing website with fundamental resources about HTML5 and friends.</p>
                       </div>
                       <div class="card-action">
@@ -683,7 +686,7 @@
                           class="activator lazyload">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator">Resume Template<i class="fas fa-ellipsis-v right"></i></span>
+                        <span class="card-title activator truncate">Resume Template<i class="fas fa-ellipsis-v right"></i></span>
                         <p class="truncate">Responsive resume template built with jQuery.</p>
                       </div>
                       <div class="card-action">
@@ -714,7 +717,7 @@
                           class="activator lazyload">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator">Phoenix<i class="fas fa-ellipsis-v right"></i></span>
+                        <span class="card-title activator truncate">Phoenix<i class="fas fa-ellipsis-v right"></i></span>
                         <p class="truncate">A pawn shop landing page built with Bootstrap 4.</p>
                       </div>
                       <div class="card-action">
@@ -747,7 +750,7 @@
                           class="activator lazyload">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator">AerialWorxs<i class="fas fa-ellipsis-v right"></i></span>
+                        <span class="card-title activator truncate">AerialWorxs<i class="fas fa-ellipsis-v right"></i></span>
                         <p class="truncate">A website built with WordPress.org for aerialworxs.com</p>
                       </div>
                       <div class="card-action">
@@ -1101,7 +1104,7 @@
       <div class="footer-copyright">
         <div class="container text-muted">
           © 2019 Marios Sofokleous. All rights reserved.
-        <a class="right" href="#home">Back to top</a>
+        <a class="right smooth-scroll" href="#home">Back to top</a>
         </div>
       </div>
     </footer>

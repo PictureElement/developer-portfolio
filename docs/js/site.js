@@ -1,30 +1,51 @@
 // Run a function when the DOM is ready
 $(document).ready(function() {
 
+  // Smooth scrolling
+  document.querySelectorAll('.smooth-scroll').forEach(function(anchor) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'start'
+      });
+    });
+  });
+
   // Hamburger button
   $('#hamburgerBtn').click(function(e) {
     e.preventDefault(); 
     $('#tableOfContents').slideToggle("slow"); 
   });
 
-  // Parallax scrolling effect
+  // Parallax scrolling effect & Back to top
   $(window).scroll(function() {
+    // Parallax
     var scrollTop = $(this).scrollTop();
-    $(".parallax").css("top", -(scrollTop * 0.5) + "px");
+    $("#parallax").css("top", -(scrollTop * 0.5) + "px");
+    // Back to top
+    let backToTopOffset = 2000;
+    if(scrollTop > backToTopOffset) {
+      $('#backToTop').fadeIn();
+    }
+    else {
+      $('#backToTop').fadeOut();
+    }
   });
 
   // About me (View toggle)
-  $('.about-me p').slice(0, 2).show();
+  $('#aboutMe p').slice(0, 2).show();
   $('#aboutViewToggle').click(function(e) {
     e.preventDefault();
-    if ($(".about-me p:hidden").length != 0) {
-      $('.about-me p').css('text-align', 'left');
-      $(".about-me p:hidden").fadeIn('slow');
+    if ($("#aboutMe p:hidden").length != 0) {
+      $('#aboutMe p').css('text-align', 'left');
+      $("#aboutMe p:hidden").fadeIn(0);
       $(this).html('View less <i class="fas fa-chevron-up"></i>');
     }
     else {
-      $(".about-me p").slice(2).fadeOut('fast');
-      $('.about-me p').css('text-align', 'center');
+      $("#aboutMe p").slice(2).fadeOut(0);
+      $('#aboutMe p').css('text-align', 'center');
       $(this).html('View more <i class="fas fa-chevron-down"></i>');
     }
   });
@@ -34,11 +55,11 @@ $(document).ready(function() {
   $('#portfolioViewToggle').click(function(e) {
     e.preventDefault();
     if ($(".project:hidden").length > 0) {
-      $(".project:hidden").fadeIn('slow');
+      $(".project:hidden").fadeIn(0);
       $(this).html('View less <i class="fas fa-chevron-up"></i>');
     }
     else {
-      $(".project").slice(6).fadeOut('fast');
+      $(".project").slice(6).fadeOut(0);
       $(this).html('View more <i class="fas fa-chevron-down"></i>');
     }
   });
@@ -48,25 +69,17 @@ $(document).ready(function() {
   $('#onlineCoursesViewToggle').click(function(e) {
     e.preventDefault();
     if ($(".online-course-card:hidden").length != 0) {
-      $(".online-course-card:hidden").fadeIn('slow');
+      $(".online-course-card:hidden").fadeIn(0);
       $(this).html('View less <i class="fas fa-chevron-up"></i>');
     }
     else {
-      $(".online-course-card").slice(2).fadeOut('fast');
+      $(".online-course-card").slice(2).fadeOut(0);
       $(this).html('View more <i class="fas fa-chevron-down"></i>');
     }
   });
 
   // Initialize tooltips
-  let tooltipOptions = { 'exitDelay': 0 };
-  $('.tooltipped').tooltip(tooltipOptions);
-
-  // Initialize scrollspy
-  let scrollspyOptions = { 'activeClass': 'scrollspy-active-element'};
-  $('.scrollspy').scrollSpy(scrollspyOptions);
-
-  // Initialize Navbar
-  $('.sidenav').sidenav();
+  $('.tooltipped').tooltip({exitDelay: 0});
 
   // Skill chart
   // Initialize echarts instance
@@ -357,9 +370,8 @@ $(document).ready(function() {
 $(window).on('load', function() {
   $('#preloader').fadeOut();
   
-  document.querySelector('.logo').classList.add("animated", "slideInDown");
-  document.querySelector('#hamburgerBtn').classList.add("animated", "slideInDown");
-  document.querySelector('#tableOfContents').classList.add("animated", "slideInDown");
+  document.querySelector('#logo').classList.add("animated", "slideInDown");
+  document.querySelector('#menuWrapper').classList.add("animated", "slideInDown");
   document.querySelector('#profile').classList.add("animated", "slideInUp");
 
   // DOM elements

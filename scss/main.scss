@@ -464,7 +464,7 @@ header {
   .skill-chart {
     max-width: 100%;
     width: 100%;
-    min-height: 285px;
+    min-height: 240px;
   }
 }
 
@@ -779,50 +779,110 @@ textarea.materialize-textarea {
 
 
 /* Skills chart */
-@media only screen and (min-width: 340px) {
+@media only screen and (min-width: 335px) {
   .skills .skill-chart {
-    min-height: 305px;
+    min-height: 265px;
   }
 }
 
-@media only screen and (min-width: 370px) {
+@media only screen and (min-width: 355px) {
+  .skills .skill-chart {
+    min-height: 285px;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .skills .skill-chart {
+    min-height: 300px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .skills .skill-chart {
+    min-height: 320px;
+  }
+}
+
+@media only screen and (min-width: 420px) {
   .skills .skill-chart {
     min-height: 340px;
   }
 }
 
-@media only screen and (min-width: 405px) {
+@media only screen and (min-width: 440px) {
   .skills .skill-chart {
-    min-height: 370px;
+    min-height: 355px;
   }
 }
 
-@media only screen and (min-width: 435px) {
+@media only screen and (min-width: 460px) {
   .skills .skill-chart {
-    min-height: 400px;
+    min-height: 375px;
   }
 }
 
-@media only screen and (min-width: 470px) {
+@media only screen and (min-width: 480px) {
+  .skills .skill-chart {
+    min-height: 395px;
+  }
+}
+
+@media only screen and (min-width: 505px) {
+  .skills .skill-chart {
+    min-height: 410px;
+  }
+}
+
+@media only screen and (min-width: 525px) {
   .skills .skill-chart {
     min-height: 430px;
   }
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 545px) {
   .skills .skill-chart {
-    min-height: 460px;
+    min-height: 465px;
   }
 }
 
-@media only screen and (min-width: 540px) {
+@media only screen and (min-width: 590px) {
   .skills .skill-chart {
-    min-height: 490px;
+    min-height: 480px;
   }
 }
 
-@media only screen and (min-width: 570px) {
+@media only screen and (min-width: 605px) {
+  .skills .skill-chart {
+    min-height: 500px;
+  }
+}
+
+@media only screen and (min-width: 615px) {
   .skills .skill-chart {
     min-height: 520px;
+  }
+}
+
+@media only screen and (min-width: 630px) {
+  .skills .skill-chart {
+    min-height: 535px;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .skills .skill-chart {
+    min-height: 555px;
+  }
+}
+
+@media only screen and (min-width: 655px) {
+  .skills .skill-chart {
+    min-height: 570px;
+  }
+}
+
+@media only screen and (min-width: 665px) {
+  .skills .skill-chart {
+    min-height: 585px;
   }
 }

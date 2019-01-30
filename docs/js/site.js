@@ -87,141 +87,181 @@ $(document).ready(function() {
 
   // Chart data
   var data = [{
-    name: 'HTML',
-    children: [{
-      name: 'HTML5 Semantics',
-      value: 1
+      name: 'HTML5',
+      children: [{
+        name: 'Semantics',
+        value: 1
+      }, {
+        name: 'PWAs',
+        value: 1
+      }, {
+        name: 'Canvas API',
+        value: 1
+      }, {
+        name: 'Intersection Observer API',
+        value: 1
+      }, {
+        name: 'Web Workers API',
+        value: 1
+      }, {
+        name: 'requestAnimationFrame',
+        value: 1
+      }, {
+        name: 'Ajax',
+        value: 1
+      }, {
+        name: 'Flexible Box Layout',
+        value: 1
+      }, {
+        name: 'CSS Transitions',
+        value: 1
+      }, {
+        name: 'CSS Animations',
+        value: 1
+      }]
     }, {
-      name: 'HTML5 Canvas',
-      value: 1
+      name: 'CSS',
+      children: [{
+        name: 'Bootstrap',
+        value: 1
+      }, {
+        name: 'Bulma',
+        value: 1
+      }, {
+        name: 'Materialize',
+        value: 1
+      }, {
+        name: 'Sass',
+        value: 1
+      }, {
+        name: 'Animate.css',
+        value: 1
+      }, {
+        name: 'Hover.css',
+        value: 1
+      }]
     }, {
-      name: 'Foundation for Emails 2',
-      value: 1
+      name: 'JS',
+      children: [{
+        name: 'jQuery',
+        value: 1
+      }, {
+        name: 'Grunt',
+        value: 1
+      }, {
+        name: 'ECharts',
+        value: 1
+      }, {
+        name: 'ScrollReveal',
+        value: 1
+      }, {
+        name: 'Lazysizes',
+        value: 1
+      }, {
+        name: 'SweetAlert',
+        value: 1
+      }]
     }, {
-      name: 'W3C markup val. svc.',
-      value: 1
-    }]
-  }, {
-    name: 'CSS',
-    children: [{
-      name: 'Bootstrap',
-      value: 1
+      name: 'Essent.',
+      children: [{
+        name: 'Git',
+        value: 1
+      }, {
+        name: 'GitHub',
+        value: 1
+      }, {
+        name: 'Linux Command Line',
+        value: 1
+      }, {
+        name: 'Visual Studio Code',
+        value: 1
+      }, {
+        name: 'Sublime Text',
+        value: 1
+      }, {
+        name: 'Chrome DevTools',
+        value: 1
+      }, {
+        name: 'Adobe Photoshop',
+        value: 1
+      }, {
+        name: 'Office Suite',
+        value: 1
+      }]
     }, {
-      name: 'Bulma',
-      value: 1
+      name: 'Other',
+      children: [{
+        name: 'WordPress',
+        value: 1
+      }, {
+        name: 'C/C++',
+        value: 1
+      }, {
+        name: 'Bash',
+        value: 1
+      }, {
+        name: 'PageSpeed Insights',
+        value: 1
+      }, {
+        name: 'Lighthouse',
+        value: 1
+      }, {
+        name: 'Responsive Bp.',
+        value: 1
+      }, {
+        name: 'TinyPNG',
+        value: 1
+      }, {
+        name: 'W3C Markup Validator',
+        value: 1
+      }, {
+        name: 'W3C CSS Validator',
+        value: 1
+      }, {
+        name: 'Freedcamp',
+        value: 1
+      }, {
+        name: 'Foundation for Emails 2',
+        value: 1
+      }, {
+        name: 'Cloudinary',
+        value: 1
+      }, {
+        name: 'Ngrok',
+        value: 1
+      }, {
+        name: 'Formspree',
+        value: 1
+      }]
     }, {
-      name: 'Materialize',
-      value: 1
-    }, {
-      name: 'Sass',
-      value: 1
-    }, {
-      name: 'Animate.css',
-      value: 1
-    }, {
-      name: 'W3C CSS val. svc.',
-      value: 1
-    }, {
-      name: 'Hover.css',
-      value: 1
-    }]
-  }, {
-    name: 'JavaScript',
-    children: [{
-      name: 'jQuery',
-      value: 1
-    }, {
-      name: 'Grunt',
-      value: 1
-    }, {
-      name: 'ECharts',
-      value: 1
-    }, {
-      name: 'ScrollReveal',
-      value: 1
-    }, {
-      name: 'lazysizes',
-      value: 1
-    }, {
-      name: 'SweetAlert',
-      value: 1
-    }]
-  }, {
-    name: 'Essential',
-    children: [{
-      name: 'Git',
-      value: 1
-    }, {
-      name: 'GitHub',
-      value: 1
-    }, {
-      name: 'Linux',
-      value: 1
-    }, {
-      name: 'Visual Studio Code',
-      value: 1
-    }, {
-      name: 'Sublime Text',
-      value: 1
-    }, {
-      name: 'Chrome DevTools',
-      value: 1
-    }, {
-      name: 'Office Applications',
-      value: 1
-    }]
-  }, {
-    name: 'Other',
-    children: [{
-      name: 'WordPress',
-      value: 1
-    }, {
-      name: 'C/C++',
-      value: 1
-    }, {
-      name: 'Bash',
-      value: 1
-    }, {
-      name: 'PageSpeed Insights',
-      value: 1
-    }, {
-      name: 'Cloudinary',
-      value: 1
-    }, {
-      name: 'ngrok',
-      value: 1
-    }, {
-      name: 'Formspree',
-      value: 1
-    }]
-  }, {
-    name: 'Design',
-    children: [{
-      name: 'Adobe Photoshop',
-      value: 1
-    }, {
-      name: 'Google Fonts',
-      value: 1
-    }, {
-      name: 'Font Awesome',
-      value: 1
-    }, {
-      name: 'Adobe Color CC',
-      value: 1
-    }, {
-      name: 'Font Pair',
-      value: 1
-    }]
-  }, {
-    name: 'Languages',
-    children: [{
-      name: 'Greek',
-      value: 1
-    }, {
-      name: 'English',
-      value: 1
-    }]
-  }];
+      name: 'Design',
+      children: [{
+        name: 'Adobe Photoshop',
+        value: 1
+      }, {
+        name: 'Google Fonts',
+        value: 1
+      }, {
+        name: 'Font Awesome',
+        value: 1
+      }, {
+        name: 'Flaticon',
+        value: 1
+      }, {
+        name: 'Shutterstock',
+        value: 1
+      }, {
+        name: 'Pexels',
+        value: 1
+      }, {
+        name: 'Unsplash',
+        value: 1
+      }, {
+        name: 'Adobe Color CC',
+        value: 1
+      }]
+    }
+  ];
 
   // Chart configuration
   var chartOptions = {
@@ -229,23 +269,18 @@ $(document).ready(function() {
       series: {
         type: 'sunburst',
         data: data,
-        //radius: [0, '100%'],
         levels: [
           {
-            // Blank setting for data mining
+            // Blank
           },
           {
-            // The most inside level
+            // 1st level
             r0: '0',
-            r: '40%'
-            /*
-            itemStyle: {
-                color: 'red'
-            },
+            r: '40%',
             label: {
-                color: 'blue'
+                color: '#000',
+                align: 'center'
             }
-            */
           },
           {
             // The second level
@@ -274,13 +309,53 @@ $(document).ready(function() {
         },
         option: {
           textStyle: {
+            fontSize: 6.5
+          }
+        }
+      },
+      {
+        query: {
+          minWidth: 286 // 335
+        },
+        option: {
+          textStyle: {
+            fontSize: 7
+          }
+        }
+      },
+      {
+        query: {
+          minWidth: 304 // 355
+        },
+        option: {
+          textStyle: {
+            fontSize: 7.5
+          }
+        }
+      },
+      {
+        query: {
+          minWidth: 322 // 375
+        },
+        option: {
+          textStyle: {
+            fontSize: 8
+          }
+        }
+      },
+      {
+        query: {
+          minWidth: 345 // 400
+        },
+        option: {
+          textStyle: {
             fontSize: 8.5
           }
         }
       },
       {
         query: {
-          minWidth: 291 // 340
+          minWidth: 363 // 420
         },
         option: {
           textStyle: {
@@ -290,7 +365,17 @@ $(document).ready(function() {
       },
       {
         query: {
-          minWidth: 318 // 370
+          minWidth: 381 // 440
+        },
+        option: {
+          textStyle: {
+            fontSize: 9.5
+          }
+        }
+      },
+      {
+        query: {
+          minWidth: 399 // 460
         },
         option: {
           textStyle: {
@@ -300,7 +385,17 @@ $(document).ready(function() {
       },
       {
         query: {
-          minWidth: 349 // 405
+          minWidth: 417 // 480
+        },
+        option: {
+          textStyle: {
+            fontSize: 10.5
+          }
+        }
+      },
+      {
+        query: {
+          minWidth: 439 // 505
         },
         option: {
           textStyle: {
@@ -310,7 +405,17 @@ $(document).ready(function() {
       },
       {
         query: {
-          minWidth: 376 // 435
+          minWidth: 457 // 525
+        },
+        option: {
+          textStyle: {
+            fontSize: 11.5
+          }
+        }
+      },
+      {
+        query: {
+          minWidth: 475 // 545
         },
         option: {
           textStyle: {
@@ -320,7 +425,17 @@ $(document).ready(function() {
       },
       {
         query: {
-          minWidth: 408 // 470
+          minWidth: 475 // 565
+        },
+        option: {
+          textStyle: {
+            fontSize: 12.5
+          }
+        }
+      },
+      {
+        query: {
+          minWidth: 516 // 590
         },
         option: {
           textStyle: {
@@ -330,7 +445,17 @@ $(document).ready(function() {
       },
       {
         query: {
-          minWidth: 435 // 500
+          minWidth: 529 // 605
+        },
+        option: {
+          textStyle: {
+            fontSize: 13.5
+          }
+        }
+      },
+      {
+        query: {
+          minWidth: 538 // 615
         },
         option: {
           textStyle: {
@@ -340,7 +465,17 @@ $(document).ready(function() {
       },
       {
         query: {
-          minWidth: 471 // 540
+          minWidth: 552 // 630
+        },
+        option: {
+          textStyle: {
+            fontSize: 14.5
+          }
+        }
+      },
+      {
+        query: {
+          minWidth: 561 // 640
         },
         option: {
           textStyle: {
@@ -350,7 +485,17 @@ $(document).ready(function() {
       },
       {
         query: {
-          minWidth: 498 // 570
+          minWidth: 574 // 655
+        },
+        option: {
+          textStyle: {
+            fontSize: 15.5
+          }
+        }
+      },
+      {
+        query: {
+          minWidth: 583 // 665
         },
         option: {
           textStyle: {

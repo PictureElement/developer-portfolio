@@ -234,10 +234,6 @@ readers do not read off random characters that represent icons */
   content: "\f106";
 }
 
-.fa-app-store:before {
-  content: "\f36f";
-}
-
 .fa-arrow-alt-circle-down:before {
   content: "\f358";
 }
@@ -546,10 +542,6 @@ readers do not read off random characters that represent icons */
   content: "\f199";
 }
 
-.fa-equals:before {
-  content: "\f52c";
-}
-
 .fa-expand:before {
   content: "\f065";
 }
@@ -662,10 +654,6 @@ readers do not read off random characters that represent icons */
   content: "\f35c";
 }
 
-.fa-font-awesome-logo-full:before {
-  content: "\f4e6";
-}
-
 .fa-gg:before {
   content: "\f260";
 }
@@ -720,22 +708,6 @@ readers do not read off random characters that represent icons */
 
 .fa-hand-paper:before {
   content: "\f256";
-}
-
-.fa-hand-point-down:before {
-  content: "\f0a7";
-}
-
-.fa-hand-point-left:before {
-  content: "\f0a5";
-}
-
-.fa-hand-point-right:before {
-  content: "\f0a4";
-}
-
-.fa-hand-point-up:before {
-  content: "\f0a6";
 }
 
 .fa-hand-pointer:before {
@@ -966,10 +938,6 @@ readers do not read off random characters that represent icons */
   content: "\f3d7";
 }
 
-.fa-paint-brush:before {
-  content: "\f1fc";
-}
-
 .fa-pause:before {
   content: "\f04c";
 }
@@ -1050,10 +1018,6 @@ readers do not read off random characters that represent icons */
   content: "\f689";
 }
 
-.fa-shapes:before {
-  content: "\f61f";
-}
-
 .fa-share:before {
   content: "\f064";
 }
@@ -1070,40 +1034,12 @@ readers do not read off random characters that represent icons */
   content: "\f14d";
 }
 
-.fa-sign:before {
-  content: "\f4d9";
-}
-
-.fa-sign-in-alt:before {
-  content: "\f2f6";
-}
-
-.fa-sign-language:before {
-  content: "\f2a7";
-}
-
-.fa-sign-out-alt:before {
-  content: "\f2f5";
-}
-
-.fa-signal:before {
-  content: "\f012";
-}
-
 .fa-skype:before {
   content: "\f17e";
 }
 
 .fa-sort:before {
   content: "\f0dc";
-}
-
-.fa-sort-alpha-down:before {
-  content: "\f15d";
-}
-
-.fa-sort-alpha-up:before {
-  content: "\f15e";
 }
 
 .fa-sort-down:before {
@@ -1116,10 +1052,6 @@ readers do not read off random characters that represent icons */
 
 .fa-square:before {
   content: "\f0c8";
-}
-
-.fa-square-full:before {
-  content: "\f45c";
 }
 
 .fa-square-root-alt:before {
@@ -1136,14 +1068,6 @@ readers do not read off random characters that represent icons */
 
 .fa-stop-circle:before {
   content: "\f28d";
-}
-
-.fa-store:before {
-  content: "\f54e";
-}
-
-.fa-store-alt:before {
-  content: "\f54f";
 }
 
 .fa-sun:before {
@@ -1184,10 +1108,6 @@ readers do not read off random characters that represent icons */
 
 .fa-th-list:before {
   content: "\f00b";
-}
-
-.fa-ticket-alt:before {
-  content: "\f3ff";
 }
 
 .fa-times:before {
@@ -1282,16 +1202,8 @@ readers do not read off random characters that represent icons */
   content: "\f03d";
 }
 
-.fa-vk:before {
-  content: "\f189";
-}
-
 .fa-weight:before {
   content: "\f496";
-}
-
-.fa-weight-hanging:before {
-  content: "\f5cd";
 }
 
 .fa-wifi:before {
@@ -3795,17 +3707,6 @@ td,th {
   border-radius: 2px 0 0 2px;
   max-width: 100%;
   width: auto;
-}
-
-.card.horizontal .card-stacked {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  position: relative;
-}
-
-.card.horizontal .card-stacked .card-content {
-  flex-grow: 1;
 }
 
 .card .card-image {

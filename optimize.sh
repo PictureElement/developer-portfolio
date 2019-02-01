@@ -35,3 +35,4 @@ grunt htmlmin
 # Copy other necessary assets
 cp -a src/webfonts/. docs/webfonts/
 cp -a src/media/. docs/media/
+cp src/CNAME docs/

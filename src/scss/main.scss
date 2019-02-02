@@ -12,8 +12,12 @@ $medium-screen: 767px;
 $large-screen: 959px;
 
 // Colors
-$primary-color: #2196F3;
+$primary-color: #114f7f;
 $text-color: #212529;
+
+// Font family
+$font-stack-primary: 'Raleway', sans-serif;
+$font-stack-secondary: 'Montserrat', sans-serif;
 
 // Footer
 $footer-copyright-bg-color: #fff;
@@ -73,7 +77,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font-stack-primary;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -114,7 +118,7 @@ main {
 }
 
 .section-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font-stack-secondary;
   font-size: 2.8rem;
   font-weight: 900;
   margin-bottom: 16px;
@@ -137,15 +141,13 @@ main {
     }
   }
   .card-action {
-    a {
-      display: inline-block;
-      width: 32px;
-      height: 32px;
-      text-align: center;
-    }
     i {
       font-size: 20px;
       line-height: 32px;
+    }
+    a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+      color: $primary-color;
+      text-decoration: underline;
     }
   }
   .card-image {
@@ -215,7 +217,6 @@ a {
 }
 
 
-
 // Header
 // =============================================================================
 
@@ -233,6 +234,7 @@ header {
 
 .logo img {
   height: 48px;
+  border: 1px solid #fff;
 }
 
 .hamburger-btn {
@@ -270,7 +272,7 @@ header {
         font-size: 25px;
         text-align: center;
         line-height: 48px;
-        color: $text-color;
+        color: #fff;
       }
     }
   }
@@ -291,11 +293,14 @@ header {
 .profile-description {
   background: #fff;
   padding: 30px 20px 30px 20px;
+  .profile-photo img {
+    border: 1px solid #eee;
+  }
 }
 
 .profile-name {
   margin-top: 15px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font-stack-secondary;
   font-size: 2.8rem;
   font-weight: 900;
   line-height: 1.25;
@@ -317,7 +322,7 @@ header {
     transition: color .2s ease-in-out;
   }
   a:hover {
-    color: $text-color;
+    text-decoration: underline;
   }
 }
 
@@ -365,7 +370,7 @@ header {
     transition: color .2s ease-in-out;
   }
   a:hover {
-    color: $text-color;
+    text-decoration: underline;
   }
   li {
     font-size: 1.4rem;
@@ -388,7 +393,7 @@ header {
         width: 48px;
         height: 48px;
         display: inline-block;
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0.5);
         border-radius: 50%;
         transition: transform .2s ease-in-out;
         &:hover {
@@ -754,6 +759,10 @@ textarea.materialize-textarea {
   .page-footer a {
     display: inline-block;
   }
+  .logo img {
+    height: 80px;
+    border-width: 2px;
+  }
   .menu-wrapper {
     position: fixed;
     top: 118px;
@@ -767,7 +776,7 @@ textarea.materialize-textarea {
       li {
         transition: background-color .2s ease-in-out;
         &:hover, &:active {
-          background: #fff;
+          background: rgba(0,0,0,0.5);
         }
         &:first-child {
           display: block;

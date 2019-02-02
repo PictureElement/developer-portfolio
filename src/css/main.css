@@ -2061,7 +2061,7 @@ a {
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #2196F3; }
+  border-left: 5px solid #114f7f; }
 
 i {
   line-height: inherit; }
@@ -2100,7 +2100,7 @@ video.responsive-video {
   .pagination li.active a {
     color: #fff; }
   .pagination li.active {
-    background-color: #2196F3; }
+    background-color: #114f7f; }
   .pagination li.disabled a {
     cursor: default;
     color: #999; }
@@ -2240,7 +2240,7 @@ ul.staggered-list li {
 .page-footer {
   padding-top: 20px;
   color: #fff;
-  background-color: #2196F3; }
+  background-color: #114f7f; }
   .page-footer .footer-copyright {
     overflow: hidden;
     min-height: 50px;
@@ -3191,12 +3191,12 @@ input[type=range] + .thumb {
     .card .card-action:last-child {
       border-radius: 0 0 2px 2px; }
     .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
-      color: #2196F3;
+      color: #114f7f;
       margin-right: 24px;
       transition: color .3s ease;
       text-transform: uppercase; }
       .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
-        color: #82c4f8; }
+        color: #1d87d9; }
   .card .card-reveal {
     padding: 24px;
     position: absolute;
@@ -4683,7 +4683,7 @@ html {
   font-size: 10px; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -4707,7 +4707,7 @@ main {
   .container {
     width: 90%; } }
 .section-title-underline {
-  background: #2196F3;
+  background: #114f7f;
   width: 60px;
   height: 5px;
   border: none;
@@ -4715,7 +4715,7 @@ main {
   margin-top: 0; }
 
 .section-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.8rem;
   font-weight: 900;
   margin-bottom: 16px;
@@ -4724,7 +4724,7 @@ main {
 .view-toggle-btn {
   border: 1px #cdcfd2 solid;
   display: block;
-  color: #2196F3; }
+  color: #114f7f; }
 
 .card .card-content .card-title, .card .card-reveal .card-title {
   display: block;
@@ -4732,19 +4732,17 @@ main {
   margin-bottom: 8px; }
   .card .card-content .card-title i, .card .card-reveal .card-title i {
     line-height: 32px; }
-.card .card-action a {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  text-align: center; }
 .card .card-action i {
   font-size: 20px;
   line-height: 32px; }
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+  color: #114f7f;
+  text-decoration: underline; }
 .card .card-image {
   border-bottom: 1px solid rgba(160, 160, 160, 0.2); }
 
 a {
-  color: #2196F3; }
+  color: #114f7f; }
 
 .material-tooltip {
   font-size: 1.6rem; }
@@ -4786,7 +4784,7 @@ a {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  background: #2196F3 !important;
+  background: #114f7f !important;
   z-index: 1000; }
 
 header {
@@ -4800,7 +4798,8 @@ header {
     z-index: 1000; }
 
 .logo img {
-  height: 48px; }
+  height: 48px;
+  border: 1px solid #fff; }
 
 .hamburger-btn {
   background: transparent;
@@ -4819,7 +4818,7 @@ header {
   list-style: none;
   white-space: nowrap;
   display: none;
-  background: #2196F3;
+  background: #114f7f;
   width: 48px; }
   .menu-wrapper .table-of-contents li {
     width: 48px;
@@ -4833,7 +4832,7 @@ header {
       font-size: 25px;
       text-align: center;
       line-height: 48px;
-      color: #212529; }
+      color: #fff; }
 
 .scrollspy-active-element, .scrollspy-focus-element {
   background: #fff; }
@@ -4844,10 +4843,12 @@ header {
 .profile-description {
   background: #fff;
   padding: 30px 20px 30px 20px; }
+  .profile-description .profile-photo img {
+    border: 1px solid #eee; }
 
 .profile-name {
   margin-top: 15px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.8rem;
   font-weight: 900;
   line-height: 1.25;
@@ -4863,25 +4864,25 @@ header {
   text-align: center;
   margin: 15px 0; }
   .profile-summary a {
-    color: #2196F3;
+    color: #114f7f;
     transition: color .2s ease-in-out; }
   .profile-summary a:hover {
-    color: #212529; }
+    text-decoration: underline; }
 
 .profile-cta {
   text-align: center;
   margin-top: 15px;
   margin-bottom: 20px; }
   .profile-cta .contact-btn {
-    background: #2196F3;
-    border: 1px solid #2196F3;
+    background: #114f7f;
+    border: 1px solid #114f7f;
     margin-right: 5px;
     color: #fff;
     transition: color .2s ease-in-out, background-color .2s ease-in-out, border .2s ease-in-out; }
     .profile-cta .contact-btn:hover, .profile-cta .contact-btn:focus {
       background: transparent;
-      color: #2196F3;
-      border: 1px solid #2196F3; }
+      color: #114f7f;
+      border: 1px solid #114f7f; }
   .profile-cta .resume-btn {
     border: 1px solid #212529;
     color: #212529;
@@ -4901,10 +4902,10 @@ header {
   .profile-details .fas, .profile-details .fab {
     font-size: 1.4rem; }
   .profile-details a {
-    color: #2196F3;
+    color: #114f7f;
     transition: color .2s ease-in-out; }
   .profile-details a:hover {
-    color: #212529; }
+    text-decoration: underline; }
   .profile-details li {
     font-size: 1.4rem;
     margin-bottom: 15px; }
@@ -4913,7 +4914,7 @@ header {
 
 .profile-social {
   padding: 15px 0;
-  background: #2196F3; }
+  background: #114f7f; }
   .profile-social ul {
     text-align: center; }
     .profile-social ul li {
@@ -4923,7 +4924,7 @@ header {
         width: 48px;
         height: 48px;
         display: inline-block;
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0.5);
         border-radius: 50%;
         transition: transform .2s ease-in-out; }
         .profile-social ul li a:hover {
@@ -5028,7 +5029,7 @@ header {
   .contact li {
     cursor: pointer; }
     .contact li:hover .contact-icon {
-      background: #2196F3; }
+      background: #114f7f; }
     .contact li:last-child .contact-link-item {
       margin-bottom: 0; }
     .contact li .contact-link-item {
@@ -5054,7 +5055,7 @@ header {
   .contact button {
     margin-top: 20px;
     margin-bottom: 56px;
-    background: #2196F3;
+    background: #114f7f;
     color: #fff;
     transition: color .2s ease-in-out, background-color .2s ease-in-out; }
     .contact button:hover, .contact button:focus {
@@ -5082,8 +5083,8 @@ input[type=tel]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
 input[type=search]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #2196F3;
-  box-shadow: 0 1px 0 0 #2196F3; }
+  border-bottom: 1px solid #114f7f;
+  box-shadow: 0 1px 0 0 #114f7f; }
 input:not([type]):focus:not([readonly]) + label,
 input[type=text]:not(.browser-default):focus:not([readonly]) + label,
 input[type=password]:not(.browser-default):focus:not([readonly]) + label,
@@ -5097,7 +5098,7 @@ input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
 input[type=number]:not(.browser-default):focus:not([readonly]) + label,
 input[type=search]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #2196F3; }
+  color: #114f7f; }
 
 .page-footer {
   padding-top: 0 !important; }
@@ -5184,6 +5185,10 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   .page-footer a {
     display: inline-block; }
 
+  .logo img {
+    height: 80px;
+    border-width: 2px; }
+
   .menu-wrapper {
     position: fixed;
     top: 118px;
@@ -5196,7 +5201,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
       .menu-wrapper .table-of-contents li {
         transition: background-color .2s ease-in-out; }
         .menu-wrapper .table-of-contents li:hover, .menu-wrapper .table-of-contents li:active {
-          background: #fff; }
+          background: rgba(0, 0, 0, 0.5); }
         .menu-wrapper .table-of-contents li:first-child {
           display: block; } }
 /* Skills chart */

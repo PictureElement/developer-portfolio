@@ -5106,6 +5106,7 @@ header nav {
 .logo img {
   height: 48px;
   border: 1px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .hamburger-btn {
@@ -5116,7 +5117,7 @@ header nav {
   box-sizing: border-box;
   font-size: 25px;
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .hamburger-btn:focus {

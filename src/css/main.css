@@ -4847,6 +4847,7 @@ header {
     border: 1px solid #eee; }
 
 .profile-name {
+  color: #114f7f;
   margin-top: 15px;
   font-family: "Montserrat", sans-serif;
   font-size: 2.8rem;
@@ -5182,16 +5183,32 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   .contact, .interests {
     padding: 60px 0; } }
 @media only screen and (min-width: 1115px) {
+  main {
+    margin-top: 0; }
+
+  .logo img {
+    position: absolute;
+    display: inline-block;
+    top: 48px;
+    left: 0;
+    border: none; }
+
+  .profile-photo {
+    position: relative; }
+
   .page-footer a {
     display: inline-block; }
 
   .logo img {
-    height: 80px;
+    height: 60px;
     border-width: 2px; }
+
+  .profile-name {
+    margin-top: 0; }
 
   .menu-wrapper {
     position: fixed;
-    top: 118px;
+    top: 68px;
     right: 50%;
     margin-right: -558px; }
     .menu-wrapper .hamburger-btn {

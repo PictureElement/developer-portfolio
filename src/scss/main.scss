@@ -760,6 +760,9 @@ textarea.materialize-textarea {
   main {
     margin-top: 0;
   }
+  header {
+    padding-top: 0;
+  }
   .logo img {
     position: absolute;
     display: inline-block;
@@ -782,7 +785,7 @@ textarea.materialize-textarea {
   }
   .menu-wrapper {
     position: fixed;
-    top: 68px;
+    top: 48px;
     right: 50%;
     margin-right: -558px;
     .hamburger-btn {

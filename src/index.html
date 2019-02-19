@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Marios Sofokleous">
     <meta name="description" content="Marios Sofokleous is a self-taught front-end web developer who tends to code things from scratch and bring ideas to life in the browser.">
+    <meta http-equiv="Accept-CH" content="DPR, Width">
     <!-- Import Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400%7CMontserrat:900" rel="stylesheet">
     <!-- Import main styles -->
@@ -15,8 +16,15 @@
     <link rel="stylesheet" href="css/all.css">
     <!-- Basic favicon -->
     <link rel="shortcut icon" href="https://res.cloudinary.com/pictureelement/image/upload/v1549144790/msof.me/logotype-1.png">
+    <!-- jQuery -->
+    <script src="js/jquery-3.3.1.min.js" defer></script>
     <!-- reCAPTCHA v2 -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" defer></script>
+    <!-- LazySizes (lazyloading) + LazySizes RIaS extension -->
+    <script src="http://cdn.jsdelivr.net/g/lazysizes(lazysizes.min.js+plugins/rias/ls.rias.min.js)" defer></script>
+    <script src="js/materialize.min.js" defer></script>
+    <script src="js/echarts.min.js" defer></script>
+    <script src="js/site.js" defer></script>
   </head>
   <body id="home">
     <!-- Preloader -->
@@ -81,40 +89,7 @@
                   <div class="row mb-0">
                     <div class="col s12 l5">
                       <div class="profile-photo text-center">
-                        <img
-                          sizes="(max-width: 1300px) 100vw, 1300px"
-                          srcset="
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_248/v1546970019/msof.me/me.jpg 248w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_323/v1546970019/msof.me/me.jpg 323w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_387/v1546970019/msof.me/me.jpg 387w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_444/v1546970019/msof.me/me.jpg 444w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_498/v1546970019/msof.me/me.jpg 498w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_541/v1546970019/msof.me/me.jpg 541w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_586/v1546970019/msof.me/me.jpg 586w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_625/v1546970019/msof.me/me.jpg 625w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_663/v1546970019/msof.me/me.jpg 663w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_701/v1546970019/msof.me/me.jpg 701w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_736/v1546970019/msof.me/me.jpg 736w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_768/v1546970019/msof.me/me.jpg 768w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_812/v1546970019/msof.me/me.jpg 812w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_843/v1546970019/msof.me/me.jpg 843w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_872/v1546970019/msof.me/me.jpg 872w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_903/v1546970019/msof.me/me.jpg 903w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_932/v1546970019/msof.me/me.jpg 932w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_965/v1546970019/msof.me/me.jpg 965w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_1045/v1546970019/msof.me/me.jpg 1045w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_1018/v1546970019/msof.me/me.jpg 1018w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_1071/v1546970019/msof.me/me.jpg 1071w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_1191/v1546970019/msof.me/me.jpg 1191w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_1201/v1546970019/msof.me/me.jpg 1201w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_1244/v1546970019/msof.me/me.jpg 1244w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_1283/v1546970019/msof.me/me.jpg 1283w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_1291/v1546970019/msof.me/me.jpg 1291w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_1267/v1546970019/msof.me/me.jpg 1267w,
-                            https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_1300/v1546970019/msof.me/me.jpg 1300w"
-                          src="https://res.cloudinary.com/pictureelement/image/upload/f_auto,q_auto/c_scale,w_1300/v1546970019/msof.me/me.jpg"
-                          alt="Marios Sofokleous: Front-end Web Developer"
-                          class="responsive-img">
+                        <img data-src="https://res.cloudinary.com/pictureelement/image/upload/w_{width},c_scale,f_auto,q_auto/v1546970019/msof.me/me.jpg" data-sizes="auto" class="lazyload" alt="Marios Sofokleous: Front-end Web Developer">
                       </div>
                     </div>
                     <div class="col s12 l7">
@@ -1123,11 +1098,5 @@
         </div>
       </div>
     </footer>
-    <!--JavaScript at end of body for optimized loading-->
-    <script src="js/lazysizes.min.js" async=""></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/materialize.min.js"></script>
-    <script src="js/echarts.min.js"></script>
-    <script src="js/site.js"></script>
   </body>
 </html>

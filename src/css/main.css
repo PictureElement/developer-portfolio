@@ -4693,6 +4693,10 @@ body {
 ul {
   list-style-type: none; }
 
+img {
+  width: 100%;
+  height: auto; }
+
 main {
   margin-top: 50px; }
 
@@ -4799,7 +4803,7 @@ header {
 
 .logo img {
   height: 48px;
-  border: 1px solid #fff;
+  width: auto;
   border: 1px solid rgba(255, 255, 255, 0.5); }
 
 .hamburger-btn {
@@ -5193,19 +5197,17 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   .logo img {
     position: absolute;
     display: inline-block;
+    height: 60px;
     top: 48px;
     left: 0;
-    border: none; }
+    border: none;
+    border-width: 2px; }
 
   .profile-photo {
     position: relative; }
 
   .page-footer a {
     display: inline-block; }
-
-  .logo img {
-    height: 60px;
-    border-width: 2px; }
 
   .profile-name {
     margin-top: 0; }

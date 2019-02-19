@@ -1,6 +1,6 @@
 // Run a function when the DOM is ready
 $(document).ready(function() {
-
+  
   // Smooth scrolling
   document.querySelectorAll('.smooth-scroll').forEach(function(anchor) {
     anchor.addEventListener('click', function (e) {

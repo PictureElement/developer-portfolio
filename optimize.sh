@@ -24,7 +24,7 @@ grunt copy
 perl -0pi -e 's/    <!-- Import main styles -->\n    <link rel="stylesheet" href="css\/main.css">\n    <!-- Import FontAwesome -->\n    <link rel="stylesheet" href="css\/all.css">/    <link rel="stylesheet" href="css\/purestyles.min.css">/' docs/index.html
 
 # In docs/index.html, update the reference to the site's main javascript file
-perl -0pi -e 's/    <script src="js\/site.js"><\/script>/    <script src="js\/site.min.js"><\/script>/' docs/index.html
+perl -0pi -e 's/    <script src="js\/site.js" defer><\/script>/    <script src="js\/site.min.js" defer><\/script>/' docs/index.html
 
 # Extract & inline critical-path CSS from docs/index.html
 grunt critical

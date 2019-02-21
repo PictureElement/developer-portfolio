@@ -175,12 +175,33 @@ a {
   position: fixed;
   left: 0;
   top: 0;
-  background: #f8f9fa url('../media/preloader.svg') no-repeat center center;
+  background: #fff url(https://res.cloudinary.com/pictureelement/image/upload/v1550790112/msof.me/page-preloader.svg) no-repeat center center;
   background-size: 100px 100px;
   width: 100%;
   height: 100%;
   z-index: 10000;
   overflow: hidden;
+}
+
+// Image Preloader
+// =============================================================================
+
+/* Suggested rule in lazySizes documentation */
+img[data-sizes="auto"] { display: block; width: 100%; }
+
+.lazyload {
+	opacity: 0;
+}
+
+.lazyloading {
+	opacity: 1;
+	transition: opacity 300ms;
+  background: #fff url(https://res.cloudinary.com/pictureelement/image/upload/v1550790112/msof.me/image-preloader.svg) no-repeat center;
+}
+
+.card .card-image .lazyloading {
+  /* 16:9 = 56.25% = calc(9 / 16 * 100%) */
+  padding-bottom: 42.86%;
 }
 
 // Parallax 

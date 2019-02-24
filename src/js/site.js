@@ -83,7 +83,7 @@ $(document).ready(function() {
 
   // Skill chart
   // Initialize echarts instance
-  var myChart = echarts.init(document.getElementById("skillChart"));
+  //var myChart = echarts.init(document.getElementById("skillChart"));
 
   // Chart data
   var data = [{
@@ -507,7 +507,7 @@ $(document).ready(function() {
   };
 
   // Use configuration item and data specified to show chart
-  myChart.setOption(chartOptions);
+  //myChart.setOption(chartOptions);
 
 });
 

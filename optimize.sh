@@ -10,6 +10,9 @@ grunt purifycss
 # Replace all special comments with normal comments (/*! to /*)
 perl -0pi -e 's/\/\*\!/\/\*/g' docs/css/purestyles.css
 
+# Add vendor-prefixed CSS properties
+grunt autoprefixer
+
 # Minify docs/purestyles.css. Create docs/css/purestyles.min.css
 grunt cssmin
 
@@ -34,5 +37,4 @@ grunt htmlmin
 
 # Copy other necessary assets
 cp -a src/webfonts/. docs/webfonts/
-cp -a src/media/. docs/media/
 cp src/CNAME docs/

@@ -10,6 +10,14 @@ module.exports = function(grunt) {
         dest: 'docs/css/purestyles.css'
       },
     },
+
+    // Add vendor-prefixed CSS properties
+    autoprefixer: {
+      single_file: {
+        src: 'docs/css/purestyles.css',
+        dest: 'docs/css/purestyles.css'
+      }
+    },
     
     // Minify CSS (purestyles.css)
     cssmin: {
@@ -91,6 +99,7 @@ module.exports = function(grunt) {
   // Load the grunt plugins
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-purifycss');
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-critical');

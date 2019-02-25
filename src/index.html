@@ -1294,6 +1294,10 @@
       };
       // Use configuration item and data specified to show chart
       chart.setOption(options, true);
+      // Resize chart, when window size changes
+      window.onresize = function() {
+        chart.resize();
+      };
     </script>
   </body>
 </html>

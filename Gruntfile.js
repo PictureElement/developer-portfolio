@@ -105,11 +105,4 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  
-  // Default task(s).
-  //grunt.registerTask('default', ['clean']);
-  //grunt.registerTask('default', ['purifycss']);
-  //grunt.registerTask('default', ['cssmin']);
-  //grunt.registerTask('default', ['critical']);
-  //grunt.registerTask('default', ['htmlmin']);
 };

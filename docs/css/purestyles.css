@@ -5729,108 +5729,108 @@ input:not([type]):focus:not([readonly]) + label,input[type=text]:not(.browser-de
 
 @media only screen and (min-width: 335px) {
   .skills .skill-chart {
-    min-height: 285px;
+    min-height: 305px;
   }
 }
 
 @media only screen and (min-width: 355px) {
   .skills .skill-chart {
-    min-height: 305px;
+    min-height: 325px;
   }
 }
 
 @media only screen and (min-width: 375px) {
   .skills .skill-chart {
-    min-height: 320px;
+    min-height: 340px;
   }
 }
 
 @media only screen and (min-width: 400px) {
   .skills .skill-chart {
-    min-height: 340px;
+    min-height: 360px;
   }
 }
 
 @media only screen and (min-width: 420px) {
   .skills .skill-chart {
-    min-height: 360px;
+    min-height: 380px;
   }
 }
 
 @media only screen and (min-width: 440px) {
   .skills .skill-chart {
-    min-height: 375px;
+    min-height: 395px;
   }
 }
 
 @media only screen and (min-width: 460px) {
   .skills .skill-chart {
-    min-height: 395px;
+    min-height: 415px;
   }
 }
 
 @media only screen and (min-width: 480px) {
   .skills .skill-chart {
-    min-height: 415px;
+    min-height: 435px;
   }
 }
 
 @media only screen and (min-width: 505px) {
   .skills .skill-chart {
-    min-height: 430px;
+    min-height: 450px;
   }
 }
 
 @media only screen and (min-width: 525px) {
   .skills .skill-chart {
-    min-height: 450px;
+    min-height: 470px;
   }
 }
 
 @media only screen and (min-width: 545px) {
   .skills .skill-chart {
-    min-height: 485px;
+    min-height: 505px;
   }
 }
 
 @media only screen and (min-width: 590px) {
   .skills .skill-chart {
-    min-height: 500px;
+    min-height: 520px;
   }
 }
 
 @media only screen and (min-width: 605px) {
   .skills .skill-chart {
-    min-height: 520px;
+    min-height: 540px;
   }
 }
 
 @media only screen and (min-width: 615px) {
   .skills .skill-chart {
-    min-height: 540px;
+    min-height: 560px;
   }
 }
 
 @media only screen and (min-width: 630px) {
   .skills .skill-chart {
-    min-height: 555px;
+    min-height: 575px;
   }
 }
 
 @media only screen and (min-width: 640px) {
   .skills .skill-chart {
-    min-height: 575px;
+    min-height: 595px;
   }
 }
 
 @media only screen and (min-width: 655px) {
   .skills .skill-chart {
-    min-height: 590px;
+    min-height: 610px;
   }
 }
 
 @media only screen and (min-width: 665px) {
   .skills .skill-chart {
-    min-height: 605px;
+    min-height: 625px;
   }
 }

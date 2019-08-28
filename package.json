@@ -1,16 +1,29 @@
 {
-  "name": "msof.me",
-  "version": "0.1.0",
+  "name": "developer-portfolio",
+  "version": "1.0.1",
+  "description": "A Material Design, customizable single-page personal portfolio template.",
+  "keywords": [
+    "portfolio",
+    "material-design",
+    "personal",
+    "website",
+    "template",
+    "tech",
+    "coding",
+    "dev"
+  ],
+  "author": "Marios Sofokleous",
+  "license": "MIT",
   "devDependencies": {
-    "grunt": "latest",
-    "grunt-autoprefixer": "^3.0.4",
-    "grunt-cli": "latest",
-    "grunt-contrib-clean": "latest",
-    "grunt-contrib-copy": "latest",
-    "grunt-contrib-cssmin": "latest",
-    "grunt-contrib-htmlmin": "latest",
-    "grunt-contrib-uglify": "latest",
-    "grunt-critical": "latest",
-    "grunt-purifycss": "latest"
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2",
+    "materialize-css": "^1.0.0-rc.2"
   }
 }

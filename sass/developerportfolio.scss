@@ -61,14 +61,40 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+
+// Global
+// =============================================================================
+html {
+  font-size: 10px;
+}
+
 body {
-  position: relative;
+  font-family: $font-stack-primary;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background: #f8f9fa;
+  color: $text-color;
+}
+
+main {
+  margin-top: 50px;
 }
 
 // Header
 // =============================================================================
+header {
+  margin-top: 25px;
+}
+
+.parallax-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .navbar {
-  background: lime;
   height: 48px;
   display: flex;
   justify-content: space-between;
@@ -76,6 +102,7 @@ body {
   &__brand {
     height: 48px;
     width: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
   }
   &__toggler {
     background: transparent;
@@ -85,15 +112,16 @@ body {
     box-sizing: border-box;
     font-size: 25px;
     color: #fff;
+    display: block;
     border: 1px solid rgba(255, 255, 255, 0.5);
     &:focus {
       background: transparent;
     }
   }
-  &-nav {
+  &__nav {
     list-style: none;
     white-space: nowrap;
-    //display: none;
+    display: none;
     background: $primary-color;
     li {
       width: 48px;
@@ -107,6 +135,127 @@ body {
       text-align: center;
       line-height: 48px;
       color: #fff;
+    }
+  }
+}
+
+
+
+// Profile
+// =============================================================================
+.lead {
+  padding-top: .75rem;
+  &__body {
+    &-photo {
+      display: block;
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+    &-name {
+      color: $primary-color;
+      margin-top: 15px;
+      font-family: $font-stack-secondary;
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 1.25;
+      text-align: center;
+    }
+    &-position {
+      font-size: 2rem;
+      font-weight: 300;
+      text-align: center;
+    }
+    &-cta {
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      &-contact {
+        background: $primary-color;
+        border: 1px solid $primary-color;
+        margin-right: 5px;
+        color: #fff;
+        transition: color .2s ease-in-out, background-color .2s ease-in-out, border .2s ease-in-out;
+        &:hover, &:focus {
+          background: transparent;
+          color: $primary-color; 
+          border: 1px solid $primary-color;
+        }
+      }
+      &-resume {
+        border: 1px solid $text-color;       
+        color: $text-color;
+        transition: color .2s ease-in-out, background-color .2s ease-in-out;
+        &:hover, &:focus {
+          background: $text-color;
+          color: #fff;     
+        }
+      }
+    }
+    &-summary {
+      font-size: 1.6rem;
+      text-align: center;
+      margin: 15px 0;
+      a {
+        color: $primary-color;
+        transition: color .2s ease-in-out;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+    &-break {
+      border: 0;
+      height: 0;
+      border-top: 1px #cdcfd2 solid;
+      margin: 0;
+    }
+    &-links {
+      margin-top: 15px;
+      li {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+      }
+      li:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        color: $primary-color;
+        transition: color .2s ease-in-out;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .fas, .fab {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  &__footer {
+    padding: 15px 0;
+    background: $primary-color;
+    ul {
+      text-align: center;
+      li {
+        display: inline-block;
+        margin: 0 5px;
+        a {
+          width: 48px;
+          height: 48px;
+          display: inline-block;
+          background-color: rgba(0, 0, 0, 0.5);
+          border-radius: 50%;
+          transition: transform .2s ease-in-out;
+          &:hover {
+          transform: scale(1.1);
+          }
+          i {
+            color: #fff;
+            font-size: 2rem;
+            line-height: 48px;
+          }
+        }
+      }
     }
   }
 }

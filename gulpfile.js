@@ -59,7 +59,8 @@ function serve(cb) {
   browserSync.init({
     server: {
       baseDir: "./"
-    }
+    },
+    open: "external"
   });
   gulp.watch("sass/developerportfolio.scss", gulp.series(css, browserReload));
   gulp.watch("js/developerportfolio.js", gulp.series(js, browserReload));

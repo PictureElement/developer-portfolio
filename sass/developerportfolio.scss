@@ -5,6 +5,7 @@
 
 // Colors
 $primary-color: #114f7f;
+$secondary-color: #212529;
 $text-color: #212529;
 
 // Font family
@@ -83,6 +84,7 @@ main {
 
 .section {
   padding-top: 35px;
+  padding-bottom: 0;
   &__title {
     position: relative;
     font-family: $font-stack-secondary;
@@ -105,14 +107,9 @@ main {
   }
 }
 
-.view-more-btn {
-  border: 1px #cdcfd2 solid;
-  display: inline-block;
-  color: $primary-color;
-}
-
-.card {
+.wide-card {
   padding-left: 72px;
+  margin-top: 0;
   margin-bottom: 15px;
   font-size: 1.6rem;
   img {
@@ -128,6 +125,33 @@ main {
       transform: scale(1.1);
     }
   }
+  &:last-child { 
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: $primary-color;
+  transition: color .2s ease-in-out;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  &:hover, &:focus {
+    background-color: lighten($primary-color, 10%);
+    text-decoration: none;
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  &:hover, &:focus {
+    background-color: lighten($secondary-color, 10%);
+    text-decoration: none;
+  }
 }
 
 
@@ -137,6 +161,23 @@ main {
   color: #6c757d !important;
 }
 
+.d-block {
+  display: block !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
 
 // Header
 // =============================================================================
@@ -200,7 +241,7 @@ header {
 // Lead
 // =============================================================================
 .lead {
-  padding-top: .75rem;
+  padding: .75rem;
   &__body {
     &-photo {
       display: block;
@@ -226,39 +267,11 @@ header {
       text-align: center;
       margin-top: 15px;
       margin-bottom: 20px;
-      &-contact {
-        background: $primary-color;
-        border: 1px solid $primary-color;
-        margin-right: 5px;
-        color: #fff;
-        transition: color .2s ease-in-out, background-color .2s ease-in-out, border .2s ease-in-out;
-        &:hover, &:focus {
-          background: transparent;
-          color: $primary-color; 
-          border: 1px solid $primary-color;
-        }
-      }
-      &-resume {
-        border: 1px solid $text-color;       
-        color: $text-color;
-        transition: color .2s ease-in-out, background-color .2s ease-in-out;
-        &:hover, &:focus {
-          background: $text-color;
-          color: #fff;     
-        }
-      }
     }
     &-summary {
       font-size: 1.6rem;
       text-align: center;
       margin: 15px 0;
-      a {
-        color: $primary-color;
-        transition: color .2s ease-in-out;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
     }
     &-break {
       border: 0;
@@ -274,13 +287,6 @@ header {
       }
       li:last-child {
         margin-bottom: 0;
-      }
-      a {
-        color: $primary-color;
-        transition: color .2s ease-in-out;
-      }
-      a:hover {
-        text-decoration: underline;
       }
       .fas, .fab {
         font-size: 1.4rem;
@@ -324,10 +330,20 @@ header {
     margin: 16px 0;
     font-size: 1.6rem;
     text-align: center;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.portfolio-section {
+  &__title {
+    margin-bottom: 24.5px;
+  }
+  .col {
+    padding: 0.75rem;
   }
   button {
-    margin-top: 20px;
-    display: block;
-    margin: 0 auto;
+    margin-top: 16px;
   }
 }

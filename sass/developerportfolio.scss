@@ -81,6 +81,37 @@ main {
   margin-top: 50px;
 }
 
+.section {
+  padding-top: 35px;
+  &__title {
+    position: relative;
+    font-family: $font-stack-secondary;
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 60px;
+      height: 5px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $primary-color;
+    }
+  }
+}
+
+.view-more-btn {
+  border: 1px #cdcfd2 solid;
+  display: inline-block;
+  color: $primary-color;
+}
+
+
 // Header
 // =============================================================================
 header {
@@ -140,8 +171,7 @@ header {
 }
 
 
-
-// Profile
+// Lead
 // =============================================================================
 .lead {
   padding-top: .75rem;
@@ -257,5 +287,21 @@ header {
         }
       }
     }
+  }
+}
+
+
+// About
+// =============================================================================
+.about-section {
+  p {
+    margin: 16px 0;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  button {
+    margin-top: 20px;
+    display: block;
+    margin: 0 auto;
   }
 }

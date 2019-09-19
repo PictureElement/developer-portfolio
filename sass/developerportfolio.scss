@@ -111,6 +111,32 @@ main {
   color: $primary-color;
 }
 
+.card {
+  padding-left: 72px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  img {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 24px;
+    top: 31px;
+    display: inline-block;
+    overflow: hidden;
+    transition: transform .2s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+
+// Helpers
+// =============================================================================
+.text-muted {
+  color: #6c757d !important;
+}
+
 
 // Header
 // =============================================================================

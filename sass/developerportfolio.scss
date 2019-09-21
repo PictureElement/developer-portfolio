@@ -22,6 +22,9 @@ $input-height: 5rem;
 // Cards
 $card-link-color: $primary-color;
 
+// Spacing
+$spacer: 1.6rem;
+
 // Materialize
 // =============================================================================
 
@@ -177,6 +180,10 @@ a {
 
 .mb-0 {
   margin-bottom: 0 !important;
+}
+
+.mt-3 {
+  margin-top: $spacer !important;
 }
 
 // Header

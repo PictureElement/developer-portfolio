@@ -117,7 +117,6 @@ main {
   font-size: 1.6rem;
   img {
     width: 42px;
-    height: 42px;
     position: absolute;
     left: 24px;
     top: 31px;
@@ -128,7 +127,7 @@ main {
       transform: scale(1.1);
     }
   }
-  &:last-child { 
+  &:last-of-type { 
     margin-bottom: 0;
   }
 }
@@ -162,6 +161,10 @@ a {
 // =============================================================================
 .text-muted {
   color: #6c757d !important;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .d-block {
@@ -343,6 +346,18 @@ header {
   }
 }
 
+
+// Experience
+// =============================================================================
+.experience-section {
+  button {
+    margin-top: 23.5px;
+  }
+}
+
+
+// Portfolio
+// =============================================================================
 .portfolio-section {
   &__title {
     margin-bottom: 24.5px;
@@ -352,8 +367,40 @@ header {
   }
 }
 
+
+// Courses
+// =============================================================================
 .courses-section {
   button {
     margin-top: 23.5px;
+  }
+}
+
+
+// Interests
+// =============================================================================
+.interests-section {
+  .card-content {
+    padding: 16.5px 24px;
+  }
+  svg *, polygon {
+    fill: $primary-color;
+  }
+  img, svg {
+    width: 65px;
+    height: 65px;
+    border: 1px solid #cdcfd2;
+    border-radius: 2px;
+    display: block;
+    padding: 1rem;
+    transition: transform .2s ease-in-out;
+    margin: 7.5px auto;
+    &:hover {
+      transform: scale(1.1);
+    }
+    @media (min-width: 440px) {
+      width: 75px;
+      height: 75px;
+    }
   }
 }

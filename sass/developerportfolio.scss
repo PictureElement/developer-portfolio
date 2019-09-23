@@ -1,31 +1,33 @@
+// Table of Contents:
+//
+//  1. Override Materialize variables
+//  2. Include parts of Materialize
+//  3. Variables
+//  4. Reset
+//  5. Global
+//  6. Helpers
+//  7. Lead
+//  8. About
+//  9. Experience
+//  10. Portfolio
+//  11. Courses
+//  12. Interests
+//  13. Contact
+//  14. Footer
+
+
 @charset "UTF-8";
 
-// My variable overrides
+
+// Override Materialize variables
 // =============================================================================
 
-// Colors
-$primary-color: #114f7f;
-$secondary-color: #212529;
-$text-color: #212529;
-
-// Font family
-$font-stack-primary: 'Raleway', sans-serif;
-$font-stack-secondary: 'Montserrat', sans-serif;
-
-// Footer
-$footer-copyright-bg-color: #fff;
-
-// Inputs
 $input-font-size: 16px;
 $input-height: 5rem;
-
-// Cards
 $card-link-color: $primary-color;
 
-// Spacing
-$spacer: 1.6rem;
 
-// Materialize
+// Include parts of Materialize
 // =============================================================================
 
 @import "../vendor/materialize-css/sass/components/color-variables";
@@ -40,6 +42,30 @@ $spacer: 1.6rem;
 @import "../vendor/materialize-css/sass/components/buttons";
 @import "../vendor/materialize-css/sass/components/waves";
 @import "../vendor/materialize-css/sass/components/forms/forms";
+
+
+// Variables
+// =============================================================================
+
+// Define colors
+$primary-color: #114f7f;
+$secondary-color: #212529;
+
+// Define text colors
+$heading-color: #114f7f;
+$text-color: #212529;
+
+// Define font families
+$font-stack-primary: 'Raleway', sans-serif;
+$font-stack-secondary: 'Montserrat', sans-serif;
+
+// Define background colors
+$background-contact: #263238;
+$background-footer: #fff;
+
+// Spacing
+$spacer: 1.6rem;
+
 
 // Reset
 // =============================================================================
@@ -68,6 +94,7 @@ time, mark, audio, video {
 
 // Global
 // =============================================================================
+
 html {
   font-size: 10px;
 }
@@ -159,6 +186,7 @@ a {
 
 // Helpers
 // =============================================================================
+
 .text-muted {
   color: #6c757d !important;
 }
@@ -189,8 +217,10 @@ a {
   margin-top: $spacer !important;
 }
 
+
 // Header
 // =============================================================================
+
 header {
   margin-top: 25px;
 }
@@ -250,6 +280,7 @@ header {
 
 // Lead
 // =============================================================================
+
 .lead {
   padding: .75rem;
   &__body {
@@ -335,6 +366,7 @@ header {
 
 // About
 // =============================================================================
+
 .about-section {
   p {
     margin: 16px 0;
@@ -349,6 +381,7 @@ header {
 
 // Experience
 // =============================================================================
+
 .experience-section {
   button {
     margin-top: 23.5px;
@@ -358,6 +391,7 @@ header {
 
 // Portfolio
 // =============================================================================
+
 .portfolio-section {
   &__title {
     margin-bottom: 24.5px;
@@ -370,6 +404,7 @@ header {
 
 // Courses
 // =============================================================================
+
 .courses-section {
   button {
     margin-top: 23.5px;
@@ -379,6 +414,7 @@ header {
 
 // Interests
 // =============================================================================
+
 .interests-section {
   .card-content {
     padding: 16.5px 24px;
@@ -404,3 +440,48 @@ header {
     }
   }
 }
+
+
+// Contact
+// =============================================================================
+
+.contact-section {
+
+}
+
+.input-field {
+  input, textarea {
+    color: #fff;
+  }
+  label {
+    color: #fff;
+    font-size: 1.6rem;
+  }
+  input:not([type]),
+  input[type=text]:not(.browser-default),
+  input[type=password]:not(.browser-default),
+  input[type=email]:not(.browser-default),
+  input[type=url]:not(.browser-default),
+  input[type=time]:not(.browser-default),
+  input[type=date]:not(.browser-default),
+  input[type=datetime]:not(.browser-default),
+  input[type=datetime-local]:not(.browser-default),
+  input[type=tel]:not(.browser-default),
+  input[type=number]:not(.browser-default),
+  input[type=search]:not(.browser-default),
+  textarea.materialize-textarea {
+    // Focused input style
+    &:focus:not([readonly]) {
+      border-bottom: 1px solid $primary-color;
+      box-shadow: 0 1px 0 0 $primary-color;
+    }
+    // Focused label style
+    &:focus:not([readonly])+label {
+      color: $primary-color;
+    }
+  }
+}
+
+
+// Contact Links
+// =============================================================================

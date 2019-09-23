@@ -568,6 +568,55 @@
           </div>
         </div>
       </section>
+      <!-- Contact -->
+      <section class="contact-section section">
+        <div class="container">
+          <h2 class="section__title">CONTACT US</h2>
+          <div class="row mb-0">
+            <div class="col s12 l6">
+              <!-- Form -->
+              <form class="contact-form" action="#" method="POST">
+                <div class="row">
+                  <div class="input-field col s12 m-0">
+                    <input id="name" type="text" class="validate" name="name" required>
+                    <label for="name">Name *</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12 m-0">
+                    <input id="email" type="email" class="validate" name="_replyto" required>
+                    <label for="email">Email *</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12 m-0">
+                    <input id="subject" type="text" class="validate" name="subject" required>
+                    <label for="subject">Subject *</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12 m-0">
+                    <textarea id="textarea" class="materialize-textarea" name="message" required></textarea>
+                    <label for="textarea">Message *</label>
+                  </div>
+                </div>
+                <!-- Spam prevention -->
+                <div class="row" style="display:none">
+                  <div class="input-field col s12 m-0">
+                    <input type="text" name="_gotcha">
+                  </div>
+                </div>
+                <button class="btn-primary btn waves-effect waves-light" type="submit" name="action">
+                  Submit <i class="fas fa-angle-right right"></i>
+                </button>
+              </form>
+            </div>
+            <div class="col s12 l6">
+              
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>

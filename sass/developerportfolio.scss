@@ -1,8 +1,8 @@
 // Table of Contents:
 //
-//  1. Override Materialize variables
-//  2. Include parts of Materialize
-//  3. Variables
+//  1. Variables
+//  2. Override Materialize variables
+//  3. Include parts of Materialize 
 //  4. Reset
 //  5. Global
 //  6. Helpers
@@ -19,32 +19,7 @@
 @charset "UTF-8";
 
 
-// Override Materialize variables
-// =============================================================================
-
-$input-font-size: 16px;
-$input-height: 5rem;
-$card-link-color: $primary-color;
-
-
-// Include parts of Materialize
-// =============================================================================
-
-@import "../vendor/materialize-css/sass/components/color-variables";
-@import "../vendor/materialize-css/sass/components/color-classes";
-@import "../vendor/materialize-css/sass/components/variables";
-@import "../vendor/materialize-css/sass/components/normalize";
-@import "../vendor/materialize-css/sass/components/global";
-@import "../vendor/materialize-css/sass/components/grid";
-@import "../vendor/materialize-css/sass/components/transitions";
-@import "../vendor/materialize-css/sass/components/cards";
-@import "../vendor/materialize-css/sass/components/tooltip";
-@import "../vendor/materialize-css/sass/components/buttons";
-@import "../vendor/materialize-css/sass/components/waves";
-@import "../vendor/materialize-css/sass/components/forms/forms";
-
-
-// Variables
+// 1. Variables
 // =============================================================================
 
 // Define colors
@@ -63,11 +38,33 @@ $font-stack-secondary: 'Montserrat', sans-serif;
 $background-contact: #263238;
 $background-footer: #fff;
 
-// Spacing
-$spacer: 1.6rem;
+
+// 2. Override Materialize variables
+// =============================================================================
+
+$input-font-size: 16px;
+$input-height: 5rem;
+$card-link-color: $primary-color;
 
 
-// Reset
+// 3. Include parts of Materialize
+// =============================================================================
+
+@import "../vendor/materialize-css/sass/components/color-variables";
+@import "../vendor/materialize-css/sass/components/color-classes";
+@import "../vendor/materialize-css/sass/components/variables";
+@import "../vendor/materialize-css/sass/components/normalize";
+@import "../vendor/materialize-css/sass/components/global";
+@import "../vendor/materialize-css/sass/components/grid";
+@import "../vendor/materialize-css/sass/components/transitions";
+@import "../vendor/materialize-css/sass/components/cards";
+@import "../vendor/materialize-css/sass/components/tooltip";
+@import "../vendor/materialize-css/sass/components/buttons";
+@import "../vendor/materialize-css/sass/components/waves";
+@import "../vendor/materialize-css/sass/components/forms/forms";
+
+
+// 4. Reset
 // =============================================================================
 
 html, body, div, span, applet, object, iframe,
@@ -92,7 +89,7 @@ time, mark, audio, video {
 }
 
 
-// Global
+// 5. Global
 // =============================================================================
 
 html {
@@ -184,7 +181,7 @@ a {
 }
 
 
-// Helpers
+// 6. Helpers
 // =============================================================================
 
 .text-muted {
@@ -197,6 +194,10 @@ a {
 
 .d-block {
   display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
 }
 
 .mx-auto {
@@ -214,11 +215,11 @@ a {
 }
 
 .mt-3 {
-  margin-top: $spacer !important;
+  margin-top: 1.6rem !important;
 }
 
 
-// Header
+// 7. Header
 // =============================================================================
 
 header {
@@ -278,7 +279,7 @@ header {
 }
 
 
-// Lead
+// 7. Lead
 // =============================================================================
 
 .lead {
@@ -364,7 +365,7 @@ header {
 }
 
 
-// About
+// 8. About
 // =============================================================================
 
 .about-section {
@@ -379,7 +380,7 @@ header {
 }
 
 
-// Experience
+// 9. Experience
 // =============================================================================
 
 .experience-section {
@@ -389,7 +390,7 @@ header {
 }
 
 
-// Portfolio
+// 10. Portfolio
 // =============================================================================
 
 .portfolio-section {
@@ -402,7 +403,7 @@ header {
 }
 
 
-// Courses
+// 11. Courses
 // =============================================================================
 
 .courses-section {
@@ -412,7 +413,7 @@ header {
 }
 
 
-// Interests
+// 12. Interests
 // =============================================================================
 
 .interests-section {
@@ -442,11 +443,16 @@ header {
 }
 
 
-// Contact
+// 13. Contact
 // =============================================================================
 
 .contact-section {
-
+  margin-top: 45px;
+  padding-bottom: 45px;
+  background-color: $background-contact;
+  &__title {
+    color: #fff;
+  }
 }
 
 .input-field {
@@ -482,6 +488,82 @@ header {
   }
 }
 
+.contact-channels {
+  margin-top: 35px;
+  &__item {
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    &:hover {
+      text-decoration: none;
+      .contact-channels__square {
+        background: $primary-color;
+      }
+    }
+  }
+  &__square {
+    transition: background-color .2s ease-in-out;
+    font-size: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 5px;
+    line-height: 1.4;
+    margin-right: 1.6rem;
+    color: #fff;
+  }
+  &__title {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1;
+    color: #fff;
+  }
+}
 
-// Contact Links
-// =============================================================================
+.contact-follow {
+  display: flex;
+  align-items: center;
+  &__square {
+    transition: background-color .2s ease-in-out;
+    font-size: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 5px;
+    line-height: 1.4;
+    margin-right: 1.6rem;
+    color: #fff;
+  }
+  &__title {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1;
+    color: #fff;
+    a {
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0 10px;
+      color: #fff;
+    }
+    &:first-child {
+      a {
+        padding-left: 0;
+      }
+    }
+    &:last-child {
+      a {
+        padding-right: 0;
+        border-width: 0;
+      }
+    }
+  }
+}

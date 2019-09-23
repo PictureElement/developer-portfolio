@@ -571,31 +571,31 @@
       <!-- Contact -->
       <section class="contact-section section">
         <div class="container">
-          <h2 class="section__title">CONTACT US</h2>
+          <h2 class="contact-section__title section__title">CONTACT US</h2>
           <div class="row mb-0">
             <div class="col s12 l6">
               <!-- Form -->
-              <form class="contact-form" action="#" method="POST">
+              <form action="#" method="POST">
                 <div class="row">
-                  <div class="input-field col s12 m-0">
+                  <div class="input-field col s12 my-0">
                     <input id="name" type="text" class="validate" name="name" required>
                     <label for="name">Name *</label>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="input-field col s12 m-0">
+                  <div class="input-field col s12 my-0">
                     <input id="email" type="email" class="validate" name="_replyto" required>
                     <label for="email">Email *</label>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="input-field col s12 m-0">
+                  <div class="input-field col s12 my-0">
                     <input id="subject" type="text" class="validate" name="subject" required>
                     <label for="subject">Subject *</label>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="input-field col s12 m-0">
+                  <div class="input-field col s12 my-0">
                     <textarea id="textarea" class="materialize-textarea" name="message" required></textarea>
                     <label for="textarea">Message *</label>
                   </div>
@@ -612,7 +612,81 @@
               </form>
             </div>
             <div class="col s12 l6">
-              
+              <!-- Channels -->
+              <ul class="contact-channels">
+                <li class="contact-channels__item">
+                  <a class="contact-channels__link" href="mailto:name@example.com">
+                    <div class="contact-channels__square">
+                      <i class="fas fa-at fa-fw"></i>
+                    </div>
+                    <div>
+                      <h6 class="contact-channels__title">EMAIL</h6>
+                      <p class="contact-channels__text">name@example.com</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="contact-channels__item">
+                  <a class="contact-channels__link" href="skype:username?chat">
+                    <div class="contact-channels__square">
+                      <i class="fab fa-skype fa-fw"></i>
+                    </div>
+                    <div>
+                      <h6 class="contact-channels__title">SKYPE</h6>
+                      <p class="contact-channels__text">@username</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="contact-channels__item">
+                  <a class="contact-channels__link" href="https://m.me/username" target="_blank" rel="noopener">
+                    <div class="contact-channels__square">
+                      <i class="fab fa-facebook-messenger fa-fw"></i>
+                    </div>
+                    <div>
+                      <h6 class="contact-channels__title">MESSENGER</h6>
+                      <p class="contact-channels__text">@username</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="contact-channels__item">
+                  <a class="contact-channels__link" href="https://t.me/username" target="_blank" rel="noopener">
+                    <div class="contact-channels__square">
+                      <i class="fab fa-telegram fa-fw"></i>
+                    </div>
+                    <div>
+                      <h6 class="contact-channels__title">TELEGRAM</h6>
+                      <p class="contact-channels__text">@username</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="contact-channels__item">
+                  <a class="contact-channels__link" href="https://wa.me/whatsappphonenumber" target="_blank" rel="noopener">
+                    <div class="contact-channels__square">
+                      <i class="fab fa-whatsapp fa-fw"></i>
+                    </div>
+                    <div>
+                      <h6 class="contact-channels__title">WHATSAPP</h6>
+                      <p class="contact-channels__text">whatsappphonenumber</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+
+              <!-- Follow Me -->
+              <div class="contact-follow">
+                <div class="contact-follow__square">
+                  <i class="fas fa-share-alt fa-fw"></i>
+                </div>
+                <div>
+                  <h6 class="contact-follow__title">FOLLOW ME</h6>
+                  <ul class="contact-follow__list">
+                    <li class="contact-follow__item"><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+                    <li class="contact-follow__item"><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li class="contact-follow__item"><a href="#" target="_blank" rel="noopener">Blog</a></li>
+                  </ul>
+                </div>
+              </div>
+          
             </div>
           </div>
         </div>

@@ -41,9 +41,6 @@ $background-footer: #fff;
 
 // 2. Override Materialize variables
 // =============================================================================
-
-$input-font-size: 16px;
-$input-height: 5rem;
 $card-link-color: $primary-color;
 
 
@@ -189,7 +186,7 @@ a {
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .d-block {
@@ -198,6 +195,10 @@ a {
 
 .d-flex {
   display: flex !important;
+}
+
+.align-items-center {
+  align-items: center !important;
 }
 
 .mx-auto {
@@ -285,6 +286,11 @@ header {
 .lead {
   padding: .75rem;
   &__body {
+    .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     &-photo {
       display: block;
       height: 400px;
@@ -295,7 +301,7 @@ header {
       color: $primary-color;
       margin-top: 15px;
       font-family: $font-stack-secondary;
-      font-size: 2.8rem;
+      font-size: 3.5rem;
       font-weight: 900;
       line-height: 1.25;
       text-align: center;
@@ -398,7 +404,7 @@ header {
     margin-bottom: 24.5px;
   }
   .col {
-    padding: 0.75rem;
+    padding: 0.75rem 0;
   }
 }
 
@@ -453,43 +459,71 @@ header {
   &__title {
     color: #fff;
   }
+  .container > .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > .col {
+      padding: 0;
+    }
+  }
 }
 
-.input-field {
+form {
+  button {
+    margin: 20px 0 45px 0;
+  }
+}
+
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default),
+input[type=time]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=datetime]:not(.browser-default),
+input[type=datetime-local]:not(.browser-default),
+input[type=tel]:not(.browser-default),
+input[type=number]:not(.browser-default),
+input[type=search]:not(.browser-default),
+textarea.materialize-textarea {
+  // Focused input style
+  &:focus:not([readonly]) {
+    border-bottom: 1px solid $primary-color;
+    box-shadow: 0 1px 0 0 $primary-color;
+  }
+  // Focused label style
+  &:focus:not([readonly])+label {
+    color: $primary-color;
+  }
+}
+
+.input-field.col {
+  input {
+    height: 34px;
+  }
   input, textarea {
     color: #fff;
   }
-  label {
-    color: #fff;
-    font-size: 1.6rem;
+  textarea {
+    height: 0;
+    &.valid {
+      border-bottom: 1px solid #4caf50;
+      box-shadow: 0 1px 0 0 #4caf50;
+    }
+    &.invalid {
+      border-bottom: 1px solid #f44336;
+      box-shadow: 0 1px 0 0 #f44336;
+    }
   }
-  input:not([type]),
-  input[type=text]:not(.browser-default),
-  input[type=password]:not(.browser-default),
-  input[type=email]:not(.browser-default),
-  input[type=url]:not(.browser-default),
-  input[type=time]:not(.browser-default),
-  input[type=date]:not(.browser-default),
-  input[type=datetime]:not(.browser-default),
-  input[type=datetime-local]:not(.browser-default),
-  input[type=tel]:not(.browser-default),
-  input[type=number]:not(.browser-default),
-  input[type=search]:not(.browser-default),
-  textarea.materialize-textarea {
-    // Focused input style
-    &:focus:not([readonly]) {
-      border-bottom: 1px solid $primary-color;
-      box-shadow: 0 1px 0 0 $primary-color;
-    }
-    // Focused label style
-    &:focus:not([readonly])+label {
-      color: $primary-color;
-    }
+  label {
+    font-size: 1.6rem;
+    top: -5px;
   }
 }
 
 .contact-channels {
-  margin-top: 35px;
   &__item {
     cursor: pointer;
     margin-bottom: 1.5rem;

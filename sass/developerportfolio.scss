@@ -10,10 +10,11 @@
 //  8. About
 //  9. Experience
 //  10. Portfolio
-//  11. Courses
-//  12. Interests
-//  13. Contact
-//  14. Footer
+//  11. Skills
+//  12. Courses
+//  13. Interests
+//  14. Contact
+//  15. Footer
 
 
 @charset "UTF-8";
@@ -420,7 +421,27 @@ a {
 }
 
 
-// 11. Courses
+// 11. Skills
+// =============================================================================
+
+.skill-chart {
+  width: 288px;
+  height: 288px;
+  margin: 0 auto;
+  //border:1px solid rgba(0,0,0,0.125);
+  //border-radius: 50%;
+  @media #{$medium-and-up} {
+    width: 510px;
+    height: 510px;
+  }
+  @media #{$large-and-up} {
+    width: 695px;
+    height: 695px;
+  }
+}
+
+
+// 12. Courses
 // =============================================================================
 
 .courses-section {
@@ -430,7 +451,7 @@ a {
 }
 
 
-// 12. Interests
+// 13. Interests
 // =============================================================================
 
 .interests-section {
@@ -460,7 +481,7 @@ a {
 }
 
 
-// 13. Contact
+// 14. Contact
 // =============================================================================
 
 .contact-section {
@@ -614,7 +635,7 @@ textarea.materialize-textarea {
 }
 
 
-// 14. Footer
+// 15. Footer
 // =============================================================================
 
 .footer {

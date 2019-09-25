@@ -22,6 +22,8 @@
     <script src="https://cdn.jsdelivr.net/g/lazysizes(lazysizes.min.js+plugins/rias/ls.rias.min.js)" defer></script>
     <!-- jQuery -->
     <script src="vendor/jquery/dist/jquery.min.js" defer></script>
+    <!-- eCharts -->
+    <script src="vendor/echarts/dist/echarts.min.js" defer></script>
     <!-- Custom scripts -->
     <script src="js/developerportfolio.min.js" defer></script>
   </head>
@@ -416,6 +418,15 @@
             </div>
           </div>
           <button class="btn-secondary btn waves-effect waves-light d-block mx-auto mt-3">Show more <i class="fas fa-chevron-down"></i></button>
+        </div>
+      </section>
+      <!-- Skills -->
+      <section class="skills-section section">
+        <div class="container">
+          <h2 class="section__title">SKILLS</h2>
+          <div class="card hoverable">
+            <div class="skill-chart" id="skillChart"></div>
+          </div>
         </div>
       </section>
       <!-- Education-->

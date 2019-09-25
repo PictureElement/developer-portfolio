@@ -1,0 +1,46 @@
+{
+  "baseOption":{
+    "series":{
+      "type":"sunburst",
+      "data":"",
+      "levels":[
+        {"itemStyle":{"color":"#fff","opacity":0.5}},
+        {
+          "r0":"0",
+          "r":"40%",
+          "itemStyle":{"opacity":0.5},
+          "label":{"color":"#212529","align":"center"}
+        },
+        {
+          "r0":"40%",
+          "r":"45%",
+          "itemStyle":{"borderWidth":3,"opacity":1},
+          "label":{
+            "position":"outside",
+            "color":"#212529"
+          }
+        }
+      ]
+    }
+  },
+  "media":[
+    {
+      "query":{"minWidth":0},
+      "option": {
+        "textStyle":{"fontSize":6.5}
+      }
+    },
+    {
+      "query":{"minWidth":508},
+      "option": {
+        "textStyle":{"fontSize":11}
+      }
+    },
+    {
+      "query":{"minWidth":693},
+      "option": {
+        "textStyle":{"fontSize":16}
+      }
+    }
+  ]
+}

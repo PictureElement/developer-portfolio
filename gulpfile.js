@@ -19,6 +19,7 @@ function copy(cb) {
   gulp.src([
     'node_modules/materialize-css/dist/js/materialize.min.js',
     'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/echarts/dist/echarts.min.js',
     'node_modules/materialize-css/sass/components/**/*',
     'node_modules/@fortawesome/fontawesome-free/css/all.min.css',
     'node_modules/@fortawesome/fontawesome-free/webfonts/**/*'
@@ -42,7 +43,9 @@ function css(cb) {
 // Minify JavaScript file and auto-inject into browser.
 function js(cb) {
   gulp.src('js/developerportfolio.js')
-    .pipe(uglify())
+    .pipe(uglify().on('error', function(e){
+      console.log(e);
+    }))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('js/'));
   cb();

@@ -102,7 +102,7 @@ body {
   color: $text-color;
 }
 
-main {
+.main {
   margin-top: 50px;
 }
 
@@ -223,7 +223,7 @@ a {
 // 7. Header
 // =============================================================================
 
-header {
+.header {
   margin-top: 25px;
 }
 
@@ -244,6 +244,14 @@ header {
     width: 48px;
     border: 1px solid rgba(255, 255, 255, 0.5);
   }
+  /*
+  &__container {
+    position: fixed;
+    top: 48px;
+    right: 50%;
+    margin-right: -558px;
+  }
+  */
   &__toggler {
     background: transparent;
     padding: 0;
@@ -261,7 +269,9 @@ header {
   &__nav {
     list-style: none;
     white-space: nowrap;
-    display: none;
+    position: relative;
+    z-index: 1000;
+    //display: none;
     background: $primary-color;
     li {
       width: 48px;
@@ -296,6 +306,7 @@ header {
       height: 400px;
       width: 100%;
       object-fit: cover;
+      filter: grayscale(100%);
     }
     &-name {
       color: $primary-color;
@@ -599,5 +610,17 @@ textarea.materialize-textarea {
         border-width: 0;
       }
     }
+  }
+}
+
+
+// 14. Footer
+// =============================================================================
+
+.footer {
+  background-color: $background-footer;
+  padding: 10px 0;
+  &__text {
+    font-size: 1.4rem;
   }
 }

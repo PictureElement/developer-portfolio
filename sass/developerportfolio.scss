@@ -9,12 +9,12 @@
 //  7. Lead
 //  8. About
 //  9. Experience
-//  10. Portfolio
-//  11. Skills
-//  12. Courses
-//  13. Interests
-//  14. Contact
-//  15. Footer
+// 10. Portfolio
+// 11. Skills
+// 12. Education
+// 13. Interests
+// 14. Contact
+// 15. Footer
 
 
 @charset "UTF-8";
@@ -149,9 +149,10 @@ body {
       transform: scale(1.1);
     }
   }
-  &:last-of-type { 
-    margin-bottom: 0;
-  }
+}
+
+.card .card-title {
+  line-height: 32px;
 }
 
 a {
@@ -407,6 +408,46 @@ a {
   }
 }
 
+.timeline {
+  position: relative;
+  &__box {
+    position: relative;
+    margin-left: 35px;
+    &:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f192";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -44px;
+      display: block;
+      width: 21px;
+      height: 21px;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: auto;
+      color: $primary-color;
+      font-size: 21px;
+      line-height: 21px;
+      z-index: 1;
+      background: #fff;
+    }
+    &:not(:last-of-type) {
+      .timeline__wrapper {
+        &:before {
+          content: "";
+          display: block;
+          width: 3px;
+          background-color: $primary-color;
+          position: absolute;
+          top: 50%;
+          bottom: calc(-50% - 15px);
+          left: -35px;
+        }
+      }
+    }
+  }
+}
+
 
 // 10. Portfolio
 // =============================================================================
@@ -424,7 +465,7 @@ a {
 // 11. Skills
 // =============================================================================
 
-.skill-chart {
+.skills-chart {
   width: 288px;
   height: 288px;
   margin: 0 auto;
@@ -441,12 +482,11 @@ a {
 }
 
 
-// 12. Courses
+// 12. Education
 // =============================================================================
-
-.courses-section {
-  button {
-    margin-top: 23.5px;
+.education-section {
+  .wide-card:last-of-type {
+    margin-bottom: 0;
   }
 }
 

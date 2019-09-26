@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
   M.Parallax.init(parallax);
 
   // Chart
-  var dom = document.getElementById('skillChart');
-  var skillChart = echarts.init(dom, 'light', {renderer: 'canvas'});
-  skillChart.showLoading();
+  var dom = document.getElementById('skillsChart');
+  var skillsChart = echarts.init(dom, 'light', {renderer: 'canvas'});
+  skillsChart.showLoading();
   var data;
   var option;
 
@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
       option = response;
       option.baseOption.series.data = data;
       console.log('Request succeeded with JSON response', response);
-      skillChart.hideLoading();
-      skillChart.setOption(option, true);
+      skillsChart.hideLoading();
+      skillsChart.setOption(option, true);
       // Resize chart, when window size changes
       window.onresize = function() {
-        skillChart.resize();
+        skillsChart.resize();
       };
     })
     .catch(function(error) {

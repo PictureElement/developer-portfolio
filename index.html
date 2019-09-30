@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	  <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400%7CMontserrat:900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Pacifico|Raleway:300,400&display=swap" rel="stylesheet">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="vendor/@fortawesome/fontawesome-free/css/all.min.css">
     <!-- Custom styles -->
@@ -36,7 +36,8 @@
       </div>
       <div class="container">
         <nav class="navbar">
-          <img class="navbar__brand" src="images/placeholder-white.svg" alt="Logotype"></a>
+          <!-- <img class="navbar__logo" src="images/logo.png" alt="Logo"></a> -->
+          <a class="navbar__logotype" href="#">&lt;Olivia&gt;</a>
           <div class="navbar__container">
             <button class="navbar__toggler waves-effect waves-light" aria-label="Toggle Navigation" type="button"><i class="fas fa-bars"></i></button>
             <ul class="navbar__nav z-depth-2">
@@ -79,21 +80,19 @@
           <div class="lead z-depth-3 white">
             <div class="lead__body">
               <div class="row mb-0">
-                <div class="col s12 m6">
+                <div class="col s12 m5">
                   <img class="lead__body-photo" src="images/profile-picture.jpg" alt="Profile picture">
                 </div>
-                <div class="col s12 m6 d-flex flex-column justify-content-center">
+                <div class="col s12 m7 d-flex flex-column justify-content-center">
                   <h1 class="lead__body-name">Hey, I'm Olivia.</h1>
-                  <h2 class="lead__body-position">Web Developer</h2>
+                  <h2 class="lead__body-position">Self-taught web developer</h2>
                   <!-- <hr class="lead__body-break"> -->
-                  <p class="lead__body-summary">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempora optio unde distinctio, placeat corporis dolores ducimus in laudantium molestiae nisi inventore facere, cumque quas! Ea aspernatur corporis quisquam. Iusto?
-                  </p>
+                  <p class="lead__body-summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed explicabo aspernatur exercitationem molestiae magni? Nobis facere veniam exercitationem? Eum fugit, ut impedit consectetur repellat ullam.</p>
                   <!-- <hr class="lead__body-break"> -->
                   <div class="lead__body-cta">
-                      <a class="btn-primary btn waves-effect waves-light" href="#contact">Contact</a>
+                      <a class="btn-primary btn waves-effect waves-light" href="#contact">Contact me</a>
                       <!-- <a class="btn-secondary btn waves-effect waves-light" href="#" target="_blank" rel="noopener">Resume <i class="far fa-file-pdf"></i></a> -->
-                      <a class="btn-secondary btn waves-effect waves-light" href="#"><i class="fas fa-eye"></i> Work</a>
+                      <a class="btn-secondary btn waves-effect waves-light" href="#"><i class="fas fa-eye"></i> My work</a>
                     </div>
                   <!--
                   <ul class="lead__body-links">
@@ -134,22 +133,16 @@
       <section class="about-section section scrollspy">
         <div class="container">
           <h2 class="section__title">ABOUT ME</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quam voluptatum corrupti consequuntur est. Obcaecati praesentium ab nobis eius similique cumque laudantium distinctio repellat quia!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus delectus consequuntur alias ducimus aspernatur adipisci rem! Harum provident a deserunt accusamus. Eligendi distinctio voluptatem numquam?
-            </p>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae eum pariatur eaque vitae cupiditate rerum reiciendis exercitationem magni delectus, dolor esse nemo asperiores. Dolores, voluptatem.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, aut <a href="#">temporibus</a> quaerat nemo cumque, officiis quos, laudantium deserunt reprehenderit nisi a inventore autem similique numquam?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere aliquam ipsa voluptas molestias odio minus adipisci, quod illo excepturi, veniam obcaecati aperiam perspiciatis. Explicabo, ex?
-            </p>
-            <button class="btn-secondary btn waves-effect waves-light d-block mx-auto">Show more <i class="fas fa-chevron-down"></i></button>
+          <div class="card">
+            <div class="card-content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto mollitia, voluptates laboriosam architecto, magnam error perferendis voluptatem asperiores sint eos repellendus assumenda voluptate perspiciatis, nemo nobis. Reiciendis commodi illum voluptates!</p>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione suscipit labore dignissimos praesentium voluptatem corporis eveniet commodi, debitis, quaerat accusamus molestias error quia alias voluptatum veniam totam hic consectetur, repudiandae mollitia beatae minima quae dolorem modi! At ipsa nobis adipisci!</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+              <a href="#">This is a link</a>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Experience -->
@@ -160,7 +153,7 @@
             <article class="timeline__box">
               <div class="timeline__wrapper">
                 <div class="wide-card card hoverable">
-                  <a href="#" rel="noopener"><img src="images/placeholder.svg" alt="Company logo"></a>
+                  <a href="#" rel="noopener"><img src="images/uber.png" alt="Company logo"></a>
                   <div class="card-content">
                     <h3 class="card-title activator">Job Title<i class="fas fa-ellipsis-v right"></i></h3>
                     <p>Employer Name</p>
@@ -168,19 +161,8 @@
                     <p class="card-location text-muted">City, Country</p>
                   </div>
                   <div class="card-reveal">
-                    <h4 class="card-title">Responsibilities<i class="fas fa-times right"></i></h4>
-                    <ul>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                    </ul>
+                    <h4 class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.</p>
                   </div>
                 </div>
               </div>
@@ -188,7 +170,7 @@
             <article class="timeline__box">
               <div class="timeline__wrapper">
                 <div class="wide-card card hoverable">
-                <a href="#" rel="noopener"><img src="images/placeholder.svg" alt="Company logo"></a>
+                <a href="#" rel="noopener"><img src="images/microsoft.png" alt="Company logo"></a>
                 <div class="card-content">
                   <h3 class="card-title activator">Job Title<i class="fas fa-ellipsis-v right"></i></h3>
                   <p>Employer Name</p>
@@ -196,19 +178,8 @@
                   <p class="card-location text-muted">City, Country</p>
                 </div>
                 <div class="card-reveal">
-                  <h4 class="card-title">Responsibilities<i class="fas fa-times right"></i></h4>
-                  <ul>
-                    <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                    <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                    <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                    <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                    <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                    <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                    <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                    <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                    <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                    <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  </ul>
+                  <h4 class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></h4>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.</p>
                 </div>
                 </div>
               </div>
@@ -216,7 +187,7 @@
             <article class="timeline__box">
               <div class="timeline__wrapper">
                 <div class="wide-card card hoverable">
-                  <a href="#" rel="noopener"><img src="images/placeholder.svg" alt="Company logo"></a>
+                  <a href="#" rel="noopener"><img src="images/amazon.png" alt="Company logo"></a>
                   <div class="card-content">
                     <h3 class="card-title activator">Job Title<i class="fas fa-ellipsis-v right"></i></h3>
                     <p>Employer Name</p>
@@ -224,25 +195,14 @@
                     <p class="card-location text-muted">City, Country</p>
                   </div>
                   <div class="card-reveal">
-                    <h4 class="card-title">Responsibilities<i class="fas fa-times right"></i></h4>
-                    <ul>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                      <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                    </ul>
+                    <h4 class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.</p>
                   </div>
                 </div>
               </div>
             </article>
           </div>
-          <button class="btn-secondary btn waves-effect waves-light d-block mx-auto">Show more <i class="fas fa-chevron-down"></i></button>  
+          <button class="show-more btn-secondary btn waves-effect waves-light d-block mx-auto">Show more <i class="fas fa-chevron-down"></i></button>  
         </div>
       </section>
       <!-- Portfolio -->
@@ -266,7 +226,7 @@
                 </div>
                 <div class="card-reveal">
                   <span class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></span>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores a quia beatae odio atque omnis molestias modi porro illum, architecto nisi suscipit dolore? Aut, veniam?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis consequuntur enim, temporibus, dignissimos quis ut eius veniam iusto officia minima, adipisci debitis consectetur et tempore deserunt amet blanditiis id!</p>
                 </div>
               </div>
             </div>
@@ -286,7 +246,7 @@
                 </div>
                 <div class="card-reveal">
                   <span class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></span>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores a quia beatae odio atque omnis molestias modi porro illum, architecto nisi suscipit dolore? Aut, veniam?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis consequuntur enim, temporibus, dignissimos quis ut eius veniam iusto officia minima, adipisci debitis consectetur et tempore deserunt amet blanditiis id!</p>
                 </div>
               </div>
             </div>
@@ -306,7 +266,7 @@
                 </div>
                 <div class="card-reveal">
                   <span class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></span>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores a quia beatae odio atque omnis molestias modi porro illum, architecto nisi suscipit dolore? Aut, veniam?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis consequuntur enim, temporibus, dignissimos quis ut eius veniam iusto officia minima, adipisci debitis consectetur et tempore deserunt amet blanditiis id!</p>
                 </div>
               </div>
             </div>
@@ -326,7 +286,7 @@
                 </div>
                 <div class="card-reveal">
                   <span class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></span>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores a quia beatae odio atque omnis molestias modi porro illum, architecto nisi suscipit dolore? Aut, veniam?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis consequuntur enim, temporibus, dignissimos quis ut eius veniam iusto officia minima, adipisci debitis consectetur et tempore deserunt amet blanditiis id!</p>
                 </div>
               </div>
             </div>
@@ -346,7 +306,7 @@
                 </div>
                 <div class="card-reveal">
                   <span class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></span>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores a quia beatae odio atque omnis molestias modi porro illum, architecto nisi suscipit dolore? Aut, veniam?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis consequuntur enim, temporibus, dignissimos quis ut eius veniam iusto officia minima, adipisci debitis consectetur et tempore deserunt amet blanditiis id!</p>
                 </div>
               </div>
             </div>
@@ -366,7 +326,7 @@
                 </div>
                 <div class="card-reveal">
                   <span class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></span>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores a quia beatae odio atque omnis molestias modi porro illum, architecto nisi suscipit dolore? Aut, veniam?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis consequuntur enim, temporibus, dignissimos quis ut eius veniam iusto officia minima, adipisci debitis consectetur et tempore deserunt amet blanditiis id!</p>
                 </div>
               </div>
             </div>
@@ -386,7 +346,7 @@
                 </div>
                 <div class="card-reveal">
                   <span class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></span>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores a quia beatae odio atque omnis molestias modi porro illum, architecto nisi suscipit dolore? Aut, veniam?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis consequuntur enim, temporibus, dignissimos quis ut eius veniam iusto officia minima, adipisci debitis consectetur et tempore deserunt amet blanditiis id!</p>
                 </div>
               </div>
             </div>
@@ -406,7 +366,7 @@
                 </div>
                 <div class="card-reveal">
                   <span class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></span>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores a quia beatae odio atque omnis molestias modi porro illum, architecto nisi suscipit dolore? Aut, veniam?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis consequuntur enim, temporibus, dignissimos quis ut eius veniam iusto officia minima, adipisci debitis consectetur et tempore deserunt amet blanditiis id!</p>
                 </div>
               </div>
             </div>
@@ -426,19 +386,19 @@
                 </div>
                 <div class="card-reveal">
                   <span class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></span>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores a quia beatae odio atque omnis molestias modi porro illum, architecto nisi suscipit dolore? Aut, veniam?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis consequuntur enim, temporibus, dignissimos quis ut eius veniam iusto officia minima, adipisci debitis consectetur et tempore deserunt amet blanditiis id!</p>
                 </div>
               </div>
             </div>
           </div>
-          <button class="btn-secondary btn waves-effect waves-light d-block mx-auto mt-3">Show more <i class="fas fa-chevron-down"></i></button>
+          <button class="show-more btn-secondary btn waves-effect waves-light d-block mx-auto">Show more <i class="fas fa-chevron-down"></i></button>
         </div>
       </section>
       <!-- Skills -->
       <section class="skills-section section">
         <div class="container">
           <h2 class="section__title">SKILLS</h2>
-          <div class="card hoverable">
+          <div class="card my-0">
             <div class="skills-chart" id="skillsChart"></div>
           </div>
         </div>
@@ -448,53 +408,27 @@
         <div class="container">
           <h2 class="section__title">EDUCATION</h2>
             <div class="wide-card card hoverable">
-              <a href="#" rel="noopener"><img src="images/placeholder.svg" alt="Institution logo"></a>
+              <a href="#" rel="noopener"><img src="images/mit.png" alt="Institution logo"></a>
               <div class="card-content">
                 <h3 class="card-title activator">Massachusetts Institute of Technology<i class="fas fa-ellipsis-v right"></i></h3>
                 <p>M.Sc. Computer Science</p>
                 <p class="card-dates text-muted">Sep 2015 - Jun 2017</p>
               </div>
               <div class="card-reveal">
-                <h4 class="card-title">Thesis<i class="fas fa-times right"></i></h4>
-                <p class="mt-0">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolores.”</p>
-                <h4 class="card-title mt-3">Main Courses</h4>
-                <ul>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                </ul>
+                <h4 class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.</p>
               </div>
             </div>
             <div class="wide-card card hoverable">
-              <a href="#" rel="noopener"><img src="images/placeholder.svg" alt="Institution logo"></a>
+              <a href="#" rel="noopener"><img src="images/tu-berlin.png" alt="Institution logo"></a>
               <div class="card-content">
                 <h3 class="card-title activator">Technische Universität Berlin<i class="fas fa-ellipsis-v right"></i></h3>
                 <p>B.Sc. Computer Science</p>
                 <p class="card-dates text-muted">Sep 2011 - Jun 2015</p>
               </div>
               <div class="card-reveal">
-                <h4 class="card-title">Thesis<i class="fas fa-times right"></i></h4>
-                <p class="mt-0">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolores.”</p>
-                <h4 class="card-title mt-3">Main Courses</h4>
-                <ul>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                  <li><i class="fas fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</li>
-                </ul>
+                <h4 class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.</p>
               </div>
             </div>
         </div>
@@ -533,8 +467,9 @@
       <section class="contact-section section">
         <div class="container">
           <h2 class="contact-section__title section__title">CONTACT ME</h2>
+          <p class="contact-section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum labore nobis molestias excepturi voluptas fugit!</p>
           <div class="row mb-0">
-            <div class="col s12 l6">
+            <div class="col s12 m7">
               <!-- Form -->
               <form action="#" method="POST">
                 <div class="row mb-0">
@@ -572,7 +507,7 @@
                 </button>
               </form>
             </div>
-            <div class="col s12 l6">
+            <div class="col s12 m5">
               <!-- Channels -->
               <ul class="contact-channels">
                 <li class="contact-channels__item">

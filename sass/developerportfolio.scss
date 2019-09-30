@@ -24,7 +24,7 @@
 // =============================================================================
 
 // Define colors
-$primary-color: #114f7f;
+$primary-color: #3b8dbf;
 $secondary-color: #212529;
 
 // Define text colors
@@ -32,6 +32,7 @@ $heading-color: #114f7f;
 $text-color: #212529;
 
 // Define font families
+$font-stack-logotype: 'Pacifico', cursive;
 $font-stack-primary: 'Raleway', sans-serif;
 $font-stack-secondary: 'Montserrat', sans-serif;
 
@@ -132,8 +133,12 @@ body {
   }
 }
 
+.container {
+  max-width: 960px;
+}
+
 .wide-card {
-  padding-left: 72px;
+  padding-left: 66px;
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 1.6rem;
@@ -151,7 +156,8 @@ body {
   }
 }
 
-.card .card-title {
+.card-title {
+  margin-bottom: 8px;
   line-height: 32px;
 }
 
@@ -242,17 +248,41 @@ a {
   top: 0;
   left: 0;
   width: 100%;
+  .parallax-container {
+    height: 450px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(170deg,$primary-color,transparent 66%);
+  }
 }
 
 .navbar {
+  position: relative;
   height: 48px;
   display: flex;
   justify-content: space-between;
   line-height: 48px;
-  &__brand {
+  /*
+  &__logo {
     height: 48px;
     width: 48px;
     border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  */
+  &__logotype {
+    color: #fff;
+    font-family: $font-stack-logotype;
+    font-size: 30px;
+    &:hover {
+      text-decoration: none;
+    }
   }
   /*
   &__container {
@@ -304,11 +334,23 @@ a {
 // =============================================================================
 
 .lead {
-  padding: .75rem 0;
+  padding: 1.5rem;
+  position: relative;
   &__body {
     .row {
       display: flex;
       flex-direction: column;
+      .col {
+        padding: 0;
+        @media #{$medium-and-up} {
+          &:first-child {
+            padding: 0 0.75rem 0 0;
+          }
+          &:last-child {
+            padding: 0 0 0 0.75rem;;
+          }
+        }
+      }
       @media #{$medium-and-up} {
         flex-direction: row;
       }
@@ -330,7 +372,7 @@ a {
       text-align: center;
     }
     &-position {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 300;
       text-align: center;
     }
@@ -339,7 +381,8 @@ a {
       margin: 20px 0;
     }
     &-summary {
-      font-size: 1.6rem;
+      font-size: 2rem;
+      font-weight: 300;
       text-align: center;
       margin: 15px 0;
     }
@@ -363,8 +406,10 @@ a {
       }
     }
   }
+  /*
   &__footer {
     padding: 15px 0;
+    margin-top: 1.5rem;
     background: $primary-color;
     ul {
       text-align: center;
@@ -390,6 +435,7 @@ a {
       }
     }
   }
+  */
 }
 
 
@@ -397,23 +443,24 @@ a {
 // =============================================================================
 
 .about-section {
-  p {
-    margin: 16px 0;
-    font-size: 1.6rem;
-    text-align: center;
-    &:first-child {
-      margin-top: 0;
+  .card-content {
+    p {
+      margin-bottom: 16px;
+      font-size: 1.6rem;
+      text-align: left;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
-}
+} 
 
 
 // 9. Experience
 // =============================================================================
-
 .experience-section {
-  button {
-    margin-top: 23.5px;
+  .show-more {
+    margin-top: 30px;
   }
 }
 
@@ -454,6 +501,11 @@ a {
         }
       }
     }
+    &:last-child {
+      .wide-card {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -463,10 +515,26 @@ a {
 
 .portfolio-section {
   &__title {
-    margin-bottom: 24.5px;
+    margin-bottom: 32px;
   }
   .col {
-    padding: 0.75rem 0;
+    padding: 0 0 1.5rem 0;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  .show-more {
+    margin-top: 30px;
+  }
+  img {
+    transition: opacity .5s, transform .5s;
+    opacity: 0.9;
+  }
+  .card:hover {
+    img {
+      transform: scale3d(1.1, 1.1, 1);
+      opacity: 1;
+    }
   }
 }
 
@@ -494,8 +562,10 @@ a {
 // 12. Education
 // =============================================================================
 .education-section {
-  .wide-card:last-of-type {
-    margin-bottom: 0;
+  .wide-card {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -519,9 +589,6 @@ a {
     padding: 1rem;
     transition: transform .2s ease-in-out;
     margin: 7.5px auto;
-    &:hover {
-      transform: scale(1.1);
-    }
     @media (min-width: 440px) {
       width: 75px;
       height: 75px;
@@ -540,12 +607,27 @@ a {
   &__title {
     color: #fff;
   }
+  &__text {
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    max-width: 600px;
+  }
   .container > .row {
     display: flex;
     flex-direction: column;
     align-items: center;
     > .col {
       padding: 0;
+    }
+    @media #{$medium-and-up} {
+      flex-direction: row;
+      > .col:first-child {
+        padding-right: 1.5rem;
+      }
     }
   }
 }

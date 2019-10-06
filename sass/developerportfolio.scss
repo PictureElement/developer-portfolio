@@ -236,6 +236,10 @@ a {
   margin-top: 1.6rem !important;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+} 
+
 
 // 7. Header
 // =============================================================================
@@ -523,13 +527,36 @@ a {
     margin-bottom: 32px;
   }
   .col {
-    padding: 0 0 1.5rem 0;
-    &:last-child {
-      padding-bottom: 0;
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    @media #{$medium-and-up} {
+      &:nth-child(odd) {
+        padding-left: 0;
+        padding-right: 0.75rem;
+      }
+      &:nth-child(even) {
+        padding-left: 0.75rem;
+        padding-right: 0;
+      }
+    }
+    @media #{$extra-large-and-up} {
+      &:nth-child(3n+1) {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+      &:nth-child(3n+2) {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+      &:nth-child(3n+3) {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
     }
   }
   .show-more {
-    margin-top: 30px;
+    margin-top: 15px;
   }
   img {
     transition: opacity .5s, transform .5s;

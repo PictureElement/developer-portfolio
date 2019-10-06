@@ -240,6 +240,11 @@ a {
   overflow: hidden;
 } 
 
+.px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 
 // 7. Header
 // =============================================================================
@@ -339,23 +344,12 @@ a {
 // =============================================================================
 
 .lead {
-  padding: 1.5rem;
   position: relative;
   &__body {
+    padding: 24px;
     .row {
       display: flex;
       flex-direction: column;
-      .col {
-        padding: 0;
-        @media #{$medium-and-up} {
-          &:first-child {
-            padding: 0 0.75rem 0 0;
-          }
-          &:last-child {
-            padding: 0 0 0 0.75rem;;
-          }
-        }
-      }
       @media #{$medium-and-up} {
         flex-direction: row;
       }
@@ -373,7 +367,7 @@ a {
       span {
         color: $primary-color;
         font-family: $font-stack-secondary;
-        font-size: 3.5rem;
+        font-size: 3rem;
         font-weight: 900;
         line-height: 1.25;
         display: inline-block;
@@ -526,34 +520,8 @@ a {
   &__title {
     margin-bottom: 32px;
   }
-  .col {
-    margin-bottom: 1.5rem;
-    padding-left: 0;
-    padding-right: 0;
-    @media #{$medium-and-up} {
-      &:nth-child(odd) {
-        padding-left: 0;
-        padding-right: 0.75rem;
-      }
-      &:nth-child(even) {
-        padding-left: 0.75rem;
-        padding-right: 0;
-      }
-    }
-    @media #{$extra-large-and-up} {
-      &:nth-child(3n+1) {
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-      }
-      &:nth-child(3n+2) {
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-      }
-      &:nth-child(3n+3) {
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-      }
-    }
+  &__col {
+    margin-bottom: 15px;
   }
   .show-more {
     margin-top: 15px;

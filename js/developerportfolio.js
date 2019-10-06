@@ -5,6 +5,18 @@ document.addEventListener('DOMContentLoaded', function() {
   var parallax = document.getElementById('parallax');
   M.Parallax.init(parallax);
 
+  // Animated text
+  var characters = document.querySelectorAll('.lead__body-name span');
+
+  var delay = 0;
+  var step = 100;
+  characters.forEach(function(character) {
+    setTimeout(function() {
+      character.classList.add('animated', 'bounceIn');
+    }, delay);
+    delay += step;
+  });
+
   // Chart
   var dom = document.getElementById('skillsChart');
   var skillsChart = echarts.init(dom, 'light', {renderer: 'canvas'});

@@ -189,6 +189,10 @@ a {
   }
 }
 
+.material-tooltip {
+  font-size: 1.6rem;
+}
+
 
 // 6. Helpers
 // =============================================================================
@@ -362,6 +366,10 @@ a {
       text-align: center;
       line-height: 48px;
       color: #fff;
+      transition: background-color .2s ease-in-out;
+      &:hover, &:active {
+        background-color: darken($primary-color, 10%);
+      }
     }
     @media #{$large-and-up} {
       position: fixed;

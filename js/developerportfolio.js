@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var parallax = document.getElementById('parallax');
   M.Parallax.init(parallax);
 
+  // Tooltips
+  var tooltips = document.querySelectorAll('.tooltipped');
+  var instances = M.Tooltip.init(tooltips);
+
   // Animated text
   var characters = document.querySelectorAll('.lead__body-name span');
 

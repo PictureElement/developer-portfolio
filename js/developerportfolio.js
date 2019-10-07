@@ -7,7 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Tooltips
   var tooltips = document.querySelectorAll('.tooltipped');
-  var instances = M.Tooltip.init(tooltips);
+  var instances = M.Tooltip.init(tooltips, {exitDelay: 0});
+
+  // Scrollspy
+  var elems = document.querySelectorAll('.scrollspy');
+  var instances = M.ScrollSpy.init(elems);
 
   // Animated text
   var characters = document.querySelectorAll('.lead__body-name span');

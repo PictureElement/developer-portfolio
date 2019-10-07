@@ -60,4 +60,18 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(function(error) {
       console.log('Request failed', error);
     });
+
+    // Navbar
+    var navbarNav = document.getElementById('navbarNav');
+    var navbarToggler = document.getElementById('navbarToggler');
+
+    navbarToggler.addEventListener('click', function() {
+      navbarNav.classList.toggle('show');
+      if (this.getAttribute('aria-expanded') === 'true') {
+        this.setAttribute('aria-expanded', 'false');
+      } else {
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+
 });

@@ -107,6 +107,9 @@ body {
 
 .main {
   margin-top: 25px;
+  @media #{$large-and-up} {
+    margin-top: 0;
+  }
 }
 
 .section {
@@ -251,6 +254,9 @@ a {
 
 .header {
   margin-top: 25px;
+  @media #{$large-and-up} {
+    margin-top: 0;
+  }
 }
 
 .parallax-wrapper {
@@ -293,6 +299,13 @@ a {
     &:hover {
       text-decoration: none;
     }
+    @media #{$large-and-up} {
+      position: absolute;
+      top: 72px;
+      left: 35px;
+      z-index: 1000;
+      font-size: 18px;
+    }
   }
   /*
   &__container {
@@ -315,14 +328,28 @@ a {
     &:focus {
       background: transparent;
     }
+    @media #{$large-and-up} {
+      display: none;
+    }
   }
   &__nav {
     list-style: none;
     white-space: nowrap;
     position: relative;
-    z-index: 1000;
-    display: none;
     background: $primary-color;
+    transition: clip-path .2s ease-in-out;
+    z-index: 1000;
+    &.collapse {
+      &:not(.show) {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        @media #{$large-and-up} {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+      &.show {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    }
     li {
       width: 48px;
       height: 48px;
@@ -335,6 +362,12 @@ a {
       text-align: center;
       line-height: 48px;
       color: #fff;
+    }
+    @media #{$large-and-up} {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
     }
   }
 }

@@ -25,11 +25,11 @@
 // =============================================================================
 
 // Define colors
-$primary-color: #3b8dbf;
+$primary-color: #b39bc8;
 $secondary-color: #212529;
 
 // Define text colors
-$heading-color: #114f7f;
+$heading-color: #b39bc8;
 $text-color: #212529;
 
 // Define font families
@@ -45,6 +45,8 @@ $background-footer: #fff;
 // 2. Override Materialize variables
 // =============================================================================
 $card-link-color: $primary-color;
+$button-raised-background: $primary-color;
+$button-raised-background-hover: lighten($button-raised-background, 5%);
 
 
 // 3. Include parts of Materialize
@@ -168,29 +170,36 @@ body {
 a {
   color: $primary-color;
   transition: color .2s ease-in-out;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.btn-primary {
-  background-color: $primary-color;
-  &:hover, &:focus {
-    background-color: lighten($primary-color, 10%);
-    text-decoration: none;
-  }
-}
-
-.btn-secondary {
-  background-color: $secondary-color;
-  &:hover, &:focus {
-    background-color: lighten($secondary-color, 10%);
-    text-decoration: none;
-  }
+  text-decoration: none;
 }
 
 .material-tooltip {
   font-size: 1.6rem;
+}
+
+// Flat filled buttons
+.btn {
+  box-shadow: none;
+  background-color: $primary-color;
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+// Text buttons
+.btn-flat {
+  color: $primary-color;
+  &:hover {
+    background-color: rgba($primary-color, 0.15);
+  }
+  &:focus {
+    background-color: rgba($primary-color, 0.30);
+  }
+}
+
+// Wave color
+.waves-effect.waves-primary .waves-ripple {
+  background-color: rgba($primary-color, 0.45);
 }
 
 
@@ -252,6 +261,13 @@ a {
   padding-right: 0 !important;
 }
 
+.border {
+  border: 1px solid #dee2e6 !important;
+}
+
+.border-primary {
+  border-color: $primary-color !important;
+}
 
 // 7. Header
 // =============================================================================

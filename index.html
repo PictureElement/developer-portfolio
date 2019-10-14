@@ -480,29 +480,30 @@
               <div class="row mb-0">
                 <div class="col s12 m7">
                   <!-- Form -->
-                  <form action="#" method="POST">
+                  <form class="form" action="#" method="POST">
+                    <p class="form__required-text">*Required information</p>
                     <div class="row mb-0">
                       <div class="input-field col s12">
                         <input id="name" type="text" class="validate" name="name" required>
-                        <label for="name">Name</label>
+                        <label for="name"><span>*</span>Name</label>
                       </div>
                     </div>
                     <div class="row mb-0">
                       <div class="input-field col s12">
                         <input id="email" type="email" class="validate" name="_replyto" required>
-                        <label for="email">Email</label>
+                        <label for="email"><span>*</span>Email</label>
                       </div>
                     </div>
                     <div class="row mb-0">
                       <div class="input-field col s12">
                         <input id="subject" type="text" class="validate" name="subject" required>
-                        <label for="subject">Subject</label>
+                        <label for="subject"><span>*</span>Subject</label>
                       </div>
                     </div>
                     <div class="row mb-0">
                       <div class="input-field col s12">
                         <textarea id="textarea" class="materialize-textarea validate" name="message" required></textarea>
-                        <label for="textarea">Message</label>
+                        <label for="textarea"><span>*</span>Message</label>
                       </div>
                     </div>
                     <!-- Spam prevention -->
@@ -511,7 +512,7 @@
                         <input type="text" name="_gotcha">
                       </div>
                     </div>
-                    <button class="waves-effect waves-light btn" type="submit" name="action">
+                    <button class="form__submit waves-effect waves-light btn" type="submit" name="action">
                       <i class="fas fa-paper-plane"></i> Submit
                     </button>
                   </form>

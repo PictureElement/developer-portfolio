@@ -205,6 +205,11 @@ a {
   background-color: rgba($primary-color, 0.45);
 }
 
+// Highlighted text color
+::selection {
+  background-color: $primary-color;
+}
+
 
 // 6. Helpers
 // =============================================================================

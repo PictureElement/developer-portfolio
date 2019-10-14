@@ -79,6 +79,7 @@
   {
     "name":"Design",
     "children":[
+      {"name":"Adobe XD","value":1},
       {"name":"Adobe Photoshop","value":1},
       {"name":"Google Fonts","value":1},
       {"name":"Font Awesome","value":1},

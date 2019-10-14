@@ -435,6 +435,7 @@ a {
     &-overlay-effect {
       position: relative;
       overflow: hidden;
+      height: 100%;
       &:before {
         content: '';
         position: absolute;

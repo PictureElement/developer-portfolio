@@ -623,16 +623,6 @@ a {
   .show-more {
     margin-top: 15px;
   }
-  img {
-    transition: opacity .5s, transform .5s;
-    opacity: 0.9;
-  }
-  .card:hover {
-    img {
-      transform: scale3d(1.1, 1.1, 1);
-      opacity: 1;
-    }
-  }
 }
 
 

@@ -308,20 +308,30 @@ a {
   display: flex;
   justify-content: space-between;
   line-height: 48px;
-  /*
   &__logo {
-    height: 48px;
     width: 48px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    height: 48px;
+    img {
+      width: 48px;
+      height: 48px;
+      filter: drop-shadow(0 2px 2px rgba(0,0,0,0.14)) drop-shadow(0 3px 1px rgba(0,0,0,0.12)) drop-shadow(0 1px 5px rgba(0,0,0,0.2));
+      @media #{$large-and-up} {
+        filter: none;
+        border: 1px solid #dee2e6;
+      }
+    }
+    @media #{$large-and-up} {
+      position: absolute;
+      top: 72px;
+      left: 24px;
+      z-index: 1;
+    }
   }
-  */
   &__logotype {
     color: #fff;
     font-family: $font-stack-logotype;
     font-size: 30px;
-    &.elegant-shadow {
-      text-shadow: 1px 1px 0px $primary-color, 2px 2px 0px rgba(0,0,0,0.25);
-    }
+    text-shadow: 0 3px 10px rgba(0,0,0,0.3);
     &:hover {
       text-decoration: none;
     }

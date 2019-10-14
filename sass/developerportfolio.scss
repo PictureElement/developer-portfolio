@@ -32,7 +32,7 @@ $heading-color: #82B8D9;
 $text-color: #212529;
 
 // Define font families
-$font-stack-logotype: 'Pacifico', cursive;
+$font-stack-logotype: 'Abril Fatface', cursive;
 $font-stack-primary: 'Raleway', sans-serif;
 $font-stack-secondary: 'Montserrat', sans-serif;
 
@@ -319,6 +319,9 @@ a {
     color: #fff;
     font-family: $font-stack-logotype;
     font-size: 30px;
+    &.elegant-shadow {
+      text-shadow: 1px 1px 0px $primary-color, 2px 2px 0px rgba(0,0,0,0.25);
+    }
     &:hover {
       text-decoration: none;
     }
@@ -412,6 +415,25 @@ a {
       flex-direction: column;
       @media #{$medium-and-up} {
         flex-direction: row;
+      }
+    }
+    &-overlay-effect {
+      position: relative;
+      overflow: hidden;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -139%;
+        display: block;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+        transform: skewX(-53.13010235deg);
+        z-index: 1;
+      }
+      &:hover:before {
+        animation: shine .75s;
       }
     }
     &-photo {
@@ -862,4 +884,10 @@ textarea.materialize-textarea {
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
+}
+
+@keyframes shine {
+	100% {
+		left: calc(139% + 50%);
+	}
 }

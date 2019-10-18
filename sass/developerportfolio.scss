@@ -23,29 +23,45 @@
 // 1. Variables
 // =============================================================================
 
-// Define colors
-$primary-color: #82B8D9;
-$secondary-color: #212529;
-
-// Define text colors
-$heading-color: #82B8D9;
-$text-color: #212529;
-
 // Define font families
 $font-stack-logotype: 'Abril Fatface', cursive;
-$font-stack-primary: 'Raleway', sans-serif;
+$font-stack-primary: 'Roboto', sans-serif;
 $font-stack-secondary: 'Montserrat', sans-serif;
 
-// Define background colors
-$background-contact: #263238;
-$background-footer: #fff;
+// Primary color
+$primary-color: #1565c0;
+$primary-light-color: #5e92f3;
+$primary-dark-color: #003c8f;
+
+// Secondary color
+$secondary-color: #7b1fa2;
+$secondary-light-color: #ae52d4;
+$secondary-dark-color: #4a0072;
+
+// Text color on primary color
+$text-on-primary: #fff;
+$text-on-primary-light: #000;
+$text-on-primary-dark: #fff;
+
+// Text color on secondary color
+$text-on-secondary: #fff;
+$text-on-secondary-light: #000;
+$text-on-secondary-dark: #fff;
+
+// Text color on white surfaces
+$on-primary: rgba(0,0,0,0.87);
+$on-secondary: rgba(0,0,0,0.54);
+
+
+
+
 
 
 // 2. Override Materialize variables
 // =============================================================================
-$button-raised-background: $primary-color;
+$button-raised-background: $secondary-color;
 $button-raised-background-hover: lighten($button-raised-background, 5%);
-$card-link-color: $primary-color;
+$card-link-color: $secondary-color;
 $card-link-color-light: lighten($card-link-color, 15%);
 
 
@@ -103,8 +119,8 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.5;
-  background: #f8f9fa;
-  color: $text-color;
+  background-color: #fff;
+  color: $on-primary;
 }
 
 .main {
@@ -115,25 +131,34 @@ body {
 }
 
 .section {
-  padding-top: 35px;
-  padding-bottom: 0;
+  &:nth-child(odd) {
+    background: #eee;
+  }
+  &:nth-child(even) {
+    background: #fff;
+  }
+  &:last-child {
+    background: $primary-color;
+  }
+  padding-top: 60px;
+  padding-bottom: 80px;
   &__title {
     position: relative;
     font-family: $font-stack-secondary;
-    font-size: 2.8rem;
-    font-weight: 900;
-    text-align: center;
-    padding-bottom: 16px;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: left;
+    padding-bottom: 10px;
     margin-bottom: 32px;
     &:after {
       content: '';
       display: inline-block;
       width: 60px;
-      height: 5px;
+      height: 3px;
       position: absolute;
       bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
+      
       background: $primary-color;
     }
   }
@@ -147,7 +172,10 @@ body {
   padding-left: 66px;
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 1.6rem;
+  &__subtitle, &__dates, &__location, &__degree {
+    font-size: 1.6rem;
+    color: $on-secondary;
+  }
   img {
     width: 42px;
     position: absolute;
@@ -162,17 +190,25 @@ body {
   }
 }
 
-.card-title {
-  margin-bottom: 8px;
-  line-height: 32px;
+.card {
+  .card-title {
+    font-weight: 400;
+    margin-bottom: 8px;
+    line-height: 32px;
+  }
+  .card-action a {
+    font-weight: 500;
+  }
 }
 
+
+
 a {
-  color: $primary-color;
+  color: $secondary-color;
   transition: color .2s ease-in-out;
   text-decoration: none;
   &:hover {
-    color: lighten($primary-color, 15%);
+    color: lighten($secondary-color, 15%);
   }
 }
 
@@ -183,31 +219,33 @@ a {
 // Flat filled buttons
 .btn {
   box-shadow: none;
-  background-color: $primary-color;
+  background-color: $secondary-color;
+  color: #fff;
   &:hover {
     box-shadow: none;
+    color: #fff;
   }
 }
 
 // Text buttons
 .btn-flat {
-  color: $primary-color;
+  color: $secondary-color;
   &:hover {
-    background-color: rgba($primary-color, 0.15);
+    background-color: rgba($secondary-color, 0.15);
   }
   &:focus {
-    background-color: rgba($primary-color, 0.30);
+    background-color: rgba($secondary-color, 0.30);
   }
 }
 
 // Wave color
 .waves-effect.waves-primary .waves-ripple {
-  background-color: rgba($primary-color, 0.45);
+  background-color: rgba($secondary-color, 0.45);
 }
 
 // Highlighted text color
 ::selection {
-  background-color: $primary-color;
+  background-color: rgba($secondary-light-color, 0.54);
 }
 
 
@@ -220,6 +258,10 @@ a {
 
 .text-center {
   text-align: center !important;
+}
+
+.text-secondary {
+  color: $secondary-color !important;
 }
 
 .d-block {
@@ -261,7 +303,7 @@ a {
 }
 
 .overflow-hidden {
-  overflow: hidden;
+  overflow: hidden !important;
 } 
 
 .px-0 {
@@ -275,6 +317,10 @@ a {
 
 .border-primary {
   border-color: $primary-color !important;
+}
+
+.border-secondary {
+  border-color: $secondary-color !important;
 }
 
 
@@ -304,7 +350,7 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    background: linear-gradient(170deg,$primary-color,transparent 66%);
+    background: linear-gradient(170deg, $primary-light-color, transparent 66%);
   }
 }
 
@@ -366,7 +412,7 @@ a {
     height: 48px;
     box-sizing: border-box;
     font-size: 25px;
-    color: $primary-color;
+    color: $secondary-color;
     display: block;
     background-color: #fff;
     border-width: 0;
@@ -381,7 +427,7 @@ a {
     list-style: none;
     white-space: nowrap;
     position: relative;
-    background: $primary-color;
+    background: $secondary-color;
     transition: clip-path .2s ease-in-out;
     z-index: 1000;
     li {
@@ -395,11 +441,11 @@ a {
       font-size: 25px;
       text-align: center;
       line-height: 48px;
-      color: #fff;
+      color: $text-on-secondary;
       transition: background-color .2s ease-in-out;
       @media #{$large-and-up} {
         &.active {
-          background-color: darken($primary-color, 20%);
+          background-color: darken($secondary-color, 20%);
         }
       }
     }
@@ -421,9 +467,11 @@ a {
 // 7. Lead
 // =============================================================================
 
+
 .lead {
   position: relative;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);
+  background-color: #fff;
   &__body {
     padding: 15px;
     .row {
@@ -464,18 +512,18 @@ a {
       text-align: center;
       margin-top: 15px;
       span {
-        color: $primary-color;
         font-family: $font-stack-secondary;
         font-size: 4rem;
-        font-weight: 900;
+        font-weight: 400;
         line-height: 1.25;
         display: inline-block;
         opacity: 0;
       }
     }
     &-position {
-      font-size: 2.5rem;
-      font-weight: 300;
+      font-family: $font-stack-secondary;
+      font-size: 2rem;
+      font-weight: 400;
       text-align: center;
     }
     &-cta {
@@ -483,16 +531,8 @@ a {
       margin: 20px 0;
     }
     &-summary {
-      font-size: 2rem;
-      font-weight: 300;
       text-align: center;
       margin: 15px 0;
-    }
-    &-break {
-      border: 0;
-      height: 0;
-      border-top: 1px #cdcfd2 solid;
-      margin: 0;
     }
     &-links {
       margin-top: 15px;
@@ -548,7 +588,6 @@ a {
   .card-content {
     p {
       margin-bottom: 16px;
-      font-size: 1.6rem;
       text-align: left;
       &:last-of-type {
         margin-bottom: 0;
@@ -587,7 +626,7 @@ a {
       font-size: 21px;
       line-height: 21px;
       z-index: 1;
-      background: #fff;
+      background: #eee;
     }
     &:not(:last-of-type) {
       .timeline__wrapper {
@@ -663,19 +702,17 @@ a {
 // =============================================================================
 
 .contact-section {
-  margin-top: 45px;
   padding-bottom: 45px;
-  background-color: $background-contact;
   &__title {
-    color: #fff;
+    color: $text-on-primary;
+    &:after {
+      background: $text-on-primary;
+    }
   }
   &__text {
-    color: #fff;
-    text-align: center;
-    margin: 0 auto;
-    font-weight: 300;
-    font-size: 2rem;
-    margin-bottom: 15px;
+    color: $text-on-primary;
+    text-align: left;
+    margin-bottom: 32px;
     max-width: 600px;
   }
   .container > .row {
@@ -701,7 +738,7 @@ a {
   &__required-text {
     min-height: 18px;
     font-size: 12px;
-    color: #9e9e9e;
+    color: rgba($text-on-primary, 0.70);
     margin-bottom: 8px;
   }
 }
@@ -719,14 +756,15 @@ input[type=tel]:not(.browser-default),
 input[type=number]:not(.browser-default),
 input[type=search]:not(.browser-default),
 textarea.materialize-textarea {
+  border-bottom: 1px solid rgba($text-on-primary, 0.70);
   // Focused input style
   &:focus:not([readonly]) {
-    border-bottom: 1px solid $primary-color;
-    box-shadow: 0 1px 0 0 $primary-color;
+    border-bottom: 2px solid $secondary-color;
+    box-shadow: 0 1px 0 0 $secondary-color;
   }
   // Focused label style
   &:focus:not([readonly])+label {
-    color: $primary-color;
+    color: $secondary-color;
   }
 }
 
@@ -735,7 +773,7 @@ textarea.materialize-textarea {
     height: 34px;
   }
   input, textarea {
-    color: #fff;
+    color: $text-on-primary;
   }
   textarea {
     height: 0;
@@ -751,6 +789,7 @@ textarea.materialize-textarea {
   label {
     font-size: 1.6rem;
     top: -5px;
+    color: rgba($text-on-primary, 0.70);
   }
 }
 
@@ -765,28 +804,30 @@ textarea.materialize-textarea {
     &:hover {
       text-decoration: none;
       .contact-channels__square {
-        background: $primary-color;
+        transition: background-color .2s ease-in-out, color .2s ease-in-out;
+        background-color: $secondary-color;
+        color: #fff;
       }
     }
   }
   &__square {
     transition: background-color .2s ease-in-out;
     font-size: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: $text-on-primary;
     padding: 5px;
     line-height: 1.4;
     margin-right: 1.6rem;
-    color: #fff;
+    color: $secondary-light-color;
   }
   &__title {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba($text-on-primary, 0.70);
   }
   &__text {
     font-size: 1.6rem;
     font-weight: 300;
     line-height: 1;
-    color: #fff;
+    color: $text-on-primary;
   }
 }
 
@@ -796,15 +837,15 @@ textarea.materialize-textarea {
   &__square {
     transition: background-color .2s ease-in-out;
     font-size: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: $text-on-primary;
     padding: 5px;
     line-height: 1.4;
     margin-right: 1.6rem;
-    color: #fff;
+    color: $secondary-light-color;
   }
   &__title {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba($text-on-primary, 0.70);
   }
   &__list {
     display: flex;
@@ -813,7 +854,6 @@ textarea.materialize-textarea {
     font-size: 1.4rem;
     font-weight: 300;
     line-height: 1;
-    color: #fff;
     a {
       border-right: 1px solid rgba(255, 255, 255, 0.3);
       padding: 0 10px;
@@ -838,13 +878,17 @@ textarea.materialize-textarea {
 // =============================================================================
 
 .footer {
-  background-color: $background-footer;
+  background-color: #fff;
   padding: 10px;
   &__text {
+    color: $on-primary;
     font-size: 1.2rem;
     @media #{$medium-and-up} {
       font-size: 1.4rem;
     }
+  }
+  &__to-top {
+    color: $secondary-color;
   }
 }
 

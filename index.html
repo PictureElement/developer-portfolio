@@ -29,34 +29,54 @@
     <script src="js/developerportfolio.min.js" defer></script>
   </head>
   <body id="top">
-    <header class="header">
-      <nav class="navbar d-flex justify-content-between align-items-center">
+
+
+
+
+    <header class="top-bar d-flex justify-content-between align-items-center">
+      
         <div class="d-flex align-items-center">
           <button class="sidenav-trigger btn-icon waves-effect waves-dark" data-target="sidenav" aria-label="Toggle navigation drawer"><i class="material-icons">menu</i></button>
-          <!--<a class="navbar__logo" href="#"><img src="images/logo.svg" alt="Personal logo" draggable="false"></a>-->
-          <a class="navbar__logotype" href="#">Olivia</a>
+          <!--<a class="top-bar__logo" href="#"><img src="images/logo.svg" alt="Personal logo" draggable="false"></a>-->
+          <a class="top-bar__logotype" href="#">Olivia</a>
         </div>
+
         <div class="d-flex align-items-center">
-          <a href="#" class="navbar__link tooltipped" data-position="bottom" data-tooltip="Email" aria-label="Download resume"><i class="material-icons">email</i></a>
-          <a href="#" class="navbar__link tooltipped" data-position="bottom" data-tooltip="Resume" aria-label="Download resume"><i class="material-icons">file_download</i></a>
+          <nav class="top-bar__nav">
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Experience</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Skills</a></li>
+              <li><a href="#">Education</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <ul class="top-bar__action-items d-flex align-items-center">
+            <li><a href="#" class="tooltipped" data-position="bottom" data-tooltip="Email" aria-label="Download resume"><i class="material-icons">email</i></a></li>
+          </ul>
         </div>
-      </nav>
-      <ul id="sidenav" class="sidenav">
-        <li><div class="user-view">
-          <div class="background">
-            <img src="">
-          </div>
-          <a href="#user"><img class="circle" src=""></a>
-          <a href="#name"><span class="white-text name">John Doe</span></a>
-          <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-        </div></li>
-        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-        <li><a href="#!">Second Link</a></li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#">Third Link With Waves</a></li>
-      </ul>
+      
     </header>
+
+
+
+
+    <ul id="sidenav" class="sidenav">
+      <li><div class="user-view">
+        <div class="background">
+          <img src="">
+        </div>
+        <a href="#user"><img class="circle" src=""></a>
+        <a href="#name"><span class="white-text name">John Doe</span></a>
+        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+      </div></li>
+      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+      <li><a href="#!">Second Link</a></li>
+      <li><div class="divider"></div></li>
+      <li><a class="subheader">Subheader</a></li>
+      <li><a class="waves-effect" href="#">Third Link With Waves</a></li>
+    </ul>
     <div class="parallax-wrapper">
       <div class="parallax-container">
         <div id="parallax" class="parallax"><img src="images/cover.jpg" alt=""></div>
@@ -152,7 +172,7 @@
               <div class="card mb-0">
                 <div class="card-content">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto mollitia, voluptates laboriosam architecto, magnam error perferendis voluptatem asperiores sint eos repellendus assumenda voluptate perspiciatis, nemo nobis. Reiciendis commodi illum voluptates!</p>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione suscipit labore dignissimos praesentium voluptatem corporis eveniet commodi, debitis, quaerat accusamus molestias error quia alias voluptatum veniam totam hic consectetur, repudiandae mollitia beatae minima quae dolorem modi! At ipsa nobis adipisci!</p>
+                  <p>Lorem ipsum dolor, sit amet consectetur <a href="#">adipisicing</a> elit. Ratione suscipit labore dignissimos praesentium voluptatem corporis eveniet commodi, debitis, quaerat accusamus molestias error quia alias voluptatum veniam totam hic consectetur, repudiandae mollitia beatae minima quae dolorem modi! At ipsa nobis adipisci!</p>
                 </div>
                 <div class="card-action">
                   <a href="#"><i class="far fa-file-pdf"></i> RESUME</a>

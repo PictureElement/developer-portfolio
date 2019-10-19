@@ -59,28 +59,6 @@ $text-on-secondary-light: #000;
 $text-on-secondary-dark: #fff;
 
 
-// ----- Theme 2 ----- 
-
-// Primary color
-$primary-color: #78909c;
-$primary-light-color: #a7c0cd;
-$primary-dark-color: #4b636e;
-
-// Secondary color
-$secondary-color: #263238;
-$secondary-light-color: #4f5b62;
-$secondary-dark-color: #000a12;
-
-// Text color on primary color
-$text-on-primary: #000;
-$text-on-primary-light: #000;
-$text-on-primary-dark: #fff;
-
-// Text color on secondary color
-$text-on-secondary: #fff;
-$text-on-secondary-light: #fff;
-$text-on-secondary-dark: #fff;
-
 
 
 
@@ -416,12 +394,16 @@ a {
   }
 }
 
-.navbar {
+.top-bar {
   position: relative;
   z-index: 1;
   background: $primary-color;
+  padding: 4px;
   .sidenav-trigger {
     color: $text-on-primary;
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
   &__logo {
     width: 48px;
@@ -447,19 +429,58 @@ a {
     font-family: $font-stack-logotype;
     font-size: 20px;
     font-weight: 500;
-    text-shadow: 0 3px 10px rgba(0,0,0,0.3);
     transition: transform .2s ease-in-out;
     padding-left: 20px;
-  }
-  &__link {
-    display: block;
-    width: 48px;
-    height: 48px;
-    text-align: center;
-    color: $text-on-primary;
-    .material-icons {
-      line-height: 48px;
+    &:hover {
+      color: $text-on-primary;
     }
+  }
+  &__nav {
+    display: none;
+    overflow-x: auto;
+    ul {
+      display: flex;
+      align-items: center;
+    }
+    li {
+      display: list-item;
+    }
+    a {
+      color: $text-on-primary;
+      padding: 0 1.6rem;
+      &:hover {
+        color: rgba($text-on-primary, 0.70);
+      }
+    }
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+  &__action-items {
+    margin-left: 1.6rem;
+    li {
+      display: list-item;
+    }
+    a {
+      display: block;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      color: $text-on-primary;
+      .material-icons {
+        line-height: 48px;
+      }
+      &:hover {
+        color: rgba($text-on-primary, 0.70);
+      }
+    }
+  }
+
+
+
+
+  @media (min-width: 768px) {
+    padding: 8px 12px;
   }
 }
 

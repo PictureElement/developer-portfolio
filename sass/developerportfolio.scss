@@ -48,11 +48,11 @@ $text-on-secondary: #fff;
 $text-on-secondary-light: #000;
 $text-on-secondary-dark: #fff;
 
-// Text color on white surfaces
+// Text color on light surfaces
 $on-primary: rgba(0,0,0,0.87);
 $on-secondary: rgba(0,0,0,0.54);
 
-
+$section-spacing: 100px;
 
 
 
@@ -60,9 +60,9 @@ $on-secondary: rgba(0,0,0,0.54);
 // 2. Override Materialize variables
 // =============================================================================
 $button-raised-background: $secondary-color;
-$button-raised-background-hover: lighten($button-raised-background, 5%);
-$card-link-color: $secondary-color;
-$card-link-color-light: lighten($card-link-color, 15%);
+$button-raised-background-hover: $secondary-light-color;
+$card-link-color: $text-on-primary;
+$card-link-color-light: rgba($text-on-primary, 0.70);
 
 
 // 3. Include parts of Materialize
@@ -119,7 +119,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: #eee;
   color: $on-primary;
 }
 
@@ -131,17 +131,8 @@ body {
 }
 
 .section {
-  &:nth-child(odd) {
-    background: #eee;
-  }
-  &:nth-child(even) {
-    background: #fff;
-  }
-  &:last-child {
-    background: $primary-color;
-  }
-  padding-top: 60px;
-  padding-bottom: 80px;
+  padding-top: $section-spacing;
+  padding-bottom: 0;
   &__title {
     position: relative;
     font-family: $font-stack-secondary;
@@ -158,8 +149,7 @@ body {
       position: absolute;
       bottom: 0;
       left: 0;
-      
-      background: $primary-color;
+      background: $secondary-color;
     }
   }
 }
@@ -196,11 +186,13 @@ body {
     margin-bottom: 8px;
     line-height: 32px;
   }
+  .card-action {
+    background-color: $primary-color;
+  }
   .card-action a {
     font-weight: 500;
   }
 }
-
 
 
 a {
@@ -208,7 +200,7 @@ a {
   transition: color .2s ease-in-out;
   text-decoration: none;
   &:hover {
-    color: lighten($secondary-color, 15%);
+    color: $secondary-light-color;
   }
 }
 
@@ -216,45 +208,48 @@ a {
   font-size: 1.6rem;
 }
 
+
 // Flat filled buttons
 .btn {
   box-shadow: none;
   background-color: $secondary-color;
-  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  color: $text-on-secondary;
   &:hover {
     box-shadow: none;
-    color: #fff;
+    color: $text-on-secondary-light;
+  }
+  &:focus {
+    background-color: $secondary-dark-color;
+    color: $text-on-secondary-dark;
   }
 }
 
 // Text buttons
 .btn-flat {
   color: $secondary-color;
+  font-size: 16px;
+  font-weight: 500;
   &:hover {
-    background-color: rgba($secondary-color, 0.15);
+    background-color: $secondary-light-color;
+    color: $text-on-secondary-light;
   }
   &:focus {
-    background-color: rgba($secondary-color, 0.30);
+    background-color: $secondary-dark-color;
+    color: $text-on-secondary-dark;
   }
-}
-
-// Wave color
-.waves-effect.waves-primary .waves-ripple {
-  background-color: rgba($secondary-color, 0.45);
 }
 
 // Highlighted text color
 ::selection {
-  background-color: rgba($secondary-light-color, 0.54);
+  background-color: $secondary-light-color;
+  color: $text-on-secondary-light;
 }
 
 
 // 6. Helpers
 // =============================================================================
-
-.text-muted {
-  color: #6c757d !important;
-}
 
 .text-center {
   text-align: center !important;
@@ -296,10 +291,6 @@ a {
 
 .mb-0 {
   margin-bottom: 0 !important;
-}
-
-.mt-3 {
-  margin-top: 1.6rem !important;
 }
 
 .overflow-hidden {
@@ -350,7 +341,7 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    background: linear-gradient(170deg, $primary-light-color, transparent 66%);
+    background: linear-gradient(170deg, $primary-color, transparent 66%);
   }
 }
 
@@ -384,8 +375,11 @@ a {
     font-family: $font-stack-logotype;
     font-size: 30px;
     text-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    transition: transform .2s ease-in-out;
     &:hover {
       text-decoration: none;
+      transform: scale(1.1);
+      color: #fff;
     }
     @media #{$large-and-up} {
       position: absolute;
@@ -412,7 +406,7 @@ a {
     height: 48px;
     box-sizing: border-box;
     font-size: 25px;
-    color: $secondary-color;
+    color: $on-primary;
     display: block;
     background-color: #fff;
     border-width: 0;
@@ -427,7 +421,7 @@ a {
     list-style: none;
     white-space: nowrap;
     position: relative;
-    background: $secondary-color;
+    background: $primary-color;
     transition: clip-path .2s ease-in-out;
     z-index: 1000;
     li {
@@ -441,12 +435,15 @@ a {
       font-size: 25px;
       text-align: center;
       line-height: 48px;
-      color: $text-on-secondary;
-      transition: background-color .2s ease-in-out;
-      @media #{$large-and-up} {
-        &.active {
-          background-color: darken($secondary-color, 20%);
-        }
+      color: $text-on-primary;
+      transition: background-color .2s ease-in-out, color .2s ease-in-out;
+      &.active {
+        background-color: $primary-dark-color;
+        color: $text-on-primary-dark;
+      }
+      &:hover {
+        background-color: $primary-light-color;
+        color: $text-on-primary-light;
       }
     }
     &.collapse {
@@ -506,15 +503,16 @@ a {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: grayscale(100%);
+      //filter: grayscale(100%);
     }
     &-name {
       text-align: center;
       margin-top: 15px;
       span {
         font-family: $font-stack-secondary;
+        color: $secondary-color;
         font-size: 4rem;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 1.25;
         display: inline-block;
         opacity: 0;
@@ -534,6 +532,7 @@ a {
       text-align: center;
       margin: 15px 0;
     }
+    /*
     &-links {
       margin-top: 15px;
       li {
@@ -547,6 +546,7 @@ a {
         font-size: 1.4rem;
       }
     }
+    */
   }
   /*
   &__footer {
@@ -601,7 +601,10 @@ a {
 // =============================================================================
 .experience-section {
   .show-more {
-    margin-top: 30px;
+    margin-top: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -662,13 +665,19 @@ a {
     margin-bottom: 15px;
   }
   .show-more {
-    margin-top: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
 
 // 11. Skills
 // =============================================================================
+
+.skills-section {
+  padding-top: $section-spacing - 15px;
+}
 
 .skills-chart {
   width: 288px;
@@ -702,11 +711,13 @@ a {
 // =============================================================================
 
 .contact-section {
-  padding-bottom: 45px;
+  padding-bottom: $section-spacing + 15px;
+  margin-top: $section-spacing + 15px;
+  background: $primary-color;
   &__title {
     color: $text-on-primary;
     &:after {
-      background: $text-on-primary;
+      background: $secondary-color;
     }
   }
   &__text {
@@ -714,6 +725,19 @@ a {
     text-align: left;
     margin-bottom: 32px;
     max-width: 600px;
+  }
+  .card {
+    margin: 0;
+    .card-content {
+      padding: 0;
+      .card-title {
+        background-color: $secondary-color;
+        border-radius: 2px 2px 0 0;
+        color: $text-on-secondary;
+        padding: 24px 0;
+        margin-bottom: 18px;
+      }
+    }
   }
   .container > .row {
     display: flex;
@@ -732,13 +756,15 @@ a {
 }
 
 .form {
+  padding: 0 24px 24px 24px;
   &__submit {
     margin: 20px 0 45px 0;
+    width: 100%;
   }
   &__required-text {
     min-height: 18px;
     font-size: 12px;
-    color: rgba($text-on-primary, 0.70);
+    color: $on-secondary;
     margin-bottom: 8px;
   }
 }
@@ -756,7 +782,7 @@ input[type=tel]:not(.browser-default),
 input[type=number]:not(.browser-default),
 input[type=search]:not(.browser-default),
 textarea.materialize-textarea {
-  border-bottom: 1px solid rgba($text-on-primary, 0.70);
+  border-bottom: 1px solid $on-secondary;
   // Focused input style
   &:focus:not([readonly]) {
     border-bottom: 2px solid $secondary-color;
@@ -773,7 +799,7 @@ textarea.materialize-textarea {
     height: 34px;
   }
   input, textarea {
-    color: $text-on-primary;
+    color: $on-primary;
   }
   textarea {
     height: 0;
@@ -789,9 +815,30 @@ textarea.materialize-textarea {
   label {
     font-size: 1.6rem;
     top: -5px;
-    color: rgba($text-on-primary, 0.70);
+    color: $on-secondary;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .contact-channels {
   &__item {
@@ -813,21 +860,21 @@ textarea.materialize-textarea {
   &__square {
     transition: background-color .2s ease-in-out;
     font-size: 2rem;
-    background-color: $text-on-primary;
+    background-color: $text-on-primary-dark;
     padding: 5px;
     line-height: 1.4;
     margin-right: 1.6rem;
-    color: $secondary-light-color;
+    color: $on-primary;
   }
   &__title {
     font-size: 1rem;
-    color: rgba($text-on-primary, 0.70);
+    color: rgba($text-on-primary-dark, 0.70);
   }
   &__text {
     font-size: 1.6rem;
     font-weight: 300;
     line-height: 1;
-    color: $text-on-primary;
+    color: $text-on-primary-dark;
   }
 }
 
@@ -841,11 +888,11 @@ textarea.materialize-textarea {
     padding: 5px;
     line-height: 1.4;
     margin-right: 1.6rem;
-    color: $secondary-light-color;
+    color: $on-primary;
   }
   &__title {
     font-size: 1rem;
-    color: rgba($text-on-primary, 0.70);
+    color: rgba($text-on-primary-dark, 0.70);
   }
   &__list {
     display: flex;
@@ -879,7 +926,7 @@ textarea.materialize-textarea {
 
 .footer {
   background-color: #fff;
-  padding: 10px;
+  padding: 2rem;
   &__text {
     color: $on-primary;
     font-size: 1.2rem;

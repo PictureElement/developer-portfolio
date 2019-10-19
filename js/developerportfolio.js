@@ -5,13 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
   var parallax = document.getElementById('parallax');
   M.Parallax.init(parallax);
 
-  // Tooltips
+  /* Tooltips
   var tooltips = document.querySelectorAll('.tooltipped');
   var instances = M.Tooltip.init(tooltips, {exitDelay: 0});
+  */
 
-  // Scrollspy
+  /* Scrollspy
   var elems = document.querySelectorAll('.scrollspy');
   var instances = M.ScrollSpy.init(elems);
+  */
 
   // Animated text
   var characters = document.querySelectorAll('.lead__body-name span');
@@ -69,17 +71,22 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log('Request failed', error);
     });
 
-    // Navbar
-    var navbarNav = document.getElementById('navbarNav');
-    var navbarToggler = document.getElementById('navbarToggler');
+  /* Navbar
+  var navbarNav = document.getElementById('navbarNav');
+  var navbarToggler = document.getElementById('navbarToggler');
 
-    navbarToggler.addEventListener('click', function() {
-      navbarNav.classList.toggle('show');
-      if (this.getAttribute('aria-expanded') === 'true') {
-        this.setAttribute('aria-expanded', 'false');
-      } else {
-        this.setAttribute('aria-expanded', 'true');
-      }
-    });
+  navbarToggler.addEventListener('click', function() {
+    navbarNav.classList.toggle('show');
+    if (this.getAttribute('aria-expanded') === 'true') {
+      this.setAttribute('aria-expanded', 'false');
+    } else {
+      this.setAttribute('aria-expanded', 'true');
+    }
+  });
+  */
+
+  // Sidenav
+  var sidenav = document.getElementById('sidenav');
+  M.Sidenav.init(sidenav);
 
 });

@@ -33,7 +33,8 @@ $on-primary: rgba(0,0,0,0.87);
 $on-secondary: rgba(0,0,0,0.54);
 
 // Spacing
-$section-spacing: 100px;
+$section-spacing-mobile: 50px;
+$section-spacing-desktop: 100px;
 
 // ----- Theme 1 ----- 
 
@@ -121,6 +122,7 @@ $button-radius: 4px;
 @import "../vendor/materialize-css/sass/components/buttons";
 @import "../vendor/materialize-css/sass/components/waves";
 @import "../vendor/materialize-css/sass/components/forms/forms";
+@import "../vendor/materialize-css/sass/components/sidenav";
 
 
 // 4. Reset
@@ -162,17 +164,11 @@ body {
   line-height: 1.5;
   background-color: #eee;
   color: $on-primary;
-}
-
-.main {
-  margin-top: 15px;
-  @media #{$large-and-up} {
-    margin-top: 0;
-  }
+  overflow-x: hidden;
 }
 
 .section {
-  padding-top: $section-spacing;
+  padding-top: $section-spacing-mobile;
   padding-bottom: 0;
   &__title {
     position: relative;
@@ -291,6 +287,26 @@ a {
   }
 }
 
+// Icon buttons
+.btn-icon {
+  text-align: center;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  display: block;
+  border-width: 0;
+  .material-icons {
+    display: block;
+    line-height: 48px;
+  }
+  &:focus {
+    background-color: transparent;
+  }
+}
+
 // Highlighted text color
 ::selection {
   background-color: $secondary-light-color;
@@ -317,6 +333,10 @@ a {
   display: flex !important;
 }
 
+.d-none {
+  display: none !important;
+}
+
 .flex-column {
   flex-direction: column !important;
 }
@@ -327,6 +347,10 @@ a {
 
 .justify-content-center {
   justify-content: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
 }
 
 .mx-auto {
@@ -368,13 +392,6 @@ a {
 // 7. Header
 // =============================================================================
 
-.header {
-  margin-top: 15px;
-  @media #{$large-and-up} {
-    margin-top: 0;
-  }
-}
-
 .parallax-wrapper {
   position: absolute;
   top: 0;
@@ -383,7 +400,7 @@ a {
   .parallax-container {
     height: 450px;
     img {
-      filter: grayscale(100%);
+      z-index: -1;
     }
   }
   &:after {
@@ -394,16 +411,18 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    background: linear-gradient(170deg, $primary-color, transparent 66%);
+    //background: linear-gradient(170deg, $primary-color, transparent 66%);
+    z-index: 0;
   }
 }
 
 .navbar {
   position: relative;
-  height: 48px;
-  display: flex;
-  justify-content: space-between;
-  line-height: 48px;
+  z-index: 1;
+  background: $primary-color;
+  .sidenav-trigger {
+    color: $text-on-primary;
+  }
   &__logo {
     width: 48px;
     height: 48px;
@@ -424,99 +443,22 @@ a {
     }
   }
   &__logotype {
-    color: #fff;
+    color: $text-on-primary;
     font-family: $font-stack-logotype;
-    font-size: 30px;
+    font-size: 20px;
+    font-weight: 500;
     text-shadow: 0 3px 10px rgba(0,0,0,0.3);
     transition: transform .2s ease-in-out;
-    &:hover {
-      text-decoration: none;
-      transform: scale(1.1);
-      color: #fff;
-    }
-    @media #{$large-and-up} {
-      position: absolute;
-      top: 72px;
-      left: 35px;
-      z-index: 1000;
-      font-size: 25px;
-    }
+    padding-left: 20px;
   }
-  &__container {
-    position: fixed;
-    right: 5%;
-    z-index: 1000;
-    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.14)) drop-shadow(0 3px 1px rgba(0,0,0,0.12)) drop-shadow(0 1px 5px rgba(0,0,0,0.2));
-    @media #{$large-and-up} {
-      top: 48px;
-      right: 0;
-    }
-  }
-  &__toggler {
-    background: transparent;
-    padding: 0;
+  &__link {
+    display: block;
     width: 48px;
     height: 48px;
-    box-sizing: border-box;
-    font-size: 25px;
-    color: $on-primary;
-    display: block;
-    background-color: #fff;
-    border-width: 0;
-    &:focus {
-      background-color: #fff;
-    }
-    @media #{$large-and-up} {
-      display: none;
-    }
-  }
-  &__nav {
-    list-style: none;
-    white-space: nowrap;
-    position: relative;
-    background: $primary-color;
-    border-radius: 4px 0 0 4px;
-    transition: clip-path .2s ease-in-out;
-    z-index: 1000;
-    li {
-      width: 48px;
-      height: 48px;
-      a {
-        display: block;
-        width: 48px;
-        height: 48px;
-        font-size: 25px;
-        text-align: center;
-        line-height: 48px;
-        color: $text-on-primary;
-        transition: background-color .2s ease-in-out, color .2s ease-in-out;
-        border-radius: 0;
-        &.active {
-          background-color: $primary-light-color;
-          color: $text-on-primary-light;
-        }
-      }
-      &:first-child {
-        a {
-          border-radius: 4px 0 0 0;
-        }
-      }
-      &:last-child {
-        a {
-          border-radius: 0 0 0 4px;
-        }
-      }
-    }
-    &.collapse {
-      &:not(.show) {
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        @media #{$large-and-up} {
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-      }
-      &.show {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      }
+    text-align: center;
+    color: $text-on-primary;
+    .material-icons {
+      line-height: 48px;
     }
   }
 }
@@ -527,6 +469,7 @@ a {
 
 
 .lead {
+  margin-top: 50px;
   position: relative;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);
   background-color: #fff;
@@ -739,7 +682,7 @@ a {
 // =============================================================================
 
 .skills-section {
-  padding-top: $section-spacing - 15px;
+  padding-top: $section-spacing-mobile - 15px;
 }
 
 .skills-chart {
@@ -774,8 +717,8 @@ a {
 // =============================================================================
 
 .contact-section {
-  padding-bottom: $section-spacing + 15px;
-  margin-top: $section-spacing + 15px;
+  padding-bottom: $section-spacing-mobile + 15px;
+  margin-top: $section-spacing-mobile + 15px;
   background: $primary-dark-color;
   &__title {
     color: $text-on-primary-dark;

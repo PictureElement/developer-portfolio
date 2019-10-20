@@ -195,16 +195,21 @@ body {
   }
 }
 
+.card-panel {
+  border-radius: 24px 8px 24px 8px;
+}
+
 .card {
   border-radius: 4px;
-  .card-content {
-    border-radius: 4px;
+  .card-image {
+    img {
+      border-radius: 4px 4px 0 0;
+    }
   }
   .card-title {
     font-weight: 400;
     margin-bottom: 8px;
     line-height: 32px;
-    border-radius: 4px 4px 0 0;
   }
   .card-action {
     background-color: $primary-color;
@@ -212,11 +217,26 @@ body {
     &:last-child {
       border-radius: 0 0 4px 4px;
     }
+    a {
+      font-weight: 500;
+    }
   }
-  .card-action a {
-    font-weight: 500;
+  .card-content {
+    border-radius: 0 0 4px 4px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 a {
@@ -616,12 +636,14 @@ a {
 // =============================================================================
 
 .about-section {
-  .card-content {
-    p {
-      margin-bottom: 16px;
-      text-align: left;
-      &:last-of-type {
-        margin-bottom: 0;
+  .card {
+    .card-content {
+      p {
+        margin-bottom: 16px;
+        text-align: left;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -636,6 +658,27 @@ a {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+  }
+  // Change card default border radius
+  .card-panel {
+    border-radius: 24px 8px 24px 8px;
+  }
+  .card {
+    border-radius: 24px 8px 24px 8px;
+    .card-image {
+      img {
+        border-radius: 24px 8px 0 0;
+      }
+    }
+    .card-content {
+      border-radius: 0 0 24px 8px;
+    }
+    .card-action {
+      border-radius: 0 0 24px 8px;
+      &:last-child {
+        border-radius: 0 0 24px 8px;
+      }
+    }
   }
 }
 
@@ -733,6 +776,27 @@ a {
   .wide-card {
     &:last-of-type {
       margin-bottom: 0;
+    }
+  }
+  // Change card default border radius
+  .card-panel {
+    border-radius: 24px 8px 24px 8px;
+  }
+  .card {
+    border-radius: 24px 8px 24px 8px;
+    .card-image {
+      img {
+        border-radius: 24px 8px 0 0;
+      }
+    }
+    .card-content {
+      border-radius: 0 0 24px 8px;
+    }
+    .card-action {
+      border-radius: 0 0 24px 8px;
+      &:last-child {
+        border-radius: 0 0 24px 8px;
+      }
     }
   }
 }

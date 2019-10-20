@@ -140,7 +140,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.5;
-  background-color: #eee;
+  background-color: #fafafa;
   color: $on-primary;
   overflow-x: hidden;
 }
@@ -201,6 +201,7 @@ body {
 
 .card {
   border-radius: 4px;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
   .card-image {
     img {
       border-radius: 4px 4px 0 0;
@@ -516,7 +517,8 @@ a {
 .lead {
   margin-top: 75px;
   position: relative;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);
+  border: 1px solid rgb(224, 224, 224);
+  //box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);
   background-color: #fff;
   border-radius: 4px;
   &__body {

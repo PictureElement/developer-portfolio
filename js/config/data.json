@@ -37,7 +37,8 @@
       {"name":"LazySizes","value":1},
       {"name":"LazySizes (RIaS ext.)","value":1},
       {"name":"SweetAlert","value":1},
-      {"name":"Fancybox","value":1}
+      {"name":"Fancybox","value":1},
+      {"name":"SimpleBar","value":1}
     ]
   },
   {
@@ -87,7 +88,9 @@
       {"name":"Shutterstock","value":1},
       {"name":"Pexels","value":1},
       {"name":"Unsplash","value":1},
-      {"name":"Adobe Color CC","value":1}
+      {"name":"Adobe Color CC","value":1},
+      {"name":"Material Design","value":1},
+      {"name":"Coolors","value":1}
     ]
   }
 ]

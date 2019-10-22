@@ -205,7 +205,6 @@ a {
     */
   }
   .card-primary {
-    padding: 16px;
     .card-title {
       color: $secondary-text-on-surface;
       font-weight: 500;
@@ -270,6 +269,9 @@ a {
 
 .basic-card {
   @extend .card;
+  .card-primary {
+    padding: 16px;
+  }
   .card-image {
     img {
       border-radius: 4px 4px 0 0;
@@ -280,6 +282,9 @@ a {
 .horizontal-card {
   @extend .card;
   padding-left: 58px;
+  .card-primary {
+    padding: 16px 64px 16px 16px;
+  }
   img {
     width: 42px;
     position: absolute;
@@ -798,7 +803,7 @@ a {
 // 12. Education styles
 // =============================================================================
 .education-section {
-  .timeline__box:not(:last-child) {
+  article:not(:last-child) {
     margin-bottom: 16px;
   }
 }

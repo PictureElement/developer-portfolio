@@ -15,6 +15,8 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="vendor/@fortawesome/fontawesome-free/css/all.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- SimpleBar -->
+    <link rel="stylesheet" href="vendor/simplebar/dist/simplebar.min.css">
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/developerportfolio.min.css">
     <!-- Materialize -->
@@ -25,14 +27,13 @@
     <script src="vendor/jquery/dist/jquery.min.js" defer></script>
     <!-- eCharts -->
     <script src="vendor/echarts/dist/echarts.min.js" defer></script>
+    <!-- SimpleBar -->
+    <script src="vendor/simplebar/dist/simplebar.min.js" defer></script>
     <!-- Custom scripts -->
     <script src="js/developerportfolio.min.js" defer></script>
   </head>
   <body id="top">
-
-
-
-
+    <!-- Header -->
     <header class="top-bar top-bar--fixed top-bar--fixed-scrolled d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center">
           <button class="sidenav-trigger btn-icon waves-effect waves-dark" data-target="sidenav" aria-label="Toggle navigation drawer"><i class="material-icons">menu</i></button>
@@ -129,15 +130,13 @@
           <div class="row mb-0">
             <div class="col s12 px-0">
               <h2 class="section__title">About me</h2>
-              <div class="card mb-0">
-                <div class="card-content waves-effect waves-surface" tabindex='0'>
+              <div class="card">
+                <div class="card-content">
                   <div class="card-primary">
-                    <h3 class="card-title mb-0">Olivia Williams</h3>
-                    <h4 class="card-subtitle">Front-end developer, Web enthusiast</h4>
+                    <h3 class="card-title">Front-end developer, Open source contributor</h3>
                   </div>
                   <div class="card-secondary">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto mollitia, voluptates laboriosam architecto, magnam error perferendis voluptatem asperiores sint eos repellendus assumenda voluptate perspiciatis, nemo nobis. Reiciendis commodi illum voluptates!</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur <a href="#">adipisicing</a> elit. Ratione suscipit labore dignissimos praesentium voluptatem corporis eveniet commodi, debitis, quaerat accusamus molestias error quia alias voluptatum veniam totam hic consectetur, repudiandae mollitia beatae minima quae dolorem modi! At ipsa nobis adipisci!</p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quaerat, rem voluptatem qui veritatis recusandae minus minima distinctio. Eum ducimus eaque maxime. Recusandae iure sit facere beatae, quia vero voluptates cumque tempora unde aperiam adipisci incidunt, similique hic dolores cum porro. Maxime <a href="#">reprehenderit</a> distinctio magni alias esse neque recusandae animi repellendus minus pariatur, natus, exercitationem voluptatum ratione harum sequi asperiores veniam ducimus laboriosam quis hic. Sequi earum aperiam harum dicta mollitia error optio magnam vitae. Commodi asperiores ipsum magnam vel odit ab assumenda quas omnis molestias, culpa doloremque esse impedit consequuntur libero. Dicta, cum! Maiores beatae omnis molestias amet ipsa voluptatum suscipit, rerum incidunt doloribus, mollitia adipisci dignissimos sunt asperiores ducimus iste quasi illo! Quo corporis ab aliquid eaque. Itaque veniam quidem dicta sapiente quam, earum nulla laborum odio repudiandae cumque sequi ipsam totam ducimus in placeat nobis voluptatem consectetur maiores inventore, tenetur dolorem eius ad vitae! Magnam, ipsam quisquam.
                   </div>
                 </div>
                 <div class="card-action d-flex align-items-center">
@@ -164,36 +163,56 @@
               <h2 class="section__title">Experience</h2>
               <div class="timeline">
                 <article class="timeline__box">
-                  <div class="timeline__wrapper">
-                    <div class="horizontal-card card">
-                      <a href="#" rel="noopener"><img class="border" src="images/experience-01.png" srcset="images/experience-01.png 1x, images/experience-01@2x.png 2x" alt="Company logo" draggable="false"></a>
-                      <div class="card-content">
-                        <h3 class="card-title activator">Job Title<i class="material-icons right">more_vert</i></h3>
-                        <p class="horizontal-card__subtitle">Employer Name</p>
-                        <p class="horizontal-card__dates">Oct 2018 - Present</p>
-                        <p class="horizontal-card__location">City, Country</p>
-                      </div>
-                      <div class="card-reveal">
-                        <h4 class="card-title">Lorem Ipsum<i class="material-icons right">close</i></h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.</p>
+                    <div class="timeline__wrapper">
+                      <div class="horizontal-card card">
+                        <a href="#" rel="noopener"><img class="border" src="images/experience-01.png" srcset="images/experience-01.png 1x, images/experience-01@2x.png 2x" alt="Company logo" draggable="false"></a>
+                        <div class="card-content">
+                          <div class="card-primary">
+                              <h3 class="card-title card-title activator">Job Title</h3>
+                              <h4 class="card-subtitle">Employer Name</h4>
+                          </div>
+                          <div class="card-secondary">
+                            Oct 2018 - Present<br>
+                            City, Country
+                          </div>
+                          <button class="card-overflow-control waves-effect waves-icon-btn btn-icon activator"><i class="material-icons">more_vert</i></button>
+                        </div>
+                        <div class="card-reveal" data-simplebar>
+                          <div class="card-primary">
+                            <h3 class="card-title">Lorem Ipsum</h3>
+                          </div>
+                          <div class="card-secondary">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.
+                          </div>
+                          <button class="card-title card-overflow-control waves-effect waves-icon-btn btn-icon"><i class="material-icons">close</i></button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </article>
+                  </article>
                 <article class="timeline__box">
                   <div class="timeline__wrapper">
                     <div class="horizontal-card card">
-                    <a href="#" rel="noopener"><img class="border" src="images/experience-02.png" srcset="images/experience-02.png 1x, images/experience-02@2x.png 2x" alt="Company logo" draggable="false"></a>
-                    <div class="card-content">
-                      <h3 class="card-title activator">Job Title<i class="material-icons right">more_vert</i></h3>
-                      <p class="horizontal-card__subtitle">Employer Name</p>
-                      <p class="horizontal-card__dates">Jun 2016 - Sep 2018</p>
-                      <p class="horizontal-card__location">City, Country</p>
-                    </div>
-                    <div class="card-reveal">
-                      <h4 class="card-title">Lorem Ipsum<i class="material-icons right">close</i></h4>
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.</p>
-                    </div>
+                      <a href="#" rel="noopener"><img class="border" src="images/experience-02.png" srcset="images/experience-02.png 1x, images/experience-02@2x.png 2x" alt="Company logo" draggable="false"></a>
+                      <div class="card-content">
+                        <div class="card-primary">
+                            <h3 class="card-title card-title activator">Job Title</h3>
+                            <h4 class="card-subtitle">Employer Name</h4>
+                        </div>
+                        <div class="card-secondary">
+                          Oct 2018 - Present<br>
+                          City, Country
+                        </div>
+                        <button class="card-overflow-control waves-effect waves-icon-btn btn-icon activator"><i class="material-icons">more_vert</i></button>
+                      </div>
+                      <div class="card-reveal" data-simplebar>
+                        <div class="card-primary">
+                          <h3 class="card-title">Lorem Ipsum</h3>
+                        </div>
+                        <div class="card-secondary">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.
+                        </div>
+                        <button class="card-title card-overflow-control waves-effect waves-icon-btn btn-icon"><i class="material-icons">close</i></button>
+                      </div>
                     </div>
                   </div>
                 </article>
@@ -202,14 +221,24 @@
                     <div class="horizontal-card card">
                       <a href="#" rel="noopener"><img class="border" src="images/experience-03.png" srcset="images/experience-03.png 1x, images/experience-03@2x.png 2x" alt="Company logo" draggable="false"></a>
                       <div class="card-content">
-                        <h3 class="card-title activator">Job Title<i class="material-icons right">more_vert</i></h3>
-                        <p class="horizontal-card__subtitle">Employer Name</p>
-                        <p class="horizontal-card__dates">Feb 2014 - May 2016</p>
-                        <p class="horizontal-card__location">City, Country</p>
+                        <div class="card-primary">
+                            <h3 class="card-title card-title activator">Job Title</h3>
+                            <h4 class="card-subtitle">Employer Name</h4>
+                        </div>
+                        <div class="card-secondary">
+                          Oct 2018 - Present<br>
+                          City, Country
+                        </div>
+                        <button class="card-overflow-control waves-effect waves-icon-btn btn-icon activator"><i class="material-icons">more_vert</i></button>
                       </div>
-                      <div class="card-reveal">
-                        <h4 class="card-title">Lorem Ipsum<i class="material-icons right">close</i></h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.</p>
+                      <div class="card-reveal" data-simplebar>
+                        <div class="card-primary">
+                          <h3 class="card-title">Lorem Ipsum</h3>
+                        </div>
+                        <div class="card-secondary">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.
+                        </div>
+                        <button class="card-title card-overflow-control waves-effect waves-icon-btn btn-icon"><i class="material-icons">close</i></button>
                       </div>
                     </div>
                   </div>
@@ -431,30 +460,60 @@
           <div class="row mb-0">
             <div class="col s12 px-0">
               <h2 class="section__title">Education</h2>
-              <div class="horizontal-card card">
-                <a href="#" rel="noopener"><img class="border" src="images/education-01.png" srcset="images/education-01.png 1x, images/education-01@2x.png 2x" alt="Institution logo" draggable="false"></a>
-                <div class="card-content">
-                  <h3 class="card-title activator">ETH Zürich<i class="fas fa-ellipsis-v right"></i></h3>
-                  <p class="horizontal-card__degree">M.Sc. Computer Science</p>
-                  <p class="horizontal-card__dates">Sep 2015 - Jun 2017</p>
+              <article class="timeline__box">
+                <div class="timeline__wrapper">
+                  <div class="horizontal-card card">
+                    <a href="#" rel="noopener"><img class="border" src="images/education-01.png" srcset="images/education-01.png 1x, images/education-01@2x.png 2x" alt="Company logo" draggable="false"></a>
+                    <div class="card-content">
+                      <div class="card-primary">
+                          <h3 class="card-title card-title activator">ETH Zürich</h3>
+                          <h4 class="card-subtitle">M.Sc. Computer Science</h4>
+                      </div>
+                      <div class="card-secondary">
+                        Thesis: “Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, itaque.”<br>
+                        Sep 2015 - Jun 2017
+                      </div>
+                      <button class="card-overflow-control waves-effect waves-icon-btn btn-icon activator"><i class="material-icons">more_vert</i></button>
+                    </div>
+                    <div class="card-reveal" data-simplebar>
+                      <div class="card-primary">
+                        <h3 class="card-title">Lorem Ipsum</h3>
+                      </div>
+                      <div class="card-secondary">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.
+                      </div>
+                      <button class="card-title card-overflow-control waves-effect waves-icon-btn btn-icon"><i class="material-icons">close</i></button>
+                    </div>
+                  </div>
                 </div>
-                <div class="card-reveal">
-                  <h4 class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></h4>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.</p>
+              </article>
+              <article class="timeline__box">
+                <div class="timeline__wrapper">
+                  <div class="horizontal-card card">
+                    <a href="#" rel="noopener"><img class="border" src="images/education-02.png" srcset="images/education-02.png 1x, images/education-02@2x.png 2x" alt="Company logo" draggable="false"></a>
+                    <div class="card-content">
+                      <div class="card-primary">
+                          <h3 class="card-title card-title activator">The University of Tokyo</h3>
+                          <h4 class="card-subtitle">B.Sc. Computer Science</h4>
+                      </div>
+                      <div class="card-secondary">
+                        Thesis: “Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, itaque.”<br>
+                        Sep 2011 - Jun 2015
+                      </div>
+                      <button class="card-overflow-control waves-effect waves-icon-btn btn-icon activator"><i class="material-icons">more_vert</i></button>
+                    </div>
+                    <div class="card-reveal" data-simplebar>
+                      <div class="card-primary">
+                        <h3 class="card-title">Lorem Ipsum</h3>
+                      </div>
+                      <div class="card-secondary">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.
+                      </div>
+                      <button class="card-title card-overflow-control waves-effect waves-icon-btn btn-icon"><i class="material-icons">close</i></button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="horizontal-card card">
-                <a href="#" rel="noopener"><img class="border" src="images/education-02.png" srcset="images/education-02.png 1x, images/education-02@2x.png 2x" alt="Institution logo" draggable="false"></a>
-                <div class="card-content">
-                  <h3 class="card-title activator">The University of Tokyo<i class="fas fa-ellipsis-v right"></i></h3>
-                  <p class="horizontal-card__degree">B.Sc. Computer Science</p>
-                  <p class="horizontal-card__dates">Sep 2011 - Jun 2015</p>
-                </div>
-                <div class="card-reveal">
-                  <h4 class="card-title">Lorem Ipsum<i class="fas fa-times right"></i></h4>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil adipisci eius esse necessitatibus veniam asperiores in pariatur dolorum cum sapiente sequi earum laboriosam officiis maiores a suscipit, consectetur rerum repellat excepturi est. Ullam quis quae atque soluta quia quas debitis enim voluptatibus excepturi eligendi incidunt quibusdam animi sunt ipsam odit, laudantium repudiandae mollitia odio. Ad reiciendis incidunt distinctio voluptas amet quo ab atque, neque esse architecto nostrum accusantium sint recusandae quibusdam quisquam sed a quas minima natus impedit quis eius.</p>
-                </div>
-              </div>
+              </article>
             </div>
           </div>
         </div>

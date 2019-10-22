@@ -126,10 +126,23 @@ body {
   font-family: $font-stack-primary;
   font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
-  background-color: #fafafa;
+  line-height: 24px;
+  background-color: $background;
   color: $primary-text-on-surface;
   overflow-x: hidden;
+}
+
+a {
+  color: $secondary-color;
+  transition: color .2s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    color: $secondary-light-color;
+  }
+}
+
+.container {
+  max-width: 960px;
 }
 
 .section {
@@ -141,7 +154,7 @@ body {
     font-size: 30px;
     font-weight: 500;
     text-align: left;
-    padding-bottom: 10px;
+    padding-bottom: 16px;
     margin-bottom: 32px;
     &:after {
       content: '';
@@ -156,50 +169,16 @@ body {
   }
 }
 
-.container {
-  max-width: 960px;
-}
-
-.horizontal-card {
-  padding-left: 66px;
-  margin-top: 0;
-  margin-bottom: 15px;
-  &__subtitle, &__dates, &__location, &__degree {
-    font-size: 14px;
-    color: $secondary-text-on-surface;
-  }
-  img {
-    width: 42px;
-    position: absolute;
-    left: 24px;
-    top: 31px;
-    display: inline-block;
-    overflow: hidden;
-    transition: transform .2s ease-in-out;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-}
-
-.card-panel {
-  border-radius: 24px 8px 24px 8px;
-}
-
 .card {
   border-radius: 4px;
   box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
   margin: 0;
-  .card-image {
-    img {
-      border-radius: 4px 4px 0 0;
-    }
-  }
   .card-content {
     border-radius: 4px 4px 0 0;
     padding: 0;
-    cursor: pointer;
+    width: 100%;
     outline: none;
+    /*
     // Overlay
     &:before {
       pointer-events: none;
@@ -223,33 +202,31 @@ body {
     &:focus:before {
       opacity: 0.12;
     }
-    .card-primary {
-      padding: 16px;
-      .card-title {
-        color: $secondary-text-on-surface;
-        font-weight: 500;
-        margin-bottom: 0;
-        line-height: 32px;
-        font-size: 20px;
-        color: $primary-text-on-surface;
-      }
-      .card-subtitle {
-        color: $secondary-text-on-surface;
-        font-weight: 500;
-        font-size: 14px;
-        margin-bottom: 0;
-      }
+    */
+  }
+  .card-primary {
+    padding: 16px;
+    .card-title {
+      color: $secondary-text-on-surface;
+      font-weight: 500;
+      margin-bottom: 0;
+      line-height: 32px;
+      font-size: 20px;
+      color: $primary-text-on-surface;
     }
-    .card-secondary {
-      padding: 0 16px;
-      p {
-        color: $secondary-text-on-surface;
-        font-weight: 400;
-        font-size: 14px;
-        margin-bottom: 0;
-        padding-bottom: 8px;
-      }
+    .card-subtitle {
+      color: $secondary-text-on-surface;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      margin-bottom: 0;
     }
+  }
+  .card-secondary {
+    padding: 0 16px 16px;
+    color: $secondary-text-on-surface;
+    font-size: 14px;
+    line-height: 20px;
   }
   .card-action {
     border-top-width: 0;
@@ -258,28 +235,62 @@ body {
     &:last-child {
       border-radius: 0 0 4px 4px;
     }
-    .card-action-links {
-      a {
-        margin-right: 8px !important;
-        &:last-child {
-          margin-right: 0 !important;
-        }
-      }
-    }
-    .card-action-icons {
-      a {
+  }
+  .card-action-links {
+    a {
+      font-size: 14px;
+      margin-right: 8px !important;
+      &:last-child {
         margin-right: 0 !important;
       }
     }
   }
+  .card-action-icons {
+    a {
+      margin-right: 0 !important;
+    }
+  }
+  .card-overflow-control {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  .card-reveal {
+    padding: 0;
+    .card-title {
+      color: $secondary-text-on-surface;
+      font-weight: 500;
+      margin-bottom: 0;
+      line-height: 32px;
+      font-size: 20px;
+      color: $primary-text-on-surface;
+    }
+  }
 }
 
-a {
-  color: $secondary-color;
-  transition: color .2s ease-in-out;
-  text-decoration: none;
-  &:hover {
-    color: $secondary-light-color;
+.basic-card {
+  @extend .card;
+  .card-image {
+    img {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+}
+
+.horizontal-card {
+  @extend .card;
+  padding-left: 58px;
+  img {
+    width: 42px;
+    position: absolute;
+    left: 16px;
+    top: 22px;
+    display: inline-block;
+    overflow: hidden;
+    transition: transform .2s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -344,6 +355,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   user-select: none;
+  background-color: #fff;
   i {
     color: $secondary-text-on-surface;
     display: block;
@@ -381,6 +393,21 @@ a {
 
 // 6. Helpers
 // =============================================================================
+.clearfix {
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
 
 .text-center {
   text-align: center !important;
@@ -675,26 +702,8 @@ a {
     left: 50%;
     transform: translateX(-50%);
   }
-  // Change card default border radius
-  .card-panel {
-    border-radius: 24px 8px 24px 8px;
-  }
-  .card {
-    border-radius: 24px 8px 24px 8px;
-    .card-image {
-      img {
-        border-radius: 24px 8px 0 0;
-      }
-    }
-    .card-content {
-      border-radius: 0 0 24px 8px;
-    }
-    .card-action {
-      border-radius: 0 0 24px 8px;
-      &:last-child {
-        border-radius: 0 0 24px 8px;
-      }
-    }
+  .timeline__box:not(:last-child) {
+    margin-bottom: 16px;
   }
 }
 
@@ -719,7 +728,7 @@ a {
       font-size: 21px;
       line-height: 21px;
       z-index: 1;
-      background: #eee;
+      background: $background;
     }
     &:not(:last-of-type) {
       .timeline__wrapper {
@@ -730,7 +739,7 @@ a {
           background-color: $primary-color;
           position: absolute;
           top: 50%;
-          bottom: calc(-50% - 15px);
+          bottom: calc(-50% - 16px);
           left: -35px;
         }
       }
@@ -789,31 +798,8 @@ a {
 // 12. Education styles
 // =============================================================================
 .education-section {
-  .horizontal-card {
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-  // Change card default border radius
-  .card-panel {
-    border-radius: 24px 8px 24px 8px;
-  }
-  .card {
-    border-radius: 24px 8px 24px 8px;
-    .card-image {
-      img {
-        border-radius: 24px 8px 0 0;
-      }
-    }
-    .card-content {
-      border-radius: 0 0 24px 8px;
-    }
-    .card-action {
-      border-radius: 0 0 24px 8px;
-      &:last-child {
-        border-radius: 0 0 24px 8px;
-      }
-    }
+  .timeline__box:not(:last-child) {
+    margin-bottom: 16px;
   }
 }
 

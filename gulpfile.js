@@ -22,7 +22,9 @@ function copy(cb) {
     'node_modules/echarts/dist/echarts.min.js',
     'node_modules/materialize-css/sass/components/**/*',
     'node_modules/@fortawesome/fontawesome-free/css/all.min.css',
-    'node_modules/@fortawesome/fontawesome-free/webfonts/**/*'
+    'node_modules/@fortawesome/fontawesome-free/webfonts/**/*',
+    'node_modules/simplebar/dist/simplebar.min.js',
+    'node_modules/simplebar/dist/simplebar.min.css'
   ], {base: 'node_modules/'})
   .pipe(gulp.dest('vendor/'));
   cb();

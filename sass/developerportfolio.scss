@@ -1,20 +1,6 @@
 // Table of Contents:
 //
-//  1. Variables
-//  2. Override Materialize variables
-//  3. Include parts of Materialize 
-//  4. Reset
-//  5. Global
-//  6. Helpers
-//  7. Lead
-//  8. About
-//  9. Experience
-// 10. Portfolio
-// 11. Skills
-// 12. Education
-// 13. Contact
-// 14. Footer
-// 15. Animations
+//  1. xxxxxxx
 
 
 @charset "UTF-8";
@@ -32,11 +18,6 @@ $font-stack-secondary: 'Montserrat', sans-serif;
 $section-spacing-mobile: 50px;
 $section-spacing-desktop: 100px;
 
-
-
-
-
-
 // Primary color
 $primary-color: #1565c0;
 $primary-light-color: #5e92f3;
@@ -47,9 +28,8 @@ $secondary-color: #7b1fa2;
 $secondary-light-color: #ae52d4;
 $secondary-dark-color: #4a0072;
 
-// Background and surface colors
+// Background color
 $background: #fafafa;
-$surface: #ffffff;
 
 // "On" colors
 $text-on-primary: #fff;
@@ -60,13 +40,6 @@ $text-on-secondary-light: #000;
 $text-on-secondary-dark: #fff;
 $primary-text-on-surface: rgba(0,0,0,0.87);
 $secondary-text-on-surface: rgba(0,0,0,0.54);
-
-
-
-
-
-
-
 
 
 // 2. Override Materialize variables
@@ -88,14 +61,11 @@ $button-radius: 4px;
 @import "../vendor/materialize-css/sass/components/grid";
 @import "../vendor/materialize-css/sass/components/transitions";
 @import "../vendor/materialize-css/sass/components/cards";
-@import "../vendor/materialize-css/sass/components/tooltip";
-@import "../vendor/materialize-css/sass/components/buttons";
 @import "../vendor/materialize-css/sass/components/waves";
-@import "../vendor/materialize-css/sass/components/forms/forms";
 @import "../vendor/materialize-css/sass/components/sidenav";
 
 
-// 4. Reset
+// 4. Reset CSS 
 // =============================================================================
 
 html, body, div, span, applet, object, iframe,
@@ -119,19 +89,44 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-
-// 5. Global
-// =============================================================================
-
-html {
-  font-size: 10px;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+// 4. Global styles
+// =============================================================================
 
 body {
   font-family: $font-stack-primary;
   font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 20px;
   background-color: #fafafa;
   color: $primary-text-on-surface;
   overflow-x: hidden;
@@ -143,7 +138,7 @@ body {
   &__title {
     position: relative;
     font-family: $font-stack-secondary;
-    font-size: 3rem;
+    font-size: 30px;
     font-weight: 500;
     text-align: left;
     padding-bottom: 10px;
@@ -165,12 +160,12 @@ body {
   max-width: 960px;
 }
 
-.wide-card {
+.horizontal-card {
   padding-left: 66px;
   margin-top: 0;
   margin-bottom: 15px;
   &__subtitle, &__dates, &__location, &__degree {
-    font-size: 1.4rem;
+    font-size: 14px;
     color: $secondary-text-on-surface;
   }
   img {
@@ -279,19 +274,6 @@ body {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 a {
   color: $secondary-color;
   transition: color .2s ease-in-out;
@@ -300,11 +282,6 @@ a {
     color: $secondary-light-color;
   }
 }
-
-.material-tooltip {
-  font-size: 1.6rem;
-}
-
 
 // Flat filled buttons
 .btn {
@@ -380,10 +357,6 @@ a {
   }
 }
 
-/* ----------------- WAVES ---------------------------------------------------*/
-
-
-
 // Waves for icon buttons
 .waves-effect.waves-icon-btn .waves-ripple {
   background-color: rgba(black, 0.16);
@@ -399,10 +372,7 @@ a {
   background-color: rgba($secondary-color, 0.16);
 }
 
-
-/* ---------------------------------------------------------------------------*/
-
-// Highlighted text color
+// Highlight color
 ::selection {
   background-color: $secondary-light-color;
   color: $text-on-secondary-light;
@@ -488,7 +458,7 @@ a {
 }
 
 
-// 7. Header
+// 7. Header styles
 // =============================================================================
 
 .parallax-wrapper {
@@ -570,7 +540,7 @@ a {
     }
     a {
       color: $text-on-primary;
-      padding: 0 1.6rem;
+      padding: 0 16px;
       &:hover {
         color: rgba($text-on-primary, 0.70);
       }
@@ -580,7 +550,7 @@ a {
     }
   }
   &__action-items {
-    margin-left: 1.6rem;
+    margin-left: 16px;
     li {
       display: list-item;
     }
@@ -610,7 +580,7 @@ a {
 }
 
 
-// 7. Lead
+// 7. Lead styles
 // =============================================================================
 
 .lead-section {
@@ -665,7 +635,7 @@ a {
       span {
         font-family: $font-stack-secondary;
         color: $secondary-color;
-        font-size: 4rem;
+        font-size: 40px;
         font-weight: 500;
         line-height: 1.25;
         display: inline-block;
@@ -674,7 +644,7 @@ a {
     }
     &-position {
       font-family: $font-stack-secondary;
-      font-size: 2rem;
+      font-size: 20px;
       font-weight: 400;
       text-align: center;
     }
@@ -686,62 +656,17 @@ a {
       text-align: center;
       margin: 15px 0;
     }
-    /*
-    &-links {
-      margin-top: 15px;
-      li {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
-      }
-      li:last-child {
-        margin-bottom: 0;
-      }
-      .fas, .fab {
-        font-size: 1.4rem;
-      }
-    }
-    */
   }
-  /*
-  &__footer {
-    padding: 15px 0;
-    margin-top: 1.5rem;
-    background: $primary-color;
-    ul {
-      text-align: center;
-      li {
-        display: inline-block;
-        margin: 0 5px;
-        a {
-          width: 48px;
-          height: 48px;
-          display: inline-block;
-          background-color: rgba(0, 0, 0, 0.5);
-          border-radius: 50%;
-          transition: transform .2s ease-in-out;
-          &:hover {
-          transform: scale(1.1);
-          }
-          i {
-            color: #fff;
-            font-size: 2rem;
-            line-height: 48px;
-          }
-        }
-      }
-    }
-  }
-  */
 }
 
 
-// 8. About
+// 8. About styles
 // =============================================================================
 
 
 
 
-// 9. Experience
+// 9. Experience styles
 // =============================================================================
 .experience-section {
   .show-more {
@@ -811,7 +736,7 @@ a {
       }
     }
     &:last-child {
-      .wide-card {
+      .horizontal-card {
         margin-bottom: 0;
       }
     }
@@ -819,7 +744,7 @@ a {
 }
 
 
-// 10. Portfolio
+// 10. Portfolio styles
 // =============================================================================
 
 .projects-section {
@@ -837,7 +762,7 @@ a {
 }
 
 
-// 11. Skills
+// 11. Skills styles
 // =============================================================================
 
 .skills-section {
@@ -860,11 +785,11 @@ a {
   }
 }
 
-
-// 12. Education
+ 
+// 12. Education styles
 // =============================================================================
 .education-section {
-  .wide-card {
+  .horizontal-card {
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -893,7 +818,7 @@ a {
 }
 
 
-// 13. Contact
+// 13. Contact styles
 // =============================================================================
 
 .contact-section {
@@ -934,7 +859,7 @@ a {
     @media #{$medium-and-up} {
       flex-direction: row;
       > .col:first-child {
-        padding-right: 1.5rem;
+        padding-right: 15px;
       }
     }
   }
@@ -998,7 +923,7 @@ textarea.materialize-textarea {
     }
   }
   label {
-    font-size: 1.6rem;
+    font-size: 16px;
     top: -5px;
     color: $secondary-text-on-surface;
   }
@@ -1028,7 +953,7 @@ textarea.materialize-textarea {
 .contact-channels {
   &__item {
     cursor: pointer;
-    margin-bottom: 1.5rem;
+    margin-bottom: 15px;
   }
   &__link {
     display: flex;
@@ -1044,19 +969,19 @@ textarea.materialize-textarea {
   }
   &__square {
     transition: background-color .2s ease-in-out;
-    font-size: 2rem;
+    font-size: 20px;
     background-color: $text-on-primary-dark;
     padding: 5px;
     line-height: 1.4;
-    margin-right: 1.6rem;
+    margin-right: 16px;
     color: $primary-text-on-surface;
   }
   &__title {
-    font-size: 1rem;
+    font-size: 10px;
     color: rgba($text-on-primary-dark, 0.70);
   }
   &__text {
-    font-size: 1.6rem;
+    font-size: 16px;
     font-weight: 300;
     line-height: 1;
     color: $text-on-primary-dark;
@@ -1068,22 +993,22 @@ textarea.materialize-textarea {
   align-items: center;
   &__square {
     transition: background-color .2s ease-in-out;
-    font-size: 2rem;
+    font-size: 20px;
     background-color: $text-on-primary;
     padding: 5px;
     line-height: 1.4;
-    margin-right: 1.6rem;
+    margin-right: 16px;
     color: $primary-text-on-surface;
   }
   &__title {
-    font-size: 1rem;
+    font-size: 10px;
     color: rgba($text-on-primary-dark, 0.70);
   }
   &__list {
     display: flex;
   }
   &__item {
-    font-size: 1.4rem;
+    font-size: 14px;
     font-weight: 300;
     line-height: 1;
     a {
@@ -1106,17 +1031,17 @@ textarea.materialize-textarea {
 }
 
 
-// 14. Footer
+// 14. Footer styles
 // =============================================================================
 
 .footer {
   background-color: #fff;
-  padding: 2rem;
+  padding: 20px;
   &__text {
     color: $primary-text-on-surface;
-    font-size: 1.2rem;
+    font-size: 12px;
     @media #{$medium-and-up} {
-      font-size: 1.4rem;
+      font-size: 14px;
     }
   }
   &__to-top {

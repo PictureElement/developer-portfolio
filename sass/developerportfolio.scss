@@ -178,6 +178,7 @@ a {
     padding: 0;
     width: 100%;
     outline: none;
+    position: relative;
     /*
     // Overlay
     &:before {
@@ -764,9 +765,6 @@ a {
 .projects-section {
   &__title {
     margin-bottom: 32px;
-  }
-  &__col {
-    margin-bottom: 15px;
   }
   .show-more {
     position: absolute;

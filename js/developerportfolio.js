@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
   */
 
   // Animated text
-  var characters = document.querySelectorAll('.lead__body-name span');
+  var characters = document.querySelectorAll('.lead-card__title span');
 
   var delay = 0;
   var step = 100;

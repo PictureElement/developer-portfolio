@@ -270,12 +270,52 @@ a {
 
 .basic-card {
   @extend .card;
-  .card-primary {
+  &__primary {
     padding: 16px;
   }
-  .card-image {
+}
+
+.lead-card {
+  @extend .card;
+  &__main {
+    display: flex;
+  }
+  &__media {
+    flex: 0 0 250px;
+    overflow: hidden;
     img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       border-radius: 4px 4px 0 0;
+    }
+  }
+  &__content {
+    .lead-card__primary {
+      padding: 16px;
+      .lead-card__title {
+        //text-align: center;
+        margin-top: 15px;
+        span {
+          font-family: $font-stack-secondary;
+          color: $secondary-color;
+          font-size: 40px;
+          font-weight: 500;
+          line-height: 1.25;
+          display: inline-block;
+          opacity: 0;
+        }
+      }
+      .lead-card__subtitle {
+        font-family: $font-stack-secondary;
+        font-size: 20px;
+        font-weight: 400;
+        //text-align: center;
+      }
+    }
+    .lead-card__secondary { 
+      font-size: 16px;
     }
   }
 }
@@ -283,7 +323,7 @@ a {
 .horizontal-card {
   @extend .card;
   padding-left: 58px;
-  .card-primary {
+  &__primary {
     padding: 16px 64px 16px 16px;
   }
   img {
@@ -616,161 +656,13 @@ a {
 // 7. Lead styles
 // =============================================================================
 
-/*
 .lead-section {
   padding-top: 100px;
 }
-.lead {
-  margin-top: 75px;
-  position: relative;
-  border: 1px solid rgb(224, 224, 224);
-  //box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);
-  background-color: #fff;
-  border-radius: 4px;
-  &__body {
-    .row {
-      display: flex;
-      flex-direction: column;
-      @media #{$medium-and-up} {
-        flex-direction: row;
-      }
-    }
-    &-overlay-effect {
-      position: relative;
-      overflow: hidden;
-      height: 100%;
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -139%;
-        display: block;
-        width: 50%;
-        height: 100%;
-        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
-        transform: skewX(-53.13010235deg);
-        z-index: 1;
-      }
-      &:hover:before {
-        animation: shine .75s;
-      }
-    }
-    &-photo {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 4px;
-      //filter: grayscale(100%);
-    }
-    &-name {
-      text-align: center;
-      margin-top: 15px;
-      span {
-        font-family: $font-stack-secondary;
-        color: $secondary-color;
-        font-size: 40px;
-        font-weight: 500;
-        line-height: 1.25;
-        display: inline-block;
-        opacity: 0;
-      }
-    }
-    &-position {
-      font-family: $font-stack-secondary;
-      font-size: 20px;
-      font-weight: 400;
-      text-align: center;
-    }
-    &-cta {
-      text-align: center;
-      margin: 20px 0;
-    }
-    &-summary {
-      text-align: center;
-      margin: 15px 0;
-    }
-  }
-}
-*/
 
-.lead {
-  border-radius: 4px;
-  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
-  margin: 0;
-  margin-top: 100px;
-  background-color: #fff;
-  &__main {
-    display: flex;
-  }
-  &__media {
-    flex: 0 0 150px;
-    overflow: hidden;
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 4px 4px 0 0;
-    }
-  }
-  &__content {
-    flex: 1;
-    position: relative;
-  }
-  &__primary {
-    padding: 16px;
-  }
-  &__title {
-    color: $secondary-text-on-surface;
-    font-weight: 500;
-    margin-bottom: 0;
-    line-height: 32px;
-    font-size: 20px;
-    color: $primary-text-on-surface;
-    cursor: pointer;
-  }
-  &__subtitle {
-    color: $secondary-text-on-surface;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 22px;
-    margin-bottom: 0;
-  }
-  &__secondary {
-    padding: 0 16px 16px;
-    color: $secondary-text-on-surface;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  &__overflow-control {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-  }
-  &__actions {
-    border-top-width: 0;
-    border-radius: 0 0 4px 4px;
-    padding: 8px;
-  }
-  &__action-links {
-    a {
-      font-size: 14px;
-      margin-right: 8px;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-  &__reveal {
-    padding: 0;
-  }
-}
 
 // 8. About styles
 // =============================================================================
-
-
 
 
 // 9. Experience styles

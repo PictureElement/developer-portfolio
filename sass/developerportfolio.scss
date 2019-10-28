@@ -493,8 +493,8 @@ a {
 }
 
 // Waves for contained buttons
-.waves-effect.waves-text-btn .waves-ripple {
-  background-color: rgba($secondary-color, 0.16);
+.waves-effect.waves-contained-btn .waves-ripple {
+  background-color: rgba($text-on-secondary, 0.32);
 }
 
 // Highlight color

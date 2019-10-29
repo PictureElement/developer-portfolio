@@ -360,13 +360,27 @@ a {
   overflow: hidden;
   vertical-align: middle;
   border-radius: 4px;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($secondary-color, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 15ms linear, background-color 15ms linear;
+    z-index: 1;
+  }
   &:hover {
-    background-color: rgba($secondary-color, 0.04);
-    color: $secondary-color;
+    &:before {
+      background-color: rgba($secondary-color, 0.04);
+    }
   }
   &:focus {
-    background-color: rgba($secondary-color, 0.12);
-    color: $secondary-color;
+    &:before {
+      background-color: rgba($secondary-color, 0.12);
+    }
   }
 }
 
@@ -440,11 +454,27 @@ a {
   vertical-align: middle;
   border-radius: 4px;
   background-color: transparent;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($secondary-color, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 15ms linear, background-color 15ms linear;
+    z-index: 1;
+  }
   &:hover {
-    background-color: rgba($secondary-color, 0.04);
+    &:before {
+      background-color: rgba($secondary-color, 0.04);
+    }
   }
   &:focus {
-    background-color: rgba($secondary-color, 0.12);
+    &:before {
+      background-color: rgba($secondary-color, 0.12);
+    }
   }
 }
 
@@ -469,26 +499,49 @@ a {
     display: block;
     font-size: 24px;
   }
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($secondary-text-on-surface, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 15ms linear, background-color 15ms linear;
+    z-index: 1;
+  }
   &:hover {
-    background-color: rgba(black, 0.04);
+    color: $text-on-secondary;
+    &:before {
+      background-color: rgba($secondary-text-on-surface, 0.04);
+    }
   }
   &:focus {
-    background-color: rgba(black, 0.12);
+    color: $text-on-secondary;
+    &:before {
+      background-color: rgba($secondary-text-on-surface, 0.12);
+    }
   }
 }
 
 // Waves for icon buttons
 .waves-effect.waves-icon-btn .waves-ripple {
-  background-color: rgba(black, 0.16);
+  background-color: rgba($secondary-text-on-surface, 0.16);
 }
 
 // Waves for surfaces
 .waves-effect.waves-surface .waves-ripple {
-  background-color: rgba(black, 0.16);
+  background-color: rgba($primary-text-on-surface, 0.16);
 }
 
 // Waves for text buttons
 .waves-effect.waves-text-btn .waves-ripple {
+  background-color: rgba($secondary-color, 0.16);
+}
+
+// Waves for outlined buttons
+.waves-effect.waves-outlined-btn .waves-ripple {
   background-color: rgba($secondary-color, 0.16);
 }
 
@@ -687,25 +740,6 @@ a {
     }
     @media (min-width: 768px) {
       display: block;
-    }
-  }
-  &__action-items {
-    margin-left: 16px;
-    li {
-      display: list-item;
-    }
-    a {
-      display: block;
-      width: 48px;
-      height: 48px;
-      text-align: center;
-      color: $text-on-primary;
-      .material-icons {
-        line-height: 48px;
-      }
-      &:hover {
-        color: rgba($text-on-primary, 0.70);
-      }
     }
   }
   &--fixed {

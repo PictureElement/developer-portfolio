@@ -171,10 +171,10 @@ a {
 
 .card {
   border-radius: 4px;
+  overflow: hidden;
   box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
   margin: 0;
   .card-content {
-    border-radius: 4px 4px 0 0;
     padding: 0;
     width: 100%;
     outline: none;
@@ -229,11 +229,7 @@ a {
     line-height: 20px;
   }
   .card-action {
-    border-radius: 0 0 4px 4px;
     padding: 8px;
-    &:last-child {
-      border-radius: 0 0 4px 4px;
-    }
   }
   .card-action-links {
     a {
@@ -281,14 +277,14 @@ a {
   }
   &__media {
     display: none;
-    flex: 0 0 200px;
+    flex: 0 0 258px;
     overflow: hidden;
     img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 4px 4px 0 0;
+      border-radius: 0 4px 0 0;
     }
     @media #{$medium-and-up} {
       display: block;
@@ -691,7 +687,7 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    //background: linear-gradient(170deg, $primary-color, transparent 66%);
+    background: linear-gradient(170deg, $primary-dark-color, transparent 66%);
     z-index: 0;
   }
 }
@@ -920,6 +916,7 @@ a {
   }
   &__text {
     color: $text-on-primary-dark;
+
     text-align: left;
     margin-bottom: 32px;
     max-width: 600px;

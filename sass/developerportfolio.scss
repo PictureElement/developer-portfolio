@@ -151,7 +151,7 @@ a {
   &__title {
     position: relative;
     font-family: $font-stack-secondary;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 500;
     text-align: left;
     padding-bottom: 16px;
@@ -229,7 +229,6 @@ a {
     line-height: 20px;
   }
   .card-action {
-    border-top-width: 0;
     border-radius: 0 0 4px 4px;
     padding: 8px;
     &:last-child {
@@ -253,7 +252,7 @@ a {
   .card-overflow-control {
     position: absolute;
     top: 8px;
-    right: 16px;
+    right: 8px;
   }
   .card-reveal {
     padding: 0;
@@ -281,7 +280,8 @@ a {
     display: flex;
   }
   &__media {
-    flex: 0 0 300px;
+    display: none;
+    flex: 0 0 200px;
     overflow: hidden;
     img {
       display: block;
@@ -290,16 +290,21 @@ a {
       object-fit: cover;
       border-radius: 4px 4px 0 0;
     }
+    @media #{$medium-and-up} {
+      display: block;
+    }
   }
   &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .lead-card__primary {
       padding: 16px;
       .lead-card__title {
-        //text-align: center;
         span {
           font-family: $font-stack-secondary;
           color: $secondary-color;
-          font-size: 40px;
+          font-size: 30px;
           font-weight: 500;
           line-height: 1.25;
           display: inline-block;
@@ -308,14 +313,22 @@ a {
       }
       .lead-card__subtitle {
         font-family: $font-stack-secondary;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 400;
-        //text-align: center;
       }
     }
     .lead-card__secondary { 
       font-size: 16px;
     }
+    .lead-card__cta {
+      padding: 25px 16px 30px 16px;
+    }
+    .lead-card__overflow-control {
+      top: 11px;
+    }
+  }
+  &__primary {
+    padding: 16px;
   }
 }
 
@@ -493,7 +506,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   user-select: none;
-  background-color: #fff;
+  background-color: transparent;
   i {
     color: $secondary-text-on-surface;
     display: block;
@@ -528,6 +541,11 @@ a {
 // Waves for icon buttons
 .waves-effect.waves-icon-btn .waves-ripple {
   background-color: rgba($secondary-text-on-surface, 0.16);
+}
+
+// Wave for sidenav trigger
+.waves-effect.waves-sidenav-btn .waves-ripple {
+  background-color: rgba($text-on-primary, 0.16);
 }
 
 // Waves for surfaces
@@ -685,9 +703,29 @@ a {
   padding: 4px;
   position: fixed;
   width: 100%;
-  .sidenav-trigger {
-    color: $text-on-primary;
-    @media (min-width: 768px) {
+  &__sidenav-trigger {
+    @extend .btn-icon;
+    i {
+      color: $text-on-primary;
+      display: block;
+      font-size: 24px;
+    }
+    &:before {
+      background-color: rgba($text-on-primary, 0);
+    }
+    &:hover {
+      color: $text-on-primary;
+      &:before {
+        background-color: rgba($text-on-primary, 0.04);
+      }
+    }
+    &:focus {
+      color: $text-on-primary;
+      &:before {
+        background-color: rgba($text-on-primary, 0.12);
+      }
+    }
+    @media #{$medium-and-up} {
       display: none;
     }
   }
@@ -720,6 +758,9 @@ a {
     &:hover {
       color: $text-on-primary;
     }
+    @media #{$medium-and-up} {
+      padding-left: 12px;
+    }
   }
   &__nav {
     display: none;
@@ -733,12 +774,12 @@ a {
     }
     a {
       color: $text-on-primary;
-      padding: 0 16px;
+      padding: 0 12px;
       &:hover {
         color: rgba($text-on-primary, 0.70);
       }
     }
-    @media (min-width: 768px) {
+    @media #{$medium-and-up} {
       display: block;
     }
   }
@@ -748,8 +789,9 @@ a {
   &--fixed-scrolled {
     box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
   }
-  @media (min-width: 768px) {
+  @media #{$medium-and-up} {
     padding: 8px 12px;
+    min-height: 64px;
   }
 }
 

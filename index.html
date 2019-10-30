@@ -36,7 +36,7 @@
     <!-- Header -->
     <header class="top-bar top-bar--fixed top-bar--fixed-scrolled d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center">
-          <button class="sidenav-trigger btn-icon waves-effect waves-dark" data-target="sidenav" aria-label="Toggle navigation drawer"><i class="material-icons">menu</i></button>
+          <button class="top-bar__sidenav-trigger sidenav-trigger btn-icon waves-effect waves-sidenav-btn" data-target="sidenav" aria-label="Toggle navigation drawer"><i class="material-icons">menu</i></button>
           <!--<a class="top-bar__logo" href="#"><img src="images/logo.svg" alt="Personal logo" draggable="false"></a>-->
           <a class="top-bar__logotype" href="#">Olivia</a>
         </div>
@@ -85,43 +85,44 @@
                     <img src="images/profile-picture.jpg" alt="Profile picture" draggable="false">
                   </div>
                   <div class="lead-card__content card-content">
-                    <div class="lead-card__primary card-primary">
-                      <h1 class="lead-card__title card-title activator">
-                        <span style="font-size: 0;padding:0 5px 0 0;">
-                          <span class="invisible">H</span>
-                          <span class="invisible">i</span>
-                          <span class="invisible">,</span>
-                        </span>
-                        <span style="font-size: 0;padding:0 5px;">
-                          <span class="invisible">I</span>
-                          <span class="invisible">'</span>
-                          <span class="invisible">m</span>
-                        </span>
-                        <span style="font-size: 0;padding:0 5px;">
-                          <span class="invisible">O</span>
-                          <span class="invisible">l</span>
-                          <span class="invisible">i</span>
-                          <span class="invisible">v</span>
-                          <span class="invisible">i</span>
-                          <span class="invisible">a</span>
-                        </span>
-                      </h1>
-                      <h2 class="lead-card__subtitle card-subtitle">Front-end developer</h2>
-                    </div>
-                    <div class="lead-card__secondary card-secondary">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores deserunt eius recusandae voluptates possimus nihil impedit libero ad debitis totam, exercitationem, unde dolore architecto similique omnis minus eaque ex doloribus. Minima in, similique dolor soluta ea modi molestiae pariatur sequi nulla a cum atque illum? Assumenda laborum porro obcaecati labore.
-                      <div class="lead__body-cta">
-                        <a class="waves-effect waves-contained-btn btn-contained" href="#contact">My work</a>
-                        <a class="waves-effect waves-outlined-btn btn-outlined" href="#">Contact me</a>
+                    <div>
+                      <div class="lead-card__primary card-primary">
+                        <h1 class="lead-card__title activator">
+                          <span style="font-size: 0;padding:0 5px 0 0;">
+                            <span class="invisible">H</span>
+                            <span class="invisible">i</span>
+                            <span class="invisible">,</span>
+                          </span>
+                          <span style="font-size: 0;padding:0 5px;">
+                            <span class="invisible">I</span>
+                            <span class="invisible">'</span>
+                            <span class="invisible">m</span>
+                          </span>
+                          <span style="font-size: 0;padding:0 5px;">
+                            <span class="invisible">O</span>
+                            <span class="invisible">l</span>
+                            <span class="invisible">i</span>
+                            <span class="invisible">v</span>
+                            <span class="invisible">i</span>
+                            <span class="invisible">a</span>
+                          </span>
+                        </h1>
+                        <h2 class="lead-card__subtitle card-subtitle">Front-end developer</h2>
+                      </div>
+                      <div class="lead-card__secondary card-secondary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quos, consectetur cupiditate iure dolorum molestiae asperiores maiores explicabo quia autem molestias labore quae laborum eos. Maiores sunt ipsum velit aliquid?
                       </div>
                     </div>
-                    <button class="card-overflow-control waves-effect waves-icon-btn btn-icon activator"><i class="material-icons">more_vert</i></button>
+                    <div class="lead-card__cta">
+                      <a class="waves-effect waves-contained-btn btn-contained" href="#contact">My work</a>
+                      <a class="waves-effect waves-outlined-btn btn-outlined" href="#">Contact me</a>
+                    </div>
+                    <button class="lead-card__overflow-control card-overflow-control waves-effect waves-icon-btn btn-icon activator"><i class="material-icons">more_vert</i></button>
                   </div>
                 </div>
                 <div class="card-action d-flex align-items-center">
                   <div class="card-action-links d-flex">
-                    <a class="waves-effect waves-text-btn btn-text" href="">LINK</a>
-                    <a class="waves-effect waves-text-btn btn-text" href="">LINK</a>
+                    <a class="waves-effect waves-text-btn btn-text" href="">RESUME</a>
                   </div>
                   <div class="card-action-icons d-flex ml-auto">
                     <a class="waves-effect waves-icon-btn btn-icon" href=""><i class="fab fa-linkedin-in"></i></a>
@@ -130,7 +131,7 @@
                   </div>
                 </div>
                 <div class="card-reveal" data-simplebar>
-                  <div class="card-primary">
+                  <div class="lead-card__primary card-primary">
                     <h2 class="card-title">Lorem Ipsum</h2>
                   </div>
                   <div class="card-secondary">
@@ -143,7 +144,7 @@
           </div>
         </div>
       </section>
-      <!-- About -->
+      <!-- About
       <section id="aboutSection" class="about-section section scrollspy">
         <div class="container">
           <div class="row mb-0">
@@ -174,6 +175,7 @@
           </div>
         </div>
       </section>
+      -->
       <!-- Experience -->
       <section id="experienceSection" class="experience-section section scrollspy">
         <div class="container">

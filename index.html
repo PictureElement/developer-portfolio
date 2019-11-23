@@ -52,21 +52,22 @@
         </nav>
     </header>
     <!-- Navigation drawer -->
-    <ul id="sidenav" class="sidenav">
-      <li><div class="user-view">
-        <div class="background">
-          <img src="">
-        </div>
-        <a href="#user"><img class="circle" src=""></a>
-        <a href="#name"><span class="white-text name">John Doe</span></a>
-        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-      </div></li>
-      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-      <li><a href="#!">Second Link</a></li>
-      <li><div class="divider"></div></li>
-      <li><a class="subheader">Subheader</a></li>
-      <li><a class="waves-effect" href="#">Third Link With Waves</a></li>
-    </ul>
+    <aside id="sidenav" class="sidenav">
+      <div class="sidenav__header">
+          <img class="sidenav__image responsive-img" src="images/profile-picture.jpg">
+          <h3 class="sidenav__title">Olivia Johnson</h3>
+          <h6 class="sidenav__subtitle">name@example.com</h6>
+      </div>
+      <nav class="sidenav__list">
+        <a class="sidenav__link active" href="#"><i class="sidenav__icon material-icons">home</i>Home</a></li>
+        <a class="sidenav__link" href="#"><i class="sidenav__icon material-icons">person</i>About</a></li>
+        <a class="sidenav__link" href="#"><i class="sidenav__icon material-icons">work</i>Experience</a></li>
+        <a class="sidenav__link" href="#"><i class="sidenav__icon material-icons">visibility</i>Projects</a></li>
+        <a class="sidenav__link" href="#"><i class="sidenav__icon material-icons">settings_applications</i>Skills</a></li>
+        <a class="sidenav__link" href="#"><i class="sidenav__icon material-icons">school</i>Education</a></li>
+        <a class="sidenav__link" href="#"><i class="sidenav__icon material-icons">email</i>Contact</a></li>
+      </nav>
+    </aside>
     <!-- Parallax -->
     <div class="parallax-wrapper">
       <div class="parallax-container">

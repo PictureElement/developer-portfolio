@@ -534,6 +534,112 @@ a {
   }
 }
 
+.sidenav {
+  &__header {
+    padding: 16px 16px 20px 16px;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+  }
+  &__image {
+    display: block;
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+  }
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 20px;
+    line-height: 1;
+  }
+  &__subtitle {
+    font-size: .875rem;
+    font-weight: 400;
+    margin-top: 5px;
+    color: rgba(0,0,0,.6);
+    line-height: 1;
+  }
+  &__divider {
+    margin: 3px 0 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+  }
+  &__link {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    font-size: .875rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+    letter-spacing: .0071428571em;
+    height: 40px;
+    margin: 8px;
+    padding: 0 8px;
+    color: $primary-text-on-surface;
+    border-radius: 4px;
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($secondary-color, 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 15ms linear, background-color 15ms linear;
+      z-index: 1;
+    }
+    &:hover {
+      color: $primary-text-on-surface;
+      &:before {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+    }
+    &:focus {
+      &:before {
+        background-color: rgba(0, 0, 0, 0.12);
+      }
+    }
+    &.active {
+      color: rgba($secondary-color, 0.87);
+      .sidenav__icon {
+        color: rgba($secondary-color, 0.87);
+      }
+      &:before {
+        background-color: rgba($secondary-color, 0.12);
+      }
+      &:hover {
+        &:before {
+          background-color: rgba($secondary-color, 0.16);
+        }
+      }
+      &:focus {
+        &:before {
+          background-color: rgba($secondary-color, 0.24);
+        }
+      }
+      &:active {
+        &:before {
+          background-color: rgba($secondary-color, 0.32);
+        }
+      }
+    }
+  }
+  &__icon {
+    color: rgba(0, 0, 0, 0.6);
+    margin-right: 32px;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+  }
+  .divider {
+    margin: 3px 0 4px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+  }
+}
+
 // Waves for icon buttons
 .waves-effect.waves-icon-btn .waves-ripple {
   background-color: rgba($secondary-text-on-surface, 0.16);

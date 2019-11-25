@@ -63,6 +63,7 @@ $button-radius: 4px;
 @import "../vendor/materialize-css/sass/components/cards";
 @import "../vendor/materialize-css/sass/components/waves";
 @import "../vendor/materialize-css/sass/components/sidenav";
+@import "../vendor/materialize-css/sass/components/forms/forms";
 
 
 // 4. Reset CSS 
@@ -1031,12 +1032,6 @@ a {
     margin: 0;
     .card-content {
       padding: 0;
-      .card-title {
-        background-color: $secondary-color;
-        color: $text-on-secondary;
-        padding: 24px 0;
-        margin-bottom: 18px;
-      }
     }
   }
   .container > .row {
@@ -1102,7 +1097,7 @@ textarea.materialize-textarea {
     color: $primary-text-on-surface;
   }
   textarea {
-    height: 0;
+    height: 100px;
     &.valid {
       border-bottom: 1px solid #4caf50;
       box-shadow: 0 1px 0 0 #4caf50;
@@ -1205,94 +1200,6 @@ textarea.materialize-textarea {
 
 
 
-
-
-
-
-
-
-
-
-
-.contact-channels {
-  &__item {
-    cursor: pointer;
-    margin-bottom: 15px;
-  }
-  &__link {
-    display: flex;
-    align-items: center;
-    &:hover {
-      text-decoration: none;
-      .contact-channels__square {
-        transition: background-color .2s ease-in-out, color .2s ease-in-out;
-        background-color: $secondary-color;
-        color: #fff;
-      }
-    }
-  }
-  &__square {
-    transition: background-color .2s ease-in-out;
-    font-size: 20px;
-    background-color: $text-on-primary-dark;
-    padding: 5px;
-    line-height: 1.4;
-    margin-right: 16px;
-    color: $primary-text-on-surface;
-  }
-  &__title {
-    font-size: 10px;
-    color: rgba($text-on-primary-dark, 0.70);
-  }
-  &__text {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1;
-    color: $text-on-primary-dark;
-  }
-}
-
-.contact-follow {
-  display: flex;
-  align-items: center;
-  &__square {
-    transition: background-color .2s ease-in-out;
-    font-size: 20px;
-    background-color: $text-on-primary;
-    padding: 5px;
-    line-height: 1.4;
-    margin-right: 16px;
-    color: $primary-text-on-surface;
-  }
-  &__title {
-    font-size: 10px;
-    color: rgba($text-on-primary-dark, 0.70);
-  }
-  &__list {
-    display: flex;
-  }
-  &__item {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1;
-    a {
-      border-right: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 0 10px;
-      color: #fff;
-    }
-    &:first-child {
-      a {
-        padding-left: 0;
-      }
-    }
-    &:last-child {
-      a {
-        padding-right: 0;
-        border-width: 0;
-      }
-    }
-  }
-}
 
 
 // 14. Footer styles

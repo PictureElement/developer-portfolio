@@ -620,13 +620,12 @@
         <div class="container">
           <div class="row mb-0">
             <div class="col s12 px-0">
-              <h2 class="contact-section__title section__title">Let's talk</h2>
+              <h2 class="contact-section__title section__title">Contact</h2>
               <p class="contact-section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum labore nobis molestias excepturi voluptas fugit!</p>
               <div class="row mb-0">
-                <div class="col s12 m7">
-                  <div class="card">
+                <div class="col s12 l6">
+                  <div class="card" style="min-height: 571px;">
                     <div class="card-content">
-                      <h3 class="card-title text-center">Contact us</h3>
                       <!-- Form -->
                       <form class="form" action="#" method="POST">
                         <div class="row mb-0">
@@ -659,17 +658,20 @@
                             <input type="text" name="_gotcha">
                           </div>
                         </div>
-                        <button class="form__submit waves-effect waves-light btn-flat border border-secondary" type="submit" name="action">
-                          <i class="fas fa-paper-plane"></i> Submit
-                        </button>
+                        <p>
+                          <label>
+                            <input type="checkbox" class="filled-in" checked="checked" />
+                            <span>By submitting this form I accept the <a href="" target="__blank">Privacy Policy</a> of this site.</span>
+                          </label>
+                        </p>
+                        <button class="form__submit waves-effect waves-contained-btn btn-contained" type="submit" name="action"><i class="fas fa-paper-plane"></i>&nbsp;Submit</button>
                         <p class="form__required-text">*Required information</p>
                       </form>
                     </div>
                   </div>
                 </div>
-                <div class="col s12 m5">
-                  <div class="contact-links">
-                    <h3 class="contact-links__title">Contact details</h3>
+                <div class="col s12 l6">
+                  <div class="contact-links" style="min-height: 571px;">
                     <ul class="contact-links-list">
                       <li class="contact-links-list-item">
                         <a href="mailto:name@example.com" class="contact-links-list-item__link waves-effect waves-surface">
@@ -681,11 +683,11 @@
                         </a>
                       </li>
                       <li class="contact-links-list-item">
-                        <a href="skype:username?chat" class="contact-links-list-item__link waves-effect waves-surface">
-                            <i class="contact-links-list-item__icon fab fa-skype fa-fw"></i>
+                        <a tel="+1-202-555-0124" class="contact-links-list-item__link waves-effect waves-surface">
+                            <i class="contact-links-list-item__icon fas fa-phone"></i>
                             <span class="contact-links-list-item__text">
-                              <span class="contact-links-list-item__primary-text">Skype</span>
-                              <span class="contact-links-list-item__secondary-text">@username</span>
+                              <span class="contact-links-list-item__primary-text">Phone</span>
+                              <span class="contact-links-list-item__secondary-text">+1-202-555-0124</span>
                             </span>
                         </a>
                       </li>
@@ -708,87 +710,33 @@
                         </a>
                       </li>
                       <li class="contact-links-list-item">
-                        <a href="https://wa.me/whatsappphonenumber" class="contact-links-list-item__link waves-effect waves-surface" target="_blank" rel="noopener">
-                            <i class="contact-links-list-item__icon fab fa-whatsapp fa-fw"></i>
+                        <a href="skype:username?chat" class="contact-links-list-item__link waves-effect waves-surface">
+                            <i class="contact-links-list-item__icon fab fa-skype fa-fw"></i>
                             <span class="contact-links-list-item__text">
-                              <span class="contact-links-list-item__primary-text">WhatsApp</span>
-                              <span class="contact-links-list-item__secondary-text">whatsappphonenumber</span>
+                              <span class="contact-links-list-item__primary-text">Skype</span>
+                              <span class="contact-links-list-item__secondary-text">@username</span>
+                            </span>
+                        </a>
+                      </li>
+                      <li class="contact-links-list-item">
+                        <a href="https://github.com/username" class="contact-links-list-item__link waves-effect waves-surface" target="_blank" rel="noopener">
+                            <i class="contact-links-list-item__icon fab fa-github fa-fw"></i>
+                            <span class="contact-links-list-item__text">
+                              <span class="contact-links-list-item__primary-text">GitHub</span>
+                              <span class="contact-links-list-item__secondary-text">@username</span>
+                            </span>
+                        </a>
+                      </li>
+                      <li class="contact-links-list-item">
+                        <a href="https://www.linkedin.com/in/username" class="contact-links-list-item__link waves-effect waves-surface" target="_blank" rel="noopener">
+                            <i class="contact-links-list-item__icon fab fa-linkedin-in fa-fw"></i>
+                            <span class="contact-links-list-item__text">
+                              <span class="contact-links-list-item__primary-text">LinkedIn</span>
+                              <span class="contact-links-list-item__secondary-text">@username</span>
                             </span>
                         </a>
                       </li>
                     </ul>
-                  </div>
-                  <!-- Channels -->
-                  <ul class="contact-channels">
-                    <li class="contact-channels__item">
-                      <a class="contact-channels__link" href="mailto:name@example.com">
-                        <div class="contact-channels__square">
-                          <i class="fas fa-at fa-fw"></i>
-                        </div>
-                        <div>
-                          <h6 class="contact-channels__title">EMAIL</h6>
-                          <p class="contact-channels__text">name@example.com</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="contact-channels__item">
-                      <a class="contact-channels__link" href="skype:username?chat">
-                        <div class="contact-channels__square">
-                          <i class="fab fa-skype fa-fw"></i>
-                        </div>
-                        <div>
-                          <h6 class="contact-channels__title">SKYPE</h6>
-                          <p class="contact-channels__text">@username</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="contact-channels__item">
-                      <a class="contact-channels__link" href="https://m.me/username" target="_blank" rel="noopener">
-                        <div class="contact-channels__square">
-                          <i class="fab fa-facebook-messenger fa-fw"></i>
-                        </div>
-                        <div>
-                          <h6 class="contact-channels__title">MESSENGER</h6>
-                          <p class="contact-channels__text">@username</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="contact-channels__item">
-                      <a class="contact-channels__link" href="https://t.me/username" target="_blank" rel="noopener">
-                        <div class="contact-channels__square">
-                          <i class="fab fa-telegram fa-fw"></i>
-                        </div>
-                        <div>
-                          <h6 class="contact-channels__title">TELEGRAM</h6>
-                          <p class="contact-channels__text">@username</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="contact-channels__item">
-                      <a class="contact-channels__link" href="https://wa.me/whatsappphonenumber" target="_blank" rel="noopener">
-                        <div class="contact-channels__square">
-                          <i class="fab fa-whatsapp fa-fw"></i>
-                        </div>
-                        <div>
-                          <h6 class="contact-channels__title">WHATSAPP</h6>
-                          <p class="contact-channels__text">whatsappphonenumber</p>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                  <!-- Follow Me -->
-                  <div class="contact-follow">
-                    <div class="contact-follow__square">
-                      <i class="fas fa-share-alt fa-fw"></i>
-                    </div>
-                    <div>
-                      <h6 class="contact-follow__title">FOLLOW ME</h6>
-                      <ul class="contact-follow__list">
-                        <li class="contact-follow__item"><a href="#" target="_blank" rel="noopener">GitHub</a></li>
-                        <li class="contact-follow__item"><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li class="contact-follow__item"><a href="#" target="_blank" rel="noopener">Blog</a></li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </div>

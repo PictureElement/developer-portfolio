@@ -621,57 +621,53 @@
           <div class="row mb-0">
             <div class="col s12 px-0">
               <h2 class="contact-section__title section__title">Contact</h2>
-              <p class="contact-section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum labore nobis molestias excepturi voluptas fugit!</p>
+              <p class="contact-section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur debitis magnam perferendis quis fugiat porro saepe. Fugit adipisci cupiditate corrupti maiores dicta quas in nobis eius recusandae? Laborum doloremque eos ullam vel inventore eaque earum neque esse. Modi, ut dicta dignissimos maiores vel ipsa nemo sint enim quia animi. Cupiditate.</p>
+              <p class="form__required-text">*Required information</p>
               <div class="row mb-0">
-                <div class="col s12 l6">
-                  <div class="card" style="min-height: 571px;">
-                    <div class="card-content">
-                      <!-- Form -->
-                      <form class="form" action="#" method="POST">
-                        <div class="row mb-0">
-                          <div class="input-field col s12">
-                            <input id="name" type="text" class="validate" name="name" required>
-                            <label for="name"><span>*</span>Name</label>
-                          </div>
+                <div class="col s12 l6 pl-0">
+                    <!-- Form -->
+                    <form class="form col s12" action="#" method="POST">
+                      <div class="row mb-0">
+                        <div class="input-field col s12">
+                          <input id="name" type="text" class="validate mb-0" name="name" required>
+                          <label for="name"><span>*</span>Name</label>
                         </div>
-                        <div class="row mb-0">
-                          <div class="input-field col s12">
-                            <input id="email" type="email" class="validate" name="_replyto" required>
-                            <label for="email"><span>*</span>Email</label>
-                          </div>
+                      </div>
+                      <div class="row mb-0">
+                        <div class="input-field col s12">
+                          <input id="email" type="email" class="validate mb-0" name="_replyto" required>
+                          <label for="email"><span>*</span>Email</label>
                         </div>
-                        <div class="row mb-0">
-                          <div class="input-field col s12">
-                            <input id="subject" type="text" class="validate" name="subject" required>
-                            <label for="subject"><span>*</span>Subject</label>
-                          </div>
+                      </div>
+                      <div class="row mb-0">
+                        <div class="input-field col s12">
+                          <input id="subject" type="text" class="validate mb-0" name="subject" required>
+                          <label for="subject"><span>*</span>Subject</label>
                         </div>
-                        <div class="row mb-0">
-                          <div class="input-field col s12">
-                            <textarea id="textarea" class="materialize-textarea validate" name="message" required></textarea>
-                            <label for="textarea"><span>*</span>Message</label>
-                          </div>
+                      </div>
+                      <div class="row mb-0">
+                        <div class="input-field col s12">
+                          <textarea id="textarea" class="materialize-textarea validate mb-0" name="message" required></textarea>
+                          <label for="textarea"><span>*</span>Message</label>
                         </div>
-                        <!-- Spam prevention -->
-                        <div class="row" style="display:none">
-                          <div class="input-field col s12 m-0">
-                            <input type="text" name="_gotcha">
-                          </div>
+                      </div>
+                      <!-- Spam prevention -->
+                      <div class="row mb-0" style="display:none">
+                        <div class="input-field col s12 m-0">
+                          <input type="text" name="_gotcha">
                         </div>
-                        <p>
-                          <label>
-                            <input type="checkbox" class="filled-in" checked="checked" />
-                            <span>By submitting this form I accept the <a href="" target="__blank">Privacy Policy</a> of this site.</span>
-                          </label>
-                        </p>
-                        <button class="form__submit waves-effect waves-contained-btn btn-contained" type="submit" name="action"><i class="fas fa-paper-plane"></i>&nbsp;Submit</button>
-                        <p class="form__required-text">*Required information</p>
-                      </form>
-                    </div>
-                  </div>
+                      </div>
+                      <p class="form__consent">
+                        <label>
+                          <input type="checkbox" class="filled-in">
+                          <span>I consent to having this website store my submitted information so they can respond to my inquiry. Learn more in <a href="#" target="__blank">privacy policy</a>.</span>
+                        </label>
+                      </p>
+                      <button class="form__submit waves-effect waves-contained-btn btn-contained" type="submit" name="action"><i class="fas fa-paper-plane"></i>&nbsp;Submit</button>
+                    </form>
                 </div>
-                <div class="col s12 l6">
-                  <div class="contact-links" style="min-height: 571px;">
+                <div class="col s12 l6 pr-0">
+                  <div class="contact-links">
                     <ul class="contact-links-list">
                       <li class="contact-links-list-item">
                         <a href="mailto:name@example.com" class="contact-links-list-item__link waves-effect waves-surface">
@@ -691,6 +687,7 @@
                             </span>
                         </a>
                       </li>
+                      <li class="contact-links-list__divider" role="separator"></li>
                       <li class="contact-links-list-item">
                         <a href="https://m.me/username" class="contact-links-list-item__link waves-effect waves-surface" target="_blank" rel="noopener">
                             <i class="contact-links-list-item__icon fab fa-facebook-messenger fa-fw"></i>
@@ -718,6 +715,7 @@
                             </span>
                         </a>
                       </li>
+                      <li class="contact-links-list__divider" role="separator"></li>
                       <li class="contact-links-list-item">
                         <a href="https://github.com/username" class="contact-links-list-item__link waves-effect waves-surface" target="_blank" rel="noopener">
                             <i class="contact-links-list-item__icon fab fa-github fa-fw"></i>

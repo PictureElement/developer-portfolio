@@ -421,7 +421,7 @@ a {
 
 // Contained buttons
 .btn-contained {
-  background-color: $secondary;
+  background-color: $secondary !important;
   color: $on-secondary;
   font-size: 14px;
   font-weight: 500;

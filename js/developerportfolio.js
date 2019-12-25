@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, delay);
     delay += step;
   });
-
+  
   // Chart
   var dom = document.getElementById('skillsChart');
   var skillsChart = echarts.init(dom, 'light', {renderer: 'canvas'});

@@ -39,7 +39,8 @@
       {"name":"SweetAlert","value":1},
       {"name":"Fancybox","value":1},
       {"name":"SimpleBar","value":1},
-      {"name": "Animate On Scroll", "value": 1}
+      {"name": "Animate On Scroll", "value": 1},
+      {"name": "Owl Carousel 2", "value": 1}
     ]
   },
   {

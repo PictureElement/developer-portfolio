@@ -18,28 +18,53 @@ $font-stack-secondary: 'Montserrat', sans-serif;
 $section-spacing-mobile: 50px;
 $section-spacing-desktop: 100px;
 
-// Primary color
-$primary-color: #1565c0;
-$primary-light-color: #5e92f3;
-$primary-dark-color: #003c8f;
+/* 
+ * 1. Visit the color tool page: https://material.io/resources/color/#!/ 
+ * 2. Choose a 500 Primary and 500 Secondary color. 
+ * 3. Light and dark color variants are generated.
+ * 4. "On" colors for the primary and secondary colors as well as their light 
+ * and dark variants are generated.
+ * 
+ */
 
-// Secondary color
-$secondary-color: #7b1fa2;
-$secondary-light-color: #ae52d4;
-$secondary-dark-color: #4a0072;
+// Primary color and variants
+$primary-color: #2196f3;
+$primary-light-color: #6ec6ff;
+$primary-dark-color: #0069c0;
 
-// Background color
-$background: #fafafa;
+// Secondary color and variants
+$secondary-color: #9c27b0;
+$secondary-light-color: #d05ce3;
+$secondary-dark-color: #6a0080;
 
-// "On" colors
-$text-on-primary: #fff;
-$text-on-primary-light: #000;
-$text-on-primary-dark: #fff;
-$text-on-secondary: #fff;
-$text-on-secondary-light: #000;
-$text-on-secondary-dark: #fff;
-$primary-text-on-surface: rgba(0,0,0,0.87);
-$secondary-text-on-surface: rgba(0,0,0,0.54);
+// "On" colors for primary and secondary colors and variants
+$on-primary: #000;
+$on-primary-light: #000;
+$on-primary-dark: #fff;
+$on-secondary: #fff;
+$on-secondary-light: #000;
+$on-secondary-dark: #fff;
+
+/* 
+ * 4. The baseline background color is #fff. If you wish, use the Material's 
+ * grey tonal palette to choose a diffetent color.
+ */
+
+$background: #f5f5f5;
+
+/* 
+ * 5. The baseline surface color is #fff. If you wish, use the Material's grey
+ * tonal palette to choose a diffetent color.
+ */
+
+$surface: #fff;
+
+/*
+ * 6. "On" colors for surface
+ */
+
+$on-surface-primary: rgba(0,0,0,0.87);
+$on-surface-secondary: rgba(0,0,0,0.54);
 
 
 // 2. Override Materialize variables
@@ -47,8 +72,10 @@ $secondary-text-on-surface: rgba(0,0,0,0.54);
 $button-raised-background: $secondary-color;
 $button-raised-background-hover: $secondary-light-color;
 $card-link-color: $secondary-color;
-$card-link-color-light: rgba($text-on-primary, 0.70);
+$card-link-color-light: rgba($on-primary, 0.70);
 $button-radius: 4px;
+$radio-empty-color: #fff;
+$card-bg-color: $surface;
 
 
 // 3. Include parts of Materialize
@@ -129,7 +156,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   background-color: $background;
-  color: $primary-text-on-surface;
+  color: $on-surface-primary;
   overflow-x: hidden;
 }
 
@@ -208,15 +235,15 @@ a {
   }
   .card-primary {
     .card-title {
-      color: $secondary-text-on-surface;
+      color: $on-surface-secondary;
       font-weight: 500;
       margin-bottom: 0;
       line-height: 32px;
       font-size: 20px;
-      color: $primary-text-on-surface;
+      color: $on-surface-primary;
     }
     .card-subtitle {
-      color: $secondary-text-on-surface;
+      color: $on-surface-secondary;
       font-weight: 500;
       font-size: 14px;
       line-height: 22px;
@@ -225,7 +252,7 @@ a {
   }
   .card-secondary {
     padding: 0 16px 16px;
-    color: $secondary-text-on-surface;
+    color: $on-surface-secondary;
     font-size: 14px;
     line-height: 20px;
   }
@@ -254,12 +281,12 @@ a {
   .card-reveal {
     padding: 0;
     .card-title {
-      color: $secondary-text-on-surface;
+      color: $on-surface-secondary;
       font-weight: 500;
       margin-bottom: 0;
       line-height: 32px;
       font-size: 20px;
-      color: $primary-text-on-surface;
+      color: $on-surface-primary;
     }
   }
 }
@@ -397,7 +424,7 @@ a {
 // Contained buttons
 .btn-contained {
   background-color: $secondary-color;
-  color: $text-on-secondary;
+  color: $on-secondary;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
@@ -421,7 +448,7 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    background-color: rgba($text-on-secondary, 0);
+    background-color: rgba($on-secondary, 0);
     position: absolute;
     top: 0;
     left: 0;
@@ -429,15 +456,15 @@ a {
     z-index: 1;
   }
   &:hover {
-    color: $text-on-secondary;
+    color: $on-secondary;
     &:before {
-      background-color: rgba($text-on-secondary, 0.08);
+      background-color: rgba($on-secondary, 0.08);
     }
   }
   &:focus {
-    color: $text-on-secondary;
+    color: $on-secondary;
     &:before {
-      background-color: rgba($text-on-secondary, 0.24);
+      background-color: rgba($on-secondary, 0.24);
     }
   }
 }
@@ -505,7 +532,7 @@ a {
   user-select: none;
   background-color: transparent;
   i {
-    color: $secondary-text-on-surface;
+    color: $on-surface-secondary;
     display: block;
     font-size: 24px;
   }
@@ -514,7 +541,7 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    background-color: rgba($secondary-text-on-surface, 0);
+    background-color: rgba($on-surface-secondary, 0);
     position: absolute;
     top: 0;
     left: 0;
@@ -522,15 +549,15 @@ a {
     z-index: 1;
   }
   &:hover {
-    color: $text-on-secondary;
+    color: $on-secondary;
     &:before {
-      background-color: rgba($secondary-text-on-surface, 0.04);
+      background-color: rgba($on-surface-secondary, 0.04);
     }
   }
   &:focus {
-    color: $text-on-secondary;
+    color: $on-secondary;
     &:before {
-      background-color: rgba($secondary-text-on-surface, 0.12);
+      background-color: rgba($on-surface-secondary, 0.12);
     }
   }
 }
@@ -577,7 +604,7 @@ a {
     height: 40px;
     margin: 8px;
     padding: 0 8px;
-    color: $primary-text-on-surface;
+    color: $on-surface-primary;
     border-radius: 4px;
     &:before {
       content: '';
@@ -592,7 +619,7 @@ a {
       z-index: 1;
     }
     &:hover {
-      color: $primary-text-on-surface;
+      color: $on-surface-primary;
       &:before {
         background-color: rgba(0, 0, 0, 0.04);
       }
@@ -643,17 +670,17 @@ a {
 
 // Waves for icon buttons
 .waves-effect.waves-icon-btn .waves-ripple {
-  background-color: rgba($secondary-text-on-surface, 0.16);
+  background-color: rgba($on-surface-secondary, 0.16);
 }
 
 // Wave for sidenav trigger
 .waves-effect.waves-sidenav-btn .waves-ripple {
-  background-color: rgba($text-on-primary, 0.16);
+  background-color: rgba($on-primary, 0.16);
 }
 
 // Waves for surfaces
 .waves-effect.waves-surface .waves-ripple {
-  background-color: rgba($primary-text-on-surface, 0.16);
+  background-color: rgba($on-surface-primary, 0.16);
 }
 
 // Waves for text buttons
@@ -668,13 +695,13 @@ a {
 
 // Waves for contained buttons
 .waves-effect.waves-contained-btn .waves-ripple {
-  background-color: rgba($text-on-secondary, 0.32);
+  background-color: rgba($on-secondary, 0.32);
 }
 
 // Highlight color
 ::selection {
   background-color: $secondary-light-color;
-  color: $text-on-secondary-light;
+  color: $on-secondary-light;
 }
 
 
@@ -789,7 +816,7 @@ a {
   left: 0;
   width: 100%;
   .parallax-container {
-    height: 450px;
+    height: 350px;
     img {
       z-index: -1;
     }
@@ -817,23 +844,23 @@ a {
   &__sidenav-trigger {
     @extend .btn-icon;
     i {
-      color: $text-on-primary;
+      color: $on-primary;
       display: block;
       font-size: 24px;
     }
     &:before {
-      background-color: rgba($text-on-primary, 0);
+      background-color: rgba($on-primary, 0);
     }
     &:hover {
-      color: $text-on-primary;
+      color: $on-primary;
       &:before {
-        background-color: rgba($text-on-primary, 0.04);
+        background-color: rgba($on-primary, 0.04);
       }
     }
     &:focus {
-      color: $text-on-primary;
+      color: $on-primary;
       &:before {
-        background-color: rgba($text-on-primary, 0.12);
+        background-color: rgba($on-primary, 0.12);
       }
     }
     @media #{$medium-and-up} {
@@ -860,14 +887,14 @@ a {
     }
   }
   &__logotype {
-    color: $text-on-primary;
+    color: $on-primary;
     font-family: $font-stack-logotype;
     font-size: 20px;
     font-weight: 500;
     transition: transform .2s ease-in-out;
     padding-left: 20px;
     &:hover {
-      color: $text-on-primary;
+      color: $on-primary;
     }
     @media #{$medium-and-up} {
       padding-left: 12px;
@@ -884,10 +911,10 @@ a {
       display: list-item;
     }
     a {
-      color: $text-on-primary;
+      color: $on-primary;
       padding: 0 12px;
       &:hover {
-        color: rgba($text-on-primary, 0.70);
+        color: rgba($on-primary, 0.70);
       }
     }
     @media #{$medium-and-up} {
@@ -1023,14 +1050,26 @@ a {
   padding-bottom: $section-spacing-mobile + 15px;
   margin-top: $section-spacing-mobile + 15px;
   background: $primary-dark-color;
+  /*
+  .contact-section__left {
+    @media #{$large-and-up} {
+      padding-left: 0;
+    }
+  }
+  .contact-section__right  {
+    @media #{$large-and-up} {
+      padding-right: 0;
+    }
+  }
+  */
   &__title {
-    color: $text-on-primary-dark;
+    color: $on-primary-dark;
     &:after {
       background: $secondary-light-color;
     }
   }
   &__text {
-    color: $text-on-primary-dark;
+    color: $on-primary-dark;
     text-align: left;
     margin-bottom: 32px;
   }
@@ -1044,16 +1083,16 @@ a {
   &__required-text {
     min-height: 18px;
     font-size: 12px;
-    color: rgba($text-on-primary-dark, 0.6);
+    color: rgba($on-primary-dark, 0.6);
     margin-bottom: 8px;
   }
   &__consent {
-    border: 1px solid $text-on-primary-dark;
+    border: 1px solid $on-primary-dark;
     padding:1rem;
     border-radius:4px;
     margin-top:10px;
     span {
-      color: $text-on-primary-dark;
+      color: $on-primary-dark;
       a {
         color: $secondary-light-color;
         text-decoration: underline;
@@ -1078,7 +1117,7 @@ input[type=tel]:not(.browser-default),
 input[type=number]:not(.browser-default),
 input[type=search]:not(.browser-default),
 textarea.materialize-textarea {
-  border-bottom: 1px solid rgba($text-on-primary-dark, 0.6);
+  border-bottom: 1px solid rgba($on-primary-dark, 0.6);
   // Focused input style
   &:focus:not([readonly]) {
     border-bottom: 1px solid $secondary-light-color;
@@ -1095,7 +1134,7 @@ textarea.materialize-textarea {
     height: 34px;
   }
   input, textarea {
-    color: $text-on-primary-dark;
+    color: $on-primary-dark;
   }
   textarea {
     height: 81px;
@@ -1111,7 +1150,7 @@ textarea.materialize-textarea {
   label {
     font-size: 16px;
     top: -5px;
-    color: rgba($text-on-primary-dark, 0.6);
+    color: rgba($on-primary-dark, 0.6);
   }
 }
 
@@ -1123,7 +1162,7 @@ textarea.materialize-textarea {
     align-items: center;
     padding: 0 16px;
     height: 72px;
-    color: $primary-text-on-surface;
+    color: $on-surface-primary;
   }
   &-list {
     &__divider {
@@ -1149,7 +1188,7 @@ textarea.materialize-textarea {
           display: block;
           width: 100%;
           height: 100%;
-          background-color: rgba($primary-text-on-surface, 0);
+          background-color: rgba($on-surface-primary, 0);
           position: absolute;
           top: 0;
           left: 0;
@@ -1161,12 +1200,12 @@ textarea.materialize-textarea {
             background-color: $secondary-light-color;
           }
           &:before {
-            background-color: rgba($primary-text-on-surface, 0.04);
+            background-color: rgba($on-surface-primary, 0.04);
           }
         }
         &:focus {
           &:before {
-            background-color: rgba($primary-text-on-surface, 0.12);
+            background-color: rgba($on-surface-primary, 0.12);
           }
         }
       }
@@ -1191,13 +1230,13 @@ textarea.materialize-textarea {
       &__primary-text {
         font-size: 16px;
         font-weight: 400;
-        color: $primary-text-on-surface;
+        color: $on-surface-primary;
         margin-bottom: -5px;
       }
       &__secondary-text {
         font-size: 14px;
         font-weight: 400;
-        color: $secondary-text-on-surface;
+        color: $on-surface-secondary;
       }
     }
   }
@@ -1221,7 +1260,7 @@ textarea.materialize-textarea {
   background-color: #fff;
   padding: 20px;
   &__text {
-    color: $primary-text-on-surface;
+    color: $on-surface-primary;
     font-size: 12px;
     @media #{$medium-and-up} {
       font-size: 14px;

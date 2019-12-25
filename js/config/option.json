@@ -9,7 +9,7 @@
           "r0":"0",
           "r":"40%",
           "itemStyle":{"opacity":0.5},
-          "label":{"color":"#212529","align":"center"}
+          "label":{"color":"rgba(0,0,0,.54)","align":"center"}
         },
         {
           "r0":"40%",
@@ -17,7 +17,7 @@
           "itemStyle":{"borderWidth":3,"opacity":1},
           "label":{
             "position":"outside",
-            "color":"#212529"
+            "color":"rgba(0,0,0,.54)"
           }
         }
       ]

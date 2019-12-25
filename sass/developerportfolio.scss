@@ -11,7 +11,7 @@
 
 // Define font families
 $font-stack-logotype: 'Abril Fatface', cursive;
-$font-stack-primary: 'Roboto', sans-serif;
+$font-stack-primary: 'Raleway', sans-serif;
 $font-stack-secondary: 'Montserrat', sans-serif;
 
 // Spacing
@@ -28,14 +28,14 @@ $section-spacing-desktop: 100px;
  */
 
 // Primary color and variants
-$primary-color: #2196f3;
-$primary-light-color: #6ec6ff;
-$primary-dark-color: #0069c0;
+$primary: #2196f3;
+$primary-light: #6ec6ff;
+$primary-dark: #0069c0;
 
 // Secondary color and variants
-$secondary-color: #9c27b0;
-$secondary-light-color: #d05ce3;
-$secondary-dark-color: #6a0080;
+$secondary: #9c27b0;
+$secondary-light: #d05ce3;
+$secondary-dark: #6a0080;
 
 // "On" colors for primary and secondary colors and variants
 $on-primary: #000;
@@ -60,18 +60,22 @@ $background: #f5f5f5;
 $surface: #fff;
 
 /*
- * 6. "On" colors for surface
+ * 6. Choose your "on" surface colors. Test the contrast of surface and 
+ * on-surface colors using  the color contrast tool 
+ * (https://contrast-ratio.com/). Achieve a contrast ratio of 4.5 or greater.  
+ * 
  */
 
+// "On" colors for surface 
 $on-surface-primary: rgba(0,0,0,0.87);
 $on-surface-secondary: rgba(0,0,0,0.54);
 
 
 // 2. Override Materialize variables
 // =============================================================================
-$button-raised-background: $secondary-color;
-$button-raised-background-hover: $secondary-light-color;
-$card-link-color: $secondary-color;
+$button-raised-background: $secondary;
+$button-raised-background-hover: $secondary-light;
+$card-link-color: $secondary;
 $card-link-color-light: rgba($on-primary, 0.70);
 $button-radius: 4px;
 $radio-empty-color: #fff;
@@ -161,11 +165,11 @@ body {
 }
 
 a {
-  color: $secondary-color;
+  color: $secondary;
   transition: color .2s ease-in-out;
   text-decoration: none;
   &:hover {
-    color: $secondary-light-color;
+    color: $secondary-light;
   }
 }
 
@@ -192,7 +196,7 @@ a {
       position: absolute;
       bottom: 0;
       left: 0;
-      background: $secondary-color;
+      background: $primary;
     }
   }
 }
@@ -327,7 +331,7 @@ a {
       .lead-card__title {
         span {
           font-family: $font-stack-secondary;
-          color: $secondary-color;
+          color: $primary;
           font-size: 30px;
           font-weight: 500;
           line-height: 1.25;
@@ -339,10 +343,12 @@ a {
         font-family: $font-stack-secondary;
         font-size: 24px;
         font-weight: 400;
+        color: $on-surface-primary;
       }
     }
     .lead-card__secondary { 
       font-size: 16px;
+      line-height: 24px;
     }
     .lead-card__cta {
       padding: 25px 16px 30px 16px;
@@ -378,7 +384,7 @@ a {
 
 // Outlined buttons
 .btn-outlined {
-  color: $secondary-color;
+  color: $secondary;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
@@ -391,7 +397,7 @@ a {
   box-sizing: border-box;
   min-width: 64px;
   height: 36px;
-  border: 1px solid $secondary-color;
+  border: 1px solid $secondary;
   outline: none;
   user-select: none;
   overflow: hidden;
@@ -402,7 +408,7 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    background-color: rgba($secondary-color, 0);
+    background-color: rgba($secondary, 0);
     position: absolute;
     top: 0;
     left: 0;
@@ -411,19 +417,19 @@ a {
   }
   &:hover {
     &:before {
-      background-color: rgba($secondary-color, 0.04);
+      background-color: rgba($secondary, 0.04);
     }
   }
   &:focus {
     &:before {
-      background-color: rgba($secondary-color, 0.12);
+      background-color: rgba($secondary, 0.12);
     }
   }
 }
 
 // Contained buttons
 .btn-contained {
-  background-color: $secondary-color;
+  background-color: $secondary;
   color: $on-secondary;
   font-size: 14px;
   font-weight: 500;
@@ -471,7 +477,7 @@ a {
 
 // Text buttons
 .btn-text {
-  color: $secondary-color !important;
+  color: $secondary !important;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
@@ -496,7 +502,7 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    background-color: rgba($secondary-color, 0);
+    background-color: rgba($secondary, 0);
     position: absolute;
     top: 0;
     left: 0;
@@ -505,12 +511,12 @@ a {
   }
   &:hover {
     &:before {
-      background-color: rgba($secondary-color, 0.04);
+      background-color: rgba($secondary, 0.04);
     }
   }
   &:focus {
     &:before {
-      background-color: rgba($secondary-color, 0.12);
+      background-color: rgba($secondary, 0.12);
     }
   }
 }
@@ -530,7 +536,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   user-select: none;
-  background-color: transparent;
+  background-color: transparent !important;
   i {
     color: $on-surface-secondary;
     display: block;
@@ -611,7 +617,7 @@ a {
       display: block;
       width: 100%;
       height: 100%;
-      background-color: rgba($secondary-color, 0);
+      background-color: rgba($secondary, 0);
       position: absolute;
       top: 0;
       left: 0;
@@ -630,26 +636,26 @@ a {
       }
     }
     &.active {
-      color: rgba($secondary-color, 0.87);
+      color: rgba($secondary, 0.87);
       .sidenav__icon {
-        color: rgba($secondary-color, 0.87);
+        color: rgba($secondary, 0.87);
       }
       &:before {
-        background-color: rgba($secondary-color, 0.12);
+        background-color: rgba($secondary, 0.12);
       }
       &:hover {
         &:before {
-          background-color: rgba($secondary-color, 0.16);
+          background-color: rgba($secondary, 0.16);
         }
       }
       &:focus {
         &:before {
-          background-color: rgba($secondary-color, 0.24);
+          background-color: rgba($secondary, 0.24);
         }
       }
       &:active {
         &:before {
-          background-color: rgba($secondary-color, 0.32);
+          background-color: rgba($secondary, 0.32);
         }
       }
     }
@@ -685,12 +691,12 @@ a {
 
 // Waves for text buttons
 .waves-effect.waves-text-btn .waves-ripple {
-  background-color: rgba($secondary-color, 0.16);
+  background-color: rgba($secondary, 0.16);
 }
 
 // Waves for outlined buttons
 .waves-effect.waves-outlined-btn .waves-ripple {
-  background-color: rgba($secondary-color, 0.16);
+  background-color: rgba($secondary, 0.16);
 }
 
 // Waves for contained buttons
@@ -700,8 +706,12 @@ a {
 
 // Highlight color
 ::selection {
-  background-color: $secondary-light-color;
+  background-color: $secondary-light;
   color: $on-secondary-light;
+}
+
+.simplebar-scrollbar:before {
+  background-color: $primary;
 }
 
 
@@ -736,7 +746,7 @@ a {
 }
 
 .text-secondary {
-  color: $secondary-color !important;
+  color: $secondary !important;
 }
 
 .d-block {
@@ -799,11 +809,11 @@ a {
 }
 
 .border-primary {
-  border-color: $primary-color !important;
+  border-color: $primary !important;
 }
 
 .border-secondary {
-  border-color: $secondary-color !important;
+  border-color: $secondary !important;
 }
 
 
@@ -829,7 +839,7 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    background: linear-gradient(170deg, $primary-dark-color, transparent 66%);
+    background: linear-gradient(170deg, $primary-dark, transparent 66%);
     z-index: 0;
   }
 }
@@ -837,7 +847,7 @@ a {
 .top-bar {
   position: relative;
   z-index: 100;
-  background: $primary-color;
+  background: $primary;
   padding: 4px;
   position: fixed;
   width: 100%;
@@ -971,7 +981,7 @@ a {
       height: 21px;
       -webkit-font-smoothing: antialiased;
       text-rendering: auto;
-      color: $primary-color;
+      color: $primary;
       font-size: 21px;
       line-height: 21px;
       z-index: 1;
@@ -983,7 +993,7 @@ a {
           content: "";
           display: block;
           width: 3px;
-          background-color: $primary-color;
+          background-color: $primary;
           position: absolute;
           top: 50%;
           bottom: calc(-50% - 16px);
@@ -1049,7 +1059,7 @@ a {
 .contact-section {
   padding-bottom: $section-spacing-mobile + 15px;
   margin-top: $section-spacing-mobile + 15px;
-  background: $primary-dark-color;
+  background: $primary-dark;
   /*
   .contact-section__left {
     @media #{$large-and-up} {
@@ -1065,13 +1075,14 @@ a {
   &__title {
     color: $on-primary-dark;
     &:after {
-      background: $secondary-light-color;
+      background: $secondary;
     }
   }
   &__text {
     color: $on-primary-dark;
     text-align: left;
     margin-bottom: 32px;
+    
   }
 }
 
@@ -1094,7 +1105,7 @@ a {
     span {
       color: $on-primary-dark;
       a {
-        color: $secondary-light-color;
+        color: $secondary-light;
         text-decoration: underline;
         &:hover {
           text-decoration: none;
@@ -1120,12 +1131,12 @@ textarea.materialize-textarea {
   border-bottom: 1px solid rgba($on-primary-dark, 0.6);
   // Focused input style
   &:focus:not([readonly]) {
-    border-bottom: 1px solid $secondary-light-color;
-    box-shadow: 0 1px 0 0 $secondary-light-color;
+    border-bottom: 1px solid $secondary-light;
+    box-shadow: 0 1px 0 0 $secondary-light;
   }
   // Focused label style
   &:focus:not([readonly])+label {
-    color: $secondary-light-color;
+    color: $secondary-light;
   }
 }
 
@@ -1197,7 +1208,7 @@ textarea.materialize-textarea {
         }
         &:hover {
           i {
-            background-color: $secondary-light-color;
+            background-color: $secondary-light;
           }
           &:before {
             background-color: rgba($on-surface-primary, 0.04);
@@ -1267,7 +1278,7 @@ textarea.materialize-textarea {
     }
   }
   &__to-top {
-    color: $secondary-color;
+    color: $secondary;
   }
 }
 

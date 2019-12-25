@@ -20,37 +20,30 @@ $section-spacing-desktop: 100px;
 
 /* 
  * 1. Visit the color tool page: https://material.io/resources/color/#!/ 
- * 2. Choose a 500 Primary and 500 Secondary color. 
- * 3. Light and dark color variants are generated.
- * 4. "On" colors for the primary and secondary colors as well as their light 
- * and dark variants are generated.
- * 
+ * 2. Choose a 500 Primary and 500 Secondary color. We'll need the dark variant 
+ * of the primary color to create contrast between the contact section and the 
+ * top app bar.
+ * 3. "On" colors for our chosen colors.
  */
 
 // Primary color and variants
 $primary: #2196f3;
-$primary-light: #6ec6ff;
 $primary-dark: #0069c0;
 
-// Secondary color and variants
+// Secondary color
 $secondary: #9c27b0;
-$secondary-light: #d05ce3;
-$secondary-dark: #6a0080;
 
 // "On" colors for primary and secondary colors and variants
 $on-primary: #000;
-$on-primary-light: #000;
 $on-primary-dark: #fff;
 $on-secondary: #fff;
-$on-secondary-light: #000;
-$on-secondary-dark: #fff;
 
 /* 
  * 4. The baseline background color is #fff. If you wish, use the Material's 
  * grey tonal palette to choose a diffetent color.
  */
 
-$background: #f5f5f5;
+$background: #eee;
 
 /* 
  * 5. The baseline surface color is #fff. If you wish, use the Material's grey
@@ -74,7 +67,6 @@ $on-surface-secondary: rgba(0,0,0,0.54);
 // 2. Override Materialize variables
 // =============================================================================
 $button-raised-background: $secondary;
-$button-raised-background-hover: $secondary-light;
 $card-link-color: $secondary;
 $card-link-color-light: rgba($on-primary, 0.70);
 $button-radius: 4px;
@@ -169,7 +161,7 @@ a {
   transition: color .2s ease-in-out;
   text-decoration: none;
   &:hover {
-    color: $secondary-light;
+    color: $secondary;
   }
 }
 
@@ -496,7 +488,7 @@ a {
   overflow: hidden;
   vertical-align: middle;
   border-radius: 4px;
-  background-color: transparent;
+  background-color: transparent !important;
   &:before {
     content: '';
     display: block;
@@ -706,8 +698,8 @@ a {
 
 // Highlight color
 ::selection {
-  background-color: $secondary-light;
-  color: $on-secondary-light;
+  background-color: $secondary;
+  color: $on-secondary;
 }
 
 .simplebar-scrollbar:before {
@@ -839,7 +831,7 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    background: linear-gradient(170deg, $primary-dark, transparent 66%);
+    background: linear-gradient(170deg, $primary, transparent 66%);
     z-index: 0;
   }
 }
@@ -1105,7 +1097,7 @@ a {
     span {
       color: $on-primary-dark;
       a {
-        color: $secondary-light;
+        color: $secondary;
         text-decoration: underline;
         &:hover {
           text-decoration: none;
@@ -1131,12 +1123,12 @@ textarea.materialize-textarea {
   border-bottom: 1px solid rgba($on-primary-dark, 0.6);
   // Focused input style
   &:focus:not([readonly]) {
-    border-bottom: 1px solid $secondary-light;
-    box-shadow: 0 1px 0 0 $secondary-light;
+    border-bottom: 1px solid $secondary;
+    box-shadow: 0 1px 0 0 $secondary;
   }
   // Focused label style
   &:focus:not([readonly])+label {
-    color: $secondary-light;
+    color: $secondary;
   }
 }
 
@@ -1208,7 +1200,7 @@ textarea.materialize-textarea {
         }
         &:hover {
           i {
-            background-color: $secondary-light;
+            background-color: $secondary;
           }
           &:before {
             background-color: rgba($on-surface-primary, 0.04);

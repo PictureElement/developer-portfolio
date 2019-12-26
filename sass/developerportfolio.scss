@@ -184,7 +184,7 @@ a {
       content: '';
       display: inline-block;
       width: 60px;
-      height: 3px;
+      height: 2px;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -960,14 +960,14 @@ a {
   position: relative;
   &__box {
     position: relative;
-    margin-left: 35px;
+    margin-right: 35px;
     &:before {
       font-family: "Font Awesome 5 Free";
       content: "\f192";
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: -44px;
+      right: -44px;
       display: block;
       width: 21px;
       height: 21px;
@@ -989,7 +989,7 @@ a {
           position: absolute;
           top: 50%;
           bottom: calc(-50% - 16px);
-          left: -35px;
+          right: -35px;
         }
       }
     }
@@ -1157,9 +1157,9 @@ textarea.materialize-textarea {
 }
 
 .contact-links {
-  background-color: $surface;
-  border-radius: 0 16px 0 16px;
-  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  //background-color: $surface;
+  //border-radius: 0 16px 0 16px;
+  //box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
   &__title {
     display: flex;
     align-items: center;
@@ -1174,7 +1174,7 @@ textarea.materialize-textarea {
       border: none;
       border-bottom-width: 1px;
       border-bottom-style: solid;
-      border-bottom-color: rgba(0,0,0,.12);
+      border-bottom-color: rgba($on-primary-dark, 0.25);
     }
     &-item {
       height: 72px;
@@ -1218,7 +1218,6 @@ textarea.materialize-textarea {
         margin-right: 16px;
         width: 40px;
         height: 40px;
-        border-radius: 50%;
         background-color: rgba(0,0,0,.3);
         color: #fff;
         align-items: center;
@@ -1233,13 +1232,13 @@ textarea.materialize-textarea {
       &__primary-text {
         font-size: 16px;
         font-weight: 400;
-        color: $on-surface-primary;
+        color: $on-primary-dark;
         margin-bottom: -5px;
       }
       &__secondary-text {
         font-size: 14px;
         font-weight: 400;
-        color: $on-surface-secondary;
+        color: $on-primary-dark;
       }
     }
   }

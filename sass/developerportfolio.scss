@@ -15,8 +15,8 @@ $font-stack-primary: 'Raleway', sans-serif;
 $font-stack-secondary: 'Montserrat', sans-serif;
 
 // Spacing
-$section-spacing-mobile: 50px;
-$section-spacing-desktop: 100px;
+$section-spacing: 50px;
+
 
 /* 
  * 1. Visit the color tool page: https://material.io/resources/color/#!/ 
@@ -119,10 +119,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-body {
-	line-height: 1;
-}
-
 ol, ul {
 	list-style: none;
 }
@@ -150,7 +146,7 @@ body {
   font-family: $font-stack-primary;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   background-color: $background;
   color: $on-surface-primary;
   overflow-x: hidden;
@@ -170,7 +166,7 @@ a {
 }
 
 .section {
-  padding-top: $section-spacing-mobile;
+  padding-top: $section-spacing;
   padding-bottom: 0;
   &__title {
     position: relative;
@@ -235,7 +231,7 @@ a {
       color: $on-surface-secondary;
       font-weight: 500;
       margin-bottom: 0;
-      line-height: 32px;
+      line-height: 1.5;
       font-size: 20px;
       color: $on-surface-primary;
     }
@@ -243,7 +239,7 @@ a {
       color: $on-surface-secondary;
       font-weight: 500;
       font-size: 14px;
-      line-height: 22px;
+      line-height: 1.5;
       margin-bottom: 0;
     }
   }
@@ -251,7 +247,7 @@ a {
     padding: 0 16px 16px;
     color: $on-surface-secondary;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 1.5;
   }
   .card-action {
     padding: 8px;
@@ -281,7 +277,7 @@ a {
       color: $on-surface-secondary;
       font-weight: 500;
       margin-bottom: 0;
-      line-height: 32px;
+      line-height: 1.5;
       font-size: 20px;
       color: $on-surface-primary;
     }
@@ -328,7 +324,7 @@ a {
           color: $primary;
           font-size: 30px;
           font-weight: 500;
-          line-height: 1.25;
+          line-height: 1.5;
           display: inline-block;
           opacity: 0;
         }
@@ -338,17 +334,18 @@ a {
         font-size: 24px;
         font-weight: 400;
         color: $on-surface-primary;
+        line-height: 1.5;
       }
     }
     .lead-card__secondary { 
       font-size: 16px;
-      line-height: 24px;
+      line-height: 1.5;
     }
     .lead-card__cta {
       padding: 25px 16px 30px 16px;
     }
     .lead-card__overflow-control {
-      top: 11px;
+      top: 15px;
     }
   }
   &__primary {
@@ -586,11 +583,6 @@ a {
     color: rgba(0,0,0,.6);
     line-height: 1;
   }
-  &__divider {
-    margin: 3px 0 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0,0,0,.12);
-  }
   &__link {
     display: flex;
     position: relative;
@@ -605,7 +597,7 @@ a {
     margin: 8px;
     padding: 0 8px;
     color: $on-surface-primary;
-    border-radius: 4px;
+    border-radius: 0 8px 0 8px;
     &:before {
       content: '';
       display: block;
@@ -660,11 +652,6 @@ a {
     width: 24px;
     height: 24px;
     font-size: 24px;
-  }
-  .divider {
-    margin: 3px 0 4px;
-    background-color: transparent;
-    border-bottom: 1px solid rgba(0,0,0,.12);
   }
 }
 
@@ -943,7 +930,10 @@ a {
 // =============================================================================
 
 .lead-section {
-  padding-top: 100px;
+  padding-top: 106px;
+  @media #{$medium-and-up} {
+    padding-top: 114px;
+  }
 }
 
 
@@ -954,8 +944,15 @@ a {
 // 9. Experience styles
 // =============================================================================
 .experience-section {
+  position: relative;
+  &__show-more {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .timeline__box:not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 }
 
@@ -978,7 +975,7 @@ a {
       text-rendering: auto;
       color: $primary;
       font-size: 21px;
-      line-height: 21px;
+      line-height: 1;
       z-index: 1;
       background: $background;
     }
@@ -1009,18 +1006,24 @@ a {
 // =============================================================================
 
 .projects-section {
+  position: relative;
   &__title {
-    margin-bottom: 32px;
+    margin-bottom: 8px;
+  }
+  &__col {
+    margin-top: 24px;
+  }
+  &__show-more {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
 
 // 11. Skills styles
 // =============================================================================
-
-.skills-section {
-  padding-top: $section-spacing-mobile - 15px;
-}
 
 .skills-chart {
   width: 288px;
@@ -1043,7 +1046,7 @@ a {
 // =============================================================================
 .education-section {
   article:not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 }
 
@@ -1052,8 +1055,8 @@ a {
 // =============================================================================
 
 .contact-section {
-  padding-bottom: $section-spacing-mobile + 15px;
-  margin-top: $section-spacing-mobile + 15px;
+  padding-bottom: $section-spacing;
+  margin-top: $section-spacing;
   background: $primary-dark;
   /*
   .contact-section__left {
@@ -1076,7 +1079,7 @@ a {
   &__text {
     color: $on-primary-dark;
     text-align: left;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     
   }
 }
@@ -1089,7 +1092,10 @@ a {
     min-height: 18px;
     font-size: 12px;
     color: rgba($on-primary-dark, 0.6);
-    margin-bottom: 8px;
+    margin: 24px 0 34px 0;
+    @media #{$large-and-up} {
+      margin: 25px 0 0 0;
+    }
   }
   &__consent {
     border: 1px solid $on-primary-dark;

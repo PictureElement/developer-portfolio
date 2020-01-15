@@ -1058,18 +1058,12 @@ a {
   padding-bottom: $section-spacing;
   margin-top: $section-spacing;
   background: $primary-dark;
-  /*
-  .contact-section__left {
+  &__right.col  {
+    padding: 0;
     @media #{$large-and-up} {
-      padding-left: 0;
+      padding: 0 12px;
     }
   }
-  .contact-section__right  {
-    @media #{$large-and-up} {
-      padding-right: 0;
-    }
-  }
-  */
   &__title {
     color: $on-primary-dark;
     &:after {
@@ -1079,7 +1073,7 @@ a {
   &__text {
     color: $on-primary-dark;
     text-align: left;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     
   }
 }
@@ -1193,7 +1187,7 @@ textarea.materialize-textarea {
         display: flex;
         align-items: center;
         width: 100%;
-        padding: 0 16px;
+        padding: 0 12px;
         z-index: 1;
         &:before {
           content: '';
@@ -1219,6 +1213,9 @@ textarea.materialize-textarea {
           &:before {
             background-color: rgba($on-surface-primary, 0.12);
           }
+        }
+        @media #{$large-and-up} {
+          padding: 0 16px;
         }
       }
       &__icon {

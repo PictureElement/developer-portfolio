@@ -866,20 +866,10 @@ a {
   &__logo {
     width: 48px;
     height: 48px;
+    margin-left: 4px;
     img {
       width: 48px;
       height: 48px;
-      filter: drop-shadow(0 2px 2px rgba(0,0,0,0.14)) drop-shadow(0 3px 1px rgba(0,0,0,0.12)) drop-shadow(0 1px 5px rgba(0,0,0,0.2));
-      @media #{$large-and-up} {
-        filter: none;
-        border: 1px solid #dee2e6;
-      }
-    }
-    @media #{$large-and-up} {
-      position: absolute;
-      top: 63px;
-      left: 15px;
-      z-index: 1;
     }
   }
   &__logotype {
@@ -888,12 +878,9 @@ a {
     font-size: 20px;
     font-weight: 500;
     transition: transform .2s ease-in-out;
-    padding-left: 20px;
+    padding-left: 4px;
     &:hover {
       color: $on-primary;
-    }
-    @media #{$medium-and-up} {
-      padding-left: 12px;
     }
   }
   &__nav {
@@ -907,6 +894,11 @@ a {
     li {
       display: list-item;
       position: relative;
+      &:last-child {
+        a {
+          padding-right: 4px;
+        }
+      }
     }
     a {
       color: $on-primary;

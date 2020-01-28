@@ -619,11 +619,6 @@ a {
         background-color: rgba(0, 0, 0, 0.04);
       }
     }
-    &:focus {
-      &:before {
-        background-color: rgba(0, 0, 0, 0.12);
-      }
-    }
     &.active {
       color: rgba($secondary, 0.87);
       .sidenav__icon {

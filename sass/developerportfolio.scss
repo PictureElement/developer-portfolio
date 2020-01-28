@@ -1097,16 +1097,15 @@ a {
 
 .form {
   &__submit {
-    margin: 30px 0 0 0;
+    margin: 30px 0 34px 0;
+    @media #{$large-and-up} {
+      margin: 30px 0 0 0;
+    }
   }
   &__required-text {
     min-height: 18px;
     font-size: 12px;
     color: rgba($on-primary-dark, 0.6);
-    margin: 24px 0 34px 0;
-    @media #{$large-and-up} {
-      margin: 25px 0 0 0;
-    }
   }
   &__consent {
     border: 1px solid $on-primary-dark;

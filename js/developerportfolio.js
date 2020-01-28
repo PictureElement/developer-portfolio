@@ -1,6 +1,17 @@
 // Run a function when the DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
   
+  // In-page link animations
+  $('.scroll-js').click(function(e) {
+    e.preventDefault();
+    var scrollTarget = $(this).attr('href');
+    var scrollDistance = $(scrollTarget).offset().top - 50;
+    $('html, body').animate({
+      scrollTop: scrollDistance + 'px'
+    }, 'slow');
+  });
+
+
   // Parallax
   var parallax = document.getElementById('parallax');
   M.Parallax.init(parallax);

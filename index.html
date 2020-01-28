@@ -41,12 +41,12 @@
         </div>
         <nav class="top-bar__nav">
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a class="scroll-js" href="#leadSection">About</a></li>
+            <li><a class="scroll-js" href="#experienceSection">Experience</a></li>
+            <li><a class="scroll-js" href="#projectsSection">Projects</a></li>
+            <li><a class="scroll-js" href="#skillsSection">Skills</a></li>
+            <li><a class="scroll-js" href="#educationSection">Education</a></li>
+            <li><a class="scroll-js" href="#contactSection">Contact</a></li>
           </ul>
         </nav>
     </header>
@@ -58,13 +58,12 @@
           <h6 class="sidenav__subtitle">name@example.com</h6>
       </div>
       <nav class="sidenav__list">
-        <a class="sidenav__link active" href="#"><i class="sidenav__icon fas fa-home"></i>Home</a></li>
-        <a class="sidenav__link" href="#"><i class="sidenav__icon fas fa-user"></i>About</a></li>
-        <a class="sidenav__link" href="#"><i class="sidenav__icon fas fa-briefcase"></i>Experience</a></li>
-        <a class="sidenav__link" href="#"><i class="sidenav__icon fas fa-eye"></i>Projects</a></li>
-        <a class="sidenav__link" href="#"><i class="sidenav__icon fas fa-cog"></i>Skills</a></li>
-        <a class="sidenav__link" href="#"><i class="sidenav__icon fas fa-graduation-cap"></i>Education</a></li>
-        <a class="sidenav__link" href="#"><i class="sidenav__icon fas fa-envelope"></i>Contact</a></li>
+        <a class="sidenav__link scroll-js active" href="#leadSection"><i class="sidenav__icon fas fa-user"></i>About</a></li>
+        <a class="sidenav__link scroll-js" href="#experienceSection"><i class="sidenav__icon fas fa-briefcase"></i>Experience</a></li>
+        <a class="sidenav__link scroll-js" href="#projectsSection"><i class="sidenav__icon fas fa-eye"></i>Projects</a></li>
+        <a class="sidenav__link scroll-js" href="#skillsSection"><i class="sidenav__icon fas fa-cog"></i>Skills</a></li>
+        <a class="sidenav__link scroll-js" href="#educationSection"><i class="sidenav__icon fas fa-graduation-cap"></i>Education</a></li>
+        <a class="sidenav__link scroll-js" href="#contactSection"><i class="sidenav__icon fas fa-envelope"></i>Contact</a></li>
       </nav>
     </aside>
     <!-- Parallax -->
@@ -75,7 +74,7 @@
     </div>
     <main class="main">
       <!-- Lead -->
-      <section id="leadSection" class="lead-section scrollspy">
+      <section id="leadSection" class="lead-section">
         <div class="container">
           <div class="row mb-0">
             <div class="col s12 px-0">
@@ -114,20 +113,20 @@
                       </div>
                     </div>
                     <div class="lead-card__cta">
-                      <a class="waves-effect waves-contained-btn btn-contained" href="#contact">My work</a>
-                      <a class="waves-effect waves-outlined-btn btn-outlined" href="#">Contact me</a>
+                      <a class="waves-effect waves-contained-btn btn-contained scroll-js" href="#projectsSection">My work</a>
+                      <a class="waves-effect waves-outlined-btn btn-outlined scroll-js" href="#contactSection">Contact me</a>
                     </div>
                     <button class="lead-card__overflow-control card-overflow-control waves-effect waves-icon-btn btn-icon activator"><i class="fas fa-ellipsis-v"></i></button>
                   </div>
                 </div>
                 <div class="card-action d-flex align-items-center">
                   <div class="card-action-links d-flex">
-                    <a class="waves-effect waves-text-btn btn-text" href="">RESUME</a>
+                    <a class="waves-effect waves-text-btn btn-text" href="images/dummy.pdf" target="_blank">RESUME</a>
                   </div>
                   <div class="card-action-icons d-flex ml-auto">
-                    <a class="waves-effect waves-icon-btn btn-icon" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="waves-effect waves-icon-btn btn-icon" href=""><i class="fab fa-github"></i></a>
-                    <a class="waves-effect waves-icon-btn btn-icon" href=""><i class="fab fa-skype"></i></a>
+                    <a class="waves-effect waves-icon-btn btn-icon" href="" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="waves-effect waves-icon-btn btn-icon" href="" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                    <a class="waves-effect waves-icon-btn btn-icon" href="skype:username?chat"><i class="fab fa-skype"></i></a>
                   </div>
                 </div>
                 <div class="card-reveal" data-simplebar>
@@ -144,40 +143,8 @@
           </div>
         </div>
       </section>
-      <!-- About
-      <section id="aboutSection" class="about-section section scrollspy">
-        <div class="container">
-          <div class="row mb-0">
-            <div class="col s12 px-0">
-              <h2 class="section__title">About me</h2>
-              <div class="basic-card card">
-                <div class="card-content">
-                  <div class="basic-card__primary card-primary">
-                    <h3 class="card-title">Front-end developer, Open source contributor</h3>
-                  </div>
-                  <div class="card-secondary">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quaerat, rem voluptatem qui veritatis recusandae minus minima distinctio. Eum ducimus eaque maxime. Recusandae iure sit facere beatae, quia vero voluptates cumque tempora unde aperiam adipisci incidunt, similique hic dolores cum porro. Maxime <a href="#">reprehenderit</a> distinctio magni alias esse neque recusandae animi repellendus minus pariatur, natus, exercitationem voluptatum ratione harum sequi asperiores veniam ducimus laboriosam quis hic. Sequi earum aperiam harum dicta mollitia error optio magnam vitae. Commodi asperiores ipsum magnam vel odit ab assumenda quas omnis molestias, culpa doloremque esse impedit consequuntur libero. Dicta, cum! Maiores beatae omnis molestias amet ipsa voluptatum suscipit, rerum incidunt doloribus, mollitia adipisci dignissimos sunt asperiores ducimus iste quasi illo! Quo corporis ab aliquid eaque. Itaque veniam quidem dicta sapiente quam, earum nulla laborum odio repudiandae cumque sequi ipsam totam ducimus in placeat nobis voluptatem consectetur maiores inventore, tenetur dolorem eius ad vitae! Magnam, ipsam quisquam.
-                  </div>
-                </div>
-                <div class="card-action d-flex align-items-center">
-                  <div class="card-action-links d-flex">
-                    <a class="waves-effect waves-text-btn btn-text" href="">LINK</a>
-                    <a class="waves-effect waves-text-btn btn-text" href="">LINK</a>
-                  </div>
-                  <div class="card-action-icons d-flex ml-auto">
-                    <a class="waves-effect waves-icon-btn btn-icon" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="waves-effect waves-icon-btn btn-icon" href=""><i class="fab fa-github"></i></a>
-                    <a class="waves-effect waves-icon-btn btn-icon" href=""><i class="fab fa-skype"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      -->
       <!-- Experience -->
-      <section id="experienceSection" class="experience-section section scrollspy">
+      <section id="experienceSection" class="experience-section section">
         <div class="container">
           <div class="row mb-0">
             <div class="col s12 px-0">
@@ -186,7 +153,7 @@
                 <article class="timeline__box">
                     <div class="timeline__wrapper">
                       <div class="horizontal-card card">
-                        <a href="#" rel="noopener"><img class="border" src="images/experience-01.png" srcset="images/experience-01.png 1x, images/experience-01@2x.png 2x" alt="Company logo" draggable="false"></a>
+                        <a href="#" target="_blank" rel="noopener"><img class="border" src="images/experience-01.png" srcset="images/experience-01.png 1x, images/experience-01@2x.png 2x" alt="Company logo" draggable="false"></a>
                         <div class="card-content">
                           <div class="horizontal-card__primary card-primary">
                               <h3 class="card-title activator">Sr. Front-End JavaScript Engineer</h3>
@@ -213,7 +180,7 @@
                 <article class="timeline__box">
                   <div class="timeline__wrapper">
                     <div class="horizontal-card card">
-                      <a href="#" rel="noopener"><img class="border" src="images/experience-02.png" srcset="images/experience-02.png 1x, images/experience-02@2x.png 2x" alt="Company logo" draggable="false"></a>
+                      <a href="#" target="_blank" rel="noopener"><img class="border" src="images/experience-02.png" srcset="images/experience-02.png 1x, images/experience-02@2x.png 2x" alt="Company logo" draggable="false"></a>
                       <div class="card-content">
                         <div class="horizontal-card__primary card-primary">
                             <h3 class="card-title activator">Front-End Software Engineer</h3>
@@ -240,7 +207,7 @@
                 <article class="timeline__box">
                   <div class="timeline__wrapper">
                     <div class="horizontal-card card">
-                      <a href="#" rel="noopener"><img class="border" src="images/experience-03.png" srcset="images/experience-03.png 1x, images/experience-03@2x.png 2x" alt="Company logo" draggable="false"></a>
+                      <a href="#" target="_blank" rel="noopener"><img class="border" src="images/experience-03.png" srcset="images/experience-03.png 1x, images/experience-03@2x.png 2x" alt="Company logo" draggable="false"></a>
                       <div class="card-content">
                         <div class="horizontal-card__primary card-primary">
                             <h3 class="card-title activator">Jr. Front-End Software Engineer</h3>
@@ -271,7 +238,7 @@
         </div>
       </section>
       <!-- Projects -->
-      <section id="projectsSection" class="projects-section section scrollspy">
+      <section id="projectsSection" class="projects-section section">
         <div class="container">
           <div class="row mb-0">
             <div class="col s12 px-0">
@@ -294,8 +261,8 @@
                     </div>
                     <div class="card-action d-flex align-items-center">
                       <div class="card-action-links d-flex">
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
                       </div>
                     </div>
                     <div class="card-reveal" data-simplebar>
@@ -326,8 +293,8 @@
                     </div>
                     <div class="card-action d-flex align-items-center">
                       <div class="card-action-links d-flex">
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
                       </div>
                     </div>
                     <div class="card-reveal" data-simplebar>
@@ -358,8 +325,8 @@
                     </div>
                     <div class="card-action d-flex align-items-center">
                       <div class="card-action-links d-flex">
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
                       </div>
                     </div>
                     <div class="card-reveal" data-simplebar>
@@ -390,8 +357,8 @@
                     </div>
                     <div class="card-action d-flex align-items-center">
                       <div class="card-action-links d-flex">
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
                       </div>
                     </div>
                     <div class="card-reveal" data-simplebar>
@@ -424,8 +391,8 @@
                     </div>
                     <div class="card-action d-flex align-items-center">
                       <div class="card-action-links d-flex">
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
                       </div>
                     </div>
                     <div class="card-reveal" data-simplebar>
@@ -456,8 +423,8 @@
                     </div>
                     <div class="card-action d-flex align-items-center">
                       <div class="card-action-links d-flex">
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
                       </div>
                     </div>
                     <div class="card-reveal" data-simplebar>
@@ -488,8 +455,8 @@
                     </div>
                     <div class="card-action d-flex align-items-center">
                       <div class="card-action-links d-flex">
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
                       </div>
                     </div>
                     <div class="card-reveal" data-simplebar>
@@ -520,8 +487,8 @@
                     </div>
                     <div class="card-action d-flex align-items-center">
                       <div class="card-action-links d-flex">
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
-                        <a class="waves-effect waves-text-btn btn-text" href="#" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-external-link-square-alt"></i>&nbsp;Demo</a>
+                        <a class="waves-effect waves-text-btn btn-text" href="#" target="_blank" rel="noopener"><i class="fas fa-code"></i>&nbsp;Source</a>
                       </div>
                     </div>
                     <div class="card-reveal" data-simplebar>
@@ -542,7 +509,7 @@
         </div>
       </section>
       <!-- Skills -->
-      <section id="skillsSection" class="skills-section section scrollspy">
+      <section id="skillsSection" class="skills-section section">
         <div class="container">
           <div class="row mb-0">
             <div class="col s12 px-0">
@@ -555,14 +522,14 @@
         </div>
       </section>
       <!-- Education-->
-      <section id="educationSection" class="education-section section scrollspy">
+      <section id="educationSection" class="education-section section">
         <div class="container">
           <div class="row mb-0">
             <div class="col s12 px-0">
               <h2 class="section__title">Education</h2>
               <article>
                 <div class="horizontal-card card">
-                  <a href="#" rel="noopener"><img class="border" src="images/education-01.png" srcset="images/education-01.png 1x, images/education-01@2x.png 2x" alt="Company logo" draggable="false"></a>
+                  <a href="#" target="_blank" rel="noopener"><img class="border" src="images/education-01.png" srcset="images/education-01.png 1x, images/education-01@2x.png 2x" alt="Company logo" draggable="false"></a>
                   <div class="card-content">
                     <div class="horizontal-card__primary card-primary">
                         <h3 class="card-title card-title activator">M.Sc. Computer Science</h3>
@@ -587,7 +554,7 @@
               </article>
               <article>
                 <div class="horizontal-card card">
-                  <a href="#" rel="noopener"><img class="border" src="images/education-02.png" srcset="images/education-02.png 1x, images/education-02@2x.png 2x" alt="Company logo" draggable="false"></a>
+                  <a href="#" target="_blank" rel="noopener"><img class="border" src="images/education-02.png" srcset="images/education-02.png 1x, images/education-02@2x.png 2x" alt="Company logo" draggable="false"></a>
                   <div class="card-content">
                     <div class="horizontal-card__primary card-primary">
                         <h3 class="card-title card-title activator">B.Sc. Computer Science</h3>
@@ -615,7 +582,7 @@
         </div>
       </section>
       <!-- Contact -->
-      <section id="contactSection" class="contact-section section scrollspy">
+      <section id="contactSection" class="contact-section section">
         <div class="container">
           <div class="row mb-0">
             <div class="col s12 px-0">
@@ -678,7 +645,7 @@
                         </a>
                       </li>
                       <li class="contact-links-list-item">
-                        <a tel="+1-202-555-0124" class="contact-links-list-item__link waves-effect waves-surface">
+                        <a href="tel:+1-202-555-0124" class="contact-links-list-item__link waves-effect waves-surface">
                             <i class="contact-links-list-item__icon fas fa-phone"></i>
                             <span class="contact-links-list-item__text">
                               <span class="contact-links-list-item__primary-text">Phone</span>
@@ -748,7 +715,7 @@
           <div class="col s12 px-0">
             <p class="footer__text">
               © 2019 Your Name. All rights reserved.
-              <a class="footer__to-top right" href="#">Back to top</a>
+              <a class="footer__to-top right scroll-js" href="#top">Back to top</a>
             </p>
           </div>
         </div>

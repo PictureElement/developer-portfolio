@@ -531,7 +531,11 @@ a {
   i {
     color: $on-surface-secondary;
     display: block;
-    font-size: 24px;
+    font-size: 18px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
   }
   &:before {
     content: '';
@@ -651,7 +655,9 @@ a {
     margin-right: 32px;
     width: 24px;
     height: 24px;
-    font-size: 24px;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
   }
 }
 
@@ -838,7 +844,11 @@ a {
     i {
       color: $on-primary;
       display: block;
-      font-size: 24px;
+      font-size: 18px;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
     }
     &:before {
       background-color: rgba($on-primary, 0);

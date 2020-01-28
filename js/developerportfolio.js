@@ -11,6 +11,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 'slow');
   });
 
+  // Add box shadow to the top navigation on scroll
+  document.addEventListener('scroll', function() {
+    if ($(document).scrollTop() > 0) {
+      $('.top-bar').addClass('top-bar--fixed-scrolled');
+    } else {
+      $('.top-bar').removeClass('top-bar--fixed-scrolled');
+    }
+  });
 
   // Parallax
   var parallax = document.getElementById('parallax');
@@ -80,20 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(function(error) {
       console.log('Request failed', error);
     });
-
-  /* Navbar
-  var navbarNav = document.getElementById('navbarNav');
-  var navbarToggler = document.getElementById('navbarToggler');
-
-  navbarToggler.addEventListener('click', function() {
-    navbarNav.classList.toggle('show');
-    if (this.getAttribute('aria-expanded') === 'true') {
-      this.setAttribute('aria-expanded', 'false');
-    } else {
-      this.setAttribute('aria-expanded', 'true');
-    }
-  });
-  */
 
   // Sidenav
   var sidenav = document.getElementById('sidenav');

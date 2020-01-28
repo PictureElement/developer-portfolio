@@ -21,10 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Tooltip.init(tooltips, {exitDelay: 0});
   */
 
-  /* Scrollspy
+  // Scrollspy
   var elems = document.querySelectorAll('.scrollspy');
-  var instances = M.ScrollSpy.init(elems);
-  */
+  var instances = M.ScrollSpy.init(elems, {scrollOffset: 50});
 
   // Animated text
   var characters = document.querySelectorAll('.lead-card__title span');

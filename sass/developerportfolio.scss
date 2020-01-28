@@ -601,7 +601,6 @@ a {
     margin: 8px;
     padding: 0 8px;
     color: $on-surface-primary;
-    border-radius: 0 8px 0 8px;
     &:before {
       content: '';
       display: block;
@@ -908,15 +907,28 @@ a {
     ul {
       display: flex;
       align-items: center;
+      overflow: hidden;
     }
     li {
       display: list-item;
+      position: relative;
     }
     a {
       color: $on-primary;
       padding: 0 12px;
       &:hover {
         color: rgba($on-primary, 0.70);
+      }
+      &.active {
+        &:after {
+          content: '';
+          width: 100%;
+          height: 1px;
+          background-color: $on-primary;
+          display: block;
+          position: absolute;
+          bottom: 0;
+        }
       }
     }
     @media #{$medium-and-up} {
@@ -1230,7 +1242,7 @@ textarea.materialize-textarea {
         width: 40px;
         height: 40px;
         background-color: rgba(0,0,0,.3);
-        border-radius: 0 8px 0 8px;
+        border-radius: 50%;
         color: #fff;
         align-items: center;
         justify-content: center;

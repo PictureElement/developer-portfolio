@@ -40,7 +40,9 @@ function copy() {
     'node_modules/@fortawesome/fontawesome-free/css/all.min.css',
     'node_modules/@fortawesome/fontawesome-free/webfonts/**/*',
     'node_modules/simplebar/dist/simplebar.min.js',
-    'node_modules/simplebar/dist/simplebar.min.css'
+    'node_modules/simplebar/dist/simplebar.min.css',
+    'node_modules/aos/dist/aos.js',
+    'node_modules/aos/dist/aos.css'
   ], {base: 'node_modules/'})
   .pipe(gulp.dest('vendor/'));
 }

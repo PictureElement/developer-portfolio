@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }, delay);
     delay += step;
   });
+
+  // Init AOS
+  AOS.init();
   
   // Chart
   var dom = document.getElementById('skillsChart');

@@ -613,12 +613,14 @@ a {
       transition: opacity 15ms linear, background-color 15ms linear;
       z-index: 1;
     }
+    /*
     &:hover {
       color: $on-surface-primary;
       &:before {
         background-color: rgba(0, 0, 0, 0.04);
       }
     }
+    */
     &.active {
       color: rgba($secondary, 0.87);
       .sidenav__icon {
@@ -1205,14 +1207,14 @@ textarea.materialize-textarea {
           z-index: 1;
         }
         &:hover {
-          i {
-            background-color: $secondary;
-          }
           &:before {
             background-color: rgba($on-surface-primary, 0.04);
           }
         }
         &:focus {
+          i {
+            background-color: $secondary;
+          }
           &:before {
             background-color: rgba($on-surface-primary, 0.12);
           }

@@ -192,8 +192,6 @@ a {
 .card {
   border-radius: 0 16px 0 16px;
   overflow: hidden;
-  box-shadow: none;
-  border: .0625rem solid #eee;
   margin: 0;
   .card-content {
     padding: 0;
@@ -813,6 +811,7 @@ a {
 // =============================================================================
 
 .parallax-wrapper {
+  border-bottom: 5px solid $primary;
   position: absolute;
   top: 0;
   left: 0;

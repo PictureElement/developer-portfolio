@@ -127,8 +127,8 @@ blockquote, q {
 	quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote::before, blockquote::after,
+q::before, q::after {
 	content: '';
 	content: none;
 }
@@ -176,7 +176,7 @@ a {
     text-align: left;
     padding-bottom: 16px;
     margin-bottom: 32px;
-    &:after {
+    &::after {
       content: '';
       display: inline-block;
       width: 60px;
@@ -200,7 +200,7 @@ a {
     position: relative;
     /*
     // Overlay
-    &:before {
+    &::before {
       pointer-events: none;
       position: absolute;
       border-radius: 50%;
@@ -215,11 +215,11 @@ a {
       z-index: 1;
     }
     // Hover state
-    &:hover:before {
+    &:hover::before {
       opacity: 0.04;
     }
     // Focus state
-    &:focus:before {
+    &:focus::before {
       opacity: 0.12;
     }
     */
@@ -400,7 +400,7 @@ a {
   overflow: hidden;
   vertical-align: middle;
   border-radius: 0 8px 0 8px;
-  &:before {
+  &::before {
     content: '';
     display: block;
     width: 100%;
@@ -413,12 +413,12 @@ a {
     z-index: 1;
   }
   &:hover {
-    &:before {
+    &::before {
       background-color: rgba($secondary, 0.04);
     }
   }
   &:focus {
-    &:before {
+    &::before {
       background-color: rgba($secondary, 0.12);
     }
   }
@@ -446,7 +446,7 @@ a {
   overflow: hidden;
   vertical-align: middle;
   border-radius: 0 8px 0 8px;
-  &:before {
+  &::before {
     content: '';
     display: block;
     width: 100%;
@@ -460,13 +460,13 @@ a {
   }
   &:hover {
     color: $on-secondary;
-    &:before {
+    &::before {
       background-color: rgba($on-secondary, 0.08);
     }
   }
   &:focus {
     color: $on-secondary;
-    &:before {
+    &::before {
       background-color: rgba($on-secondary, 0.24);
     }
   }
@@ -494,7 +494,7 @@ a {
   vertical-align: middle;
   border-radius: 0 8px 0 8px;
   background-color: transparent !important;
-  &:before {
+  &::before {
     content: '';
     display: block;
     width: 100%;
@@ -507,12 +507,12 @@ a {
     z-index: 1;
   }
   &:hover {
-    &:before {
+    &::before {
       background-color: rgba($secondary, 0.04);
     }
   }
   &:focus {
-    &:before {
+    &::before {
       background-color: rgba($secondary, 0.12);
     }
   }
@@ -543,7 +543,7 @@ a {
     line-height: 24px;
     text-align: center;
   }
-  &:before {
+  &::before {
     content: '';
     display: block;
     width: 100%;
@@ -557,13 +557,13 @@ a {
   }
   &:hover {
     color: $on-secondary;
-    &:before {
+    &::before {
       background-color: rgba($on-surface-secondary, 0.04);
     }
   }
   &:focus {
     color: $on-secondary;
-    &:before {
+    &::before {
       background-color: rgba($on-surface-secondary, 0.12);
     }
   }
@@ -607,7 +607,7 @@ a {
     margin: 8px;
     padding: 0 8px;
     color: $on-surface-primary;
-    &:before {
+    &::before {
       content: '';
       display: block;
       width: 100%;
@@ -622,7 +622,7 @@ a {
     /*
     &:hover {
       color: $on-surface-primary;
-      &:before {
+      &::before {
         background-color: rgba(0, 0, 0, 0.04);
       }
     }
@@ -632,21 +632,21 @@ a {
       .sidenav__icon {
         color: rgba($secondary, 0.87);
       }
-      &:before {
+      &::before {
         background-color: rgba($secondary, 0.12);
       }
       &:hover {
-        &:before {
+        &::before {
           background-color: rgba($secondary, 0.16);
         }
       }
       &:focus {
-        &:before {
+        &::before {
           background-color: rgba($secondary, 0.24);
         }
       }
       &:active {
-        &:before {
+        &::before {
           background-color: rgba($secondary, 0.32);
         }
       }
@@ -700,7 +700,7 @@ a {
 }
 
 // Scrollbar color
-.simplebar-scrollbar:before {
+.simplebar-scrollbar::before {
   background-color: $primary;
 }
 
@@ -708,7 +708,7 @@ a {
 // 6. Helpers
 // =============================================================================
 .clearfix {
-  &:after {
+  &::after {
     display: block;
     content: "";
     clear: both;
@@ -822,7 +822,7 @@ a {
       z-index: -1;
     }
   }
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     top: 0;
@@ -853,18 +853,18 @@ a {
       line-height: 24px;
       text-align: center;
     }
-    &:before {
+    &::before {
       background-color: rgba($on-primary, 0);
     }
     &:hover {
       color: $on-primary;
-      &:before {
+      &::before {
         background-color: rgba($on-primary, 0.04);
       }
     }
     &:focus {
       color: $on-primary;
-      &:before {
+      &::before {
         background-color: rgba($on-primary, 0.12);
       }
     }
@@ -916,7 +916,7 @@ a {
         color: rgba($on-primary, 0.70);
       }
       &.active {
-        &:after {
+        &::after {
           content: '';
           width: 100%;
           height: 1px;
@@ -960,21 +960,28 @@ a {
   position: relative;
   &__show-more {
     position: absolute;
-    bottom: -50px;
+    bottom: -26px;
     left: 50%;
     transform: translateX(-50%);
   }
-  .timeline__box:not(:last-child) {
+  .timeline__box {
     margin-bottom: 24px;
   }
 }
 
 .timeline {
   position: relative;
+  &.collapse {
+    .timeline__box:nth-child(n+3) {
+      position: absolute !important;
+      top: -9999px !important;
+      left: -9999px !important;
+    }
+  }
   &__box {
     position: relative;
     margin-right: 35px;
-    &:before {
+    &::before {
       font-family: "Font Awesome 5 Free";
       content: "\f192";
       position: absolute;
@@ -992,21 +999,24 @@ a {
       z-index: 1;
       background: $background;
     }
-    &:not(:last-of-type) {
-      .timeline__wrapper {
-        &:before {
-          content: "";
-          display: block;
-          width: 3px;
-          background-color: $primary;
-          position: absolute;
-          top: 50%;
-          bottom: calc(-50% - 16px);
-          right: -35px;
-        }
+    .timeline__wrapper {
+      &::before {
+        content: "";
+        display: block;
+        width: 3px;
+        background-color: $primary;
+        position: absolute;
+        top: 50%;
+        bottom: calc(-50% - 16px);
+        right: -35px;
       }
     }
     &:last-child {
+      .timeline__wrapper {
+        &::before {
+          background: linear-gradient(to bottom, $primary, rgba(52,152,219,0));
+        }
+      }
       .horizontal-card {
         margin-bottom: 0;
       }
@@ -1022,6 +1032,15 @@ a {
   position: relative;
   &__title {
     margin-bottom: 8px;
+  }
+  &__row-wrapper {
+    &.collapse {
+      .row:nth-child(n+3) {
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+      }
+    }
   }
   &__col {
     margin-top: 24px;
@@ -1079,7 +1098,7 @@ a {
   }
   &__title {
     color: $on-primary-dark;
-    &:after {
+    &::after {
       background: $secondary;
     }
   }
@@ -1201,7 +1220,7 @@ textarea.materialize-textarea {
         width: 100%;
         padding: 0 12px;
         z-index: 1;
-        &:before {
+        &::before {
           content: '';
           display: block;
           width: 100%;
@@ -1214,7 +1233,7 @@ textarea.materialize-textarea {
           z-index: 1;
         }
         &:hover {
-          &:before {
+          &::before {
             background-color: rgba($on-surface-primary, 0.04);
           }
         }
@@ -1222,7 +1241,7 @@ textarea.materialize-textarea {
           i {
             background-color: $secondary;
           }
-          &:before {
+          &::before {
             background-color: rgba($on-surface-primary, 0.12);
           }
         }

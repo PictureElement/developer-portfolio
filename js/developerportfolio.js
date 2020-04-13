@@ -1,6 +1,6 @@
 // Run a function when the DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-  
+
   // In-page link animations
   $('.scroll-js').click(function(e) {
     e.preventDefault();
@@ -95,5 +95,27 @@ document.addEventListener('DOMContentLoaded', function() {
   // Sidenav
   var sidenav = document.getElementById('sidenav');
   M.Sidenav.init(sidenav);
+
+  // Show more/less projects
+  $('#showMoreProjects').click(function () {
+    if ($('.projects-section__row-wrapper').hasClass('collapse')) {
+      $('.projects-section__row-wrapper').removeClass('collapse');
+      $(this).html('<i class="fas fa-chevron-up"></i> Show less');
+    } else {
+      $('.projects-section__row-wrapper').addClass('collapse');
+      $(this).html('<i class="fas fa-chevron-down"></i> Show more');
+    }
+  });
+
+  // Show more/less experience
+  $('#showMoreExperience').click(function () {
+    if ($('.timeline').hasClass('collapse')) {
+      $('.timeline').removeClass('collapse');
+      $(this).html('<i class="fas fa-chevron-up"></i> Show less');
+    } else {
+      $('.timeline').addClass('collapse');
+      $(this).html('<i class="fas fa-chevron-down"></i> Show more');
+    }
+  });
 
 });

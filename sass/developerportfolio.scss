@@ -1104,7 +1104,7 @@ a {
     color: rgba($on-primary-dark, 0.6);
   }
   &__consent {
-    border: 1px solid $on-primary-dark;
+    border: 1px solid rgba(255,255,255,.6);
     padding:1rem;
     border-radius: 0 16px 0 16px;
     margin-top:10px;

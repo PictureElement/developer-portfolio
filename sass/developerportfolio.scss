@@ -319,6 +319,13 @@ a {
     .lead-card__primary {
       padding: 16px;
       .lead-card__title {
+        font-family: $font-stack-secondary;
+        color: $primary;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1.5;
+        display: inline-block;
+        /*
         span {
           font-family: $font-stack-secondary;
           color: $primary;
@@ -328,6 +335,7 @@ a {
           display: inline-block;
           opacity: 0;
         }
+        */
       }
       .lead-card__subtitle {
         font-family: $font-stack-secondary;

@@ -357,6 +357,11 @@ a {
   &__primary {
     padding: 16px;
   }
+  @media #{$medium-and-down} {
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0,0,0,.12);
+  }
 }
 
 .horizontal-card {
@@ -951,6 +956,13 @@ a {
   padding-top: 106px;
   @media #{$medium-and-up} {
     padding-top: 150px;
+  }
+  @media #{$medium-and-down} {
+    padding-top: 56px;
+    .container {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 }
 

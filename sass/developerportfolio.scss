@@ -15,7 +15,7 @@ $font-stack-primary: 'Raleway', sans-serif;
 $font-stack-secondary: 'Montserrat', sans-serif;
 
 // Spacing
-$section-spacing: 50px;
+$section-spacing: 75px;
 
 
 /* 
@@ -950,7 +950,7 @@ a {
 .lead-section {
   padding-top: 106px;
   @media #{$medium-and-up} {
-    padding-top: 114px;
+    padding-top: 150px;
   }
 }
 
@@ -1030,6 +1030,7 @@ a {
 
 .projects-section {
   position: relative;
+  margin-top: -24px;
   &__title {
     margin-bottom: 8px;
   }

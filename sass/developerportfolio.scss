@@ -265,19 +265,9 @@ a {
         color: $primary;
         font-size: 30px;
         font-weight: 500;
-        line-height: 1.5;
+        line-height: 1.2;
         display: inline-block;
-        /*
-        span {
-          font-family: $font-stack-secondary;
-          color: $primary;
-          font-size: 30px;
-          font-weight: 500;
-          line-height: 1.5;
-          display: inline-block;
-          opacity: 0;
-        }
-        */
+        margin-right: 40px;
       }
       .lead-card__subtitle {
         font-family: $font-stack-secondary;

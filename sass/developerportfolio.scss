@@ -1,12 +1,7 @@
-// Table of Contents:
-//
-//  1. xxxxxxx
-
-
 @charset "UTF-8";
 
 
-// 1. Variables
+// 1. VARIABLES
 // =============================================================================
 
 // Define font families
@@ -16,15 +11,6 @@ $font-stack-secondary: 'Montserrat', sans-serif;
 
 // Spacing
 $section-spacing: 75px;
-
-
-/* 
- * 1. Visit the color tool page: https://material.io/resources/color/#!/ 
- * 2. Choose a 500 Primary and 500 Secondary color. We'll need the dark variant 
- * of the primary color to create contrast between the contact section and the 
- * top app bar.
- * 3. "On" colors for our chosen colors.
- */
 
 // Primary color and variants
 $primary: #2196f3;
@@ -38,34 +24,17 @@ $on-primary: #000;
 $on-primary-dark: #fff;
 $on-secondary: #fff;
 
-/* 
- * 4. The baseline background color is #fff. If you wish, use the Material's 
- * grey tonal palette to choose a diffetent color.
- */
-
+// Background color
 $background: #f5f5f5;
 
-/* 
- * 5. The baseline surface color is #fff. If you wish, use the Material's grey
- * tonal palette to choose a diffetent color.
- */
-
+// Surface color
 $surface: #fff;
-
-/*
- * 6. Choose your "on" surface colors. Test the contrast of surface and 
- * on-surface colors using  the color contrast tool 
- * (https://contrast-ratio.com/). Achieve a contrast ratio of 4.5 or greater.  
- * 
- */
 
 // "On" colors for surface 
 $on-surface-primary: rgba(0,0,0,0.87);
 $on-surface-secondary: rgba(0,0,0,0.54);
 
-
-// 2. Override Materialize variables
-// =============================================================================
+// Override Materialize variables
 $button-raised-background: $secondary;
 $card-link-color: $secondary;
 $card-link-color-light: rgba($on-primary, 0.70);
@@ -73,10 +42,7 @@ $radio-empty-color: #fff;
 $card-bg-color: $surface;
 $secondary-color: $secondary;
 
-
-// 3. Include parts of Materialize
-// =============================================================================
-
+// Include parts of Materialize
 @import "../vendor/materialize-css/sass/components/color-variables";
 @import "../vendor/materialize-css/sass/components/variables";
 @import "../vendor/materialize-css/sass/components/normalize";
@@ -89,7 +55,7 @@ $secondary-color: $secondary;
 @import "../vendor/materialize-css/sass/components/forms/forms";
 
 
-// 4. Reset CSS 
+// 2. RESET CSS
 // =============================================================================
 
 html, body, div, span, applet, object, iframe,
@@ -113,7 +79,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
+// HTML5 display-role reset for older browsers
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -139,7 +105,7 @@ table {
 }
 
 
-// 4. Global styles
+// 3. GLOBAL
 // =============================================================================
 
 body {
@@ -189,6 +155,7 @@ a {
   }
 }
 
+// Base card
 .card {
   border-radius: 0 16px 0 16px;
   overflow: hidden;
@@ -198,31 +165,6 @@ a {
     width: 100%;
     outline: none;
     position: relative;
-    /*
-    // Overlay
-    &::before {
-      pointer-events: none;
-      position: absolute;
-      border-radius: 50%;
-      opacity: 0;
-      content: "";
-      background-color: #000;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      transition: opacity 15ms linear,background-color 15ms linear;
-      z-index: 1;
-    }
-    // Hover state
-    &:hover::before {
-      opacity: 0.04;
-    }
-    // Focus state
-    &:focus::before {
-      opacity: 0.12;
-    }
-    */
   }
   .card-primary {
     .card-title {
@@ -282,6 +224,7 @@ a {
   }
 }
 
+// Basic card
 .basic-card {
   @extend .card;
   &__primary {
@@ -289,6 +232,7 @@ a {
   }
 }
 
+// Lead card
 .lead-card {
   @extend .card;
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
@@ -364,6 +308,7 @@ a {
   }
 }
 
+// Horizontal card
 .horizontal-card {
   @extend .card;
   padding-left: 58px;
@@ -574,6 +519,7 @@ a {
   }
 }
 
+// Navigation drawer
 .sidenav {
   &__header {
     padding: 16px 16px 20px 16px;
@@ -710,7 +656,7 @@ a {
 }
 
 
-// 6. Helpers
+// 4. HELPER CLASSES
 // =============================================================================
 .clearfix {
   &::after {
@@ -812,7 +758,7 @@ a {
 }
 
 
-// 7. Header styles
+// 5. HEADER
 // =============================================================================
 
 .parallax-wrapper {
@@ -949,7 +895,7 @@ a {
 }
 
 
-// 7. Lead styles
+// 6. LEAD
 // =============================================================================
 
 .lead-section {
@@ -966,7 +912,7 @@ a {
   }
 }
 
-// 9. Experience styles
+// 7. EXPERIENCE
 // =============================================================================
 .experience-section {
   position: relative;
@@ -1037,7 +983,7 @@ a {
 }
 
 
-// 10. Portfolio styles
+// 8. PORTFOLIO
 // =============================================================================
 
 .projects-section {
@@ -1067,7 +1013,7 @@ a {
 }
 
 
-// 11. Skills styles
+// 9. SKILLS
 // =============================================================================
 
 .skills-chart {
@@ -1087,7 +1033,7 @@ a {
 }
 
  
-// 12. Education styles
+// 10. EDUCATION
 // =============================================================================
 .education-section {
   article:not(:last-child) {
@@ -1096,7 +1042,7 @@ a {
 }
 
 
-// 13. Contact styles
+// 11. CONTACT
 // =============================================================================
 
 .contact-section {
@@ -1204,9 +1150,6 @@ textarea.materialize-textarea {
 }
 
 .contact-links {
-  //background-color: $surface;
-  //border-radius: 0 16px 0 16px;
-  //box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
   &__title {
     display: flex;
     align-items: center;
@@ -1297,17 +1240,7 @@ textarea.materialize-textarea {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-// 14. Footer styles
+// 12. FOOTER
 // =============================================================================
 
 .footer {
@@ -1323,61 +1256,4 @@ textarea.materialize-textarea {
   &__to-top {
     color: $secondary;
   }
-}
-
-
-// 15. Animations
-// =============================================================================
-
-@keyframes bounceIn {
-  from,
-  20%,
-  40%,
-  60%,
-  80%,
-  to {
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  0% {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-
-  20% {
-    transform: scale3d(1.1, 1.1, 1.1);
-  }
-
-  40% {
-    transform: scale3d(0.9, 0.9, 0.9);
-  }
-
-  60% {
-    opacity: 1;
-    transform: scale3d(1.03, 1.03, 1.03);
-  }
-
-  80% {
-    transform: scale3d(0.97, 0.97, 0.97);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-.bounceIn {
-  animation-name: bounceIn;
-}
-
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-@keyframes shine {
-	100% {
-		left: calc(139% + 50%);
-	}
 }

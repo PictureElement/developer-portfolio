@@ -24,26 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var parallax = document.getElementById('parallax');
   M.Parallax.init(parallax);
 
-  /* Tooltips
-  var tooltips = document.querySelectorAll('.tooltipped');
-  var instances = M.Tooltip.init(tooltips, {exitDelay: 0});
-  */
-
   // Scrollspy
   var elems = document.querySelectorAll('.scrollspy');
   var instances = M.ScrollSpy.init(elems, {scrollOffset: 50});
-
-  // Animated text
-  var characters = document.querySelectorAll('.lead-card__title span');
-
-  var delay = 0;
-  var step = 100;
-  characters.forEach(function(character) {
-    setTimeout(function() {
-      character.classList.add('animated', 'bounceIn');
-    }, delay);
-    delay += step;
-  });
 
   // Init AOS
   AOS.init();

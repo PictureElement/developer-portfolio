@@ -8,7 +8,9 @@
   A single-page personal portfolio for <a href="https://www.msof.me/" target="_blank">www.msof.me</a> based on Google Material Design guidelines. To view a live demo, <a href="https://pictureelement.github.io/developer-portfolio/" target="_blank">click here</a>
 </p>
 
-![demo](https://raw.githubusercontent.com/PictureElement/developer-portfolio/master/images/demo.png)
+![demo-1](https://raw.githubusercontent.com/PictureElement/developer-portfolio/master/images/demo-1.png)
+
+![demo-2](https://raw.githubusercontent.com/PictureElement/developer-portfolio/master/images/demo-2.png)
 
 ## Setup
 

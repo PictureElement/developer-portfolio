@@ -108,6 +108,14 @@ By default, the template comes with a number of images, some of which can be kep
 
 * Education image (`images/education-0x.png`, `images/education-0x@2x.png`) - these are the images associated with the schools under the education section. There are two variants for each image that differ in resolution. The recommended sizes are 42 x 42 and 84 x 84 for `images/education-0x.png` and `images/education-0x@2x.png` respectively.
 
+### Contact Form
+
+[Formspree](https://formspree.io/) is used to handle form submissions. It uses reCAPTCHA and a honeypot field for spam filtering.
+
+To setup the form, just place `https://formspree.io/$YOUR_EMAIL` in the action attribute of the form and change `$YOUR_EMAIL` to the email you want submissions to be sent to. 
+
+Once the form is configured correctly, submit it once. You should then receive an email from Formspree asking you to confirm your email address.
+
 ## License
 
 You can fork this repo is completely free. Code released under the [MIT](LICENSE) license.

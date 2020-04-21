@@ -34,6 +34,10 @@ $surface: #fff;
 $on-surface-primary: rgba(0,0,0,0.87);
 $on-surface-secondary: rgba(0,0,0,0.54);
 
+
+// 2. MATERIALIZE
+// =============================================================================
+
 // Override Materialize variables
 $button-raised-background: $secondary;
 $card-link-color: $secondary;
@@ -42,7 +46,6 @@ $radio-empty-color: #fff;
 $card-bg-color: $surface;
 $secondary-color: $secondary;
 
-// Include parts of Materialize
 @import "../vendor/materialize-css/sass/components/color-variables";
 @import "../vendor/materialize-css/sass/components/variables";
 @import "../vendor/materialize-css/sass/components/normalize";
@@ -55,7 +58,7 @@ $secondary-color: $secondary;
 @import "../vendor/materialize-css/sass/components/forms/forms";
 
 
-// 2. RESET CSS
+// 3. RESET CSS
 // =============================================================================
 
 html, body, div, span, applet, object, iframe,
@@ -105,7 +108,7 @@ table {
 }
 
 
-// 3. GLOBAL
+// 4. GLOBAL
 // =============================================================================
 
 body {
@@ -633,7 +636,7 @@ a {
 }
 
 
-// 4. HELPER CLASSES
+// 5. HELPER CLASSES
 // =============================================================================
 .clearfix {
   &::after {
@@ -735,7 +738,7 @@ a {
 }
 
 
-// 5. HEADER
+// 6. HEADER
 // =============================================================================
 
 .parallax-wrapper {
@@ -884,7 +887,7 @@ a {
 }
 
 
-// 6. LEAD
+// 7. LEAD
 // =============================================================================
 
 .lead-section {
@@ -894,7 +897,7 @@ a {
   }
 }
 
-// 7. EXPERIENCE
+// 8. EXPERIENCE
 // =============================================================================
 .experience-section {
   position: relative;
@@ -965,7 +968,7 @@ a {
 }
 
 
-// 8. PORTFOLIO
+// 9. PORTFOLIO
 // =============================================================================
 
 .projects-section {
@@ -995,7 +998,7 @@ a {
 }
 
 
-// 9. SKILLS
+// 10. SKILLS
 // =============================================================================
 
 .skills-chart {
@@ -1013,7 +1016,7 @@ a {
 }
 
  
-// 10. EDUCATION
+// 11. EDUCATION
 // =============================================================================
 .education-section {
   article:not(:last-child) {
@@ -1022,7 +1025,7 @@ a {
 }
 
 
-// 11. CONTACT
+// 12. CONTACT
 // =============================================================================
 
 .contact-section {
@@ -1220,7 +1223,7 @@ textarea.materialize-textarea {
 }
 
 
-// 12. FOOTER
+// 13. FOOTER
 // =============================================================================
 
 .footer {

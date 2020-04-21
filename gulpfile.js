@@ -42,7 +42,8 @@ function copy() {
     'node_modules/simplebar/dist/simplebar.min.js',
     'node_modules/simplebar/dist/simplebar.min.css',
     'node_modules/aos/dist/aos.js',
-    'node_modules/aos/dist/aos.css'
+    'node_modules/aos/dist/aos.css',
+    'node_modules/headroom.js/dist/headroom.min.js'
   ], {base: 'node_modules/'})
   .pipe(gulp.dest('vendor/'));
 }

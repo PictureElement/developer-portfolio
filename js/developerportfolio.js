@@ -1,6 +1,13 @@
 // Run a function when the DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
 
+  // Make top bar react to user's scroll
+  var topBar = document.querySelector(".top-bar");
+
+  var headroom  = new Headroom(topBar);
+
+  headroom.init();
+
   // In-page link animations
   $('.scroll-js').click(function(e) {
     e.preventDefault();
@@ -9,15 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     $('html, body').animate({
       scrollTop: scrollDistance + 'px'
     }, 'slow');
-  });
-
-  // Add box shadow to the top navigation on scroll
-  document.addEventListener('scroll', function() {
-    if ($(document).scrollTop() > 0) {
-      $('.top-bar').addClass('top-bar--fixed-scrolled');
-    } else {
-      $('.top-bar').removeClass('top-bar--fixed-scrolled');
-    }
   });
 
   // Parallax

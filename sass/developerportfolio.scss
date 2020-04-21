@@ -560,14 +560,6 @@ a {
       transition: opacity 15ms linear, background-color 15ms linear;
       z-index: 1;
     }
-    /*
-    &:hover {
-      color: $on-surface-primary;
-      &::before {
-        background-color: rgba(0, 0, 0, 0.04);
-      }
-    }
-    */
     &.active {
       color: rgba($secondary, 0.87);
       .sidenav__icon {
@@ -872,16 +864,28 @@ a {
       display: block;
     }
   }
-  &--fixed {
-    transition: box-shadow .2s linear,-webkit-box-shadow .2s linear;
-  }
-  &--fixed-scrolled {
-    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
-  }
   @media #{$medium-and-up} {
     padding: 8px 12px;
     min-height: 64px;
   }
+}
+
+// Styles for Headroom.js
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear, box-shadow 200ms linear;
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
+.headroom--not-top {
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
 }
 
 
@@ -1010,8 +1014,6 @@ a {
   width: 288px;
   height: 288px;
   margin: 0 auto;
-  //border:1px solid rgba(0,0,0,0.125);
-  //border-radius: 50%;
   @media #{$medium-and-up} {
     width: 510px;
     height: 510px;

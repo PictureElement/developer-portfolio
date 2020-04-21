@@ -29,6 +29,7 @@
     "@fortawesome/fontawesome-free": "^5.10.2",
     "aos": "^2.3.4",
     "echarts": "^4.3.0",
+    "headroom.js": "^0.11.0",
     "jquery": "^3.4.1",
     "materialize-css": "^1.0.0-rc.2",
     "simplebar": "^5.0.2"

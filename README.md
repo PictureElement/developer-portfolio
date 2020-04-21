@@ -1,14 +1,14 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/PictureElement/developer-portfolio/master/src/images/logo@2x.png">
+  <img alt="Logo" src="https://raw.githubusercontent.com/PictureElement/developer-portfolio/master/images/logo@2x.png">
 </div>
 <h1 align="center">
   developer-portfolio
 </h1>
 <p align="center">
-  A single-page personal portfolio for <a href="https://www.msof.me/" target="_blank">www.msof.me</a> based on Google Material Design guidelines. To view a live demo, [click here](https://pictureelement.github.io/developer-portfolio/).
+  A single-page personal portfolio for <a href="https://www.msof.me/" target="_blank">www.msof.me</a> based on Google Material Design guidelines. To view a live demo, <a href="https://pictureelement.github.io/developer-portfolio/" target="_blank">click here</a>
 </p>
 
-![demo](https://raw.githubusercontent.com/PictureElement/developer-portfolio/master/src/images/demo.png)
+![demo](https://raw.githubusercontent.com/PictureElement/developer-portfolio/master/images/demo.png)
 
 ## Setup
 

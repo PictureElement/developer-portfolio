@@ -26,9 +26,31 @@ Simply fork the repo and run `npm install` in order to get all the Gulp dev depe
 
 ## Customization
 
+### Personal logo
+
+The template supports two types of branding, a logomark (default) and a logotype.
+You can choose either one by commenting the markup of the one type you are not interested in.
+The markup can be found in `index.htm` within the `<header>` tag.
+
+Markup for the Logomark:
+`<a data-aos="zoom-in" data-aos-duration="700" data-aos-once="true" class="top-bar__logo" href="."><img src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x" alt="Personal logo" draggable="false"></a>`
+
+Markup for the Logotype:
+`<a data-aos="zoom-in" data-aos-duration="700" data-aos-once="true" class="top-bar__logotype" href=".">Olivia</a>`
+
+### Favicon
+
+Visit [this](https://favicon.io/favicon-converter/) page, upload your desired image and generate your favicon files. Download the files and place them in the root directory of your project, replacing the default ones.
+
+### Google Fonts
+
+The template's default fonts are _Raleway_ (primary), _Montserrat_ (secondary) and _Abril Fatface_ (logotype).
+
+To change the fonts modify the stylesheet link located in `index.html` (within the `<head>` tag) to request your desired web fonts. Ensure to define the new fonts in `sass/developerportfolio.scss` file as well (see _Styling_ section below).
+
 ### Styling
 
-In general, most styles on the page are based off the definitions of variables in the VARIABLES section in the `sass/developerportfolio.scss` file.
+In general, most styles on the page are based off the definitions of variables in the _VARIABLES_ section in `sass/developerportfolio.scss` file.
 
 ```SCSS
 // Define font families

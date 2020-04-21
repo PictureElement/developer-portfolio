@@ -8,23 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   headroom.init();
 
-  // In-page link animations
-  $('.scroll-js').click(function(e) {
-    e.preventDefault();
-    var scrollTarget = $(this).attr('href');
-    var scrollDistance = $(scrollTarget).offset().top - 50;
-    $('html, body').animate({
-      scrollTop: scrollDistance + 'px'
-    }, 'slow');
-  });
-
   // Parallax
   var parallax = document.getElementById('parallax');
   M.Parallax.init(parallax);
 
   // Scrollspy
   var elems = document.querySelectorAll('.scrollspy');
-  var instances = M.ScrollSpy.init(elems, {scrollOffset: 50});
+  var instances = M.ScrollSpy.init(elems, {scrollOffset: 0});
 
   // Init AOS
   AOS.init();

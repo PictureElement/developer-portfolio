@@ -28,14 +28,16 @@ Simply fork the repo and run `npm install` in order to get all the Gulp dev depe
 
 ### Personal logo
 
-The template supports two types of branding, a logomark (default) and a logotype.
+The template supports two types of personal logos, a logomark (default) and a logotype.
 You can choose either one by commenting the markup of the one type you are not interested in.
-The markup can be found in `index.htm` within the `<header>` tag.
+The logo-related markup can be found in `index.htm` within the `<header>` tag.
 
 Markup for the Logomark:
+
 `<a data-aos="zoom-in" data-aos-duration="700" data-aos-once="true" class="top-bar__logo" href="."><img src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x" alt="Personal logo" draggable="false"></a>`
 
 Markup for the Logotype:
+
 `<a data-aos="zoom-in" data-aos-duration="700" data-aos-once="true" class="top-bar__logotype" href=".">Olivia</a>`
 
 ### Favicon

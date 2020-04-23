@@ -12,6 +12,11 @@ $font-stack-secondary: 'Montserrat', sans-serif;
 // Spacing
 $section-spacing: 75px;
 
+
+// 1.1 LIGHT THEME
+// -----------------------------------------------------------------------------
+
+/*
 // Primary color and variants
 $primary: #2196f3;
 $primary-dark: #0069c0;
@@ -45,6 +50,44 @@ $scrollbar-color: $secondary;
 
 // Parallax border color
 $parallax-border-color: $secondary;
+*/
+
+// 1.2 DARK THEME
+// -----------------------------------------------------------------------------
+
+// Primary color and variants
+$primary: rgb(10,25,47);
+$primary-dark: #01031E;
+
+// Secondary color
+$secondary: rgb(100, 255, 218);
+
+// Background color
+$background: rgb(10,25,47);
+
+// Surface color
+$surface: #213044;
+
+// "On" colors for primary and secondary colors and variants
+$on-primary: rgb(136, 146, 176);
+$on-primary-dark: #fff;
+$on-secondary: #000;
+
+// "On" color for background
+$on-background: rgba(255,255,255,0.87);
+
+// "On" colors for surface 
+$on-surface-primary: rgb(136, 146, 176);
+$on-surface-secondary: rgb(136, 146, 176);
+
+// Timeline color
+$timeline-color: rgb(100, 255, 218);
+
+// Scrollbar color
+$scrollbar-color: rgb(100, 255, 218);
+
+// Parallax border color
+$parallax-border-color: rgb(100, 255, 218);
 
 
 // 2. MATERIALIZE

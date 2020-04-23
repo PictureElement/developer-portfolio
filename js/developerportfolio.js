@@ -1,24 +1,22 @@
 // Run a function when the DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
 
+  // Scrollspy
+  var elems = document.querySelectorAll('.scrollspy');
+  var instances = M.ScrollSpy.init(elems, {scrollOffset: 0});
+
   // Make top bar react to user's scroll
   var topBar = document.querySelector(".top-bar");
-
   var headroom  = new Headroom(topBar);
-
   headroom.init();
 
   // Parallax
   var parallax = document.getElementById('parallax');
   M.Parallax.init(parallax);
 
-  // Scrollspy
-  var elems = document.querySelectorAll('.scrollspy');
-  var instances = M.ScrollSpy.init(elems, {scrollOffset: 0});
-
   // Init AOS
   AOS.init();
-  
+
   // Chart
   var dom = document.getElementById('skillsChart');
   var skillsChart = echarts.init(dom, 'light', {renderer: 'canvas'});
@@ -88,5 +86,4 @@ document.addEventListener('DOMContentLoaded', function() {
       $(this).html('<i class="fas fa-chevron-down"></i> Show more');
     }
   });
-
 });

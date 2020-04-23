@@ -37,6 +37,9 @@ $surface: #fff;
 $on-surface-primary: rgba(0,0,0,0.87);
 $on-surface-secondary: rgba(0,0,0,0.54);
 
+// Timeline color
+$timeline-color: $secondary;
+
 
 // 2. MATERIALIZE
 // =============================================================================
@@ -157,7 +160,7 @@ a {
       position: absolute;
       bottom: 0;
       left: 0;
-      background: $primary;
+      background: $secondary;
     }
   }
 }
@@ -269,12 +272,15 @@ a {
       padding: 16px;
       .lead-card__title {
         font-family: $font-stack-secondary;
-        color: $primary;
+        color: $secondary;
         font-size: 30px;
         font-weight: 500;
         line-height: 1.2;
         display: inline-block;
         margin-right: 40px;
+        span {
+          color: $on-surface-primary;
+        }
       }
       .lead-card__subtitle {
         font-family: $font-stack-secondary;
@@ -964,7 +970,7 @@ a {
       height: 21px;
       -webkit-font-smoothing: antialiased;
       text-rendering: auto;
-      color: $primary;
+      color: $timeline-color;
       font-size: 21px;
       line-height: 1;
       z-index: 1;
@@ -975,7 +981,7 @@ a {
         content: "";
         display: block;
         width: 3px;
-        background-color: $primary;
+        background-color: $timeline-color;
         position: absolute;
         top: 50%;
         bottom: calc(-50% - 16px);

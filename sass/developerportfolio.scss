@@ -43,6 +43,9 @@ $timeline-color: $secondary;
 // Scrollbar color
 $scrollbar-color: $secondary;
 
+// Parallax border color
+$parallax-border-color: $secondary;
+
 
 // 2. MATERIALIZE
 // =============================================================================
@@ -779,7 +782,7 @@ a {
 // =============================================================================
 
 .parallax-wrapper {
-  border-bottom: 5px solid $primary;
+  border-bottom: 5px solid $parallax-border-color;
   position: absolute;
   top: 0;
   left: 0;
@@ -994,7 +997,7 @@ a {
     &:last-child {
       .timeline__wrapper {
         &::before {
-          background: linear-gradient(to bottom, $primary, rgba(52,152,219,0));
+          background: linear-gradient(to bottom, $timeline-color, transparent);
         }
       }
       .horizontal-card {

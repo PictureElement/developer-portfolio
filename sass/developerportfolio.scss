@@ -19,19 +19,19 @@ $primary-dark: #0069c0;
 // Secondary color
 $secondary: #9c27b0;
 
+// Background color
+$background: #f5f5f5;
+
+// Surface color
+$surface: #fff;
+
 // "On" colors for primary and secondary colors and variants
 $on-primary: #000;
 $on-primary-dark: #fff;
 $on-secondary: #fff;
 
-// Background color
-$background: #f5f5f5;
-
 // "On" color for background
 $on-background: rgba(0,0,0,0.87);
-
-// Surface color
-$surface: #fff;
 
 // "On" colors for surface 
 $on-surface-primary: rgba(0,0,0,0.87);
@@ -39,6 +39,9 @@ $on-surface-secondary: rgba(0,0,0,0.54);
 
 // Timeline color
 $timeline-color: $secondary;
+
+// Scrollbar color
+$scrollbar-color: $secondary;
 
 
 // 2. MATERIALIZE
@@ -664,9 +667,9 @@ a {
   color: $on-secondary;
 }
 
-// Scrollbar color
+// Scrollbar background
 .simplebar-scrollbar::before {
-  background-color: $primary;
+  background-color: $scrollbar-color;
 }
 
 
@@ -1268,6 +1271,11 @@ textarea.materialize-textarea {
     }
   }
   &__to-top {
-    color: $secondary;
+    color: rgba(0,0,0,0.87);
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+      color: rgba(0,0,0,0.87);
+    }
   }
 }

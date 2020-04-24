@@ -16,78 +16,93 @@ $section-spacing: 75px;
 // 1.1 LIGHT THEME
 // -----------------------------------------------------------------------------
 
-/*
-// Primary color and variants
+// Primary color
 $primary: #2196f3;
-$primary-dark: #0069c0;
 
 // Secondary color
 $secondary: #9c27b0;
 
-// Background color
+// Background
 $background: #f5f5f5;
+
+// Contact section background
+$contact-background: #0069c0;
 
 // Surface color
 $surface: #fff;
 
-// "On" colors for primary and secondary colors and variants
-$on-primary: #000;
-$on-primary-dark: #fff;
-$on-secondary: #fff;
+// "On" color for primary
+$on-primary: rgba(0,0,0,0.87);
+
+// "On" color for secondary
+$on-secondary: rgba(255,255,255,0.87);
 
 // "On" color for background
 $on-background: rgba(0,0,0,0.87);
 
-// "On" colors for surface 
+// "On" color for contact section background
+$on-contact-background: rgba(255,255,255,0.87);
+
+// "On" color for surface (primary)
 $on-surface-primary: rgba(0,0,0,0.87);
+
+// "On" color for surface (secondary)
 $on-surface-secondary: rgba(0,0,0,0.54);
 
-// Timeline color
-$timeline-color: $secondary;
+// Timeline
+$timeline-color: #9c27b0;
 
-// Scrollbar color
-$scrollbar-color: $secondary;
+// Scrollbar
+$scrollbar-color: #9c27b0;
 
-// Parallax border color
-$parallax-border-color: $secondary;
-*/
+// Parallax border
+$parallax-border-color: #9c27b0;
+
 
 // 1.2 DARK THEME
 // -----------------------------------------------------------------------------
 
-// Primary color and variants
-$primary: rgb(10,25,47);
-$primary-dark: #01031E;
+// Primary color
+$primary: #0a192f;
 
 // Secondary color
-$secondary: rgb(100, 255, 218);
+$secondary: #64ffda;
 
-// Background color
-$background: rgb(10,25,47);
+// Background
+$background: #0a192f;
+
+// Contact section background
+$contact-background: #403f4c;
 
 // Surface color
 $surface: #213044;
 
-// "On" colors for primary and secondary colors and variants
-$on-primary: rgb(136, 146, 176);
-$on-primary-dark: #fff;
-$on-secondary: #000;
+// "On" color for primary
+$on-primary: #8892b0;
+
+// "On" color for secondary
+$on-secondary: rgba(0,0,0,0.87);
 
 // "On" color for background
 $on-background: rgba(255,255,255,0.87);
 
-// "On" colors for surface 
-$on-surface-primary: rgb(136, 146, 176);
-$on-surface-secondary: rgb(136, 146, 176);
+// "On" color for contact section background
+$on-contact-background: #fff;
 
-// Timeline color
-$timeline-color: rgb(100, 255, 218);
+// "On" color for surface (primary)
+$on-surface-primary: #8892b0;
 
-// Scrollbar color
-$scrollbar-color: rgb(100, 255, 218);
+// "On" color for surface (secondary)
+$on-surface-secondary: #8892b0;
 
-// Parallax border color
-$parallax-border-color: rgb(100, 255, 218);
+// Timeline
+$timeline-color: #64ffda;
+
+// Scrollbar
+$scrollbar-color: #64ffda;
+
+// Parallax border
+$parallax-border-color: #64ffda;
 
 
 // 2. MATERIALIZE
@@ -328,6 +343,8 @@ a {
         display: inline-block;
         margin-right: 40px;
         span {
+          font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+          font-weight: 400;
           color: $on-surface-primary;
         }
       }
@@ -934,7 +951,7 @@ a {
           content: '';
           width: 100%;
           height: 1px;
-          background-color: $on-primary;
+          background-color: $secondary;
           display: block;
           position: absolute;
           bottom: 0;
@@ -1114,7 +1131,7 @@ a {
 .contact-section {
   padding-bottom: $section-spacing;
   margin-top: $section-spacing;
-  background: $primary-dark;
+  background: $contact-background;
   &__right.col  {
     padding: 0;
     @media #{$large-and-up} {
@@ -1122,10 +1139,10 @@ a {
     }
   }
   &__title {
-    color: $on-primary-dark;
+    color: $on-contact-background;
   }
   &__text {
-    color: $on-primary-dark;
+    color: $on-contact-background;
     text-align: left;
     margin-bottom: 32px;
     
@@ -1142,7 +1159,7 @@ a {
   &__required-text {
     min-height: 18px;
     font-size: 12px;
-    color: rgba($on-primary-dark, 0.6);
+    color: rgba($on-contact-background, 0.6);
   }
   &__consent {
     border: 1px solid rgba(255,255,255,.6);
@@ -1150,7 +1167,7 @@ a {
     border-radius: 0 16px 0 16px;
     margin-top:10px;
     span {
-      color: $on-primary-dark;
+      color: $on-contact-background;
       a {
         color: $secondary;
         text-decoration: underline;
@@ -1175,7 +1192,7 @@ input[type=tel]:not(.browser-default),
 input[type=number]:not(.browser-default),
 input[type=search]:not(.browser-default),
 textarea.materialize-textarea {
-  border-bottom: 1px solid rgba($on-primary-dark, 0.6);
+  border-bottom: 1px solid rgba($on-contact-background, 0.6);
   // Focused input style
   &:focus:not([readonly]) {
     border-bottom: 1px solid $secondary;
@@ -1192,7 +1209,7 @@ textarea.materialize-textarea {
     height: 34px;
   }
   input, textarea {
-    color: $on-primary-dark;
+    color: $on-contact-background;
   }
   textarea {
     height: 81px;
@@ -1208,7 +1225,7 @@ textarea.materialize-textarea {
   label {
     font-size: 16px;
     top: -5px;
-    color: rgba($on-primary-dark, 0.6);
+    color: rgba($on-contact-background, 0.6);
   }
 }
 
@@ -1227,7 +1244,7 @@ textarea.materialize-textarea {
       border: none;
       border-bottom-width: 1px;
       border-bottom-style: solid;
-      border-bottom-color: rgba($on-primary-dark, 0.25);
+      border-bottom-color: rgba($on-contact-background, 0.25);
     }
     &-item {
       height: 72px;
@@ -1290,13 +1307,13 @@ textarea.materialize-textarea {
       &__primary-text {
         font-size: 16px;
         font-weight: 400;
-        color: $on-primary-dark;
+        color: $on-contact-background;
         margin-bottom: -5px;
       }
       &__secondary-text {
         font-size: 14px;
         font-weight: 400;
-        color: $on-primary-dark;
+        color: $on-contact-background;
       }
     }
   }

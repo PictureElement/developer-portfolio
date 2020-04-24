@@ -338,13 +338,11 @@ a {
         font-family: $font-stack-secondary;
         color: $secondary;
         font-size: calc(35px + (50 - 35) * ((100vw - 320px) / (1920 - 320)));
-        font-weight: 500;
+        font-weight: 400;
         line-height: 1.2;
         display: inline-block;
         margin-right: 40px;
         span {
-          font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
-          font-weight: 400;
           color: $on-surface-primary;
         }
       }
@@ -357,7 +355,7 @@ a {
       }
     }
     .lead-card__secondary { 
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.5;
     }
     .lead-card__cta {
@@ -1145,7 +1143,7 @@ a {
     color: $on-contact-background;
     text-align: left;
     margin-bottom: 32px;
-    
+    font-size: 18px;
   }
 }
 

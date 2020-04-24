@@ -637,7 +637,7 @@ a {
     letter-spacing: .0071428571em;
     height: 40px;
     margin: 8px;
-    padding: 0 8px;
+    padding: 0 8px !important;
     color: $on-surface-primary;
     &::before {
       content: '';

@@ -82,35 +82,35 @@ $secondary: #64ffda;
 // Background
 $background: #0a192f;
 
-// Background secondary (contact section)
+// Background secondary
 $background-secondary: #403f4c;
 
 // Surface color
 $surface: #213044;
 
-// Navigation drawer surface
+// Surface color (navigation drawer)
 $surface-nav-drawer: #213044;
 
 // "On" color for primary
 $on-primary: #8892b0;
 
 // "On" color for secondary
-$on-secondary: rgba(0,0,0,0.87);
+$on-secondary: #0a192f;
 
 // "On" color for background
-$on-background: rgba(255,255,255,0.87);
+$on-background: #ccd6f6;
 
-// "On" color for contact section background
-$on-background-secondary: #fff;
+// "On" color for background secondary
+$on-background-secondary: #ccd6f6;
 
 // "On" color for surface (primary)
-$on-surface-primary: #8892b0;
+$on-surface-primary: #ccd6f6;
 
 // "On" color for surface (secondary)
 $on-surface-secondary: #8892b0;
 
 // "On" color for navigation drawer surface (primary)
-$on-surface-nav-drawer-primary: #8892b0;
+$on-surface-nav-drawer-primary: #ccd6f6;
 
 // "On" color for navigation drawer surface (secondary)
 $on-surface-nav-drawer-secondary:#8892b0;
@@ -1153,7 +1153,7 @@ a {
     color: $on-background-secondary;
     text-align: left;
     margin-bottom: 32px;
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -1314,7 +1314,7 @@ textarea.materialize-textarea {
       }
       &__primary-text {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 500;
         color: $on-background-secondary;
         margin-bottom: -5px;
       }

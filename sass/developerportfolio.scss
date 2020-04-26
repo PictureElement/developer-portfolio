@@ -230,7 +230,7 @@ a {
   &__title {
     position: relative;
     font-family: $font-stack-secondary;
-    font-size: 30px;
+    font-size: calc(24px + (28 - 24) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 500;
     text-align: left;
     padding-bottom: 16px;
@@ -357,7 +357,7 @@ a {
       .lead-card__title {
         font-family: $font-stack-secondary;
         color: $secondary;
-        font-size: calc(35px + (50 - 35) * ((100vw - 320px) / (1920 - 320)));
+        font-size: calc(32px + (40 - 32) * ((100vw - 320px) / (1920 - 320)));
         font-weight: 500;
         line-height: 1.2;
         display: inline-block;
@@ -368,14 +368,14 @@ a {
       }
       .lead-card__subtitle {
         font-family: $font-stack-secondary;
-        font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+        font-size: calc(24px + (28 - 24) * ((100vw - 320px) / (1920 - 320)));
         font-weight: 500;
         color: $on-surface-secondary;
         line-height: 1.5;
       }
     }
     .lead-card__secondary { 
-      font-size: 18px;
+      font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
       line-height: 1.5;
     }
     .lead-card__cta {
@@ -1086,11 +1086,20 @@ a {
     margin-bottom: 8px;
   }
   &__row-wrapper {
-    &.collapse {
-      .row:nth-child(n+3) {
-        position: absolute !important;
-        top: -9999px !important;
-        left: -9999px !important;
+    &.collapse .row {
+      @media #{$medium-and-down} {
+        &:nth-child(n+2) {
+          position: absolute !important;
+          top: -9999px !important;
+          left: -9999px !important;
+        }
+      }
+      @media #{$medium-and-up} {
+        &:nth-child(n+3) {
+          position: absolute !important;
+          top: -9999px !important;
+          left: -9999px !important;
+        }
       }
     }
   }

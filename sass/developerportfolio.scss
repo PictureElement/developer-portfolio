@@ -16,6 +16,7 @@ $section-spacing: 75px;
 // 1.1 LIGHT THEME
 // -----------------------------------------------------------------------------
 
+/*
 // Primary color
 $primary: #2196f3;
 
@@ -66,11 +67,12 @@ $scrollbar-color: #9c27b0;
 
 // Parallax border
 $parallax-border-color: #9c27b0;
+*/
 
 
 // 1.2 DARK THEME
 // -----------------------------------------------------------------------------
-/*
+
 // Primary color
 $primary: #0a192f;
 
@@ -121,7 +123,7 @@ $scrollbar-color: #64ffda;
 
 // Parallax border
 $parallax-border-color: #64ffda;
-*/
+
 
 // 2. MATERIALIZE
 // =============================================================================
@@ -356,7 +358,7 @@ a {
         font-family: $font-stack-secondary;
         color: $secondary;
         font-size: calc(35px + (50 - 35) * ((100vw - 320px) / (1920 - 320)));
-        font-weight: 400;
+        font-weight: 500;
         line-height: 1.2;
         display: inline-block;
         margin-right: 40px;
@@ -367,8 +369,8 @@ a {
       .lead-card__subtitle {
         font-family: $font-stack-secondary;
         font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
-        font-weight: 400;
-        color: $on-surface-primary;
+        font-weight: 500;
+        color: $on-surface-secondary;
         line-height: 1.5;
       }
     }
@@ -679,16 +681,13 @@ a {
     }
     &:focus {
       color: $secondary !important;
-      .sidenav__icon {
-        color: $secondary !important;
-      }
       &::before {
         background-color: rgba($secondary, 0.24);
       }
     }
   }
   &__icon {
-    color: $on-surface-nav-drawer-primary !important;
+    color: $secondary !important;
     margin-right: 32px;
     width: 24px;
     height: 24px;

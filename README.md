@@ -8,6 +8,9 @@
   A single-page personal portfolio for <a href="https://www.msof.me/" target="_blank">www.msof.me</a> based on Google Material Design guidelines. To view a live demo, <a href="https://pictureelement.github.io/developer-portfolio/" target="_blank">click here</a>
 </p>
 
+![demo-1](https://raw.githubusercontent.com/PictureElement/developer-portfolio/master/images/demo-1.png)
+![demo-2](https://raw.githubusercontent.com/PictureElement/developer-portfolio/master/images/demo-2.png)
+
 ## Setup
 
 Simply fork the repo and run `npm install` in order to get all the Gulp dev dependencies. Next, run `gulp watch` to build the project and start live reloading on localhost:3000. At this point, the page is ready to go and you can begin to add your own information and make any needed changes.

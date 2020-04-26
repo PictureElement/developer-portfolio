@@ -125,7 +125,7 @@ By default, the template comes with a number of images, some of which can be kep
 
 * Cover (`images/cover.jpg`) - this is the background image that is moved at a different speed than the foreground content while scrolling (parallax effect). The recommended size is 1920 x 750.
 
-* Profile picture (`images/profile.jpg`, `images/profile@2x.jpg`) - this is the profile picture of yourself. There are two variants that differ in resolution. The recommended sizes are 415 x 415 and 830 x 830 for `images/profile.jpg` and `images/profile@2x.jpg` respectively.
+* Profile picture (`images/profile.jpg`, `images/profile@2x.jpg`) - this is the profile picture of yourself. There are two variants that differ in resolution. The recommended sizes are 318 x 318 and 636 x 636 for `images/profile.jpg` and `images/profile@2x.jpg` respectively.
 
 * Thumbnail (`images/thumbnail.jpg`, `images/thumbnail@2x.jpg`) - this is the profile picture of yourself. There are two variants that differ in resolution. The recommended sizes are 64 x 64 and 128 x 128 for `images/thumbnail.jpg` and `images/thumbnail@2x.jpg` respectively.
 

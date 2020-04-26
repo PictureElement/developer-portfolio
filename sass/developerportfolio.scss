@@ -325,6 +325,10 @@ a {
     .lead-card__secondary { 
       font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
       line-height: 1.5;
+      display: none;
+      @media #{$extra-large-and-up} {
+        display: block;
+      }
     }
     .lead-card__cta {
       padding: 25px 16px 30px 16px;
@@ -804,9 +808,12 @@ a {
   left: 0;
   width: 100%;
   .parallax-container {
-    height: 350px;
+    height: 250px;
     img {
       z-index: -1;
+    }
+    @media #{$medium-and-up} {
+      height: 350px;
     }
   }
   &::after {
@@ -946,7 +953,7 @@ a {
 // =============================================================================
 
 .lead-section {
-  padding-top: 100px;
+  padding-top: 112px;
   @media #{$medium-and-up} {
     padding-top: 150px;
   }

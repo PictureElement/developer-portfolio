@@ -16,7 +16,7 @@ $section-spacing: 75px;
 // 1.1 LIGHT THEME
 // -----------------------------------------------------------------------------
 
-
+/*
 // Primary color
 $primary: #2196f3;
 
@@ -67,12 +67,12 @@ $scrollbar-color: #9c27b0;
 
 // Parallax border
 $parallax-border-color: #9c27b0;
-
+*/
 
 // 1.2 DARK THEME
 // -----------------------------------------------------------------------------
 
-/*
+
 // Primary color
 $primary: #0a192f;
 
@@ -123,7 +123,7 @@ $scrollbar-color: #64ffda;
 
 // Parallax border
 $parallax-border-color: #64ffda;
-*/
+
 
 // 2. MATERIALIZE
 // =============================================================================
@@ -918,6 +918,7 @@ a {
     img {
       width: 48px;
       height: 48px;
+      animation: pulse 2s infinite;
     }
   }
   &__logotype {
@@ -927,9 +928,7 @@ a {
     font-weight: 500;
     transition: transform .2s ease-in-out;
     padding-left: 4px;
-    &:hover {
-      color: $on-primary;
-    }
+    animation: pulse 2s infinite;
   }
   &__nav {
     display: none;
@@ -1357,5 +1356,23 @@ textarea.materialize-textarea {
       text-decoration: none;
       color: rgba(0,0,0,0.87);
     }
+  }
+}
+
+
+// 14. ANIMATIONS
+// =============================================================================
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
   }
 }

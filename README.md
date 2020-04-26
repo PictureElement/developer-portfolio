@@ -1,6 +1,3 @@
-<div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/PictureElement/developer-portfolio/master/images/logo@2x.png">
-</div>
 <h1 align="center">
   developer-portfolio
 </h1>
@@ -17,13 +14,13 @@ Simply fork the repo and run `npm install` in order to get all the Gulp dev depe
 
 ## Features
 
-* Strictly based on Google Material Design guidelines
+* Based on Google Material Design guidelines
 * Gulp-ready (compiles Sass file, minifies CSS and JS, live reloading with Browsersync)
 * Responsive web design
 * Styling can be done through simple variable edits
 * Sunburst chart for displaying skills
 * Scroll animations
-* GDPR-ready
+* Light and dark theme demos
 
 ## Customization
 
@@ -64,27 +61,56 @@ $font-stack-secondary: 'Montserrat', sans-serif;
 // Spacing
 $section-spacing: 75px;
 
-// Primary color and variants
-$primary: #2196f3;
-$primary-dark: #0069c0;
+// Primary color
+$primary: #0a192f;
 
 // Secondary color
-$secondary: #9c27b0;
+$secondary: #64ffda;
 
-// "On" colors for primary and secondary colors and variants
-$on-primary: #000;
-$on-primary-dark: #fff;
-$on-secondary: #fff;
+// Background
+$background: #0a192f;
 
-// Background color
-$background: #f5f5f5;
+// Background secondary
+$background-secondary: #403f4c;
 
 // Surface color
-$surface: #fff;
+$surface: #213044;
 
-// "On" colors for surface 
-$on-surface-primary: rgba(0,0,0,0.87);
-$on-surface-secondary: rgba(0,0,0,0.54);
+// Surface color (navigation drawer)
+$surface-nav-drawer: #213044;
+
+// "On" color for primary
+$on-primary: #8892b0;
+
+// "On" color for secondary
+$on-secondary: #0a192f;
+
+// "On" color for background
+$on-background: #ccd6f6;
+
+// "On" color for background secondary
+$on-background-secondary: #ccd6f6;
+
+// "On" color for surface (primary)
+$on-surface-primary: #ccd6f6;
+
+// "On" color for surface (secondary)
+$on-surface-secondary: #8892b0;
+
+// "On" color for surface (navigation drawer - primary)
+$on-surface-nav-drawer-primary: #ccd6f6;
+
+// "On" color for surface (navigation drawer - secondary)
+$on-surface-nav-drawer-secondary:#8892b0;
+
+// Timeline
+$timeline-color: #64ffda;
+
+// Scrollbar
+$scrollbar-color: #64ffda;
+
+// Parallax border
+$parallax-border-color: #64ffda;
 ```
 
 ### Skills 

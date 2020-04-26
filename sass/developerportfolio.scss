@@ -25,11 +25,14 @@ $secondary: #9c27b0;
 // Background
 $background: #f5f5f5;
 
-// Contact section background
-$contact-background: #0069c0;
+// Background secondary (contact section)
+$background-secondary: #0069c0;
 
 // Surface color
 $surface: #fff;
+
+// Navigation drawer surface
+$surface-nav-drawer: #fff;
 
 // "On" color for primary
 $on-primary: rgba(0,0,0,0.87);
@@ -41,13 +44,19 @@ $on-secondary: rgba(255,255,255,0.87);
 $on-background: rgba(0,0,0,0.87);
 
 // "On" color for contact section background
-$on-contact-background: rgba(255,255,255,0.87);
+$on-background-secondary: rgba(255,255,255,0.87);
 
 // "On" color for surface (primary)
 $on-surface-primary: rgba(0,0,0,0.87);
 
 // "On" color for surface (secondary)
 $on-surface-secondary: rgba(0,0,0,0.54);
+
+// "On" color for navigation drawer surface (primary)
+$on-surface-nav-drawer-primary: rgba(0,0,0,0.87);
+
+// "On" color for navigation drawer surface (secondary)
+$on-surface-nav-drawer-secondary:rgba(0,0,0,0.54);
 
 // Timeline
 $timeline-color: #9c27b0;
@@ -61,7 +70,7 @@ $parallax-border-color: #9c27b0;
 
 // 1.2 DARK THEME
 // -----------------------------------------------------------------------------
-
+/*
 // Primary color
 $primary: #0a192f;
 
@@ -71,11 +80,14 @@ $secondary: #64ffda;
 // Background
 $background: #0a192f;
 
-// Contact section background
-$contact-background: #403f4c;
+// Background secondary (contact section)
+$background-secondary: #403f4c;
 
 // Surface color
 $surface: #213044;
+
+// Navigation drawer surface
+$surface-nav-drawer: #213044;
 
 // "On" color for primary
 $on-primary: #8892b0;
@@ -87,13 +99,19 @@ $on-secondary: rgba(0,0,0,0.87);
 $on-background: rgba(255,255,255,0.87);
 
 // "On" color for contact section background
-$on-contact-background: #fff;
+$on-background-secondary: #fff;
 
 // "On" color for surface (primary)
 $on-surface-primary: #8892b0;
 
 // "On" color for surface (secondary)
 $on-surface-secondary: #8892b0;
+
+// "On" color for navigation drawer surface (primary)
+$on-surface-nav-drawer-primary: #8892b0;
+
+// "On" color for navigation drawer surface (secondary)
+$on-surface-nav-drawer-secondary:#8892b0;
 
 // Timeline
 $timeline-color: #64ffda;
@@ -103,7 +121,7 @@ $scrollbar-color: #64ffda;
 
 // Parallax border
 $parallax-border-color: #64ffda;
-
+*/
 
 // 2. MATERIALIZE
 // =============================================================================
@@ -602,9 +620,10 @@ a {
 
 // Navigation drawer
 .sidenav {
+  background-color: $surface-nav-drawer;
   &__header {
     padding: 16px 16px 20px 16px;
-    border-bottom: 1px solid rgba(0,0,0,.12);
+    border-bottom: 1px solid rgba($on-surface-nav-drawer-primary,.12);
   }
   &__image {
     display: block;
@@ -617,13 +636,20 @@ a {
     font-weight: 500;
     margin-top: 20px;
     line-height: 1;
+    color: $on-surface-nav-drawer-primary;
   }
   &__subtitle {
     font-size: .875rem;
     font-weight: 400;
     margin-top: 5px;
-    color: rgba(0,0,0,.6);
+    color: $on-surface-nav-drawer-secondary;
     line-height: 1;
+    a {
+      color: $on-surface-nav-drawer-secondary;
+      &:hover {
+        color: $secondary;
+      }
+    }
   }
   &__link {
     display: flex;
@@ -638,7 +664,7 @@ a {
     height: 40px;
     margin: 8px;
     padding: 0 8px !important;
-    color: $on-surface-primary;
+    color: $on-surface-nav-drawer-primary !important;
     &::before {
       content: '';
       display: block;
@@ -651,33 +677,18 @@ a {
       transition: opacity 15ms linear, background-color 15ms linear;
       z-index: 1;
     }
-    &.active {
-      color: rgba($secondary, 0.87);
+    &:focus {
+      color: $secondary !important;
       .sidenav__icon {
-        color: rgba($secondary, 0.87);
+        color: $secondary !important;
       }
       &::before {
-        background-color: rgba($secondary, 0.12);
-      }
-      &:hover {
-        &::before {
-          background-color: rgba($secondary, 0.16);
-        }
-      }
-      &:focus {
-        &::before {
-          background-color: rgba($secondary, 0.24);
-        }
-      }
-      &:active {
-        &::before {
-          background-color: rgba($secondary, 0.32);
-        }
+        background-color: rgba($secondary, 0.24);
       }
     }
   }
   &__icon {
-    color: rgba(0, 0, 0, 0.6);
+    color: $on-surface-nav-drawer-primary !important;
     margin-right: 32px;
     width: 24px;
     height: 24px;
@@ -1129,7 +1140,7 @@ a {
 .contact-section {
   padding-bottom: $section-spacing;
   margin-top: $section-spacing;
-  background: $contact-background;
+  background: $background-secondary;
   &__right.col  {
     padding: 0;
     @media #{$large-and-up} {
@@ -1137,10 +1148,10 @@ a {
     }
   }
   &__title {
-    color: $on-contact-background;
+    color: $on-background-secondary;
   }
   &__text {
-    color: $on-contact-background;
+    color: $on-background-secondary;
     text-align: left;
     margin-bottom: 32px;
     font-size: 18px;
@@ -1157,7 +1168,7 @@ a {
   &__required-text {
     min-height: 18px;
     font-size: 12px;
-    color: rgba($on-contact-background, 0.6);
+    color: rgba($on-background-secondary, 0.6);
   }
   &__consent {
     border: 1px solid rgba(255,255,255,.6);
@@ -1165,7 +1176,7 @@ a {
     border-radius: 0 16px 0 16px;
     margin-top:10px;
     span {
-      color: $on-contact-background;
+      color: $on-background-secondary;
       a {
         color: $secondary;
         text-decoration: underline;
@@ -1190,7 +1201,7 @@ input[type=tel]:not(.browser-default),
 input[type=number]:not(.browser-default),
 input[type=search]:not(.browser-default),
 textarea.materialize-textarea {
-  border-bottom: 1px solid rgba($on-contact-background, 0.6);
+  border-bottom: 1px solid rgba($on-background-secondary, 0.6);
   // Focused input style
   &:focus:not([readonly]) {
     border-bottom: 1px solid $secondary;
@@ -1207,7 +1218,7 @@ textarea.materialize-textarea {
     height: 34px;
   }
   input, textarea {
-    color: $on-contact-background;
+    color: $on-background-secondary;
   }
   textarea {
     height: 81px;
@@ -1223,7 +1234,7 @@ textarea.materialize-textarea {
   label {
     font-size: 16px;
     top: -5px;
-    color: rgba($on-contact-background, 0.6);
+    color: rgba($on-background-secondary, 0.6);
   }
 }
 
@@ -1242,7 +1253,7 @@ textarea.materialize-textarea {
       border: none;
       border-bottom-width: 1px;
       border-bottom-style: solid;
-      border-bottom-color: rgba($on-contact-background, 0.25);
+      border-bottom-color: rgba($on-background-secondary, 0.25);
     }
     &-item {
       height: 72px;
@@ -1305,13 +1316,13 @@ textarea.materialize-textarea {
       &__primary-text {
         font-size: 16px;
         font-weight: 400;
-        color: $on-contact-background;
+        color: $on-background-secondary;
         margin-bottom: -5px;
       }
       &__secondary-text {
         font-size: 14px;
         font-weight: 400;
-        color: $on-contact-background;
+        color: $on-background-secondary;
       }
     }
   }

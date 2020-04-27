@@ -125,13 +125,13 @@ By default, the template comes with a number of images, some of which can be kep
 
 * Cover (`images/cover.jpg`) - this is the background image that is moved at a different speed than the foreground content while scrolling (parallax effect). The recommended size is 1920 x 750.
 
-* Profile picture (`images/profile.jpg`, `images/profile@2x.jpg`) - this is the profile picture of yourself. There are two variants that differ in resolution. The recommended sizes are 318 x 318 and 636 x 636 for `images/profile.jpg` and `images/profile@2x.jpg` respectively.
+* Profile picture (`images/profile.jpg`, `images/profile@2x.jpg`) - this is the profile picture of yourself. There are two variants that differ in resolution. The recommended sizes are 310 x 310 and 620 x 620 for `images/profile.jpg` and `images/profile@2x.jpg` respectively.
 
 * Thumbnail (`images/thumbnail.jpg`, `images/thumbnail@2x.jpg`) - this is the profile picture of yourself. There are two variants that differ in resolution. The recommended sizes are 64 x 64 and 128 x 128 for `images/thumbnail.jpg` and `images/thumbnail@2x.jpg` respectively.
 
 * Experience image (`images/experience-0x.png`, `images/experience-0x@2x.png`) - these are the images associated with the company logo under the exprerience section. There are two variants for each image that differ in resolution. The recommended sizes are 42 x 42 and 84 x 84 for `images/experience-0x.png` and `images/experience-0x@2x.png` respectively.
 
-* Project image (`images/project-0x.png`, `images/project-0x@2x.png`) - these are the images associated with the projects under the projects section. The recommended sizes are 540 x 406 and 1080 x 812 for `images/project-0x.png` and `images/project-0x@2x.png` respectively.
+* Project image (`images/project-0x.png`, `images/project-0x@2x.png`) - these are the images associated with the projects under the projects section. The recommended sizes are 540 x 405 and 1080 x 810 for `images/project-0x.png` and `images/project-0x@2x.png` respectively.
 
 * Education image (`images/education-0x.png`, `images/education-0x@2x.png`) - these are the images associated with the schools under the education section. There are two variants for each image that differ in resolution. The recommended sizes are 42 x 42 and 84 x 84 for `images/education-0x.png` and `images/education-0x@2x.png` respectively.
 

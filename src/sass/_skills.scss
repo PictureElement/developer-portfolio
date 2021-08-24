@@ -2,12 +2,14 @@
     width: 288px;
     height: 288px;
     margin: 0 auto;
+
     @media #{$medium-and-up} {
-      width: 510px;
-      height: 510px;
+        width: 510px;
+        height: 510px;
     }
+
     @media #{$large-and-up} {
-      width: 695px;
-      height: 695px;
+        width: 695px;
+        height: 695px;
     }
-  }
+}

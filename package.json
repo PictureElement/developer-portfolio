@@ -1,41 +1,41 @@
 {
-  "name": "developer-portfolio",
-  "version": "1.0.1",
-  "description": "A Material Design, customizable single-page personal portfolio template.",
-  "keywords": [
-    "portfolio",
-    "material-design",
-    "personal",
-    "website",
-    "template",
-    "tech",
-    "coding",
-    "dev"
-  ],
-  "author": "Marios Sofokleous",
-  "license": "MIT",
-  "devDependencies": {
-    "browser-sync": "^2.26.14",
-    "critical": "^2.0.5",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.0",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-if": "^3.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.2",
-    "gulp-useref": "^4.0.1",
-    "gulp-wait": "0.0.2",
-    "puppeteer": "^5.3.1"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.2",
-    "aos": "^2.3.4",
-    "echarts": "^4.3.0",
-    "headroom.js": "^0.11.0",
-    "jquery": "^3.4.1",
-    "materialize-css": "^1.0.0-rc.2",
-    "simplebar": "^5.0.2"
-  }
+    "name": "developer-portfolio",
+    "version": "1.0.1",
+    "description": "Personal portfolio template based on Google Material Design guidelines.",
+    "keywords": [
+        "portfolio",
+        "material-design",
+        "personal",
+        "website",
+        "template",
+        "tech",
+        "coding",
+        "dev"
+    ],
+    "author": "Marios Sofokleous",
+    "license": "MIT",
+    "devDependencies": {
+        "browser-sync": "^2.26.14",
+        "critical": "^2.0.5",
+        "del": "^5.1.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.0",
+        "gulp-clean-css": "^4.2.0",
+        "gulp-if": "^3.0.0",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-uglify": "^3.0.2",
+        "gulp-useref": "^4.0.1",
+        "gulp-wait": "0.0.2",
+        "puppeteer": "^5.3.1"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.10.2",
+        "aos": "^2.3.4",
+        "echarts": "^4.3.0",
+        "headroom.js": "^0.11.0",
+        "jquery": "^3.4.1",
+        "materialize-css": "^1.0.0-rc.2",
+        "simplebar": "^5.0.2"
+    }
 }

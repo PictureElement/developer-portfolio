@@ -37,7 +37,7 @@ $(document).ready(function () {
         .then(status)
         .then(json)
         .then(function (response) {
-            console.log('Request succeeded with JSON response', response);
+            //console.log('Request succeeded with JSON response', response);
             data = response;
             return fetch('js/config/option.json');
         })
@@ -46,7 +46,7 @@ $(document).ready(function () {
         .then(function (response) {
             option = response;
             option.baseOption.series.data = data;
-            console.log('Request succeeded with JSON response', response);
+            //console.log('Request succeeded with JSON response', response);
             skillsChart.hideLoading();
             skillsChart.setOption(option, true);
             // Resize chart, when window size changes

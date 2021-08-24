@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+@import "variables";
+
+// Materialize overrides
+@import "overrides";
+
+// Materialize
+@import "../vendor/materialize-css/sass/components/color-variables";
+@import "../vendor/materialize-css/sass/components/variables";
+@import "../vendor/materialize-css/sass/components/normalize";
+@import "../vendor/materialize-css/sass/components/global";
+@import "../vendor/materialize-css/sass/components/grid";
+@import "../vendor/materialize-css/sass/components/transitions";
+@import "../vendor/materialize-css/sass/components/cards";
+@import "../vendor/materialize-css/sass/components/waves";
+@import "../vendor/materialize-css/sass/components/sidenav";
+@import "../vendor/materialize-css/sass/components/forms/forms";
+
+@import "reset";
+
+@import "global";
+
+@import "helpers";
+
+@import "header";
+
+@import "lead";
+
+@import "experience";
+
+@import "portfolio";
+
+@import "skills";
+
+@import "education";
+
+@import "contact";
+
+@import "footer";
+
+@import "animations";

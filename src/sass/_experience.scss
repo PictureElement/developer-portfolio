@@ -1,0 +1,67 @@
+.experience-section {
+    position: relative;
+    &__show-more {
+      position: absolute;
+      bottom: -26px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .timeline__box {
+      margin-bottom: 24px;
+    }
+  }
+  
+  .timeline {
+    position: relative;
+    &.collapse {
+      .timeline__box:nth-child(n+3) {
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+      }
+    }
+    &__box {
+      position: relative;
+      margin-right: 35px;
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f192";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -44px;
+        display: block;
+        width: 21px;
+        height: 21px;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: auto;
+        color: $timeline-color;
+        font-size: 21px;
+        line-height: 1;
+        z-index: 1;
+        background: $background;
+      }
+      .timeline__wrapper {
+        &::before {
+          content: "";
+          display: block;
+          width: 3px;
+          background-color: $timeline-color;
+          position: absolute;
+          top: 50%;
+          bottom: calc(-50% - 16px);
+          right: -35px;
+        }
+      }
+      &:last-child {
+        .timeline__wrapper {
+          &::before {
+            background: linear-gradient(to bottom, $timeline-color, transparent);
+          }
+        }
+        .horizontal-card {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }

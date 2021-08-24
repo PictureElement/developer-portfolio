@@ -1,0 +1,19 @@
+.footer {
+    background-color: #fff;
+    padding: 20px;
+    &__text {
+      color: rgba(0,0,0,0.87);
+      font-size: 12px;
+      @media #{$medium-and-up} {
+        font-size: 14px;
+      }
+    }
+    &__to-top {
+      color: rgba(0,0,0,0.87);
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+        color: rgba(0,0,0,0.87);
+      }
+    }
+  }

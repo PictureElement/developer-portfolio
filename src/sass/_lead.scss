@@ -1,0 +1,7 @@
+.lead-section {
+    padding-top: 112px;
+    @media #{$medium-and-up} {
+      padding-top: 150px;
+    }
+  }
+  

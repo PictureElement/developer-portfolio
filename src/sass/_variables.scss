@@ -1,0 +1,58 @@
+// Define font families
+$font-stack-logotype: 'Abril Fatface', cursive;
+$font-stack-primary: 'Raleway', sans-serif;
+$font-stack-secondary: 'Montserrat', sans-serif;
+
+// Section spacing
+$section-spacing: 75px;
+
+// Primary color
+$primary: #0a192f;
+
+// Secondary color
+$secondary: #64ffda;
+
+// Background
+$background: #0a192f;
+
+// Background secondary
+$background-secondary: #403f4c;
+
+// Surface color
+$surface: #213044;
+
+// Surface color (navigation drawer)
+$surface-nav-drawer: #213044;
+
+// "On" color for primary
+$on-primary: #8892b0;
+
+// "On" color for secondary
+$on-secondary: #0a192f;
+
+// "On" color for background
+$on-background: #ccd6f6;
+
+// "On" color for background secondary
+$on-background-secondary: #ccd6f6;
+
+// "On" color for surface (primary)
+$on-surface-primary: #ccd6f6;
+
+// "On" color for surface (secondary)
+$on-surface-secondary: #8892b0;
+
+// "On" color for surface (navigation drawer - primary)
+$on-surface-nav-drawer-primary: #ccd6f6;
+
+// "On" color for surface (navigation drawer - secondary)
+$on-surface-nav-drawer-secondary:#8892b0;
+
+// Timeline
+$timeline-color: #64ffda;
+
+// Scrollbar
+$scrollbar-color: #64ffda;
+
+// Parallax border
+$parallax-border-color: #64ffda;

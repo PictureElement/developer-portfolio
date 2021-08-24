@@ -1,0 +1,146 @@
+.parallax-wrapper {
+    border-bottom: 5px solid $parallax-border-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .parallax-container {
+      height: 250px;
+      img {
+        z-index: -1;
+      }
+      @media #{$medium-and-up} {
+        height: 350px;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(170deg, $primary, transparent 66%);
+      z-index: 0;
+    }
+  }
+  
+  .top-bar {
+    position: relative;
+    z-index: 100;
+    background: $primary;
+    padding: 4px;
+    position: fixed;
+    width: 100%;
+    &__sidenav-trigger {
+      @extend .btn-icon;
+      i {
+        color: $on-primary;
+        display: block;
+        font-size: 18px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+      }
+      &::before {
+        background-color: rgba($on-primary, 0);
+      }
+      &:hover {
+        color: $on-primary;
+        &::before {
+          background-color: rgba($on-primary, 0.04);
+        }
+      }
+      &:focus {
+        color: $on-primary;
+        &::before {
+          background-color: rgba($on-primary, 0.12);
+        }
+      }
+      @media #{$medium-and-up} {
+        display: none;
+      }
+    }
+    &__logo {
+      width: 48px;
+      height: 48px;
+      margin-left: 4px;
+      img {
+        width: 48px;
+        height: 48px;
+        animation: pulse 2s infinite;
+      }
+    }
+    &__logotype {
+      color: $on-primary;
+      font-family: $font-stack-logotype;
+      font-size: 20px;
+      font-weight: 500;
+      transition: transform .2s ease-in-out;
+      padding-left: 4px;
+      animation: pulse 2s infinite;
+    }
+    &__nav {
+      display: none;
+      overflow-x: auto;
+      ul {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+      li {
+        display: list-item;
+        position: relative;
+        &:last-child {
+          a {
+            padding-right: 4px;
+          }
+        }
+      }
+      a {
+        color: $on-primary;
+        padding: 0 12px;
+        &:hover {
+          color: rgba($on-primary, 0.70);
+        }
+        &.active {
+          &::after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: $secondary;
+            display: block;
+            position: absolute;
+            bottom: 0;
+          }
+        }
+      }
+      @media #{$medium-and-up} {
+        display: block;
+      }
+    }
+    @media #{$medium-and-up} {
+      padding: 8px 12px;
+      min-height: 64px;
+    }
+  }
+  
+  // Styles for Headroom.js
+  .headroom {
+    will-change: transform;
+    transition: transform 200ms linear, box-shadow 200ms linear;
+  }
+  
+  .headroom--pinned {
+    transform: translateY(0%);
+  }
+  
+  .headroom--unpinned {
+    transform: translateY(-100%);
+  }
+  
+  .headroom--not-top {
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+  }

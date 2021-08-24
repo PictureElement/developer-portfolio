@@ -1,0 +1,34 @@
+.projects-section {
+    position: relative;
+    margin-top: -24px;
+    &__title {
+      margin-bottom: 8px;
+    }
+    &__row-wrapper {
+      &.collapse .row {
+        @media #{$medium-and-down} {
+          &:nth-child(n+2) {
+            position: absolute !important;
+            top: -9999px !important;
+            left: -9999px !important;
+          }
+        }
+        @media #{$medium-and-up} {
+          &:nth-child(n+3) {
+            position: absolute !important;
+            top: -9999px !important;
+            left: -9999px !important;
+          }
+        }
+      }
+    }
+    &__col {
+      margin-top: 24px;
+    }
+    &__show-more {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+}

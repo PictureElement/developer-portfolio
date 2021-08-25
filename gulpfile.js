@@ -170,7 +170,7 @@ function criticalCSS() {
 // =============================================================================
 
 // Define tasks
-const init = gulp.series(cleanDist, cleanVendor, populateVendor, copyImages, copyTheme, copyVendor, copyHtml);
+const init = gulp.series(cleanDist, cleanVendor, populateVendor, copyImages, copyVendor, copyHtml);
 // const build = gulp.series(init, compileSass, css, js, criticalCSS);
 const build = gulp.series(init, compileSass, css, js);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSyncSrc));

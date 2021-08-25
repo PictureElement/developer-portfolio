@@ -1,10 +1,6 @@
 @charset "UTF-8";
 
-@import "../vendor/rfs/scss";
-
 @import "variables";
-
-@import "helpers";
 
 // Materialize overrides
 @import "overrides";
@@ -23,15 +19,9 @@
 
 @import "reset";
 
-@import "sidenav";
+@import "global";
 
-@import "cards";
-
-@import "buttons";
-
-@import "waves";
-
-@import "misc";
+@import "helpers";
 
 @import "header";
 

@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const cleanCSS = require('gulp-clean-css');
@@ -29,7 +29,6 @@ function populateVendor() {
     return gulp.src([
             'node_modules/materialize-css/dist/js/materialize.min.js',
             'node_modules/materialize-css/sass/components/**/*',
-            'node_modules/rfs/scss.scss',
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/echarts/dist/echarts.min.js',
             'node_modules/@fortawesome/fontawesome-free/css/all.min.css',
@@ -171,7 +170,7 @@ function criticalCSS() {
 // =============================================================================
 
 // Define tasks
-const init = gulp.series(cleanDist, cleanVendor, populateVendor, copyImages, copyVendor, copyHtml);
+const init = gulp.series(cleanDist, cleanVendor, populateVendor, copyImages, copyTheme, copyVendor, copyHtml);
 // const build = gulp.series(init, compileSass, css, js, criticalCSS);
 const build = gulp.series(init, compileSass, css, js);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSyncSrc));

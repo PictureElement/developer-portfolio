@@ -1,0 +1,608 @@
+body {
+    font-family: $font-stack-primary;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: $background;
+    color: $on-surface-primary;
+    overflow-x: hidden;
+}
+
+a {
+    color: $secondary;
+    transition: color .2s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+        color: $secondary;
+    }
+}
+
+.container {
+    max-width: 960px;
+}
+
+.section {
+    padding-top: $section-spacing;
+    padding-bottom: 0;
+
+    &__title {
+        position: relative;
+        font-family: $font-stack-secondary;
+        font-size: calc(24px + (28 - 24) * ((100vw - 320px) / (1920 - 320)));
+        font-weight: 500;
+        text-align: left;
+        padding-bottom: 16px;
+        margin-bottom: 32px;
+        color: $on-background;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 60px;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: $secondary;
+        }
+    }
+}
+
+// Base card
+.card {
+    border-radius: 0 16px 0 16px;
+    overflow: hidden;
+    margin: 0;
+
+    .card-content {
+        padding: 0;
+        width: 100%;
+        outline: none;
+        position: relative;
+    }
+
+    .card-primary {
+        .card-title {
+            color: $on-surface-secondary;
+            font-weight: 500;
+            margin-bottom: 0;
+            line-height: 1.5;
+            font-size: 20px;
+            color: $on-surface-primary;
+        }
+
+        .card-subtitle {
+            color: $on-surface-secondary;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+    }
+
+    .card-secondary {
+        padding: 0 16px 16px;
+        color: $on-surface-secondary;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .card-action {
+        padding: 8px;
+    }
+
+    .card-action-links {
+        a {
+            font-size: 14px;
+            margin-right: 8px !important;
+
+            &:last-child {
+                margin-right: 0 !important;
+            }
+        }
+    }
+
+    .card-action-icons {
+        a {
+            margin-right: 0 !important;
+        }
+    }
+
+    .card-overflow-control {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+
+    .card-reveal {
+        padding: 0;
+
+        .card-title {
+            color: $on-surface-secondary;
+            font-weight: 500;
+            margin-bottom: 0;
+            line-height: 1.5;
+            font-size: 20px;
+            color: $on-surface-primary;
+        }
+    }
+}
+
+// Basic card
+.basic-card {
+    @extend .card;
+
+    &__primary {
+        padding: 16px;
+    }
+}
+
+// Lead card
+.lead-card {
+    @extend .card;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    border: none;
+
+    &__main {
+        display: flex;
+    }
+
+    &__media {
+        display: none;
+        flex: 0 0 200px;
+        overflow: hidden;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media #{$medium-and-up} {
+            display: block;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .lead-card__primary {
+            padding: 16px;
+
+            .lead-card__title {
+                font-family: $font-stack-secondary;
+                color: $secondary;
+                font-size: calc(32px + (40 - 32) * ((100vw - 320px) / (1920 - 320)));
+                font-weight: 500;
+                line-height: 1.2;
+                display: inline-block;
+                margin-right: 40px;
+
+                span {
+                    color: $on-surface-primary;
+                }
+            }
+
+            .lead-card__subtitle {
+                font-family: $font-stack-secondary;
+                font-size: calc(24px + (28 - 24) * ((100vw - 320px) / (1920 - 320)));
+                font-weight: 500;
+                color: $on-surface-secondary;
+                line-height: 1.5;
+            }
+        }
+
+        .lead-card__secondary {
+            font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+            line-height: 1.5;
+            display: none;
+
+            @media #{$extra-large-and-up} {
+                display: block;
+            }
+        }
+
+        .lead-card__cta {
+            padding: 25px 16px 30px 16px;
+        }
+
+        .lead-card__overflow-control {
+            top: 15px;
+        }
+    }
+
+    &__primary {
+        padding: 16px;
+    }
+}
+
+// Horizontal card
+.horizontal-card {
+    @extend .card;
+    padding-left: 58px;
+
+    &__primary {
+        padding: 16px 64px 16px 16px;
+    }
+
+    img {
+        width: 42px;
+        position: absolute;
+        left: 16px;
+        top: 22px;
+        display: inline-block;
+        overflow: hidden;
+        transition: transform .2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+// Outlined buttons
+.btn-outlined {
+    color: $secondary;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 15px;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 64px;
+    height: 36px;
+    border: 1px solid $secondary;
+    outline: none;
+    user-select: none;
+    overflow: hidden;
+    vertical-align: middle;
+    border-radius: 0 8px 0 8px;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($secondary, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 15ms linear, background-color 15ms linear;
+        z-index: 1;
+    }
+
+    &:hover {
+        &::before {
+            background-color: rgba($secondary, 0.04);
+        }
+    }
+
+    &:focus {
+        &::before {
+            background-color: rgba($secondary, 0.12);
+        }
+    }
+}
+
+// Contained buttons
+.btn-contained {
+    background-color: $secondary !important;
+    color: $on-secondary;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 16px;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 64px;
+    height: 36px;
+    border: none;
+    outline: none;
+    user-select: none;
+    overflow: hidden;
+    vertical-align: middle;
+    border-radius: 0 8px 0 8px;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($on-secondary, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 15ms linear, background-color 15ms linear;
+        z-index: 1;
+    }
+
+    &:hover {
+        color: $on-secondary;
+
+        &::before {
+            background-color: rgba($on-secondary, 0.08);
+        }
+    }
+
+    &:focus {
+        color: $on-secondary;
+
+        &::before {
+            background-color: rgba($on-secondary, 0.24);
+        }
+    }
+}
+
+// Text buttons
+.btn-text {
+    color: $secondary !important;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 8px;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 64px;
+    height: 36px;
+    border: none;
+    outline: none;
+    user-select: none;
+    overflow: hidden;
+    vertical-align: middle;
+    border-radius: 0 8px 0 8px;
+    background-color: transparent !important;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($secondary, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 15ms linear, background-color 15ms linear;
+        z-index: 1;
+    }
+
+    &:hover {
+        &::before {
+            background-color: rgba($secondary, 0.04);
+        }
+    }
+
+    &:focus {
+        &::before {
+            background-color: rgba($secondary, 0.12);
+        }
+    }
+}
+
+// Text buttons on background
+.btn-text-on-background {
+    @extend .btn-text;
+    color: $on-background !important;
+
+    &::before {
+        background-color: rgba($on-background, 0);
+    }
+
+    &:hover {
+        &::before {
+            background-color: rgba($on-background, 0.04);
+        }
+    }
+
+    &:focus {
+        &::before {
+            background-color: rgba($on-background, 0.12);
+        }
+    }
+}
+
+// Icon buttons
+.btn-icon {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    font-size: 24px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent !important;
+
+    i {
+        color: $on-surface-secondary;
+        display: block;
+        font-size: 18px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($on-surface-secondary, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 15ms linear, background-color 15ms linear;
+        z-index: 1;
+    }
+
+    &:hover {
+        color: $on-secondary;
+
+        &::before {
+            background-color: rgba($on-surface-secondary, 0.04);
+        }
+    }
+
+    &:focus {
+        color: $on-secondary;
+
+        &::before {
+            background-color: rgba($on-surface-secondary, 0.12);
+        }
+    }
+}
+
+// Navigation drawer
+.sidenav {
+    background-color: $surface-nav-drawer;
+
+    &__header {
+        padding: 16px 16px 20px 16px;
+        border-bottom: 1px solid rgba($on-surface-nav-drawer-primary, .12);
+    }
+
+    &__image {
+        display: block;
+        height: 64px;
+        width: 64px;
+        border-radius: 50%;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-top: 20px;
+        line-height: 1;
+        color: $on-surface-nav-drawer-primary;
+    }
+
+    &__subtitle {
+        font-size: .875rem;
+        font-weight: 400;
+        margin-top: 5px;
+        color: $on-surface-nav-drawer-secondary;
+        line-height: 1;
+
+        a {
+            color: $on-surface-nav-drawer-secondary;
+
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        font-weight: 500;
+        letter-spacing: .0071428571em;
+        height: 40px;
+        margin: 8px;
+        padding: 0 8px !important;
+        color: $on-surface-nav-drawer-primary !important;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($secondary, 0);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 15ms linear, background-color 15ms linear;
+            z-index: 1;
+        }
+
+        &:focus {
+            color: $secondary !important;
+
+            &::before {
+                background-color: rgba($secondary, 0.24);
+            }
+        }
+    }
+
+    &__icon {
+        color: $secondary !important;
+        margin-right: 32px;
+        width: 24px;
+        height: 24px;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+    }
+}
+
+// Waves for icon buttons
+.waves-effect.waves-icon-btn .waves-ripple {
+    background-color: rgba($on-surface-secondary, 0.16);
+}
+
+// Wave for sidenav trigger
+.waves-effect.waves-sidenav-btn .waves-ripple {
+    background-color: rgba($on-primary, 0.16);
+}
+
+// Waves for surfaces
+.waves-effect.waves-surface .waves-ripple {
+    background-color: rgba($on-surface-primary, 0.16);
+}
+
+// Waves for text buttons
+.waves-effect.waves-text-btn .waves-ripple {
+    background-color: rgba($secondary, 0.16);
+}
+
+// Waves for text buttons on background
+.waves-effect.waves-text-btn-on-background .waves-ripples {
+    background-color: rgba($on-background, 0.16);
+}
+
+// Waves for outlined buttons
+.waves-effect.waves-outlined-btn .waves-ripple {
+    background-color: rgba($secondary, 0.16);
+}
+
+// Waves for contained buttons
+.waves-effect.waves-contained-btn .waves-ripple {
+    background-color: rgba($on-secondary, 0.32);
+}
+
+// Highlight color
+::selection {
+    background-color: $secondary;
+    color: $on-secondary;
+}
+
+// Scrollbar background
+.simplebar-scrollbar::before {
+    background-color: $scrollbar-color;
+}

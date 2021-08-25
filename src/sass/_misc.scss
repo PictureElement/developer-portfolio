@@ -1,0 +1,56 @@
+body {
+    font-family: $font-stack-primary;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: $background;
+    color: $on-surface-primary;
+    overflow-x: hidden;
+}
+
+a {
+    color: $secondary;
+    transition: color .2s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+        color: $secondary;
+    }
+}
+
+.container {
+    max-width: 960px;
+}
+
+.section {
+    padding-top: $section-spacing;
+    padding-bottom: 0;
+
+    &__title {
+        position: relative;
+        font-family: $font-stack-secondary;
+        font-size: calc(24px + (28 - 24) * ((100vw - 320px) / (1920 - 320)));
+        font-weight: 500;
+        text-align: left;
+        padding-bottom: 16px;
+        margin-bottom: 32px;
+        color: $on-background;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 60px;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: $secondary;
+        }
+    }
+}
+
+// Highlight color
+::selection {
+    background-color: $secondary;
+    color: $on-secondary;
+}

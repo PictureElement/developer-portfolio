@@ -1,0 +1,87 @@
+// Navigation drawer
+.sidenav {
+    background-color: $surface-nav-drawer;
+
+    &__header {
+        padding: 16px 16px 20px 16px;
+        border-bottom: 1px solid rgba($on-surface-nav-drawer-primary, .12);
+    }
+
+    &__image {
+        display: block;
+        height: 64px;
+        width: 64px;
+        border-radius: 50%;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-top: 20px;
+        line-height: 1;
+        color: $on-surface-nav-drawer-primary;
+    }
+
+    &__subtitle {
+        font-size: .875rem;
+        font-weight: 400;
+        margin-top: 5px;
+        color: $on-surface-nav-drawer-secondary;
+        line-height: 1;
+
+        a {
+            color: $on-surface-nav-drawer-secondary;
+
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        font-weight: 500;
+        letter-spacing: .0071428571em;
+        height: 40px;
+        margin: 8px;
+        padding: 0 8px !important;
+        color: $on-surface-nav-drawer-primary !important;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($secondary, 0);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 15ms linear, background-color 15ms linear;
+            z-index: 1;
+        }
+
+        &:focus {
+            color: $secondary !important;
+
+            &::before {
+                background-color: rgba($secondary, 0.24);
+            }
+        }
+    }
+
+    &__icon {
+        color: $secondary !important;
+        margin-right: 32px;
+        width: 24px;
+        height: 24px;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+    }
+}

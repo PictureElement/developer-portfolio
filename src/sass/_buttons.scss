@@ -1,0 +1,228 @@
+// Outlined buttons
+.btn-outlined {
+    color: $secondary;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 15px;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 64px;
+    height: 36px;
+    border: 1px solid $secondary;
+    outline: none;
+    user-select: none;
+    overflow: hidden;
+    vertical-align: middle;
+    border-radius: 0 8px 0 8px;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($secondary, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 15ms linear, background-color 15ms linear;
+        z-index: 1;
+    }
+
+    &:hover {
+        &::before {
+            background-color: rgba($secondary, 0.04);
+        }
+    }
+
+    &:focus {
+        &::before {
+            background-color: rgba($secondary, 0.12);
+        }
+    }
+}
+
+// Contained buttons
+.btn-contained {
+    background-color: $secondary !important;
+    color: $on-secondary;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 16px;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 64px;
+    height: 36px;
+    border: none;
+    outline: none;
+    user-select: none;
+    overflow: hidden;
+    vertical-align: middle;
+    border-radius: 0 8px 0 8px;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($on-secondary, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 15ms linear, background-color 15ms linear;
+        z-index: 1;
+    }
+
+    &:hover {
+        color: $on-secondary;
+
+        &::before {
+            background-color: rgba($on-secondary, 0.08);
+        }
+    }
+
+    &:focus {
+        color: $on-secondary;
+
+        &::before {
+            background-color: rgba($on-secondary, 0.24);
+        }
+    }
+}
+
+// Text buttons
+.btn-text {
+    color: $secondary !important;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 8px;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 64px;
+    height: 36px;
+    border: none;
+    outline: none;
+    user-select: none;
+    overflow: hidden;
+    vertical-align: middle;
+    border-radius: 0 8px 0 8px;
+    background-color: transparent !important;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($secondary, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 15ms linear, background-color 15ms linear;
+        z-index: 1;
+    }
+
+    &:hover {
+        &::before {
+            background-color: rgba($secondary, 0.04);
+        }
+    }
+
+    &:focus {
+        &::before {
+            background-color: rgba($secondary, 0.12);
+        }
+    }
+}
+
+// Text buttons on background
+.btn-text-on-background {
+    @extend .btn-text;
+    color: $on-background !important;
+
+    &::before {
+        background-color: rgba($on-background, 0);
+    }
+
+    &:hover {
+        &::before {
+            background-color: rgba($on-background, 0.04);
+        }
+    }
+
+    &:focus {
+        &::before {
+            background-color: rgba($on-background, 0.12);
+        }
+    }
+}
+
+// Icon buttons
+.btn-icon {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    font-size: 24px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent !important;
+
+    i {
+        color: $on-surface-secondary;
+        display: block;
+        font-size: 18px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($on-surface-secondary, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 15ms linear, background-color 15ms linear;
+        z-index: 1;
+    }
+
+    &:hover {
+        color: $on-secondary;
+
+        &::before {
+            background-color: rgba($on-surface-secondary, 0.04);
+        }
+    }
+
+    &:focus {
+        color: $on-secondary;
+
+        &::before {
+            background-color: rgba($on-surface-secondary, 0.12);
+        }
+    }
+}

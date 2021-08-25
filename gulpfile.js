@@ -29,6 +29,7 @@ function populateVendor() {
     return gulp.src([
             'node_modules/materialize-css/dist/js/materialize.min.js',
             'node_modules/materialize-css/sass/components/**/*',
+            'node_modules/rfs/scss.scss',
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/echarts/dist/echarts.min.js',
             'node_modules/@fortawesome/fontawesome-free/css/all.min.css',

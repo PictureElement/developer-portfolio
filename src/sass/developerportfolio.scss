@@ -4,6 +4,8 @@
 
 @import "variables";
 
+@import "helpers";
+
 // Materialize overrides
 @import "overrides";
 
@@ -30,8 +32,6 @@
 @import "waves";
 
 @import "misc";
-
-@import "helpers";
 
 @import "header";
 

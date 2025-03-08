@@ -15,7 +15,7 @@
     "author": "Marios Sofokleous",
     "license": "MIT",
     "devDependencies": {
-        "browser-sync": "^2.26.14",
+        "browser-sync": "^3.0.3",
         "critical": "^2.0.5",
         "del": "^5.1.0",
         "gulp": "^4.0.2",
